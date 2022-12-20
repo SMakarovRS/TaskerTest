@@ -1,0 +1,399 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>МестоХранения</dataPath>
+			<field>МестоХранения</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Сотрудник</dataPath>
+			<field>Сотрудник</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Период</dataPath>
+			<field>Период</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номенклатура</dataPath>
+			<field>Номенклатура</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаНачала</dataPath>
+			<field>ДатаНачала</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата начала</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаОкончания</dataPath>
+			<field>ДатаОкончания</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата окончания</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Регистратор</dataPath>
+			<field>Регистратор</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Регистратор</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	Остатки.Период КАК Дата,
+	Остатки.МестоХранения КАК МестоХранения,
+	NULL КАК Комплект,
+	Остатки.Номенклатура КАК Номенклатура,
+	Остатки.Количество КАК Количество,
+	ЕСТЬNULL(Остатки.Сумма, 0) КАК Сумма,
+	Остатки.Регистратор КАК Регистратор,
+	Остатки.Организация КАК Организация,
+	ВЫБОР
+		КОГДА Остатки.ВидДвижения = ЗНАЧЕНИЕ(ВидДвиженияНакопления.Приход)
+			ТОГДА Остатки.Период
+	КОНЕЦ КАК ДатаНачала,
+	ВЫБОР
+		КОГДА Остатки.ВидДвижения = ЗНАЧЕНИЕ(ВидДвиженияНакопления.Расход)
+			ТОГДА Остатки.Период
+	КОНЕЦ КАК ДатаОкончания
+ПОМЕСТИТЬ ВТ_Остатки
+ИЗ
+	РегистрНакопления.Остатки КАК Остатки
+
+СГРУППИРОВАТЬ ПО
+	Остатки.МестоХранения,
+	Остатки.Период,
+	Остатки.Номенклатура,
+	Остатки.Количество,
+	Остатки.Регистратор,
+	Остатки.Организация,
+	ЕСТЬNULL(Остатки.Сумма, 0),
+	ВЫБОР
+		КОГДА Остатки.ВидДвижения = ЗНАЧЕНИЕ(ВидДвиженияНакопления.Приход)
+			ТОГДА Остатки.Период
+	КОНЕЦ,
+	ВЫБОР
+		КОГДА Остатки.ВидДвижения = ЗНАЧЕНИЕ(ВидДвиженияНакопления.Расход)
+			ТОГДА Остатки.Период
+	КОНЕЦ
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	Комплектация.Период,
+	ЗНАЧЕНИЕ(Справочник.МестаХранения.ПустаяСсылка),
+	Комплектация.Комплект,
+	Комплектация.Номенклатура,
+	Комплектация.Количество,
+	ЕСТЬNULL(Комплектация.Сумма, 0),
+	Комплектация.Регистратор,
+	NULL,
+	NULL,
+	NULL
+ИЗ
+	РегистрНакопления.Комплектация КАК Комплектация
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_Остатки.Дата КАК Дата,
+	ВТ_Остатки.МестоХранения КАК МестоХранения,
+	ВТ_Остатки.Номенклатура КАК Номенклатура,
+	ВТ_Остатки.Количество КАК Количество,
+	ВТ_Остатки.Сумма КАК Сумма,
+	ВТ_Остатки.Регистратор КАК Регистратор,
+	ВТ_Остатки.Комплект КАК Комплект,
+	ВТ_Остатки.Организация КАК Организация,
+	ВТ_Остатки.ДатаНачала КАК ДатаНачала,
+	ВТ_Остатки.ДатаОкончания КАК ДатаОкончания
+ПОМЕСТИТЬ ВТ_ОстаткиКомплекты
+ИЗ
+	ВТ_Остатки КАК ВТ_Остатки
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	Остатки.Период,
+	Остатки.МестоХранения,
+	ВТ_Остатки.Номенклатура,
+	ВТ_Остатки.Количество,
+	ВТ_Остатки.Сумма,
+	Остатки.Регистратор,
+	NULL,
+	Остатки.Организация,
+	ВЫБОР
+		КОГДА Остатки.ВидДвижения = ЗНАЧЕНИЕ(ВидДвиженияНакопления.Приход)
+			ТОГДА Остатки.Период
+	КОНЕЦ,
+	ВЫБОР
+		КОГДА Остатки.ВидДвижения = ЗНАЧЕНИЕ(ВидДвиженияНакопления.Расход)
+			ТОГДА Остатки.Период
+	КОНЕЦ
+ИЗ
+	ВТ_Остатки КАК ВТ_Остатки
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрНакопления.Остатки КАК Остатки
+		ПО (ВЫБОР
+				КОГДА ВТ_Остатки.Комплект ЕСТЬ NULL
+					ТОГДА ЛОЖЬ
+				ИНАЧЕ ВТ_Остатки.Комплект = Остатки.Номенклатура
+			КОНЕЦ)
+ГДЕ
+	НЕ ВТ_Остатки.Комплект ЕСТЬ NULL
+
+СГРУППИРОВАТЬ ПО
+	Остатки.МестоХранения,
+	ВТ_Остатки.Количество,
+	ВТ_Остатки.Сумма,
+	Остатки.Период,
+	Остатки.Организация,
+	Остатки.Регистратор,
+	ВТ_Остатки.Номенклатура,
+	ВЫБОР
+		КОГДА Остатки.ВидДвижения = ЗНАЧЕНИЕ(ВидДвиженияНакопления.Приход)
+			ТОГДА Остатки.Период
+	КОНЕЦ,
+	ВЫБОР
+		КОГДА Остатки.ВидДвижения = ЗНАЧЕНИЕ(ВидДвиженияНакопления.Расход)
+			ТОГДА Остатки.Период
+	КОНЕЦ
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ВТ_ОстаткиКомплекты.МестоХранения КАК МестоХранения,
+	ВТ_ОстаткиКомплекты.Номенклатура КАК Номенклатура,
+	МИНИМУМ(ВТ_ОстаткиКомплекты.ДатаНачала) КАК ДатаНачала,
+	МАКСИМУМ(ВТ_ОстаткиКомплекты.ДатаОкончания) КАК ДатаОкончания
+ПОМЕСТИТЬ ВТ_Периоды
+ИЗ
+	ВТ_ОстаткиКомплекты КАК ВТ_ОстаткиКомплекты
+
+СГРУППИРОВАТЬ ПО
+	ВТ_ОстаткиКомплекты.Номенклатура,
+	ВТ_ОстаткиКомплекты.МестоХранения
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ РАЗЛИЧНЫЕ
+	ОтветственныеСотрудники.Период КАК Период,
+	ВТ_Периоды.МестоХранения КАК МестоХранения,
+	ОтветственныеСотрудники.Сотрудник КАК Сотрудник,
+	ВЫБОР
+		КОГДА ОтветственныеСотрудники.Регистратор.Ссылка ЕСТЬ NULL
+			ТОГДА ""
+		ИНАЧЕ ОтветственныеСотрудники.Регистратор
+	КОНЕЦ КАК Регистратор,
+	ВТ_Периоды.Номенклатура КАК Номенклатура,
+	ВТ_Периоды.ДатаНачала КАК ДатаНачала,
+	ВТ_Периоды.ДатаОкончания КАК ДатаОкончания
+ИЗ
+	ВТ_Периоды КАК ВТ_Периоды
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.ОтветственныеСотрудники КАК ОтветственныеСотрудники
+		ПО ВТ_Периоды.МестоХранения = ОтветственныеСотрудники.МестоХранения
+ГДЕ
+	ВЫБОР
+			КОГДА ТИПЗНАЧЕНИЯ(ОтветственныеСотрудники.Регистратор) = ТИП(Документ.ПеремещениеСотрудников)
+					И ОтветственныеСотрудники.Сотрудник = ЗНАЧЕНИЕ(Справочник.Сотрудники.ПустаяСсылка)
+				ТОГДА ЛОЖЬ
+			ИНАЧЕ ИСТИНА
+		КОНЕЦ
+	И ОтветственныеСотрудники.Период &lt;= ВЫБОР
+			КОГДА ВТ_Периоды.ДатаОкончания = НЕОПРЕДЕЛЕНО
+					ИЛИ ВТ_Периоды.ДатаОкончания ЕСТЬ NULL
+					ИЛИ ВТ_Периоды.ДатаОкончания = ДАТАВРЕМЯ(1, 1, 1)
+				ТОГДА ДАТАВРЕМЯ(3999, 12, 31)
+			ИНАЧЕ ВТ_Периоды.ДатаОкончания
+		КОНЕЦ
+	И КОНЕЦПЕРИОДА(ОтветственныеСотрудники.Период, ДЕНЬ) &gt;= КОНЕЦПЕРИОДА(ВТ_Периоды.ДатаНачала, ДЕНЬ)
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ РАЗЛИЧНЫЕ
+	ВложенныйЗапрос.Период,
+	ВложенныйЗапрос.МестоХранения,
+	ОтветственныеСотрудники.Сотрудник,
+	ВЫБОР
+		КОГДА ОтветственныеСотрудники.Регистратор.Ссылка ЕСТЬ NULL
+			ТОГДА ""
+		ИНАЧЕ ОтветственныеСотрудники.Регистратор
+	КОНЕЦ,
+	ВТ_Периоды.Номенклатура,
+	ВТ_Периоды.ДатаНачала,
+	ВТ_Периоды.ДатаОкончания
+ИЗ
+	(ВЫБРАТЬ
+		МАКСИМУМ(ОтветственныеСотрудники.Период) КАК Период,
+		ОтветственныеСотрудники.МестоХранения КАК МестоХранения
+	ИЗ
+		ВТ_Периоды КАК ВТ_Периоды
+			ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.ОтветственныеСотрудники КАК ОтветственныеСотрудники
+			ПО ВТ_Периоды.МестоХранения = ОтветственныеСотрудники.МестоХранения
+	ГДЕ
+		ОтветственныеСотрудники.Период &lt;= ВТ_Периоды.ДатаНачала
+	
+	СГРУППИРОВАТЬ ПО
+		ОтветственныеСотрудники.МестоХранения) КАК ВложенныйЗапрос
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.ОтветственныеСотрудники КАК ОтветственныеСотрудники
+			ВНУТРЕННЕЕ СОЕДИНЕНИЕ ВТ_Периоды КАК ВТ_Периоды
+			ПО (ВТ_Периоды.МестоХранения = ОтветственныеСотрудники.МестоХранения)
+		ПО ВложенныйЗапрос.Период = ОтветственныеСотрудники.Период
+			И ВложенныйЗапрос.МестоХранения = ОтветственныеСотрудники.МестоХранения
+
+УПОРЯДОЧИТЬ ПО
+	ДатаНачала</query>
+	</dataSet>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>История по ответственным</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Номенклатура</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДатаНачала</dcsset:field>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Начало хранения</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДатаОкончания</dcsset:field>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Окончание хранения</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>МестоХранения</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Период</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Сотрудник</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Регистратор</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:left xsi:type="dcscor:Field">Номенклатура</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:userSettingID>a443a185-b7fc-4fec-8946-bc50175aaf6e</dcsset:userSettingID>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>ДатаНачала</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>РасположениеИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ГоризонтальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВертикальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Номенклатура</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ДатаНачала</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ДатаОкончания</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>МестоХранения</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:item xsi:type="dcsset:StructureItemGroup">
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+					</dcsset:item>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

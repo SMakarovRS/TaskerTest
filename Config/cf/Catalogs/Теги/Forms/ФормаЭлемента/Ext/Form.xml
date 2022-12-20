@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Наименование" id="1">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<CommandBar name="Группа1" id="14">
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="15"/>
+			<ChildItems>
+				<Button name="СтильЦветТекста" id="10">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.Command.СтильЦветТекста</CommandName>
+					<ExtendedTooltip name="СтильЦветТекстаРасширеннаяПодсказка" id="11"/>
+				</Button>
+				<Button name="СтильЦветФона" id="12">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.Command.СтильЦветФона</CommandName>
+					<ExtendedTooltip name="СтильЦветФонаРасширеннаяПодсказка" id="13"/>
+				</Button>
+				<Button name="СоздатьСлучайный" id="27">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.Command.СлучайныйЦвет</CommandName>
+					<ExtendedTooltip name="СоздатьСлучайныйРасширеннаяПодсказка" id="28"/>
+				</Button>
+			</ChildItems>
+		</CommandBar>
+		<UsualGroup name="Группа3" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Образец</v8:content>
+				</v8:item>
+			</Title>
+			<HorizontalSpacing>None</HorizontalSpacing>
+			<Representation>None</Representation>
+			<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="17"/>
+			<ChildItems>
+				<LabelField name="Образец" id="24">
+					<DataPath>Образец</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<Border width="1">
+						<v8ui:style xsi:type="v8ui:ControlBorderType">Indented</v8ui:style>
+					</Border>
+					<BorderColor>#000000</BorderColor>
+					<ContextMenu name="ОбразецКонтекстноеМеню" id="25"/>
+					<ExtendedTooltip name="ОбразецРасширеннаяПодсказка" id="26"/>
+				</LabelField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.Теги</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="Образец" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Образец</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="СтильЦветТекста" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Стиль цвет текста</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Стиль цвет текста</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ФорматированиеШрифтЦветТекста</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СтильЦветТекста</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+		</Command>
+		<Command name="СтильЦветФона" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Стиль цвет фона</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Стиль цвет фона</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ФорматированиеШрифтЦветФона</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СтильЦветФона</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+		</Command>
+		<Command name="СлучайныйЦвет" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Случайный цвет</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Случайный цвет</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СлучайныйЦвет</Action>
+		</Command>
+	</Commands>
+</Form>

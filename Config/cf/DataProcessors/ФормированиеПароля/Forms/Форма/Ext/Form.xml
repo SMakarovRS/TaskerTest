@@ -1,0 +1,307 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Формирование пароля пользователя</v8:content>
+		</v8:item>
+	</Title>
+	<Width>50</Width>
+	<AutoTitle>false</AutoTitle>
+	<ChildItemsWidth>Equal</ChildItemsWidth>
+	<Customizable>false</Customizable>
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаВыбрать" id="31">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.Сформировать</CommandName>
+				<ExtendedTooltip name="ФормаВыбратьРасширеннаяПодсказка" id="35"/>
+			</Button>
+			<Button name="ЗакрытьФорму" id="32">
+				<Type>CommandBarButton</Type>
+				<Representation>Text</Representation>
+				<CommandName>Form.Command.ЗакрытьФорму</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Закрыть</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ЗакрытьФормуРасширеннаяПодсказка" id="36"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+	</Events>
+	<ChildItems>
+		<LabelDecoration name="ДекорацияЗаголовок" id="1">
+			<HorizontalStretch>true</HorizontalStretch>
+			<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Формирование пароля пользователя</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ДекорацияЗаголовокКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ДекорацияЗаголовокРасширеннаяПодсказка" id="37"/>
+		</LabelDecoration>
+		<UsualGroup name="ГруппаЗаголовок" id="3">
+			<EnableContentChange>true</EnableContentChange>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа заголовок</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа заголовок</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаЗаголовокРасширеннаяПодсказка" id="38"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаПароль" id="54">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа пароль</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа пароль</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПарольРасширеннаяПодсказка" id="55"/>
+					<ChildItems>
+						<InputField name="Пароль" id="4">
+							<DataPath>Объект.Пароль</DataPath>
+							<Width>20</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<ContextMenu name="ПарольКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="ПарольРасширеннаяПодсказка" id="39"/>
+						</InputField>
+						<Button name="ОбновитьПароль" id="6">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ОбновитьПароль</CommandName>
+							<ExtendedTooltip name="ОбновитьПарольРасширеннаяПодсказка" id="40"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<InputField name="КоличествоСимволов" id="7">
+					<DataPath>Объект.КоличествоСимволов</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Символов</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="КоличествоСимволовКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="КоличествоСимволовРасширеннаяПодсказка" id="41"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<CheckBoxField name="ВключатьЦифры" id="9">
+			<DataPath>Объект.ВключатьЦифры</DataPath>
+			<TitleLocation>Right</TitleLocation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ВключатьЦифрыКонтекстноеМеню" id="10"/>
+			<ExtendedTooltip name="ВключатьЦифрыРасширеннаяПодсказка" id="42"/>
+			<Events>
+				<Event name="OnChange">ОбновитьПароль</Event>
+			</Events>
+		</CheckBoxField>
+		<LabelDecoration name="Декорация2" id="11">
+			<HorizontalStretch>true</HorizontalStretch>
+			<TextColor>#3366FF</TextColor>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>     0123456789</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="Декорация2КонтекстноеМеню" id="12"/>
+			<ExtendedTooltip name="Декорация2РасширеннаяПодсказка" id="43"/>
+		</LabelDecoration>
+		<CheckBoxField name="ВключатьМаленькиеЛатинскиеБуквы" id="13">
+			<DataPath>Объект.ВключатьМаленькиеЛатинскиеБуквы</DataPath>
+			<TitleLocation>Right</TitleLocation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ВключатьМаленькиеЛатинскиеБуквыКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ВключатьМаленькиеЛатинскиеБуквыРасширеннаяПодсказка" id="44"/>
+			<Events>
+				<Event name="OnChange">ОбновитьПароль</Event>
+			</Events>
+		</CheckBoxField>
+		<LabelDecoration name="Декорация3" id="23">
+			<HorizontalStretch>true</HorizontalStretch>
+			<TextColor>#3366FF</TextColor>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>     abcdefghijklmnopqrstuvwxyz</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="Декорация3КонтекстноеМеню" id="24"/>
+			<ExtendedTooltip name="Декорация3РасширеннаяПодсказка" id="45"/>
+		</LabelDecoration>
+		<CheckBoxField name="ВключатьБольшиеЛатинскиеБуквы" id="15">
+			<DataPath>Объект.ВключатьБольшиеЛатинскиеБуквы</DataPath>
+			<TitleLocation>Right</TitleLocation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ВключатьБольшиеЛатинскиеБуквыКонтекстноеМеню" id="16"/>
+			<ExtendedTooltip name="ВключатьБольшиеЛатинскиеБуквыРасширеннаяПодсказка" id="46"/>
+			<Events>
+				<Event name="OnChange">ОбновитьПароль</Event>
+			</Events>
+		</CheckBoxField>
+		<LabelDecoration name="Декорация4" id="25">
+			<HorizontalStretch>true</HorizontalStretch>
+			<TextColor>#3366FF</TextColor>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>     ABCDEFGHIJKLMNOPQRSTUVWXYZ</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="Декорация4КонтекстноеМеню" id="26"/>
+			<ExtendedTooltip name="Декорация4РасширеннаяПодсказка" id="47"/>
+		</LabelDecoration>
+		<CheckBoxField name="ВключатьМаленькиеРусскиеБуквы" id="17">
+			<DataPath>Объект.ВключатьМаленькиеРусскиеБуквы</DataPath>
+			<TitleLocation>Right</TitleLocation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ВключатьМаленькиеРусскиеБуквыКонтекстноеМеню" id="18"/>
+			<ExtendedTooltip name="ВключатьМаленькиеРусскиеБуквыРасширеннаяПодсказка" id="48"/>
+			<Events>
+				<Event name="OnChange">ОбновитьПароль</Event>
+			</Events>
+		</CheckBoxField>
+		<LabelDecoration name="Декорация5" id="27">
+			<TextColor>#3366FF</TextColor>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>     абвгдежзийклмнопрстуфхцчшщъыьэюя</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="Декорация5КонтекстноеМеню" id="28"/>
+			<ExtendedTooltip name="Декорация5РасширеннаяПодсказка" id="49"/>
+		</LabelDecoration>
+		<CheckBoxField name="ВключатьБольшиеРусскиеБуквы" id="19">
+			<DataPath>Объект.ВключатьБольшиеРусскиеБуквы</DataPath>
+			<TitleLocation>Right</TitleLocation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ВключатьБольшиеРусскиеБуквыКонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="ВключатьБольшиеРусскиеБуквыРасширеннаяПодсказка" id="50"/>
+			<Events>
+				<Event name="OnChange">ОбновитьПароль</Event>
+			</Events>
+		</CheckBoxField>
+		<LabelDecoration name="Декорация6" id="29">
+			<TextColor>#3366FF</TextColor>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>     АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="Декорация6КонтекстноеМеню" id="30"/>
+			<ExtendedTooltip name="Декорация6РасширеннаяПодсказка" id="51"/>
+		</LabelDecoration>
+		<CheckBoxField name="ВключатьДругиеСимволы" id="21">
+			<DataPath>Объект.ВключатьДругиеСимволы</DataPath>
+			<TitleLocation>Right</TitleLocation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ВключатьДругиеСимволыКонтекстноеМеню" id="22"/>
+			<ExtendedTooltip name="ВключатьДругиеСимволыРасширеннаяПодсказка" id="52"/>
+			<Events>
+				<Event name="OnChange">ОбновитьПароль</Event>
+			</Events>
+		</CheckBoxField>
+		<LabelDecoration name="Декорация7" id="33">
+			<TextColor>#3366FF</TextColor>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>     !@#$%^&amp;*-+=/&lt;&gt;[]{}</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="Декорация7КонтекстноеМеню" id="34"/>
+			<ExtendedTooltip name="Декорация7РасширеннаяПодсказка" id="53"/>
+		</LabelDecoration>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ФормированиеПароля</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ОбновитьПароль" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить пароль</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОбновитьПароль</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Сформировать" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Сформировать</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЗакрытьФорму" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Закрыть</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Закрыть форму</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗакрытьФорму</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

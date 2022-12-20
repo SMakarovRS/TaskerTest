@@ -1,0 +1,364 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СетевыеИнтерфейсы.DNS2</dataPath>
+			<field>СетевыеИнтерфейсы.DNS2</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация</dataPath>
+			<field>Организация</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИмяПредопределенныхДанных</dataPath>
+			<field>ИмяПредопределенныхДанных</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СетевыеИнтерфейсы.DHCP</dataPath>
+			<field>СетевыеИнтерфейсы.DHCP</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Ссылка</dataPath>
+			<field>Ссылка</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СетевоеИмя</dataPath>
+			<field>СетевоеИмя</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Наименование</dataPath>
+			<field>Наименование</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВерсияДанных</dataPath>
+			<field>ВерсияДанных</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидМестаХранения</dataPath>
+			<field>ВидМестаХранения</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СетевыеИнтерфейсы.ПортRadmin</dataPath>
+			<field>СетевыеИнтерфейсы.ПортRadmin</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СетевыеИнтерфейсы.Ссылка</dataPath>
+			<field>СетевыеИнтерфейсы.Ссылка</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПометкаУдаления</dataPath>
+			<field>ПометкаУдаления</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Код</dataPath>
+			<field>Код</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КонтактнаяИнформация.Регион</dataPath>
+			<field>КонтактнаяИнформация.Регион</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Родитель</dataPath>
+			<field>Родитель</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КонтактнаяИнформация.Значение</dataPath>
+			<field>КонтактнаяИнформация.Значение</field>
+		</field>
+		<field xsi:type="DataSetFieldNestedDataSet">
+			<dataPath>ДополнительныеРеквизиты</dataPath>
+			<field>ДополнительныеРеквизиты</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Подразделение</dataPath>
+			<field>Подразделение</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КонтактнаяИнформация.ДоменноеИмяСервера</dataPath>
+			<field>КонтактнаяИнформация.ДоменноеИмяСервера</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НавСсылка</dataPath>
+			<field>НавСсылка</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Комментарий</dataPath>
+			<field>Комментарий</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СетевыеИнтерфейсы.МаскаПодсети</dataPath>
+			<field>СетевыеИнтерфейсы.МаскаПодсети</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СетевойПользователь</dataPath>
+			<field>СетевойПользователь</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДополнительныеРеквизиты.Значение</dataPath>
+			<field>ДополнительныеРеквизиты.Значение</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Картинка</dataPath>
+			<field>Картинка</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПоследнийОтветственный</dataPath>
+			<field>ПоследнийОтветственный</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ГруппаДоступа</dataPath>
+			<field>ГруппаДоступа</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СвободныеОстатки</dataPath>
+			<field>СвободныеОстатки</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СетевыеИнтерфейсы.НомерСтроки</dataPath>
+			<field>СетевыеИнтерфейсы.НомерСтроки</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СетевыеИнтерфейсы.IPАдрес</dataPath>
+			<field>СетевыеИнтерфейсы.IPАдрес</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СетевыеИнтерфейсы.DNS1</dataPath>
+			<field>СетевыеИнтерфейсы.DNS1</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СетевыеИнтерфейсы.WINS</dataPath>
+			<field>СетевыеИнтерфейсы.WINS</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КонтактнаяИнформация.ЗначенияПолей</dataPath>
+			<field>КонтактнаяИнформация.ЗначенияПолей</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СетевыеИнтерфейсы.Шлюз</dataPath>
+			<field>СетевыеИнтерфейсы.Шлюз</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДополнительныеРеквизиты.Свойство</dataPath>
+			<field>ДополнительныеРеквизиты.Свойство</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СетевыеИнтерфейсы.MACАдрес</dataPath>
+			<field>СетевыеИнтерфейсы.MACАдрес</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Предопределенный</dataPath>
+			<field>Предопределенный</field>
+		</field>
+		<field xsi:type="DataSetFieldNestedDataSet">
+			<dataPath>СетевыеИнтерфейсы</dataPath>
+			<field>СетевыеИнтерфейсы</field>
+		</field>
+		<field xsi:type="DataSetFieldNestedDataSet">
+			<dataPath>КонтактнаяИнформация</dataPath>
+			<field>КонтактнаяИнформация</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДополнительныеРеквизиты.Ссылка</dataPath>
+			<field>ДополнительныеРеквизиты.Ссылка</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КонтактнаяИнформация.ВидДляСписка</dataPath>
+			<field>КонтактнаяИнформация.ВидДляСписка</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КонтактнаяИнформация.Город</dataPath>
+			<field>КонтактнаяИнформация.Город</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КонтактнаяИнформация.Представление</dataPath>
+			<field>КонтактнаяИнформация.Представление</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДополнительныеРеквизиты.НомерСтроки</dataPath>
+			<field>ДополнительныеРеквизиты.НомерСтроки</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КонтактнаяИнформация.Вид</dataPath>
+			<field>КонтактнаяИнформация.Вид</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДополнительныеРеквизиты.ТекстоваяСтрока</dataPath>
+			<field>ДополнительныеРеквизиты.ТекстоваяСтрока</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КонтактнаяИнформация.Ссылка</dataPath>
+			<field>КонтактнаяИнформация.Ссылка</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КонтактнаяИнформация.НомерСтроки</dataPath>
+			<field>КонтактнаяИнформация.НомерСтроки</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КонтактнаяИнформация.Тип</dataPath>
+			<field>КонтактнаяИнформация.Тип</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КонтактнаяИнформация.Страна</dataPath>
+			<field>КонтактнаяИнформация.Страна</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КонтактнаяИнформация.АдресЭП</dataPath>
+			<field>КонтактнаяИнформация.АдресЭП</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КонтактнаяИнформация.НомерТелефона</dataPath>
+			<field>КонтактнаяИнформация.НомерТелефона</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КонтактнаяИнформация.НомерТелефонаБезКодов</dataPath>
+			<field>КонтактнаяИнформация.НомерТелефонаБезКодов</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Местоположение</dataPath>
+			<field>Местоположение</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	МестаХранения.Ссылка КАК Ссылка,
+	МестаХранения.ВерсияДанных КАК ВерсияДанных,
+	МестаХранения.ПометкаУдаления КАК ПометкаУдаления,
+	МестаХранения.Родитель КАК Родитель,
+	МестаХранения.Код КАК Код,
+	МестаХранения.Наименование КАК Наименование,
+	МестаХранения.ВидМестаХранения КАК ВидМестаХранения,
+	МестаХранения.Организация КАК Организация,
+	МестаХранения.Подразделение КАК Подразделение,
+	МестаХранения.Комментарий КАК Комментарий,
+	МестаХранения.СетевоеИмя КАК СетевоеИмя,
+	МестаХранения.СетевойПользователь КАК СетевойПользователь,
+	МестаХранения.Местоположение КАК Местоположение,
+	МестаХранения.НавСсылка КАК НавСсылка,
+	МестаХранения.Картинка КАК Картинка,
+	МестаХранения.ПоследнийОтветственный КАК ПоследнийОтветственный,
+	МестаХранения.ГруппаДоступа КАК ГруппаДоступа,
+	МестаХранения.СвободныеОстатки КАК СвободныеОстатки,
+	МестаХранения.СетевыеИнтерфейсы.(
+		Ссылка КАК Ссылка,
+		НомерСтроки КАК НомерСтроки,
+		IPАдрес КАК IPАдрес,
+		МаскаПодсети КАК МаскаПодсети,
+		DNS1 КАК DNS1,
+		DNS2 КАК DNS2,
+		WINS КАК WINS,
+		DHCP КАК DHCP,
+		Шлюз КАК Шлюз,
+		ПортRadmin КАК ПортRadmin,
+		MACАдрес КАК MACАдрес
+	) КАК СетевыеИнтерфейсы,
+	МестаХранения.ДополнительныеРеквизиты.(
+		Ссылка КАК Ссылка,
+		НомерСтроки КАК НомерСтроки,
+		Свойство КАК Свойство,
+		Значение КАК Значение,
+		ТекстоваяСтрока КАК ТекстоваяСтрока
+	) КАК ДополнительныеРеквизиты,
+	МестаХранения.КонтактнаяИнформация.(
+		Ссылка КАК Ссылка,
+		НомерСтроки КАК НомерСтроки,
+		Тип КАК Тип,
+		Вид КАК Вид,
+		Представление КАК Представление,
+		ЗначенияПолей КАК ЗначенияПолей,
+		Страна КАК Страна,
+		Регион КАК Регион,
+		Город КАК Город,
+		АдресЭП КАК АдресЭП,
+		ДоменноеИмяСервера КАК ДоменноеИмяСервера,
+		НомерТелефона КАК НомерТелефона,
+		НомерТелефонаБезКодов КАК НомерТелефонаБезКодов,
+		ВидДляСписка КАК ВидДляСписка,
+		Значение КАК Значение
+	) КАК КонтактнаяИнформация,
+	МестаХранения.Предопределенный КАК Предопределенный,
+	МестаХранения.ИмяПредопределенныхДанных КАК ИмяПредопределенныхДанных
+ИЗ
+	Справочник.МестаХранения КАК МестаХранения
+ГДЕ
+	МестаХранения.Ссылка = &amp;Основание	</query>
+	</dataSet>
+	<parameter>
+		<name>Основание</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Основание</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.МестаХранения</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+		<use>Always</use>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Ссылка</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ВидМестаХранения</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Наименование</dcsset:left>
+					<dcsset:comparisonType>Contains</dcsset:comparisonType>
+					<dcsset:right xsi:type="xs:string"/>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Организация</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Подразделение</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Местоположение</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">СетевоеИмя</dcsset:left>
+					<dcsset:comparisonType>Contains</dcsset:comparisonType>
+					<dcsset:right xsi:type="xs:string"/>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">СетевойПользователь</dcsset:left>
+					<dcsset:comparisonType>Contains</dcsset:comparisonType>
+					<dcsset:right xsi:type="xs:string"/>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

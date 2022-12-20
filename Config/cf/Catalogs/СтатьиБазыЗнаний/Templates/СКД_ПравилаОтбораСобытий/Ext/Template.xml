@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Ссылка</dataPath>
+			<field>Ссылка</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПометкаУдаления</dataPath>
+			<field>ПометкаУдаления</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Наименование</dataPath>
+			<field>Наименование</field>
+		</field>
+		<field xsi:type="DataSetFieldNestedDataSet">
+			<dataPath>Категории</dataPath>
+			<field>Категории</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Категории.Ссылка</dataPath>
+			<field>Категории.Ссылка</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗапретПубликации</dataPath>
+			<field>ЗапретПубликации</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Категории.Категория</dataPath>
+			<field>Категории.Категория</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаКорректировки</dataPath>
+			<field>ДатаКорректировки</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КраткоеОписание</dataPath>
+			<field>КраткоеОписание</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Категории.НомерСтроки</dataPath>
+			<field>Категории.НомерСтроки</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПолныйТекст</dataPath>
+			<field>ПолныйТекст</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Черновик</dataPath>
+			<field>Черновик</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Автор</dataPath>
+			<field>Автор</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаСоздания</dataPath>
+			<field>ДатаСоздания</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Ответственный</dataPath>
+			<field>Ответственный</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>АвторКорректировки</dataPath>
+			<field>АвторКорректировки</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Текст</dataPath>
+			<field>Текст</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	СтатьиБазыЗнаний.Ссылка КАК Ссылка,
+	СтатьиБазыЗнаний.ПометкаУдаления КАК ПометкаУдаления,
+	СтатьиБазыЗнаний.Наименование КАК Наименование,
+	СтатьиБазыЗнаний.Автор КАК Автор,
+	СтатьиБазыЗнаний.АвторКорректировки КАК АвторКорректировки,
+	СтатьиБазыЗнаний.ДатаКорректировки КАК ДатаКорректировки,
+	СтатьиБазыЗнаний.ДатаСоздания КАК ДатаСоздания,
+	СтатьиБазыЗнаний.ЗапретПубликации КАК ЗапретПубликации,
+	СтатьиБазыЗнаний.КраткоеОписание КАК КраткоеОписание,
+	СтатьиБазыЗнаний.Ответственный КАК Ответственный,
+	СтатьиБазыЗнаний.ПолныйТекст КАК ПолныйТекст,
+	СтатьиБазыЗнаний.Текст КАК Текст,
+	СтатьиБазыЗнаний.Черновик КАК Черновик,
+	СтатьиБазыЗнаний.Категории.(
+		Ссылка КАК Ссылка,
+		НомерСтроки КАК НомерСтроки,
+		Категория КАК Категория
+	) КАК Категории
+ИЗ
+	Справочник.СтатьиБазыЗнаний КАК СтатьиБазыЗнаний
+ГДЕ
+	СтатьиБазыЗнаний.Ссылка = &amp;Основание</query>
+	</dataSet>
+	<parameter>
+		<name>Основание</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Основание</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.КарточкиНоменклатуры</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+		<use>Always</use>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Ссылка</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Автор</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Категории.Категория</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">КраткоеОписание</dcsset:left>
+					<dcsset:comparisonType>Contains</dcsset:comparisonType>
+					<dcsset:right xsi:type="xs:string"/>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Наименование</dcsset:left>
+					<dcsset:comparisonType>Contains</dcsset:comparisonType>
+					<dcsset:right xsi:type="xs:string"/>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ПолныйТекст</dcsset:left>
+					<dcsset:comparisonType>Contains</dcsset:comparisonType>
+					<dcsset:right xsi:type="xs:string"/>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ДатаСоздания</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="v8:StandardBeginningDate">
+						<v8:variant xsi:type="v8:StandardBeginningDateVariant">Custom</v8:variant>
+						<v8:date>0001-01-01T00:00:00</v8:date>
+					</dcsset:right>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

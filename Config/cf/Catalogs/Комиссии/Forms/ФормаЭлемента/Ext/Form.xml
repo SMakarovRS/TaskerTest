@@ -1,0 +1,264 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="ChoiceProcessing">ОбработкаВыбора</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="FillCheckProcessingAtServer">ОбработкаПроверкиЗаполненияНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<PictureDecoration name="ДекорацияПредупреждение" id="56">
+			<Visible>false</Visible>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<TextColor>#A80000</TextColor>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Комиссия используется в документах, поэтому изменения не допустимы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTipRepresentation>ShowRight</ToolTipRepresentation>
+			<Picture>
+				<xr:Ref>CommonPicture.сстВнимание</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<FileDragMode>AsFile</FileDragMode>
+			<ContextMenu name="ДекорацияПредупреждениеКонтекстноеМеню" id="57"/>
+			<ExtendedTooltip name="ДекорацияПредупреждениеРасширеннаяПодсказка" id="58">
+				<TextColor>#A80000</TextColor>
+				<Font ref="style:NormalTextFont" kind="StyleItem"/>
+				<Title formatted="false">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Комиссия используется в документах, поэтому изменения не допустимы!</v8:content>
+					</v8:item>
+				</Title>
+			</ExtendedTooltip>
+		</PictureDecoration>
+		<UsualGroup name="ГруппаШапка" id="59">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="60"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаЛево" id="61">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа лево</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаЛевоРасширеннаяПодсказка" id="62"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаДатаНомерПриказа" id="50">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа дата номер приказа</v8:content>
+								</v8:item>
+							</Title>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаДатаНомерПриказаРасширеннаяПодсказка" id="51"/>
+							<ChildItems>
+								<InputField name="ДатаПодписаниеПриказа" id="19">
+									<DataPath>Объект.ДатаПодписаниеПриказа</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дата</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДатаПодписаниеПриказаКонтекстноеМеню" id="20"/>
+									<ExtendedTooltip name="ДатаПодписаниеПриказаРасширеннаяПодсказка" id="21"/>
+								</InputField>
+								<InputField name="Код" id="1">
+									<DataPath>Объект.Code</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>№</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+									<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<InputField name="Организация" id="7">
+							<DataPath>Объект.Организация</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<ContextMenu name="ОрганизацияКонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="9"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаПраво" id="63">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа право</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Representation>StrongSeparation</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПравоРасширеннаяПодсказка" id="64"/>
+					<ChildItems>
+						<CheckBoxField name="КомиссияРасформирована" id="16">
+							<DataPath>Объект.КомиссияРасформирована</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Комиссия</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Tumbler</CheckBoxType>
+							<EditFormat>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>БЛ=Действующая; БИ='Не действующая'</v8:content>
+								</v8:item>
+							</EditFormat>
+							<ContextMenu name="КомиссияРасформированаКонтекстноеМеню" id="17"/>
+							<ExtendedTooltip name="КомиссияРасформированаРасширеннаяПодсказка" id="18"/>
+						</CheckBoxField>
+						<InputField name="КомиссияФункционируетПо" id="22">
+							<DataPath>Объект.КомиссияФункционируетПо</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Функционирует по</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="КомиссияФункционируетПоКонтекстноеМеню" id="23"/>
+							<ExtendedTooltip name="КомиссияФункционируетПоРасширеннаяПодсказка" id="24"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаОрганизацияФункционирует" id="54">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа организация функционирует</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОрганизацияФункционируетРасширеннаяПодсказка" id="55"/>
+		</UsualGroup>
+		<UsualGroup name="ГруппаЗаголовок" id="52">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа заголовок</v8:content>
+				</v8:item>
+			</Title>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаЗаголовокРасширеннаяПодсказка" id="53"/>
+			<ChildItems>
+				<InputField name="Наименование" id="4">
+					<DataPath>Объект.Description</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="ПодписиКомиссии" id="28">
+			<Representation>List</Representation>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Объект.ПодписиКомиссии</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ПодписиКомиссииКонтекстноеМеню" id="29"/>
+			<AutoCommandBar name="ПодписиКомиссииКоманднаяПанель" id="30"/>
+			<ExtendedTooltip name="ПодписиКомиссииРасширеннаяПодсказка" id="31"/>
+			<SearchStringAddition name="ПодписиКомиссииСтрокаПоиска" id="32">
+				<AdditionSource>
+					<Item>ПодписиКомиссии</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПодписиКомиссииСтрокаПоискаКонтекстноеМеню" id="33"/>
+				<ExtendedTooltip name="ПодписиКомиссииСтрокаПоискаРасширеннаяПодсказка" id="34"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ПодписиКомиссииСостояниеПросмотра" id="35">
+				<AdditionSource>
+					<Item>ПодписиКомиссии</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<HorizontalLocation>Left</HorizontalLocation>
+				<ContextMenu name="ПодписиКомиссииСостояниеПросмотраКонтекстноеМеню" id="36"/>
+				<ExtendedTooltip name="ПодписиКомиссииСостояниеПросмотраРасширеннаяПодсказка" id="37"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ПодписиКомиссииУправлениеПоиском" id="38">
+				<AdditionSource>
+					<Item>ПодписиКомиссии</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ПодписиКомиссииУправлениеПоискомКонтекстноеМеню" id="39"/>
+				<ExtendedTooltip name="ПодписиКомиссииУправлениеПоискомРасширеннаяПодсказка" id="40"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="OnChange">ПодписиКомиссииПриИзменении</Event>
+			</Events>
+			<ChildItems>
+				<LabelField name="ПодписиКомиссииНомерСтроки" id="41">
+					<DataPath>Объект.ПодписиКомиссии.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПодписиКомиссииНомерСтрокиКонтекстноеМеню" id="42"/>
+					<ExtendedTooltip name="ПодписиКомиссииНомерСтрокиРасширеннаяПодсказка" id="43"/>
+				</LabelField>
+				<CheckBoxField name="ПодписиКомиссииЭтоПодписьПредседателяКомиссии" id="44">
+					<DataPath>Объект.ПодписиКомиссии.ЭтоПодписьПредседателяКомиссии</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПодписиКомиссииЭтоПодписьПредседателяКомиссииКонтекстноеМеню" id="45"/>
+					<ExtendedTooltip name="ПодписиКомиссииЭтоПодписьПредседателяКомиссииРасширеннаяПодсказка" id="46"/>
+					<Events>
+						<Event name="OnChange">ПодписиКомиссииЭтоПодписьПредседателяКомиссииПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<InputField name="ПодписиКомиссииПодписьЧленаКомиссии" id="47">
+					<DataPath>Объект.ПодписиКомиссии.ПодписьЧленаКомиссии</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПодписиКомиссииПодписьЧленаКомиссииКонтекстноеМеню" id="48"/>
+					<ExtendedTooltip name="ПодписиКомиссииПодписьЧленаКомиссииРасширеннаяПодсказка" id="49"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.Комиссии</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

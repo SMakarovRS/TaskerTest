@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Ссылка</dataPath>
+			<field>Ссылка</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Дата</dataPath>
+			<field>Дата</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Подразделение</dataPath>
+			<field>Подразделение</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номер</dataPath>
+			<field>Номер</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация</dataPath>
+			<field>Организация</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Проведен</dataPath>
+			<field>Проведен</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТекущийИсполнитель</dataPath>
+			<field>ТекущийИсполнитель</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Выполнено</dataPath>
+			<field>Выполнено</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КарточкаНоменклатуры</dataPath>
+			<field>КарточкаНоменклатуры</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Приоритет</dataPath>
+			<field>Приоритет</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Процесс</dataPath>
+			<field>Процесс</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СпособСоздания</dataPath>
+			<field>СпособСоздания</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТекущийЭтап</dataPath>
+			<field>ТекущийЭтап</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Инициатор</dataPath>
+			<field>Инициатор</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Тема</dataPath>
+			<field>Тема</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОценкаВыполнения</dataPath>
+			<field>ОценкаВыполнения</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>SLA</dataPath>
+			<field>SLA</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Сервис</dataPath>
+			<field>Сервис</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаСоздания</dataPath>
+			<field>ДатаСоздания</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>МестоХранения</dataPath>
+			<field>МестоХранения</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Категория</dataPath>
+			<field>Категория</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Проект</dataPath>
+			<field>Проект</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаЗавершения</dataPath>
+			<field>ДатаЗавершения</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаВыполнения</dataPath>
+			<field>ДатаВыполнения</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Завершено</dataPath>
+			<field>Завершено</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПометкаУдаления</dataPath>
+			<field>ПометкаУдаления</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Клиент</dataPath>
+			<field>Клиент</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КрайняяДатаВыполнения</dataPath>
+			<field>КрайняяДатаВыполнения</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаНазначенияИсполнителя</dataPath>
+			<field>ДатаНазначенияИсполнителя</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>УслугаНедоступна</dataPath>
+			<field>УслугаНедоступна</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Услуга</dataPath>
+			<field>Услуга</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Спринт</dataPath>
+			<field>Спринт</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаВходящегоДокумента</dataPath>
+			<field>ДатаВходящегоДокумента</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НомерВходящегоДокумента</dataPath>
+			<field>НомерВходящегоДокумента</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+    Задание.Ссылка КАК Ссылка,
+    Задание.Номер КАК Номер,
+    Задание.Дата КАК Дата,
+    Задание.Проведен КАК Проведен,
+    Задание.SLA КАК SLA,
+    Задание.Выполнено КАК Выполнено,
+    Задание.Завершено КАК Завершено,
+    Задание.ДатаНазначенияИсполнителя КАК ДатаНазначенияИсполнителя,
+    Задание.ДатаВыполнения КАК ДатаВыполнения,
+    Задание.ДатаЗавершения КАК ДатаЗавершения,
+    Задание.Инициатор КАК Инициатор,
+    Задание.КарточкаНоменклатуры КАК КарточкаНоменклатуры,
+    Задание.Категория КАК Категория,
+    Задание.КрайняяДатаВыполнения КАК КрайняяДатаВыполнения,
+    Задание.МестоХранения КАК МестоХранения,
+    Задание.Организация КАК Организация,
+    Задание.Клиент КАК Клиент,
+    Задание.ОценкаВыполнения КАК ОценкаВыполнения,
+    Задание.Подразделение КАК Подразделение,
+    Задание.Приоритет КАК Приоритет,
+    Задание.Проект КАК Проект,
+    Задание.Процесс КАК Процесс,
+    Задание.Сервис КАК Сервис,
+    Задание.СпособСоздания КАК СпособСоздания,
+    Задание.ТекущийИсполнитель КАК ТекущийИсполнитель,
+    Задание.ТекущийЭтап КАК ТекущийЭтап,
+    Задание.ДатаСоздания КАК ДатаСоздания,
+    Задание.Тема КАК Тема,
+    Задание.ПометкаУдаления КАК ПометкаУдаления,
+    Задание.Услуга КАК Услуга,
+    Задание.УслугаНедоступна КАК УслугаНедоступна,
+    Задание.Спринт КАК Спринт,
+    Задание.ДатаВходящегоДокумента КАК ДатаВходящегоДокумента,
+    Задание.НомерВходящегоДокумента КАК НомерВходящегоДокумента
+ИЗ
+    Документ.Задание КАК Задание</query>
+	</dataSet>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Ссылка</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">SLA</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:userSettingID>ea2200a8-eaca-466b-ad59-1df232bb8b72</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Выполнено</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+					<dcsset:userSettingID>494ce27c-be1c-4ef2-b4f1-0fcf7668654c</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Завершено</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+					<dcsset:userSettingID>7b5ceb6b-a937-4191-a701-95d7d181e6be</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Инициатор</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:userSettingID>3ad6dc3a-eacb-4afa-881b-cb166066ba46</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ТекущийИсполнитель</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:userSettingID>62b0923e-96d3-44dd-921d-a8ad8ff7a136</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ТекущийЭтап</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:userSettingID>37bde820-1a41-4a5a-a902-f19e76aec32f</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Процесс</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.Процессы.ПустаяСсылка</dcsset:right>
+					<dcsset:userSettingID>eaa67662-1d15-4ce5-84cb-5bba846d807a</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Организация</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.Организации.ПустаяСсылка</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Сервис</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.Сервисы.ПустаяСсылка</dcsset:right>
+					<dcsset:userSettingID>b7c87aa9-78fb-4f25-b58a-81dfb7d329d3</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">СпособСоздания</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.СпособыСозданияЗаданий.ПустаяСсылка</dcsset:right>
+					<dcsset:userSettingID>7b7045c1-9136-4291-bab7-129d94098c88</dcsset:userSettingID>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

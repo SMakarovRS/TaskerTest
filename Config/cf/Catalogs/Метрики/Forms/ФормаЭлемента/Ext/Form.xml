@@ -1,0 +1,268 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Width>80</Width>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<UsualGroup name="Группа6" id="104">
+			<Group>Vertical</Group>
+			<Representation>StrongSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<BackColor>web:AntiqueWhite</BackColor>
+			<ExtendedTooltip name="Группа6РасширеннаяПодсказка" id="105"/>
+			<ChildItems>
+				<UsualGroup name="Группа1" id="28">
+					<Group>AlwaysHorizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="29"/>
+					<ChildItems>
+						<InputField name="Родитель" id="62">
+							<DataPath>Объект.Parent</DataPath>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<ContextMenu name="РодительКонтекстноеМеню" id="63"/>
+							<ExtendedTooltip name="РодительРасширеннаяПодсказка" id="64"/>
+						</InputField>
+						<InputField name="Код" id="65">
+							<DataPath>Объект.Code</DataPath>
+							<ContextMenu name="КодКонтекстноеМеню" id="66"/>
+							<ExtendedTooltip name="КодРасширеннаяПодсказка" id="67"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Группа4" id="76">
+					<Group>AlwaysHorizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="77"/>
+					<ChildItems>
+						<InputField name="Наименование" id="4">
+							<DataPath>Объект.Description</DataPath>
+							<DefaultItem>true</DefaultItem>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<InputHint>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Количество вовремя выполненных заданий</v8:content>
+								</v8:item>
+							</InputHint>
+							<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+						</InputField>
+						<InputField name="Идентификатор" id="109">
+							<DataPath>Объект.Идентификатор</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<ContextMenu name="ИдентификаторКонтекстноеМеню" id="110"/>
+							<ExtendedTooltip name="ИдентификаторРасширеннаяПодсказка" id="111"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Группа2" id="30">
+					<Group>AlwaysHorizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="31"/>
+					<ChildItems>
+						<InputField name="ЕдиницаИзмерения" id="19">
+							<DataPath>Объект.ЕдиницаИзмерения</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Ед.изм.</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<Width>8</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<InputHint>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>шт.</v8:content>
+								</v8:item>
+							</InputHint>
+							<ContextMenu name="ЕдиницаИзмеренияКонтекстноеМеню" id="20"/>
+							<ExtendedTooltip name="ЕдиницаИзмеренияРасширеннаяПодсказка" id="21"/>
+						</InputField>
+						<InputField name="ЗначениеПоУмолчанию" id="93">
+							<DataPath>Объект.ЗначениеПоУмолчанию</DataPath>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ContextMenu name="ЗначениеПоУмолчаниюКонтекстноеМеню" id="94"/>
+							<ExtendedTooltip name="ЗначениеПоУмолчаниюРасширеннаяПодсказка" id="95"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="Страницы" id="32">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="33"/>
+			<ChildItems>
+				<Page name="СтраницаИзмерения" id="38">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Измерения</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница измерения</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Picture>
+						<xr:Ref>StdPicture.Dimension</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<TitleDataPath>Объект.Измерения.RowsCount</TitleDataPath>
+					<ExtendedTooltip name="СтраницаИзмеренияРасширеннаяПодсказка" id="39"/>
+					<ChildItems>
+						<Table name="Измерения" id="40">
+							<ChangeRowOrder>false</ChangeRowOrder>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<DataPath>Объект.Измерения</DataPath>
+							<CommandSet>
+								<ExcludedCommand>CancelSearch</ExcludedCommand>
+								<ExcludedCommand>Change</ExcludedCommand>
+								<ExcludedCommand>Copy</ExcludedCommand>
+								<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+								<ExcludedCommand>EndEdit</ExcludedCommand>
+								<ExcludedCommand>Find</ExcludedCommand>
+								<ExcludedCommand>MoveDown</ExcludedCommand>
+								<ExcludedCommand>MoveUp</ExcludedCommand>
+								<ExcludedCommand>OutputList</ExcludedCommand>
+								<ExcludedCommand>SelectAll</ExcludedCommand>
+								<ExcludedCommand>ShowMultipleSelection</ExcludedCommand>
+								<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+								<ExcludedCommand>SortListAsc</ExcludedCommand>
+								<ExcludedCommand>SortListDesc</ExcludedCommand>
+							</CommandSet>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ИзмеренияКонтекстноеМеню" id="41"/>
+							<AutoCommandBar name="ИзмеренияКоманднаяПанель" id="42"/>
+							<ExtendedTooltip name="ИзмеренияРасширеннаяПодсказка" id="43"/>
+							<SearchStringAddition name="ИзмеренияСтрокаПоиска" id="44">
+								<AdditionSource>
+									<Item>Измерения</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ИзмеренияСтрокаПоискаКонтекстноеМеню" id="45"/>
+								<ExtendedTooltip name="ИзмеренияСтрокаПоискаРасширеннаяПодсказка" id="46"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ИзмеренияСостояниеПросмотра" id="47">
+								<AdditionSource>
+									<Item>Измерения</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<HorizontalLocation>Left</HorizontalLocation>
+								<ContextMenu name="ИзмеренияСостояниеПросмотраКонтекстноеМеню" id="48"/>
+								<ExtendedTooltip name="ИзмеренияСостояниеПросмотраРасширеннаяПодсказка" id="49"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ИзмеренияУправлениеПоиском" id="50">
+								<AdditionSource>
+									<Item>Измерения</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ИзмеренияУправлениеПоискомКонтекстноеМеню" id="51"/>
+								<ExtendedTooltip name="ИзмеренияУправлениеПоискомРасширеннаяПодсказка" id="52"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="BeforeAddRow">ИзмеренияПередНачаломДобавления</Event>
+								<Event name="OnActivateRow">ИзмеренияПриАктивизацииСтроки</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="ИзмеренияНомерСтроки" id="53">
+									<DataPath>Объект.Измерения.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИзмеренияНомерСтрокиКонтекстноеМеню" id="54"/>
+									<ExtendedTooltip name="ИзмеренияНомерСтрокиРасширеннаяПодсказка" id="55"/>
+								</LabelField>
+								<InputField name="ИзмеренияТипИзмерения" id="59">
+									<DataPath>Объект.Измерения.ТипИзмерения</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<DropListButton>false</DropListButton>
+									<ChoiceButton>true</ChoiceButton>
+									<TextEdit>false</TextEdit>
+									<ContextMenu name="ИзмеренияТипИзмеренияКонтекстноеМеню" id="60"/>
+									<ExtendedTooltip name="ИзмеренияТипИзмеренияРасширеннаяПодсказка" id="61"/>
+									<Events>
+										<Event name="StartChoice">ИзмеренияТипИзмеренияНачалоВыбора</Event>
+									</Events>
+								</InputField>
+								<InputField name="ИзмеренияПредставление" id="56">
+									<DataPath>Объект.Измерения.Представление</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИзмеренияПредставлениеКонтекстноеМеню" id="57"/>
+									<ExtendedTooltip name="ИзмеренияПредставлениеРасширеннаяПодсказка" id="58"/>
+								</InputField>
+								<InputField name="ИзмеренияПодсказка" id="78">
+									<DataPath>Объект.Измерения.Подсказка</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИзмеренияПодсказкаКонтекстноеМеню" id="79"/>
+									<ExtendedTooltip name="ИзмеренияПодсказкаРасширеннаяПодсказка" id="80"/>
+								</InputField>
+								<InputField name="ИзмеренияПоУмолчанию" id="81">
+									<DataPath>Объект.Измерения.ПоУмолчанию</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИзмеренияПоУмолчаниюКонтекстноеМеню" id="82"/>
+									<ExtendedTooltip name="ИзмеренияПоУмолчаниюРасширеннаяПодсказка" id="83"/>
+								</InputField>
+								<CheckBoxField name="ИзмеренияОбязательное" id="84">
+									<DataPath>Объект.Измерения.Обязательное</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ИзмеренияОбязательноеКонтекстноеМеню" id="85"/>
+									<ExtendedTooltip name="ИзмеренияОбязательноеРасширеннаяПодсказка" id="86"/>
+								</CheckBoxField>
+								<InputField name="ИзмеренияНазначение" id="106">
+									<DataPath>Объект.Измерения.Назначение</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ClearButton>true</ClearButton>
+									<ContextMenu name="ИзмеренияНазначениеКонтекстноеМеню" id="107"/>
+									<ExtendedTooltip name="ИзмеренияНазначениеРасширеннаяПодсказка" id="108"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<InputField name="Описание" id="13">
+			<DataPath>Объект.Описание</DataPath>
+			<TitleLocation>None</TitleLocation>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<MultiLine>true</MultiLine>
+			<InputHint>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Описание (подсказка)</v8:content>
+				</v8:item>
+			</InputHint>
+			<ContextMenu name="ОписаниеКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ОписаниеРасширеннаяПодсказка" id="15"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.Метрики</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

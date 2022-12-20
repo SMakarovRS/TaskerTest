@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Subsystem uuid="77e97101-84da-4e0f-b408-05ec3b58a702">
+		<Properties>
+			<Name>СотрудникиИМестаХранения</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сотрудники и места хранения</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeInCommandInterface>true</IncludeInCommandInterface>
+			<Explanation/>
+			<Picture/>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ЗакреплениеСотрудников</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПеремещениеСотрудников</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.СнятиеЗакрепленияСотрудников</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Сотрудники</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DocumentJournal.ОтветственныеСотрудники</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.УправлениеITОтделом8УФ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.УправлениеITОтделом8УФКлиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.УправлениеITОтделом8УФКлиентСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.УправлениеITОтделом8УФПовтИсп</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.УправлениеITОтделом8УФДатыЗапретаИзменения</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.МенеджерПодсказок</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ФизическиеЛица</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ПрограммаДляЗагрузкиСотрудников</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ИспользоватьЗагрузкуСотрудников</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ЗагрузкаСотрудниковСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ЗагрузкаСотрудниковНаходитсяНаСервере</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonTemplate.ЗагрузкаСотрудниковЗУП_2_5</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.СписокIPАдресов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ЗакрепленныеСотрудники</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ScheduledJob.ЗагрузкаСотрудников</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ОтветственныеСотрудники</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ДобавлениеИзменениеСотрудников</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ЧтениеСотрудников</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.СписокСотрудников</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.СозданиеИзменениеМестХраненияПриИзмененииСотрудников</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.СозданиеИзменениеМестХраненияПриИзмененииСотрудников</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonTemplate.ЗагрузкаСотрудниковЗУП_3_1</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonTemplate.ЗагрузкаСотрудниковБП_3_0</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ВидыПричинОтклоненияОтГрафика</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects/>
+	</Subsystem>
+</MetaDataObject>

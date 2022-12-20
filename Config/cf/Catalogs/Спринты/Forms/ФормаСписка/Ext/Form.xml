@@ -1,0 +1,477 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаПоказыватьТолькоОткрытыеСпринты" id="31">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ПоказыватьТолькоВключаяЗавершенныеСпринты</CommandName>
+				<ExtendedTooltip name="ФормаПоказыватьТолькоОткрытыеСпринтыРасширеннаяПодсказка" id="32"/>
+			</Button>
+			<ButtonGroup name="ФормаГруппаПереносы" id="57">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Форма группа переносы</v8:content>
+					</v8:item>
+				</Title>
+				<Representation>Compact</Representation>
+				<ExtendedTooltip name="ФормаГруппаПереносыРасширеннаяПодсказка" id="58"/>
+				<ChildItems>
+					<Button name="ФормаПеренестиВсеЗаданияДругогоСпринтаВТекущийСпринт" id="45">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ПеренестиНевыполненныеЗаданияДругогоСпринтаВТекущийСпринт</CommandName>
+						<ExtendedTooltip name="ФормаПеренестиВсеЗаданияДругогоСпринтаВТекущийСпринтРасширеннаяПодсказка" id="46"/>
+					</Button>
+					<Button name="ФормаПеренестиВсеЗаданияТекущегоСпринтаВДругойСпринт" id="47">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ПеренестиНевыполненныеЗаданияТекущегоСпринтаВДругойСпринт</CommandName>
+						<ExtendedTooltip name="ФормаПеренестиВсеЗаданияТекущегоСпринтаВДругойСпринтРасширеннаяПодсказка" id="48"/>
+					</Button>
+				</ChildItems>
+			</ButtonGroup>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="СписокКомпоновщикНастроекПользовательскиеНастройки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа пользовательских настроек</v8:content>
+				</v8:item>
+			</Title>
+			<VerticalStretch>false</VerticalStretch>
+			<Group>Vertical</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="СписокКомпоновщикНастроекПользовательскиеНастройкиРасширеннаяПодсказка" id="2"/>
+		</UsualGroup>
+		<Table name="Список" id="3">
+			<CommandBarLocation>None</CommandBarLocation>
+			<DefaultItem>true</DefaultItem>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<InitialTreeView>ExpandTopLevel</InitialTreeView>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Список</DataPath>
+			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список</v8:content>
+				</v8:item>
+			</Title>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<UserSettingsGroup>СписокКомпоновщикНастроекПользовательскиеНастройки</UserSettingsGroup>
+			<ContextMenu name="СписокКонтекстноеМеню" id="4">
+				<ChildItems>
+					<Button name="СписокОткрытьСпринт" id="43">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ОткрытьСпринт</CommandName>
+						<ExtendedTooltip name="СписокОткрытьСпринтРасширеннаяПодсказка" id="44"/>
+					</Button>
+					<Button name="СписокЗавершитьСпринт" id="41">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ЗавершитьСпринт</CommandName>
+						<ExtendedTooltip name="СписокЗавершитьСпринтРасширеннаяПодсказка" id="42"/>
+					</Button>
+				</ChildItems>
+			</ContextMenu>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="5"/>
+			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="6"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="7">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="8"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="9"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="10">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<HorizontalLocation>Left</HorizontalLocation>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="11"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="12"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокУправлениеПоиском" id="13">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="14"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="15"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<CheckBoxField name="Завершен" id="22">
+					<DataPath>Список.Завершен</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ЗавершенКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="ЗавершенРасширеннаяПодсказка" id="24"/>
+				</CheckBoxField>
+				<LabelField name="Наименование" id="16">
+					<DataPath>Список.Наименование</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="18"/>
+				</LabelField>
+				<LabelField name="ДатаНачала" id="35">
+					<DataPath>Список.ДатаНачала</DataPath>
+					<Width>11</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<ContextMenu name="ДатаНачалаКонтекстноеМеню" id="36"/>
+					<ExtendedTooltip name="ДатаНачалаРасширеннаяПодсказка" id="37"/>
+				</LabelField>
+				<LabelField name="ДатаОкончания" id="38">
+					<DataPath>Список.ДатаОкончания</DataPath>
+					<Width>12</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<ContextMenu name="ДатаОкончанияКонтекстноеМеню" id="39"/>
+					<ExtendedTooltip name="ДатаОкончанияРасширеннаяПодсказка" id="40"/>
+				</LabelField>
+				<LabelField name="Добавлено" id="66">
+					<DataPath>Список.Добавлено</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Добавлено заданий</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HeaderPicture>
+						<xr:Ref>CommonPicture.сстЗавтра</xr:Ref>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</HeaderPicture>
+					<Width>7</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ContextMenu name="ДобавленоКонтекстноеМеню" id="67"/>
+					<ExtendedTooltip name="ДобавленоРасширеннаяПодсказка" id="68"/>
+				</LabelField>
+				<LabelField name="Выполнено" id="25">
+					<DataPath>Список.Выполнено</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выполнено заданий</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HeaderPicture>
+						<xr:Ref>CommonPicture.сстГалочка</xr:Ref>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</HeaderPicture>
+					<Width>7</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ContextMenu name="ВыполненоКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="ВыполненоРасширеннаяПодсказка" id="27"/>
+				</LabelField>
+				<LabelField name="Всего" id="28">
+					<DataPath>Список.Всего</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Всего</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>None</TitleLocation>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Всего заданий</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HeaderPicture>
+						<xr:Ref>CommonPicture.сстДиаграмма</xr:Ref>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</HeaderPicture>
+					<Width>7</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ContextMenu name="ВсегоКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="ВсегоРасширеннаяПодсказка" id="30"/>
+				</LabelField>
+				<LabelField name="БаллыДобавлено" id="59">
+					<DataPath>Список.БаллыДобавлено</DataPath>
+					<Width>10</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ContextMenu name="БаллыДобавленоКонтекстноеМеню" id="60"/>
+					<ExtendedTooltip name="БаллыДобавленоРасширеннаяПодсказка" id="61"/>
+				</LabelField>
+				<LabelField name="БаллыВыполнено" id="69">
+					<DataPath>Список.БаллыВыполнено</DataPath>
+					<Width>10</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ContextMenu name="БаллыВыполненоКонтекстноеМеню" id="70"/>
+					<ExtendedTooltip name="БаллыВыполненоРасширеннаяПодсказка" id="71"/>
+				</LabelField>
+				<LabelField name="БаллыВсего" id="52">
+					<DataPath>Список.БаллыВсего</DataPath>
+					<Width>10</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ContextMenu name="БаллыВсегоКонтекстноеМеню" id="53"/>
+					<ExtendedTooltip name="БаллыВсегоРасширеннаяПодсказка" id="54"/>
+				</LabelField>
+				<LabelField name="Ссылка" id="49">
+					<DataPath>Список.Ссылка</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="СсылкаКонтекстноеМеню" id="50"/>
+					<ExtendedTooltip name="СсылкаРасширеннаяПодсказка" id="51"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>Список.Ссылка</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	СправочникСпринты.Ссылка КАК Ссылка,
+	СправочникСпринты.ПометкаУдаления КАК ПометкаУдаления,
+	СправочникСпринты.Родитель КАК Родитель,
+	СправочникСпринты.ЭтоГруппа КАК ЭтоГруппа,
+	СправочникСпринты.Код КАК Код,
+	СправочникСпринты.Наименование КАК Наименование,
+	СправочникСпринты.ДатаНачала КАК ДатаНачала,
+	СправочникСпринты.ДатаОкончания КАК ДатаОкончания,
+	СправочникСпринты.Завершен КАК Завершен,
+	СправочникСпринты.Предопределенный КАК Предопределенный,
+	СправочникСпринты.ИмяПредопределенныхДанных КАК ИмяПредопределенныхДанных,
+	ЕСТЬNULL(ДобавленныеСпринты.Добавлено, 0) КАК Добавлено,
+	ЕСТЬNULL(ВыполненныеВСпринте.Выполнено, 0) КАК Выполнено,
+	ЕСТЬNULL(ВыполненныеВСпринте.Всего, 0) КАК Всего,
+	ЕСТЬNULL(ВыполненныеВСпринте.БаллыВсего, 0) КАК БаллыВсего,
+	ЕСТЬNULL(ДобавленныеСпринты.БаллыДобавлено, 0) КАК БаллыДобавлено,
+	ЕСТЬNULL(ВыполненныеВСпринте.БаллыВыполнено, 0) КАК БаллыВыполнено
+ИЗ
+	Справочник.Спринты КАК СправочникСпринты
+		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+			Задание.Спринт КАК Спринт,
+			СУММА(ВЫБОР
+					КОГДА Задание.Выполнено = ИСТИНА
+						ТОГДА 1
+					ИНАЧЕ 0
+				КОНЕЦ) КАК Выполнено,
+			СУММА(1) КАК Всего,
+			СУММА(Задание.Баллы) КАК БаллыВсего,
+			СУММА(ВЫБОР
+					КОГДА Задание.Выполнено = ИСТИНА
+						ТОГДА Задание.Баллы
+					ИНАЧЕ 0
+				КОНЕЦ) КАК БаллыВыполнено
+		ИЗ
+			Документ.Задание КАК Задание
+		
+		СГРУППИРОВАТЬ ПО
+			Задание.Спринт) КАК ВыполненныеВСпринте
+		ПО СправочникСпринты.Ссылка = ВыполненныеВСпринте.Спринт
+		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+			Задание.СпринтСоздания КАК СпринтСоздания,
+			СУММА(1) КАК Добавлено,
+			СУММА(Задание.Баллы) КАК БаллыДобавлено
+		ИЗ
+			Документ.Задание КАК Задание
+		
+		СГРУППИРОВАТЬ ПО
+			Задание.СпринтСоздания) КАК ДобавленныеСпринты
+		ПО СправочникСпринты.Ссылка = ДобавленныеСпринты.СпринтСоздания</QueryText>
+				<MainTable>Catalog.Спринты</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>ДатаНачала</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:item>
+							<dcsset:selection/>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">Выполнено</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="dcscor:Field">Всего</dcsset:right>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">Завершен</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>ЦветТекста</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:Color">#008000</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:selection/>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">Всего</dcsset:left>
+									<dcsset:comparisonType>Greater</dcsset:comparisonType>
+									<dcsset:right xsi:type="dcscor:Field">Выполнено</dcsset:right>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">Завершен</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>ЦветТекста</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:Color">#993300</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПоказыватьТолькоВключаяЗавершенныеСпринты" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показывать включая завершенные спринты</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показывать включая завершенные спринты</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ВосклицательныйЗнакСерый</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ПоказыватьТолькоВключаяЗавершенныеСпринты</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЗавершитьСпринт" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Завершить спринт</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Завершить спринт</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.сстШарБелый</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ОткрытьСпринт</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьСпринт" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть спринт</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть спринт</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.сстШарЗеленый</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ОткрытьСпринт</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПеренестиНевыполненныеЗаданияДругогоСпринтаВТекущийСпринт" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перенести не выполненные задания другого спринта в текущий спринт</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перенести не выполненные задания другого спринта в текущий спринт</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.СтрелкаВнизЗеленая</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ПеренестиНевыполненныеЗаданияДругогоСпринтаВТекущийСпринт</Action>
+		</Command>
+		<Command name="ПеренестиНевыполненныеЗаданияТекущегоСпринтаВДругойСпринт" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перенести не выполненные задания текущего спринта в другой спринт</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перенести не выполненные задания текущего спринта в другой спринт</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.СтрелкаВверхКрасная</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ПеренестиНевыполненныеЗаданияТекущегоСпринтаВДругойСпринт</Action>
+		</Command>
+	</Commands>
+</Form>

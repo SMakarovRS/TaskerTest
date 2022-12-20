@@ -1,0 +1,637 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Команда Telegram</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаБотАктивно" id="27">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Бот, активно</v8:content>
+				</v8:item>
+			</Title>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаБотАктивноРасширеннаяПодсказка" id="28"/>
+			<ChildItems>
+				<InputField name="Владелец" id="4">
+					<DataPath>Объект.Owner</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Бот</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<ContextMenu name="ВладелецКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="ВладелецРасширеннаяПодсказка" id="6"/>
+				</InputField>
+				<InputField name="Родитель" id="117">
+					<DataPath>Объект.Parent</DataPath>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<ContextMenu name="РодительКонтекстноеМеню" id="118"/>
+					<ExtendedTooltip name="РодительРасширеннаяПодсказка" id="119"/>
+				</InputField>
+				<CheckBoxField name="Активно" id="24">
+					<DataPath>Объект.Активность</DataPath>
+					<ToolTipRepresentation>Button</ToolTipRepresentation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="АктивноКонтекстноеМеню" id="25"/>
+					<ExtendedTooltip name="АктивноРасширеннаяПодсказка" id="26"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="НаименованиеПриоритет" id="181">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Наименование приоритет</v8:content>
+				</v8:item>
+			</Title>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="НаименованиеПриоритетРасширеннаяПодсказка" id="182"/>
+			<ChildItems>
+				<InputField name="Наименование" id="1">
+					<DataPath>Объект.Description</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="3"/>
+				</InputField>
+				<InputField name="Приоритет" id="156">
+					<DataPath>Объект.Приоритет</DataPath>
+					<ToolTipRepresentation>Button</ToolTipRepresentation>
+					<SpinButton>true</SpinButton>
+					<ContextMenu name="ПриоритетКонтекстноеМеню" id="157"/>
+					<ExtendedTooltip name="ПриоритетРасширеннаяПодсказка" id="158"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="Страницы" id="51">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="52"/>
+			<ChildItems>
+				<Page name="СтраницаВходящийТекстИ" id="120">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Условия И</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница входящий текст И</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Picture>
+						<xr:Ref>CommonPicture.ВставитьТекст</xr:Ref>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="СтраницаВходящийТекстИРасширеннаяПодсказка" id="121"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаВходящийТекстИ" id="183">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Входящий текст</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Behavior>Collapsible</Behavior>
+							<CollapsedRepresentationTitle>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Входящий текст</v8:content>
+								</v8:item>
+							</CollapsedRepresentationTitle>
+							<ControlRepresentation>Picture</ControlRepresentation>
+							<Representation>None</Representation>
+							<TitleDataPath>Объект.ВходящийТекстИ.RowsCount</TitleDataPath>
+							<ExtendedTooltip name="ГруппаВходящийТекстИРасширеннаяПодсказка" id="184"/>
+							<ChildItems>
+								<Table name="ВходящийТекстИ" id="122">
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<DataPath>Объект.ВходящийТекстИ</DataPath>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="ВходящийТекстИКонтекстноеМеню" id="123"/>
+									<AutoCommandBar name="ВходящийТекстИКоманднаяПанель" id="124"/>
+									<ExtendedTooltip name="ВходящийТекстИРасширеннаяПодсказка" id="125"/>
+									<SearchStringAddition name="ВходящийТекстИСтрокаПоиска" id="126">
+										<AdditionSource>
+											<Item>ВходящийТекстИ</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ВходящийТекстИСтрокаПоискаКонтекстноеМеню" id="127"/>
+										<ExtendedTooltip name="ВходящийТекстИСтрокаПоискаРасширеннаяПодсказка" id="128"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ВходящийТекстИСостояниеПросмотра" id="129">
+										<AdditionSource>
+											<Item>ВходящийТекстИ</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<HorizontalLocation>Left</HorizontalLocation>
+										<ContextMenu name="ВходящийТекстИСостояниеПросмотраКонтекстноеМеню" id="130"/>
+										<ExtendedTooltip name="ВходящийТекстИСостояниеПросмотраРасширеннаяПодсказка" id="131"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ВходящийТекстИУправлениеПоиском" id="132">
+										<AdditionSource>
+											<Item>ВходящийТекстИ</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ВходящийТекстИУправлениеПоискомКонтекстноеМеню" id="133"/>
+										<ExtendedTooltip name="ВходящийТекстИУправлениеПоискомРасширеннаяПодсказка" id="134"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="OnEditEnd">ВходящийТекстИПриОкончанииРедактирования</Event>
+										<Event name="OnActivateRow">ВходящийТекстИПриАктивизацииСтроки</Event>
+										<Event name="AfterDeleteRow">ВходящийТекстИПослеУдаления</Event>
+									</Events>
+									<ChildItems>
+										<LabelField name="ВходящийТекстИНомерСтроки" id="147">
+											<DataPath>Объект.ВходящийТекстИ.LineNumber</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ВходящийТекстИНомерСтрокиКонтекстноеМеню" id="148"/>
+											<ExtendedTooltip name="ВходящийТекстИНомерСтрокиРасширеннаяПодсказка" id="149"/>
+										</LabelField>
+										<InputField name="ВходящийТекстИВидСравнения" id="150">
+											<DataPath>Объект.ВходящийТекстИ.ВидСравнения</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ВходящийТекстИВидСравненияКонтекстноеМеню" id="151"/>
+											<ExtendedTooltip name="ВходящийТекстИВидСравненияРасширеннаяПодсказка" id="152"/>
+											<Events>
+												<Event name="OnChange">ВходящийТекстИВидСравненияПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="ВходящийТекстИЗначение" id="153">
+											<DataPath>Объект.ВходящийТекстИ.Значение</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ВходящийТекстИЗначениеКонтекстноеМеню" id="154"/>
+											<ExtendedTooltip name="ВходящийТекстИЗначениеРасширеннаяПодсказка" id="155"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+								<LabelDecoration name="ПодсказкаВходящийТекст1" id="144">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<TextColor>style:ЦветПодписи</TextColor>
+									<Font ref="style:ШрифтМикротекста" kind="StyleItem"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Текст, который пользователь введет боту Telegram. Команда сработает, если  все условия на этой вкладке будут выполняться (условие "И").</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ПодсказкаВходящийТекст1КонтекстноеМеню" id="145"/>
+									<ExtendedTooltip name="ПодсказкаВходящийТекст1РасширеннаяПодсказка" id="146"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаПараметрыИ" id="185">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Параметры</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Behavior>Collapsible</Behavior>
+							<ControlRepresentation>Picture</ControlRepresentation>
+							<Representation>None</Representation>
+							<TitleDataPath>Объект.УсловияИ.RowsCount</TitleDataPath>
+							<ExtendedTooltip name="ГруппаПараметрыИРасширеннаяПодсказка" id="186"/>
+							<ChildItems>
+								<Table name="УсловияИ" id="59">
+									<HeightInTableRows>3</HeightInTableRows>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<DataPath>Объект.УсловияИ</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Условия</v8:content>
+										</v8:item>
+									</Title>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="УсловияИКонтекстноеМеню" id="60"/>
+									<AutoCommandBar name="УсловияИКоманднаяПанель" id="61"/>
+									<ExtendedTooltip name="УсловияИРасширеннаяПодсказка" id="62"/>
+									<SearchStringAddition name="УсловияИСтрокаПоиска" id="63">
+										<AdditionSource>
+											<Item>УсловияИ</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="УсловияИСтрокаПоискаКонтекстноеМеню" id="64"/>
+										<ExtendedTooltip name="УсловияИСтрокаПоискаРасширеннаяПодсказка" id="65"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="УсловияИСостояниеПросмотра" id="66">
+										<AdditionSource>
+											<Item>УсловияИ</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<HorizontalLocation>Left</HorizontalLocation>
+										<ContextMenu name="УсловияИСостояниеПросмотраКонтекстноеМеню" id="67"/>
+										<ExtendedTooltip name="УсловияИСостояниеПросмотраРасширеннаяПодсказка" id="68"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="УсловияИУправлениеПоиском" id="69">
+										<AdditionSource>
+											<Item>УсловияИ</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="УсловияИУправлениеПоискомКонтекстноеМеню" id="70"/>
+										<ExtendedTooltip name="УсловияИУправлениеПоискомРасширеннаяПодсказка" id="71"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="OnEditEnd">УсловияИПриОкончанииРедактирования</Event>
+										<Event name="AfterDeleteRow">УсловияИПослеУдаления</Event>
+									</Events>
+									<ChildItems>
+										<LabelField name="Условия1НомерСтроки" id="72">
+											<DataPath>Объект.УсловияИ.LineNumber</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="Условия1НомерСтрокиКонтекстноеМеню" id="73"/>
+											<ExtendedTooltip name="Условия1НомерСтрокиРасширеннаяПодсказка" id="74"/>
+										</LabelField>
+										<InputField name="Условия1Условие" id="75">
+											<DataPath>Объект.УсловияИ.Условие</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="Условия1УсловиеКонтекстноеМеню" id="76"/>
+											<ExtendedTooltip name="Условия1УсловиеРасширеннаяПодсказка" id="77"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+								<LabelDecoration name="ПодсказкаУсловие" id="100">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<TextColor>style:ЦветПодписи</TextColor>
+									<Font ref="style:ШрифтМикротекста" kind="StyleItem"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Если все условия параметров будет выполняться, команда сработает и перейдет к действиям(условие "И").</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ПодсказкаУсловиеКонтекстноеМеню" id="101"/>
+									<ExtendedTooltip name="ПодсказкаУсловиеРасширеннаяПодсказка" id="102"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаВходящийТекстИЛИ" id="53">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Условия ИЛИ</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница входящий текст ИЛИ</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Picture>
+						<xr:Ref>CommonPicture.ВставитьТекст</xr:Ref>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="СтраницаВходящийТекстИЛИРасширеннаяПодсказка" id="54"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаВходящийТекстИЛИ" id="187">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Входящий текст</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Behavior>Collapsible</Behavior>
+							<CollapsedRepresentationTitle>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Входящий текст</v8:content>
+								</v8:item>
+							</CollapsedRepresentationTitle>
+							<ControlRepresentation>Picture</ControlRepresentation>
+							<Representation>None</Representation>
+							<TitleDataPath>Объект.ВходящийТекстИЛИ.RowsCount</TitleDataPath>
+							<ExtendedTooltip name="ГруппаВходящийТекстИЛИРасширеннаяПодсказка" id="188"/>
+							<ChildItems>
+								<Table name="ВходящийТекстИЛИ" id="29">
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<DataPath>Объект.ВходящийТекстИЛИ</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Входящий текст (ИЛИ)</v8:content>
+										</v8:item>
+									</Title>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="ВходящийТекстИЛИКонтекстноеМеню" id="30"/>
+									<AutoCommandBar name="ВходящийТекстИЛИКоманднаяПанель" id="31"/>
+									<ExtendedTooltip name="ВходящийТекстИЛИРасширеннаяПодсказка" id="32"/>
+									<SearchStringAddition name="ВходящийТекстИЛИСтрокаПоиска" id="33">
+										<AdditionSource>
+											<Item>ВходящийТекстИЛИ</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ВходящийТекстИЛИСтрокаПоискаКонтекстноеМеню" id="34"/>
+										<ExtendedTooltip name="ВходящийТекстИЛИСтрокаПоискаРасширеннаяПодсказка" id="35"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ВходящийТекстИЛИСостояниеПросмотра" id="36">
+										<AdditionSource>
+											<Item>ВходящийТекстИЛИ</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<HorizontalLocation>Left</HorizontalLocation>
+										<ContextMenu name="ВходящийТекстИЛИСостояниеПросмотраКонтекстноеМеню" id="37"/>
+										<ExtendedTooltip name="ВходящийТекстИЛИСостояниеПросмотраРасширеннаяПодсказка" id="38"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ВходящийТекстИЛИУправлениеПоиском" id="39">
+										<AdditionSource>
+											<Item>ВходящийТекстИЛИ</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ВходящийТекстИЛИУправлениеПоискомКонтекстноеМеню" id="40"/>
+										<ExtendedTooltip name="ВходящийТекстИЛИУправлениеПоискомРасширеннаяПодсказка" id="41"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="OnEditEnd">ВходящийТекстИЛИПриОкончанииРедактирования</Event>
+										<Event name="OnActivateRow">ВходящийТекстИЛИПриАктивизацииСтроки</Event>
+										<Event name="AfterDeleteRow">ВходящийТекстИЛИПослеУдаления</Event>
+									</Events>
+									<ChildItems>
+										<LabelField name="ВходящийТекстИЛИНомерСтроки" id="42">
+											<DataPath>Объект.ВходящийТекстИЛИ.LineNumber</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ВходящийТекстИЛИНомерСтрокиКонтекстноеМеню" id="43"/>
+											<ExtendedTooltip name="ВходящийТекстИЛИНомерСтрокиРасширеннаяПодсказка" id="44"/>
+										</LabelField>
+										<InputField name="ВходящийТекстИЛИВидСравнения" id="45">
+											<DataPath>Объект.ВходящийТекстИЛИ.ВидСравнения</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ВходящийТекстИЛИВидСравненияКонтекстноеМеню" id="46"/>
+											<ExtendedTooltip name="ВходящийТекстИЛИВидСравненияРасширеннаяПодсказка" id="47"/>
+											<Events>
+												<Event name="OnChange">ВходящийТекстИЛИВидСравненияПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="ВходящийТекстИЛИЗначение" id="48">
+											<DataPath>Объект.ВходящийТекстИЛИ.Значение</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ВходящийТекстИЛИЗначениеКонтекстноеМеню" id="49"/>
+											<ExtendedTooltip name="ВходящийТекстИЛИЗначениеРасширеннаяПодсказка" id="50"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+								<LabelDecoration name="ПодсказкаВходящийТекст" id="97">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<TextColor>style:ЦветПодписи</TextColor>
+									<Font ref="style:ШрифтМикротекста" kind="StyleItem"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Текст, который пользователь введет боту Telegram. Команда сработает, если хотя бы одно из условий на этой вкладке будет выполняться (условие "ИЛИ").</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ПодсказкаВходящийТекстКонтекстноеМеню" id="98"/>
+									<ExtendedTooltip name="ПодсказкаВходящийТекстРасширеннаяПодсказка" id="99"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаПараметрыИЛИ" id="189">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Параметры</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Behavior>Collapsible</Behavior>
+							<ControlRepresentation>Picture</ControlRepresentation>
+							<Representation>None</Representation>
+							<TitleDataPath>Объект.УсловияИЛИ.RowsCount</TitleDataPath>
+							<ExtendedTooltip name="ГруппаПараметрыИЛИРасширеннаяПодсказка" id="190"/>
+							<ChildItems>
+								<Table name="УсловияИЛИ" id="162">
+									<HeightInTableRows>3</HeightInTableRows>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<DataPath>Объект.УсловияИЛИ</DataPath>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="УсловияИЛИКонтекстноеМеню" id="163"/>
+									<AutoCommandBar name="УсловияИЛИКоманднаяПанель" id="164"/>
+									<ExtendedTooltip name="УсловияИЛИРасширеннаяПодсказка" id="165"/>
+									<SearchStringAddition name="УсловияИЛИСтрокаПоиска" id="166">
+										<AdditionSource>
+											<Item>УсловияИЛИ</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="УсловияИЛИСтрокаПоискаКонтекстноеМеню" id="167"/>
+										<ExtendedTooltip name="УсловияИЛИСтрокаПоискаРасширеннаяПодсказка" id="168"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="УсловияИЛИСостояниеПросмотра" id="169">
+										<AdditionSource>
+											<Item>УсловияИЛИ</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<HorizontalLocation>Left</HorizontalLocation>
+										<ContextMenu name="УсловияИЛИСостояниеПросмотраКонтекстноеМеню" id="170"/>
+										<ExtendedTooltip name="УсловияИЛИСостояниеПросмотраРасширеннаяПодсказка" id="171"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="УсловияИЛИУправлениеПоиском" id="172">
+										<AdditionSource>
+											<Item>УсловияИЛИ</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="УсловияИЛИУправлениеПоискомКонтекстноеМеню" id="173"/>
+										<ExtendedTooltip name="УсловияИЛИУправлениеПоискомРасширеннаяПодсказка" id="174"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="OnEditEnd">УсловияИЛИПриОкончанииРедактирования</Event>
+										<Event name="AfterDeleteRow">УсловияИЛИПослеУдаления</Event>
+									</Events>
+									<ChildItems>
+										<LabelField name="УсловияИЛИНомерСтроки" id="175">
+											<DataPath>Объект.УсловияИЛИ.LineNumber</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="УсловияИЛИНомерСтрокиКонтекстноеМеню" id="176"/>
+											<ExtendedTooltip name="УсловияИЛИНомерСтрокиРасширеннаяПодсказка" id="177"/>
+										</LabelField>
+										<InputField name="УсловияИЛИУсловие" id="178">
+											<DataPath>Объект.УсловияИЛИ.Условие</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="УсловияИЛИУсловиеКонтекстноеМеню" id="179"/>
+											<ExtendedTooltip name="УсловияИЛИУсловиеРасширеннаяПодсказка" id="180"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+								<LabelDecoration name="ПодсказкаУсловие1" id="159">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<TextColor>style:ЦветПодписи</TextColor>
+									<Font ref="style:ШрифтМикротекста" kind="StyleItem"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Если хотя бы одно из условий параметров будет выполняться команда сработает и перейдет к действиям (условие "ИЛИ").</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ПодсказкаУсловие1КонтекстноеМеню" id="160"/>
+									<ExtendedTooltip name="ПодсказкаУсловие1РасширеннаяПодсказка" id="161"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаДействия" id="55">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Действия</v8:content>
+						</v8:item>
+					</Title>
+					<Picture>
+						<xr:Ref>CommonPicture.сстЗеленыйФлаг</xr:Ref>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</Picture>
+					<TitleDataPath>Объект.Действия.RowsCount</TitleDataPath>
+					<ExtendedTooltip name="СтраницаДействияРасширеннаяПодсказка" id="56"/>
+					<ChildItems>
+						<Table name="Действия" id="78">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.Действия</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Действия</v8:content>
+								</v8:item>
+							</Title>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ДействияКонтекстноеМеню" id="79"/>
+							<AutoCommandBar name="ДействияКоманднаяПанель" id="80"/>
+							<ExtendedTooltip name="ДействияРасширеннаяПодсказка" id="81"/>
+							<SearchStringAddition name="ДействияСтрокаПоиска" id="82">
+								<AdditionSource>
+									<Item>Действия</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДействияСтрокаПоискаКонтекстноеМеню" id="83"/>
+								<ExtendedTooltip name="ДействияСтрокаПоискаРасширеннаяПодсказка" id="84"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ДействияСостояниеПросмотра" id="85">
+								<AdditionSource>
+									<Item>Действия</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<HorizontalLocation>Left</HorizontalLocation>
+								<ContextMenu name="ДействияСостояниеПросмотраКонтекстноеМеню" id="86"/>
+								<ExtendedTooltip name="ДействияСостояниеПросмотраРасширеннаяПодсказка" id="87"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ДействияУправлениеПоиском" id="88">
+								<AdditionSource>
+									<Item>Действия</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ДействияУправлениеПоискомКонтекстноеМеню" id="89"/>
+								<ExtendedTooltip name="ДействияУправлениеПоискомРасширеннаяПодсказка" id="90"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ДействияНомерСтроки" id="91">
+									<DataPath>Объект.Действия.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДействияНомерСтрокиКонтекстноеМеню" id="92"/>
+									<ExtendedTooltip name="ДействияНомерСтрокиРасширеннаяПодсказка" id="93"/>
+								</LabelField>
+								<InputField name="ДействияДействие" id="94">
+									<DataPath>Объект.Действия.Действие</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДействияДействиеКонтекстноеМеню" id="95"/>
+									<ExtendedTooltip name="ДействияДействиеРасширеннаяПодсказка" id="96"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+						<LabelDecoration name="ПодсказкаВходящийТекст2" id="103">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<TextColor>style:ЦветПодписи</TextColor>
+							<Font ref="style:ШрифтМикротекста" kind="StyleItem"/>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Если выполнены все условия на вкладке "Условия И" и хотя бы одно на вкладке "Условия ИЛИ", то все действия на этой вкладке будут выполнены.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ПодсказкаВходящийТекст2КонтекстноеМеню" id="104"/>
+							<ExtendedTooltip name="ПодсказкаВходящийТекст2РасширеннаяПодсказка" id="105"/>
+						</LabelDecoration>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<UsualGroup name="ГруппаПодвал" id="115">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа подвал</v8:content>
+				</v8:item>
+			</Title>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПодвалРасширеннаяПодсказка" id="116"/>
+			<ChildItems>
+				<InputField name="Комментарий" id="109">
+					<DataPath>Объект.Комментарий</DataPath>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<InputHint>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Произвольное описание команды</v8:content>
+						</v8:item>
+					</InputHint>
+					<ContextMenu name="КомментарийКонтекстноеМеню" id="110"/>
+					<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="111"/>
+				</InputField>
+				<CheckBoxField name="ПрименитьОстальныеКоманды" id="112">
+					<DataPath>Объект.ПрименитьОстальныеКоманды</DataPath>
+					<ToolTipRepresentation>Button</ToolTipRepresentation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПрименитьОстальныеКомандыКонтекстноеМеню" id="113"/>
+					<ExtendedTooltip name="ПрименитьОстальныеКомандыРасширеннаяПодсказка" id="114"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.TelegramКоманды</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

@@ -1,0 +1,462 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Перевести задание на этап</v8:content>
+		</v8:item>
+	</Title>
+	<Width>60</Width>
+	<Height>35</Height>
+	<WindowOpeningMode>LockWholeInterface</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>None</CommandBarLocation>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаКоманды" id="75">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа команды</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа команды</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ToolTipRepresentation>None</ToolTipRepresentation>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКомандыРасширеннаяПодсказка" id="76"/>
+			<ChildItems>
+				<Button name="СоздатьПодпроцесс" id="80">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.СоздатьПодпроцесс</CommandName>
+					<ExtendedTooltip name="СоздатьПодпроцессРасширеннаяПодсказка" id="81"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<LabelDecoration name="ДекорацияЗадание" id="66">
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Задание:</v8:content>
+				</v8:item>
+			</Title>
+			<BackColor>style:FieldAlternativeBackColor</BackColor>
+			<ContextMenu name="ДекорацияЗаданиеКонтекстноеМеню" id="67"/>
+			<ExtendedTooltip name="ДекорацияЗаданиеРасширеннаяПодсказка" id="68"/>
+		</LabelDecoration>
+		<UsualGroup name="ГруппаШапка" id="32">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Horizontal</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="33"/>
+			<ChildItems>
+				<PictureDecoration name="ДекорацияПустышка" id="36">
+					<Width>2</Width>
+					<Height>1</Height>
+					<FileDragMode>AsFile</FileDragMode>
+					<ContextMenu name="ДекорацияПустышкаКонтекстноеМеню" id="37"/>
+					<ExtendedTooltip name="ДекорацияПустышкаРасширеннаяПодсказка" id="38"/>
+				</PictureDecoration>
+				<UsualGroup name="Группа3" id="34">
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="35"/>
+					<ChildItems>
+						<LabelField name="СсылкаНаОбъект" id="18">
+							<DataPath>СсылкаНаОбъект</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Документ</v8:content>
+								</v8:item>
+							</Title>
+							<TitleFont ref="sys:DefaultGUIFont" height="8" kind="WindowsFont"/>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Font ref="sys:DefaultGUIFont" height="8" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+							<ContextMenu name="СсылкаНаОбъектКонтекстноеМеню" id="19"/>
+							<ExtendedTooltip name="СсылкаНаОбъектРасширеннаяПодсказка" id="20"/>
+						</LabelField>
+						<LabelField name="СсылкаНаОбъектСервис" id="29">
+							<DataPath>СсылкаНаОбъект.Сервис</DataPath>
+							<TitleFont ref="sys:DefaultGUIFont" height="8" kind="WindowsFont"/>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Font ref="sys:DefaultGUIFont" height="8" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+							<ContextMenu name="СсылкаНаОбъектСервисКонтекстноеМеню" id="30"/>
+							<ExtendedTooltip name="СсылкаНаОбъектСервисРасширеннаяПодсказка" id="31"/>
+						</LabelField>
+						<LabelField name="Услуга" id="82">
+							<DataPath>Услуга</DataPath>
+							<TitleFont ref="sys:DefaultGUIFont" height="8" kind="WindowsFont"/>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Font ref="sys:DefaultGUIFont" height="8" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+							<ContextMenu name="УслугаКонтекстноеМеню" id="83"/>
+							<ExtendedTooltip name="УслугаРасширеннаяПодсказка" id="84"/>
+						</LabelField>
+						<LabelField name="СсылкаНаОбъектПроцесс" id="60">
+							<DataPath>СсылкаНаОбъект.Процесс</DataPath>
+							<TitleFont ref="sys:DefaultGUIFont" height="8" kind="WindowsFont"/>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Font ref="sys:DefaultGUIFont" height="8" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+							<ContextMenu name="СсылкаНаОбъектПроцессКонтекстноеМеню" id="61"/>
+							<ExtendedTooltip name="СсылкаНаОбъектПроцессРасширеннаяПодсказка" id="62"/>
+						</LabelField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаТекущийЭтап" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущий этап</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа текущий этап</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаТекущийЭтапРасширеннаяПодсказка" id="4"/>
+			<ChildItems>
+				<LabelDecoration name="ДекорацияТекущийЭтап" id="55">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<HorizontalStretch>true</HorizontalStretch>
+					<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Текущий этап:</v8:content>
+						</v8:item>
+					</Title>
+					<BackColor>style:FieldAlternativeBackColor</BackColor>
+					<ContextMenu name="ДекорацияТекущийЭтапКонтекстноеМеню" id="56"/>
+					<ExtendedTooltip name="ДекорацияТекущийЭтапРасширеннаяПодсказка" id="57"/>
+				</LabelDecoration>
+				<UsualGroup name="Группа2" id="53">
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="54"/>
+					<ChildItems>
+						<PictureDecoration name="ДекорацияПустышка2" id="39">
+							<Width>15</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Height>1</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Декорация пустышка2</v8:content>
+								</v8:item>
+							</Title>
+							<FileDragMode>AsFile</FileDragMode>
+							<ContextMenu name="ДекорацияПустышка2КонтекстноеМеню" id="40"/>
+							<ExtendedTooltip name="ДекорацияПустышка2РасширеннаяПодсказка" id="41"/>
+						</PictureDecoration>
+						<UsualGroup name="ГруппаТекущийЭтапКартинкаТекст" id="58">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа текущий этап картинка текст</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTipRepresentation>None</ToolTipRepresentation>
+							<Group>Horizontal</Group>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаТекущийЭтапКартинкаТекстРасширеннаяПодсказка" id="59"/>
+							<ChildItems>
+								<PictureDecoration name="КартинкаТекущийЭтап" id="10">
+									<Width>2</Width>
+									<Height>2</Height>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Картинка текущий этап</v8:content>
+										</v8:item>
+									</Title>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="КартинкаТекущийЭтапКонтекстноеМеню" id="11"/>
+									<ExtendedTooltip name="КартинкаТекущийЭтапРасширеннаяПодсказка" id="12"/>
+								</PictureDecoration>
+								<LabelDecoration name="НадписьТекущийЭтап" id="13">
+									<Width>24</Width>
+									<Height>2</Height>
+									<Font ref="sys:DefaultGUIFont" height="12" kind="WindowsFont"/>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<VerticalAlign>Center</VerticalAlign>
+									<ContextMenu name="НадписьТекущийЭтапКонтекстноеМеню" id="14"/>
+									<ExtendedTooltip name="НадписьТекущийЭтапРасширеннаяПодсказка" id="15"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<PictureDecoration name="ДекорацияПустышка3" id="69">
+							<Width>15</Width>
+							<Height>1</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Декорация пустышка2</v8:content>
+								</v8:item>
+							</Title>
+							<FileDragMode>AsFile</FileDragMode>
+							<ContextMenu name="ДекорацияПустышка3КонтекстноеМеню" id="70"/>
+							<ExtendedTooltip name="ДекорацияПустышка3РасширеннаяПодсказка" id="71"/>
+						</PictureDecoration>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаЭтапы" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Следующий этап</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа этапы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаЭтапыРасширеннаяПодсказка" id="9"/>
+			<ChildItems>
+				<LabelDecoration name="ДекорацияПеревестиНаЭтап" id="63">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<HorizontalStretch>true</HorizontalStretch>
+					<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Перевести на этап:</v8:content>
+						</v8:item>
+					</Title>
+					<BackColor>style:FieldAlternativeBackColor</BackColor>
+					<ContextMenu name="ДекорацияПеревестиНаЭтапКонтекстноеМеню" id="64"/>
+					<ExtendedTooltip name="ДекорацияПеревестиНаЭтапРасширеннаяПодсказка" id="65"/>
+				</LabelDecoration>
+				<UsualGroup name="Группа4" id="45">
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="46"/>
+					<ChildItems>
+						<LabelDecoration name="Декорация3" id="42">
+							<Width>15</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Height>1</Height>
+							<ContextMenu name="Декорация3КонтекстноеМеню" id="43"/>
+							<ExtendedTooltip name="Декорация3РасширеннаяПодсказка" id="44"/>
+						</LabelDecoration>
+						<UsualGroup name="ГруппаПеревестиНаЭтап" id="16">
+							<EnableContentChange>true</EnableContentChange>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Перевести на этап</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Перевести задание на другой этап</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПеревестиНаЭтапExtendedTooltip" id="17"/>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<LabelDecoration name="НадписьНетЭтапов" id="5">
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<Height>2</Height>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Нет доступных этапов (работа завершена)</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="НадписьНетЭтаповКонтекстноеМеню" id="6"/>
+			<ExtendedTooltip name="НадписьНетЭтаповРасширеннаяПодсказка" id="7"/>
+		</LabelDecoration>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="СсылкаНаОбъект" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ссылка на объект</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DocumentRef.Задание</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЭтоВебКлиент" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Это веб клиент</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗаписатьОбъект" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать объект</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Источник" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Источник</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:UUID</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЭтапПерехода" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Этап перехода</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Процессы</v8:Type>
+				<v8:Type>cfg:CatalogRef.ЭтапыПроцессов</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекущийЭтап" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущий этап</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Процессы</v8:Type>
+				<v8:Type>cfg:CatalogRef.ЭтапыПроцессов</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекущийПроцесс" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущий процесс</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Процессы</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПолученаСсылка" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получена ссылка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Сервис" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сервис</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Сервисы</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СтруктураОбъекта" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Структура объекта</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="Услуга" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Услуга</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Услуги</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="СоздатьПодпроцесс" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подпроцесс...</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать подпроцесс</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ПеревестиЗадание</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СоздатьПодпроцесс</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

@@ -1,0 +1,993 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Ответственные сотрудники</v8:content>
+		</v8:item>
+	</Title>
+	<Width>90</Width>
+	<AutoTitle>false</AutoTitle>
+	<Group>Horizontal</Group>
+	<ChildItemsWidth>LeftWidest</ChildItemsWidth>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="ОбщаяГруппа" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Общая группа</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedTooltip name="ОбщаяГруппаExtendedTooltip" id="125"/>
+			<Events>
+				<Event name="OnCurrentPageChange">ОбщаяГруппаПриСменеСтраницы</Event>
+			</Events>
+			<ChildItems>
+				<Page name="ГруппаЖурнал" id="17">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Журнал</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<ChildItemsWidth>LeftWidest</ChildItemsWidth>
+					<ExtendedTooltip name="ГруппаЖурналExtendedTooltip" id="126"/>
+					<ChildItems>
+						<Table name="Список" id="86">
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Список</DataPath>
+							<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Список</v8:content>
+								</v8:item>
+							</Title>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<ContextMenu name="СписокКонтекстноеМеню" id="87"/>
+							<AutoCommandBar name="СписокКоманднаяПанель" id="88">
+								<ChildItems>
+									<Button name="СписокЗакладки" id="104">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.Закладки</CommandName>
+										<ExtendedTooltip name="СписокЗакладкиExtendedTooltip" id="127"/>
+									</Button>
+									<Button name="СписокВидимостьОтбора" id="109">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ВидимостьОтбора</CommandName>
+										<ExtendedTooltip name="СписокВидимостьОтбораExtendedTooltip" id="128"/>
+									</Button>
+									<Button name="СписокИзменитьФорму" id="245">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.StandardCommand.CustomizeForm</CommandName>
+										<ExtendedTooltip name="СписокИзменитьФормуРасширеннаяПодсказка" id="246"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="СписокExtendedTooltip" id="129"/>
+							<SearchStringAddition name="СписокSearchString" id="130">
+								<AdditionSource>
+									<Item>Список</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокSearchStringContextMenu" id="131"/>
+								<ExtendedTooltip name="СписокSearchStringExtendedTooltip" id="132"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СписокViewStatus" id="133">
+								<AdditionSource>
+									<Item>Список</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<HorizontalLocation>Left</HorizontalLocation>
+								<ContextMenu name="СписокViewStatusContextMenu" id="134"/>
+								<ExtendedTooltip name="СписокViewStatusExtendedTooltip" id="135"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СписокSearchControl" id="136">
+								<AdditionSource>
+									<Item>Список</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокSearchControlContextMenu" id="137"/>
+								<ExtendedTooltip name="СписокSearchControlExtendedTooltip" id="138"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="СписокДата" id="89">
+									<DataPath>Список.Date</DataPath>
+									<ContextMenu name="СписокДатаКонтекстноеМеню" id="90"/>
+									<ExtendedTooltip name="СписокДатаExtendedTooltip" id="139"/>
+								</LabelField>
+								<LabelField name="СписокНомер" id="91">
+									<DataPath>Список.Number</DataPath>
+									<ContextMenu name="СписокНомерКонтекстноеМеню" id="92"/>
+									<ExtendedTooltip name="СписокНомерExtendedTooltip" id="140"/>
+								</LabelField>
+								<LabelField name="СписокТип" id="93">
+									<DataPath>Список.Type</DataPath>
+									<ContextMenu name="СписокТипКонтекстноеМеню" id="94"/>
+									<ExtendedTooltip name="СписокТипExtendedTooltip" id="141"/>
+								</LabelField>
+								<LabelField name="СписокОрганизация" id="95">
+									<DataPath>Список.Организация</DataPath>
+									<ContextMenu name="СписокОрганизацияКонтекстноеМеню" id="96"/>
+									<ExtendedTooltip name="СписокОрганизацияExtendedTooltip" id="142"/>
+								</LabelField>
+								<LabelField name="СписокАвтор" id="97">
+									<DataPath>Список.Автор</DataPath>
+									<ContextMenu name="СписокАвторКонтекстноеМеню" id="98"/>
+									<ExtendedTooltip name="СписокАвторExtendedTooltip" id="143"/>
+								</LabelField>
+								<LabelField name="СписокКомментарий" id="99">
+									<DataPath>Список.Комментарий</DataPath>
+									<ContextMenu name="СписокКомментарийКонтекстноеМеню" id="100"/>
+									<ExtendedTooltip name="СписокКомментарийExtendedTooltip" id="144"/>
+								</LabelField>
+								<LabelField name="СписокСсылка" id="253">
+									<DataPath>Список.Ref</DataPath>
+									<UserVisible>
+										<xr:Common>false</xr:Common>
+									</UserVisible>
+									<ContextMenu name="СписокСсылкаКонтекстноеМеню" id="254"/>
+									<ExtendedTooltip name="СписокСсылкаРасширеннаяПодсказка" id="255"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+						<UsualGroup name="ГруппаСписокОтбор" id="108">
+							<Visible>false</Visible>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Отбор</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ExtendedTooltip name="ГруппаСписокОтборExtendedTooltip" id="145"/>
+							<ChildItems>
+								<Table name="СписокОтбор" id="105">
+									<Representation>Tree</Representation>
+									<Autofill>true</Autofill>
+									<InitialTreeView>ExpandAllLevels</InitialTreeView>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<FileDragMode>AsFile</FileDragMode>
+									<DataPath>Список.Filter</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Список отбор</v8:content>
+										</v8:item>
+									</Title>
+									<SearchStringLocation>None</SearchStringLocation>
+									<ViewStatusLocation>None</ViewStatusLocation>
+									<SearchControlLocation>None</SearchControlLocation>
+									<ViewMode>All</ViewMode>
+									<SettingsNamedItemDetailedRepresentation>false</SettingsNamedItemDetailedRepresentation>
+									<ContextMenu name="СписокОтборКонтекстноеМеню" id="106"/>
+									<AutoCommandBar name="СписокОтборКоманднаяПанель" id="107"/>
+									<ExtendedTooltip name="СписокОтборExtendedTooltip" id="146"/>
+									<SearchStringAddition name="СписокОтборSearchString" id="147">
+										<AdditionSource>
+											<Item>СписокОтбор</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="СписокОтборSearchStringContextMenu" id="148"/>
+										<ExtendedTooltip name="СписокОтборSearchStringExtendedTooltip" id="149"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="СписокОтборViewStatus" id="150">
+										<AdditionSource>
+											<Item>СписокОтбор</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<HorizontalLocation>Left</HorizontalLocation>
+										<ContextMenu name="СписокОтборViewStatusContextMenu" id="151"/>
+										<ExtendedTooltip name="СписокОтборViewStatusExtendedTooltip" id="152"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="СписокОтборSearchControl" id="153">
+										<AdditionSource>
+											<Item>СписокОтбор</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="СписокОтборSearchControlContextMenu" id="154"/>
+										<ExtendedTooltip name="СписокОтборSearchControlExtendedTooltip" id="155"/>
+									</SearchControlAddition>
+								</Table>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаПоДокументам" id="18">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>По документам</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаПоДокументамExtendedTooltip" id="156"/>
+					<ChildItems>
+						<Pages name="ПоДокументам" id="19">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>По документам</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ПоДокументамExtendedTooltip" id="157"/>
+							<Events>
+								<Event name="OnCurrentPageChange">ПоДокументамПриСменеСтраницы</Event>
+							</Events>
+							<ChildItems>
+								<Page name="ГруппаЗакреплениеСотрудников" id="20">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Закрепление сотрудников</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Horizontal</Group>
+									<ChildItemsWidth>LeftWidest</ChildItemsWidth>
+									<ExtendedTooltip name="ГруппаЗакреплениеСотрудниковExtendedTooltip" id="158"/>
+									<ChildItems>
+										<Table name="ЗакреплениеСотрудников" id="21">
+											<UseAlternationRowColor>true</UseAlternationRowColor>
+											<EnableStartDrag>true</EnableStartDrag>
+											<FileDragMode>AsFile</FileDragMode>
+											<DataPath>ЗакреплениеСотрудников</DataPath>
+											<RowPictureDataPath>ЗакреплениеСотрудников.DefaultPicture</RowPictureDataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Закрепление сотрудников</v8:content>
+												</v8:item>
+											</Title>
+											<SearchStringLocation>None</SearchStringLocation>
+											<ViewStatusLocation>None</ViewStatusLocation>
+											<SearchControlLocation>None</SearchControlLocation>
+											<AutoRefresh>false</AutoRefresh>
+											<AutoRefreshPeriod>60</AutoRefreshPeriod>
+											<Period>
+												<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+												<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+												<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+											</Period>
+											<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+											<RestoreCurrentRow>false</RestoreCurrentRow>
+											<TopLevelParent xsi:nil="true"/>
+											<ShowRoot>true</ShowRoot>
+											<AllowRootChoice>false</AllowRootChoice>
+											<UpdateOnDataChange>Auto</UpdateOnDataChange>
+											<ContextMenu name="ЗакреплениеСотрудниковКонтекстноеМеню" id="22"/>
+											<AutoCommandBar name="ЗакреплениеСотрудниковКоманднаяПанель" id="23">
+												<ChildItems>
+													<Button name="ЗакреплениеСотрудниковЗакладки" id="101">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.Закладки</CommandName>
+														<ExtendedTooltip name="ЗакреплениеСотрудниковЗакладкиExtendedTooltip" id="159"/>
+													</Button>
+													<Button name="ЗакреплениеСотрудниковВидимостьОтбора" id="110">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.ВидимостьОтбора</CommandName>
+														<ExtendedTooltip name="ЗакреплениеСотрудниковВидимостьОтбораExtendedTooltip" id="160"/>
+													</Button>
+													<Button name="ЗакреплениеСотрудниковИзменитьФорму" id="247">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.StandardCommand.CustomizeForm</CommandName>
+														<ExtendedTooltip name="ЗакреплениеСотрудниковИзменитьФормуРасширеннаяПодсказка" id="248"/>
+													</Button>
+												</ChildItems>
+											</AutoCommandBar>
+											<ExtendedTooltip name="ЗакреплениеСотрудниковExtendedTooltip" id="161"/>
+											<SearchStringAddition name="ЗакреплениеСотрудниковSearchString" id="162">
+												<AdditionSource>
+													<Item>ЗакреплениеСотрудников</Item>
+													<Type>SearchStringRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ЗакреплениеСотрудниковSearchStringContextMenu" id="163"/>
+												<ExtendedTooltip name="ЗакреплениеСотрудниковSearchStringExtendedTooltip" id="164"/>
+											</SearchStringAddition>
+											<ViewStatusAddition name="ЗакреплениеСотрудниковViewStatus" id="165">
+												<AdditionSource>
+													<Item>ЗакреплениеСотрудников</Item>
+													<Type>ViewStatusRepresentation</Type>
+												</AdditionSource>
+												<HorizontalLocation>Left</HorizontalLocation>
+												<ContextMenu name="ЗакреплениеСотрудниковViewStatusContextMenu" id="166"/>
+												<ExtendedTooltip name="ЗакреплениеСотрудниковViewStatusExtendedTooltip" id="167"/>
+											</ViewStatusAddition>
+											<SearchControlAddition name="ЗакреплениеСотрудниковSearchControl" id="168">
+												<AdditionSource>
+													<Item>ЗакреплениеСотрудников</Item>
+													<Type>SearchControl</Type>
+												</AdditionSource>
+												<ContextMenu name="ЗакреплениеСотрудниковSearchControlContextMenu" id="169"/>
+												<ExtendedTooltip name="ЗакреплениеСотрудниковSearchControlExtendedTooltip" id="170"/>
+											</SearchControlAddition>
+											<ChildItems>
+												<LabelField name="ЗакреплениеСотрудниковДата" id="24">
+													<DataPath>ЗакреплениеСотрудников.Date</DataPath>
+													<ContextMenu name="ЗакреплениеСотрудниковДатаКонтекстноеМеню" id="25"/>
+													<ExtendedTooltip name="ЗакреплениеСотрудниковДатаExtendedTooltip" id="171"/>
+												</LabelField>
+												<LabelField name="ЗакреплениеСотрудниковНомер" id="26">
+													<DataPath>ЗакреплениеСотрудников.Number</DataPath>
+													<ContextMenu name="ЗакреплениеСотрудниковНомерКонтекстноеМеню" id="27"/>
+													<ExtendedTooltip name="ЗакреплениеСотрудниковНомерExtendedTooltip" id="172"/>
+												</LabelField>
+												<LabelField name="ЗакреплениеСотрудниковОрганизация" id="28">
+													<DataPath>ЗакреплениеСотрудников.Организация</DataPath>
+													<ContextMenu name="ЗакреплениеСотрудниковОрганизацияКонтекстноеМеню" id="29"/>
+													<ExtendedTooltip name="ЗакреплениеСотрудниковОрганизацияExtendedTooltip" id="173"/>
+												</LabelField>
+												<LabelField name="ЗакреплениеСотрудниковАвтор" id="30">
+													<DataPath>ЗакреплениеСотрудников.Автор</DataPath>
+													<ContextMenu name="ЗакреплениеСотрудниковАвторКонтекстноеМеню" id="31"/>
+													<ExtendedTooltip name="ЗакреплениеСотрудниковАвторExtendedTooltip" id="174"/>
+												</LabelField>
+												<LabelField name="ЗакреплениеСотрудниковКомментарий" id="38">
+													<DataPath>ЗакреплениеСотрудников.Комментарий</DataPath>
+													<ContextMenu name="ЗакреплениеСотрудниковКомментарийКонтекстноеМеню" id="39"/>
+													<ExtendedTooltip name="ЗакреплениеСотрудниковКомментарийExtendedTooltip" id="175"/>
+												</LabelField>
+												<LabelField name="ЗакреплениеСотрудниковСсылка" id="256">
+													<DataPath>ЗакреплениеСотрудников.Ref</DataPath>
+													<UserVisible>
+														<xr:Common>false</xr:Common>
+													</UserVisible>
+													<ContextMenu name="ЗакреплениеСотрудниковСсылкаКонтекстноеМеню" id="257"/>
+													<ExtendedTooltip name="ЗакреплениеСотрудниковСсылкаРасширеннаяПодсказка" id="258"/>
+												</LabelField>
+											</ChildItems>
+										</Table>
+										<UsualGroup name="ГруппаЗакреплениеСотрудниковОтбор" id="113">
+											<Visible>false</Visible>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Отбор</v8:content>
+												</v8:item>
+											</Title>
+											<Group>Vertical</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаЗакреплениеСотрудниковОтборExtendedTooltip" id="176"/>
+											<ChildItems>
+												<Table name="ЗакреплениеСотрудниковОтбор" id="114">
+													<Representation>Tree</Representation>
+													<Autofill>true</Autofill>
+													<InitialTreeView>ExpandAllLevels</InitialTreeView>
+													<EnableStartDrag>true</EnableStartDrag>
+													<EnableDrag>true</EnableDrag>
+													<FileDragMode>AsFile</FileDragMode>
+													<DataPath>ЗакреплениеСотрудников.Filter</DataPath>
+													<SearchStringLocation>None</SearchStringLocation>
+													<ViewStatusLocation>None</ViewStatusLocation>
+													<SearchControlLocation>None</SearchControlLocation>
+													<ViewMode>All</ViewMode>
+													<SettingsNamedItemDetailedRepresentation>false</SettingsNamedItemDetailedRepresentation>
+													<ContextMenu name="ЗакреплениеСотрудниковОтборКонтекстноеМеню" id="115"/>
+													<AutoCommandBar name="ЗакреплениеСотрудниковОтборКоманднаяПанель" id="116"/>
+													<ExtendedTooltip name="ЗакреплениеСотрудниковОтборExtendedTooltip" id="177"/>
+													<SearchStringAddition name="ЗакреплениеСотрудниковОтборSearchString" id="178">
+														<AdditionSource>
+															<Item>ЗакреплениеСотрудниковОтбор</Item>
+															<Type>SearchStringRepresentation</Type>
+														</AdditionSource>
+														<ContextMenu name="ЗакреплениеСотрудниковОтборSearchStringContextMenu" id="179"/>
+														<ExtendedTooltip name="ЗакреплениеСотрудниковОтборSearchStringExtendedTooltip" id="180"/>
+													</SearchStringAddition>
+													<ViewStatusAddition name="ЗакреплениеСотрудниковОтборViewStatus" id="181">
+														<AdditionSource>
+															<Item>ЗакреплениеСотрудниковОтбор</Item>
+															<Type>ViewStatusRepresentation</Type>
+														</AdditionSource>
+														<HorizontalLocation>Left</HorizontalLocation>
+														<ContextMenu name="ЗакреплениеСотрудниковОтборViewStatusContextMenu" id="182"/>
+														<ExtendedTooltip name="ЗакреплениеСотрудниковОтборViewStatusExtendedTooltip" id="183"/>
+													</ViewStatusAddition>
+													<SearchControlAddition name="ЗакреплениеСотрудниковОтборSearchControl" id="184">
+														<AdditionSource>
+															<Item>ЗакреплениеСотрудниковОтбор</Item>
+															<Type>SearchControl</Type>
+														</AdditionSource>
+														<ContextMenu name="ЗакреплениеСотрудниковОтборSearchControlContextMenu" id="185"/>
+														<ExtendedTooltip name="ЗакреплениеСотрудниковОтборSearchControlExtendedTooltip" id="186"/>
+													</SearchControlAddition>
+												</Table>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</Page>
+								<Page name="ГруппаПеремещениеСотрудников" id="42">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Перемещение сотрудников</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Horizontal</Group>
+									<ChildItemsWidth>LeftWidest</ChildItemsWidth>
+									<ExtendedTooltip name="ГруппаПеремещениеСотрудниковExtendedTooltip" id="187"/>
+									<ChildItems>
+										<Table name="ПеремещениеСотрудников" id="43">
+											<UseAlternationRowColor>true</UseAlternationRowColor>
+											<EnableStartDrag>true</EnableStartDrag>
+											<FileDragMode>AsFile</FileDragMode>
+											<DataPath>ПеремещениеСотрудников</DataPath>
+											<RowPictureDataPath>ПеремещениеСотрудников.DefaultPicture</RowPictureDataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Перемещение сотрудников</v8:content>
+												</v8:item>
+											</Title>
+											<SearchStringLocation>None</SearchStringLocation>
+											<ViewStatusLocation>None</ViewStatusLocation>
+											<SearchControlLocation>None</SearchControlLocation>
+											<AutoRefresh>false</AutoRefresh>
+											<AutoRefreshPeriod>60</AutoRefreshPeriod>
+											<Period>
+												<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+												<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+												<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+											</Period>
+											<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+											<RestoreCurrentRow>false</RestoreCurrentRow>
+											<TopLevelParent xsi:nil="true"/>
+											<ShowRoot>true</ShowRoot>
+											<AllowRootChoice>false</AllowRootChoice>
+											<UpdateOnDataChange>Auto</UpdateOnDataChange>
+											<ContextMenu name="ПеремещениеСотрудниковКонтекстноеМеню" id="44"/>
+											<AutoCommandBar name="ПеремещениеСотрудниковКоманднаяПанель" id="45">
+												<ChildItems>
+													<Button name="ПеремещениеСотрудниковЗакладки" id="102">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.Закладки</CommandName>
+														<ExtendedTooltip name="ПеремещениеСотрудниковЗакладкиExtendedTooltip" id="188"/>
+													</Button>
+													<Button name="ПеремещениеСотрудниковВидимостьОтбора" id="111">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.ВидимостьОтбора</CommandName>
+														<ExtendedTooltip name="ПеремещениеСотрудниковВидимостьОтбораExtendedTooltip" id="189"/>
+													</Button>
+													<Button name="ПеремещениеСотрудниковИзменитьФорму" id="249">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.StandardCommand.CustomizeForm</CommandName>
+														<ExtendedTooltip name="ПеремещениеСотрудниковИзменитьФормуРасширеннаяПодсказка" id="250"/>
+													</Button>
+												</ChildItems>
+											</AutoCommandBar>
+											<ExtendedTooltip name="ПеремещениеСотрудниковExtendedTooltip" id="190"/>
+											<SearchStringAddition name="ПеремещениеСотрудниковSearchString" id="191">
+												<AdditionSource>
+													<Item>ПеремещениеСотрудников</Item>
+													<Type>SearchStringRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ПеремещениеСотрудниковSearchStringContextMenu" id="192"/>
+												<ExtendedTooltip name="ПеремещениеСотрудниковSearchStringExtendedTooltip" id="193"/>
+											</SearchStringAddition>
+											<ViewStatusAddition name="ПеремещениеСотрудниковViewStatus" id="194">
+												<AdditionSource>
+													<Item>ПеремещениеСотрудников</Item>
+													<Type>ViewStatusRepresentation</Type>
+												</AdditionSource>
+												<HorizontalLocation>Left</HorizontalLocation>
+												<ContextMenu name="ПеремещениеСотрудниковViewStatusContextMenu" id="195"/>
+												<ExtendedTooltip name="ПеремещениеСотрудниковViewStatusExtendedTooltip" id="196"/>
+											</ViewStatusAddition>
+											<SearchControlAddition name="ПеремещениеСотрудниковSearchControl" id="197">
+												<AdditionSource>
+													<Item>ПеремещениеСотрудников</Item>
+													<Type>SearchControl</Type>
+												</AdditionSource>
+												<ContextMenu name="ПеремещениеСотрудниковSearchControlContextMenu" id="198"/>
+												<ExtendedTooltip name="ПеремещениеСотрудниковSearchControlExtendedTooltip" id="199"/>
+											</SearchControlAddition>
+											<ChildItems>
+												<LabelField name="ПеремещениеСотрудниковДата" id="46">
+													<DataPath>ПеремещениеСотрудников.Date</DataPath>
+													<ContextMenu name="ПеремещениеСотрудниковДатаКонтекстноеМеню" id="47"/>
+													<ExtendedTooltip name="ПеремещениеСотрудниковДатаExtendedTooltip" id="200"/>
+												</LabelField>
+												<LabelField name="ПеремещениеСотрудниковНомер" id="48">
+													<DataPath>ПеремещениеСотрудников.Number</DataPath>
+													<ContextMenu name="ПеремещениеСотрудниковНомерКонтекстноеМеню" id="49"/>
+													<ExtendedTooltip name="ПеремещениеСотрудниковНомерExtendedTooltip" id="201"/>
+												</LabelField>
+												<LabelField name="ПеремещениеСотрудниковОрганизация" id="50">
+													<DataPath>ПеремещениеСотрудников.Организация</DataPath>
+													<ContextMenu name="ПеремещениеСотрудниковОрганизацияКонтекстноеМеню" id="51"/>
+													<ExtendedTooltip name="ПеремещениеСотрудниковОрганизацияExtendedTooltip" id="202"/>
+												</LabelField>
+												<LabelField name="ПеремещениеСотрудниковАвтор" id="52">
+													<DataPath>ПеремещениеСотрудников.Автор</DataPath>
+													<ContextMenu name="ПеремещениеСотрудниковАвторКонтекстноеМеню" id="53"/>
+													<ExtendedTooltip name="ПеремещениеСотрудниковАвторExtendedTooltip" id="203"/>
+												</LabelField>
+												<LabelField name="ПеремещениеСотрудниковКомментарий" id="60">
+													<DataPath>ПеремещениеСотрудников.Комментарий</DataPath>
+													<ContextMenu name="ПеремещениеСотрудниковКомментарийКонтекстноеМеню" id="61"/>
+													<ExtendedTooltip name="ПеремещениеСотрудниковКомментарийExtendedTooltip" id="204"/>
+												</LabelField>
+												<LabelField name="ПеремещениеСотрудниковСсылка" id="259">
+													<DataPath>ПеремещениеСотрудников.Ref</DataPath>
+													<UserVisible>
+														<xr:Common>false</xr:Common>
+													</UserVisible>
+													<ContextMenu name="ПеремещениеСотрудниковСсылкаКонтекстноеМеню" id="260"/>
+													<ExtendedTooltip name="ПеремещениеСотрудниковСсылкаРасширеннаяПодсказка" id="261"/>
+												</LabelField>
+											</ChildItems>
+										</Table>
+										<UsualGroup name="ГруппаПеремещениеСотрудниковОтбор" id="117">
+											<Visible>false</Visible>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Отбор</v8:content>
+												</v8:item>
+											</Title>
+											<Group>Vertical</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаПеремещениеСотрудниковОтборExtendedTooltip" id="205"/>
+											<ChildItems>
+												<Table name="ПеремещениеСотрудниковОтбор" id="118">
+													<Representation>Tree</Representation>
+													<Autofill>true</Autofill>
+													<InitialTreeView>ExpandAllLevels</InitialTreeView>
+													<EnableStartDrag>true</EnableStartDrag>
+													<EnableDrag>true</EnableDrag>
+													<FileDragMode>AsFile</FileDragMode>
+													<DataPath>ПеремещениеСотрудников.Filter</DataPath>
+													<SearchStringLocation>None</SearchStringLocation>
+													<ViewStatusLocation>None</ViewStatusLocation>
+													<SearchControlLocation>None</SearchControlLocation>
+													<ViewMode>All</ViewMode>
+													<SettingsNamedItemDetailedRepresentation>false</SettingsNamedItemDetailedRepresentation>
+													<ContextMenu name="ПеремещениеСотрудниковОтборКонтекстноеМеню" id="119"/>
+													<AutoCommandBar name="ПеремещениеСотрудниковОтборКоманднаяПанель" id="120"/>
+													<ExtendedTooltip name="ПеремещениеСотрудниковОтборExtendedTooltip" id="206"/>
+													<SearchStringAddition name="ПеремещениеСотрудниковОтборSearchString" id="207">
+														<AdditionSource>
+															<Item>ПеремещениеСотрудниковОтбор</Item>
+															<Type>SearchStringRepresentation</Type>
+														</AdditionSource>
+														<ContextMenu name="ПеремещениеСотрудниковОтборSearchStringContextMenu" id="208"/>
+														<ExtendedTooltip name="ПеремещениеСотрудниковОтборSearchStringExtendedTooltip" id="209"/>
+													</SearchStringAddition>
+													<ViewStatusAddition name="ПеремещениеСотрудниковОтборViewStatus" id="210">
+														<AdditionSource>
+															<Item>ПеремещениеСотрудниковОтбор</Item>
+															<Type>ViewStatusRepresentation</Type>
+														</AdditionSource>
+														<HorizontalLocation>Left</HorizontalLocation>
+														<ContextMenu name="ПеремещениеСотрудниковОтборViewStatusContextMenu" id="211"/>
+														<ExtendedTooltip name="ПеремещениеСотрудниковОтборViewStatusExtendedTooltip" id="212"/>
+													</ViewStatusAddition>
+													<SearchControlAddition name="ПеремещениеСотрудниковОтборSearchControl" id="213">
+														<AdditionSource>
+															<Item>ПеремещениеСотрудниковОтбор</Item>
+															<Type>SearchControl</Type>
+														</AdditionSource>
+														<ContextMenu name="ПеремещениеСотрудниковОтборSearchControlContextMenu" id="214"/>
+														<ExtendedTooltip name="ПеремещениеСотрудниковОтборSearchControlExtendedTooltip" id="215"/>
+													</SearchControlAddition>
+												</Table>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</Page>
+								<Page name="ГруппаСнятиеЗакрепленияСотрудников" id="64">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Снятие закрепления сотрудников</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Horizontal</Group>
+									<ChildItemsWidth>LeftWidest</ChildItemsWidth>
+									<ExtendedTooltip name="ГруппаСнятиеЗакрепленияСотрудниковExtendedTooltip" id="216"/>
+									<ChildItems>
+										<Table name="СнятиеЗакрепленияСотрудников" id="65">
+											<UseAlternationRowColor>true</UseAlternationRowColor>
+											<EnableStartDrag>true</EnableStartDrag>
+											<FileDragMode>AsFile</FileDragMode>
+											<DataPath>СнятиеЗакрепленияСотрудников</DataPath>
+											<RowPictureDataPath>СнятиеЗакрепленияСотрудников.DefaultPicture</RowPictureDataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Снятие закрепления сотрудников</v8:content>
+												</v8:item>
+											</Title>
+											<SearchStringLocation>None</SearchStringLocation>
+											<ViewStatusLocation>None</ViewStatusLocation>
+											<SearchControlLocation>None</SearchControlLocation>
+											<AutoRefresh>false</AutoRefresh>
+											<AutoRefreshPeriod>60</AutoRefreshPeriod>
+											<Period>
+												<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+												<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+												<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+											</Period>
+											<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+											<RestoreCurrentRow>false</RestoreCurrentRow>
+											<TopLevelParent xsi:nil="true"/>
+											<ShowRoot>true</ShowRoot>
+											<AllowRootChoice>false</AllowRootChoice>
+											<UpdateOnDataChange>Auto</UpdateOnDataChange>
+											<ContextMenu name="СнятиеЗакрепленияСотрудниковКонтекстноеМеню" id="66"/>
+											<AutoCommandBar name="СнятиеЗакрепленияСотрудниковКоманднаяПанель" id="67">
+												<ChildItems>
+													<Button name="СнятиеЗакрепленияСотрудниковЗакладки" id="103">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.Закладки</CommandName>
+														<ExtendedTooltip name="СнятиеЗакрепленияСотрудниковЗакладкиExtendedTooltip" id="217"/>
+													</Button>
+													<Button name="СнятиеЗакрепленияСотрудниковВидимостьОтбора" id="112">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.ВидимостьОтбора</CommandName>
+														<ExtendedTooltip name="СнятиеЗакрепленияСотрудниковВидимостьОтбораExtendedTooltip" id="218"/>
+													</Button>
+													<Button name="СнятиеЗакрепленияСотрудниковИзменитьФорму" id="251">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.StandardCommand.CustomizeForm</CommandName>
+														<ExtendedTooltip name="СнятиеЗакрепленияСотрудниковИзменитьФормуРасширеннаяПодсказка" id="252"/>
+													</Button>
+												</ChildItems>
+											</AutoCommandBar>
+											<ExtendedTooltip name="СнятиеЗакрепленияСотрудниковExtendedTooltip" id="219"/>
+											<SearchStringAddition name="СнятиеЗакрепленияСотрудниковSearchString" id="220">
+												<AdditionSource>
+													<Item>СнятиеЗакрепленияСотрудников</Item>
+													<Type>SearchStringRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="СнятиеЗакрепленияСотрудниковSearchStringContextMenu" id="221"/>
+												<ExtendedTooltip name="СнятиеЗакрепленияСотрудниковSearchStringExtendedTooltip" id="222"/>
+											</SearchStringAddition>
+											<ViewStatusAddition name="СнятиеЗакрепленияСотрудниковViewStatus" id="223">
+												<AdditionSource>
+													<Item>СнятиеЗакрепленияСотрудников</Item>
+													<Type>ViewStatusRepresentation</Type>
+												</AdditionSource>
+												<HorizontalLocation>Left</HorizontalLocation>
+												<ContextMenu name="СнятиеЗакрепленияСотрудниковViewStatusContextMenu" id="224"/>
+												<ExtendedTooltip name="СнятиеЗакрепленияСотрудниковViewStatusExtendedTooltip" id="225"/>
+											</ViewStatusAddition>
+											<SearchControlAddition name="СнятиеЗакрепленияСотрудниковSearchControl" id="226">
+												<AdditionSource>
+													<Item>СнятиеЗакрепленияСотрудников</Item>
+													<Type>SearchControl</Type>
+												</AdditionSource>
+												<ContextMenu name="СнятиеЗакрепленияСотрудниковSearchControlContextMenu" id="227"/>
+												<ExtendedTooltip name="СнятиеЗакрепленияСотрудниковSearchControlExtendedTooltip" id="228"/>
+											</SearchControlAddition>
+											<ChildItems>
+												<LabelField name="СнятиеЗакрепленияСотрудниковДата" id="68">
+													<DataPath>СнятиеЗакрепленияСотрудников.Date</DataPath>
+													<ContextMenu name="СнятиеЗакрепленияСотрудниковДатаКонтекстноеМеню" id="69"/>
+													<ExtendedTooltip name="СнятиеЗакрепленияСотрудниковДатаExtendedTooltip" id="229"/>
+												</LabelField>
+												<LabelField name="СнятиеЗакрепленияСотрудниковНомер" id="70">
+													<DataPath>СнятиеЗакрепленияСотрудников.Number</DataPath>
+													<ContextMenu name="СнятиеЗакрепленияСотрудниковНомерКонтекстноеМеню" id="71"/>
+													<ExtendedTooltip name="СнятиеЗакрепленияСотрудниковНомерExtendedTooltip" id="230"/>
+												</LabelField>
+												<LabelField name="СнятиеЗакрепленияСотрудниковОрганизация" id="72">
+													<DataPath>СнятиеЗакрепленияСотрудников.Организация</DataPath>
+													<ContextMenu name="СнятиеЗакрепленияСотрудниковОрганизацияКонтекстноеМеню" id="73"/>
+													<ExtendedTooltip name="СнятиеЗакрепленияСотрудниковОрганизацияExtendedTooltip" id="231"/>
+												</LabelField>
+												<LabelField name="СнятиеЗакрепленияСотрудниковАвтор" id="74">
+													<DataPath>СнятиеЗакрепленияСотрудников.Автор</DataPath>
+													<ContextMenu name="СнятиеЗакрепленияСотрудниковАвторКонтекстноеМеню" id="75"/>
+													<ExtendedTooltip name="СнятиеЗакрепленияСотрудниковАвторExtendedTooltip" id="232"/>
+												</LabelField>
+												<LabelField name="СнятиеЗакрепленияСотрудниковКомментарий" id="82">
+													<DataPath>СнятиеЗакрепленияСотрудников.Комментарий</DataPath>
+													<ContextMenu name="СнятиеЗакрепленияСотрудниковКомментарийКонтекстноеМеню" id="83"/>
+													<ExtendedTooltip name="СнятиеЗакрепленияСотрудниковКомментарийExtendedTooltip" id="233"/>
+												</LabelField>
+												<LabelField name="СнятиеЗакрепленияСотрудниковСсылка" id="262">
+													<DataPath>СнятиеЗакрепленияСотрудников.Ref</DataPath>
+													<UserVisible>
+														<xr:Common>false</xr:Common>
+													</UserVisible>
+													<ContextMenu name="СнятиеЗакрепленияСотрудниковСсылкаКонтекстноеМеню" id="263"/>
+													<ExtendedTooltip name="СнятиеЗакрепленияСотрудниковСсылкаРасширеннаяПодсказка" id="264"/>
+												</LabelField>
+											</ChildItems>
+										</Table>
+										<UsualGroup name="ГруппаСнятиеЗакрепленияСотрудниковОтбор" id="121">
+											<Visible>false</Visible>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Отбор</v8:content>
+												</v8:item>
+											</Title>
+											<Group>Vertical</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаСнятиеЗакрепленияСотрудниковОтборExtendedTooltip" id="234"/>
+											<ChildItems>
+												<Table name="СнятиеЗакрепленияСотрудниковОтбор" id="122">
+													<Representation>Tree</Representation>
+													<Autofill>true</Autofill>
+													<InitialTreeView>ExpandAllLevels</InitialTreeView>
+													<EnableStartDrag>true</EnableStartDrag>
+													<EnableDrag>true</EnableDrag>
+													<FileDragMode>AsFile</FileDragMode>
+													<DataPath>СнятиеЗакрепленияСотрудников.Filter</DataPath>
+													<SearchStringLocation>None</SearchStringLocation>
+													<ViewStatusLocation>None</ViewStatusLocation>
+													<SearchControlLocation>None</SearchControlLocation>
+													<ViewMode>All</ViewMode>
+													<SettingsNamedItemDetailedRepresentation>false</SettingsNamedItemDetailedRepresentation>
+													<ContextMenu name="СнятиеЗакрепленияСотрудниковОтборКонтекстноеМеню" id="123"/>
+													<AutoCommandBar name="СнятиеЗакрепленияСотрудниковОтборКоманднаяПанель" id="124"/>
+													<ExtendedTooltip name="СнятиеЗакрепленияСотрудниковОтборExtendedTooltip" id="235"/>
+													<SearchStringAddition name="СнятиеЗакрепленияСотрудниковОтборSearchString" id="236">
+														<AdditionSource>
+															<Item>СнятиеЗакрепленияСотрудниковОтбор</Item>
+															<Type>SearchStringRepresentation</Type>
+														</AdditionSource>
+														<ContextMenu name="СнятиеЗакрепленияСотрудниковОтборSearchStringContextMenu" id="237"/>
+														<ExtendedTooltip name="СнятиеЗакрепленияСотрудниковОтборSearchStringExtendedTooltip" id="238"/>
+													</SearchStringAddition>
+													<ViewStatusAddition name="СнятиеЗакрепленияСотрудниковОтборViewStatus" id="239">
+														<AdditionSource>
+															<Item>СнятиеЗакрепленияСотрудниковОтбор</Item>
+															<Type>ViewStatusRepresentation</Type>
+														</AdditionSource>
+														<HorizontalLocation>Left</HorizontalLocation>
+														<ContextMenu name="СнятиеЗакрепленияСотрудниковОтборViewStatusContextMenu" id="240"/>
+														<ExtendedTooltip name="СнятиеЗакрепленияСотрудниковОтборViewStatusExtendedTooltip" id="241"/>
+													</ViewStatusAddition>
+													<SearchControlAddition name="СнятиеЗакрепленияСотрудниковОтборSearchControl" id="242">
+														<AdditionSource>
+															<Item>СнятиеЗакрепленияСотрудниковОтбор</Item>
+															<Type>SearchControl</Type>
+														</AdditionSource>
+														<ContextMenu name="СнятиеЗакрепленияСотрудниковОтборSearchControlContextMenu" id="243"/>
+														<ExtendedTooltip name="СнятиеЗакрепленияСотрудниковОтборSearchControlExtendedTooltip" id="244"/>
+													</SearchControlAddition>
+												</Table>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</Page>
+							</ChildItems>
+						</Pages>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>Список.Ref</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>DocumentJournal.ОтветственныеСотрудники</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ЗакреплениеСотрудников" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Закрепление сотрудников</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>ЗакреплениеСотрудников.Ref</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>Document.ЗакреплениеСотрудников</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ПеремещениеСотрудников" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перемещение сотрудников</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>ПеремещениеСотрудников.Ref</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>Document.ПеремещениеСотрудников</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="СнятиеЗакрепленияСотрудников" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снятие закрепления сотрудников</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>СнятиеЗакрепленияСотрудников.Ref</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>Document.СнятиеЗакрепленияСотрудников</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ФлагЗакладки" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Флаг закладки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ФлагВидимостьОтбора" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Флаг видимость отбора</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Закладки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Закладки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Закладки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ПереместитьВЗакладкиВзаимодействия</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>Закладки</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ВидимостьОтбора" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отбор</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Видимость отбора</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.FilterCriterion</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ВидимостьОтбора</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

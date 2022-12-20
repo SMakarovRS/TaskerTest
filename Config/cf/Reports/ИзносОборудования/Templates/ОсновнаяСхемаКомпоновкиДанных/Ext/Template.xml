@@ -1,0 +1,726 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номенклатура</dataPath>
+			<field>Номенклатура</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоОстаток</dataPath>
+			<field>КоличествоОстаток</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация</dataPath>
+			<field>Организация</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>МестоХранения</dataPath>
+			<field>МестоХранения</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Партия</dataPath>
+			<field>Партия</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НоменклатураСрокПолезногоИспользования</dataPath>
+			<field>НоменклатураСрокПолезногоИспользования</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НоменклатураДатаВводаВЭксплуатацию</dataPath>
+			<field>НоменклатураДатаВводаВЭксплуатацию</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НоменклатураСерийныйНомер</dataPath>
+			<field>НоменклатураСерийныйНомер</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НоменклатураПервоначальнаяСтоимость</dataPath>
+			<field>НоменклатураПервоначальнаяСтоимость</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НоменклатураИнвентарныйНомер</dataPath>
+			<field>НоменклатураИнвентарныйНомер</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СрокЭксплуатации</dataPath>
+			<field>СрокЭксплуатации</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Срок эксплуатации</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ФактическийИзносПроценты</dataPath>
+			<field>ФактическийИзносПроценты</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Фактический износ проценты</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ФактическийИзносСумма</dataPath>
+			<field>ФактическийИзносСумма</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Фактический износ сумма</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОстаточнаяСтоимость</dataPath>
+			<field>ОстаточнаяСтоимость</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Остаточная стоимость</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидНоменклатуры</dataPath>
+			<field>ВидНоменклатуры</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид номенклатуры</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ОстаткиОстатки.Организация,
+	ОстаткиОстатки.МестоХранения,
+	ОстаткиОстатки.Номенклатура.ИнвентарныйНомер,
+	ОстаткиОстатки.Номенклатура,
+	ОстаткиОстатки.Номенклатура.ПервоначальнаяСтоимость,
+	ОстаткиОстатки.Номенклатура.СрокПолезногоИспользования,
+	ОстаткиОстатки.КоличествоОстаток,
+	ОстаткиОстатки.Номенклатура.СерийныйНомер,
+	ВЫБОР
+		КОГДА ОстаткиОстатки.Номенклатура.ДатаВводаВЭксплуатацию = ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+			ТОГДА 0
+		ИНАЧЕ ВЫБОР
+				КОГДА &amp;ДатаОкончания = ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+					ТОГДА РАЗНОСТЬДАТ(ОстаткиОстатки.Номенклатура.ДатаВводаВЭксплуатацию, &amp;ТекущаяДата, ДЕНЬ)
+				ИНАЧЕ РАЗНОСТЬДАТ(ОстаткиОстатки.Номенклатура.ДатаВводаВЭксплуатацию, &amp;ДатаОкончания, ДЕНЬ)
+			КОНЕЦ
+	КОНЕЦ КАК СрокЭксплуатации,
+	ОстаткиОстатки.Номенклатура.ДатаВводаВЭксплуатацию,
+	ВЫБОР
+		КОГДА ВЫБОР
+				КОГДА ОстаткиОстатки.Номенклатура.ДатаВводаВЭксплуатацию = ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+					ТОГДА 0
+				ИНАЧЕ ВЫБОР
+						КОГДА &amp;ДатаОкончания = ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+							ТОГДА РАЗНОСТЬДАТ(ОстаткиОстатки.Номенклатура.ДатаВводаВЭксплуатацию, &amp;ТекущаяДата, ДЕНЬ)
+						ИНАЧЕ РАЗНОСТЬДАТ(ОстаткиОстатки.Номенклатура.ДатаВводаВЭксплуатацию, &amp;ДатаОкончания, ДЕНЬ)
+					КОНЕЦ
+			КОНЕЦ = 0
+			ТОГДА 0
+		ИНАЧЕ ВЫБОР
+				КОГДА ОстаткиОстатки.Номенклатура.СрокПолезногоИспользования = 0
+					ТОГДА 0
+				ИНАЧЕ ВЫБОР
+						КОГДА &amp;ДатаОкончания = ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+							ТОГДА РАЗНОСТЬДАТ(ОстаткиОстатки.Номенклатура.ДатаВводаВЭксплуатацию, &amp;ТекущаяДата, ДЕНЬ)
+						ИНАЧЕ РАЗНОСТЬДАТ(ОстаткиОстатки.Номенклатура.ДатаВводаВЭксплуатацию, &amp;ДатаОкончания, ДЕНЬ)
+					КОНЕЦ / (ОстаткиОстатки.Номенклатура.СрокПолезногоИспользования / 12) / 365 * 100
+			КОНЕЦ
+	КОНЕЦ КАК ФактическийИзносПроценты,
+	ВЫБОР
+		КОГДА ВЫБОР
+				КОГДА ВЫБОР
+						КОГДА ОстаткиОстатки.Номенклатура.ДатаВводаВЭксплуатацию = ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+							ТОГДА 0
+						ИНАЧЕ ВЫБОР
+								КОГДА &amp;ДатаОкончания = ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+									ТОГДА РАЗНОСТЬДАТ(ОстаткиОстатки.Номенклатура.ДатаВводаВЭксплуатацию, &amp;ТекущаяДата, ДЕНЬ)
+								ИНАЧЕ РАЗНОСТЬДАТ(ОстаткиОстатки.Номенклатура.ДатаВводаВЭксплуатацию, &amp;ДатаОкончания, ДЕНЬ)
+							КОНЕЦ
+					КОНЕЦ = 0
+					ТОГДА 0
+				ИНАЧЕ ВЫБОР
+						КОГДА ОстаткиОстатки.Номенклатура.СрокПолезногоИспользования = 0
+							ТОГДА 0
+						ИНАЧЕ ВЫБОР
+								КОГДА &amp;ДатаОкончания = ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+									ТОГДА РАЗНОСТЬДАТ(ОстаткиОстатки.Номенклатура.ДатаВводаВЭксплуатацию, &amp;ТекущаяДата, ДЕНЬ)
+								ИНАЧЕ РАЗНОСТЬДАТ(ОстаткиОстатки.Номенклатура.ДатаВводаВЭксплуатацию, &amp;ДатаОкончания, ДЕНЬ)
+							КОНЕЦ / (ОстаткиОстатки.Номенклатура.СрокПолезногоИспользования / 12) / 365 * 100
+					КОНЕЦ
+			КОНЕЦ * ОстаткиОстатки.Номенклатура.ПервоначальнаяСтоимость / 100 &gt;= ОстаткиОстатки.Номенклатура.ПервоначальнаяСтоимость
+			ТОГДА ОстаткиОстатки.Номенклатура.ПервоначальнаяСтоимость
+		ИНАЧЕ ВЫБОР
+				КОГДА ВЫБОР
+						КОГДА ОстаткиОстатки.Номенклатура.ДатаВводаВЭксплуатацию = ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+							ТОГДА 0
+						ИНАЧЕ ВЫБОР
+								КОГДА &amp;ДатаОкончания = ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+									ТОГДА РАЗНОСТЬДАТ(ОстаткиОстатки.Номенклатура.ДатаВводаВЭксплуатацию, &amp;ТекущаяДата, ДЕНЬ)
+								ИНАЧЕ РАЗНОСТЬДАТ(ОстаткиОстатки.Номенклатура.ДатаВводаВЭксплуатацию, &amp;ДатаОкончания, ДЕНЬ)
+							КОНЕЦ
+					КОНЕЦ = 0
+					ТОГДА 0
+				ИНАЧЕ ВЫБОР
+						КОГДА ОстаткиОстатки.Номенклатура.СрокПолезногоИспользования = 0
+							ТОГДА 0
+						ИНАЧЕ ВЫБОР
+								КОГДА &amp;ДатаОкончания = ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+									ТОГДА РАЗНОСТЬДАТ(ОстаткиОстатки.Номенклатура.ДатаВводаВЭксплуатацию, &amp;ТекущаяДата, ДЕНЬ)
+								ИНАЧЕ РАЗНОСТЬДАТ(ОстаткиОстатки.Номенклатура.ДатаВводаВЭксплуатацию, &amp;ДатаОкончания, ДЕНЬ)
+							КОНЕЦ / (ОстаткиОстатки.Номенклатура.СрокПолезногоИспользования / 12) / 365 * 100
+					КОНЕЦ
+			КОНЕЦ * ОстаткиОстатки.Номенклатура.ПервоначальнаяСтоимость / 100
+	КОНЕЦ КАК ФактическийИзносСумма,
+	ВЫБОР
+		КОГДА ОстаткиОстатки.Номенклатура.ПервоначальнаяСтоимость - ВЫБОР
+				КОГДА ВЫБОР
+						КОГДА ВЫБОР
+								КОГДА ОстаткиОстатки.Номенклатура.ДатаВводаВЭксплуатацию = ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+									ТОГДА 0
+								ИНАЧЕ ВЫБОР
+										КОГДА &amp;ДатаОкончания = ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+											ТОГДА РАЗНОСТЬДАТ(ОстаткиОстатки.Номенклатура.ДатаВводаВЭксплуатацию, &amp;ТекущаяДата, ДЕНЬ)
+										ИНАЧЕ РАЗНОСТЬДАТ(ОстаткиОстатки.Номенклатура.ДатаВводаВЭксплуатацию, &amp;ДатаОкончания, ДЕНЬ)
+									КОНЕЦ
+							КОНЕЦ = 0
+							ТОГДА 0
+						ИНАЧЕ ВЫБОР
+								КОГДА ОстаткиОстатки.Номенклатура.СрокПолезногоИспользования = 0
+									ТОГДА 0
+								ИНАЧЕ ВЫБОР
+										КОГДА &amp;ДатаОкончания = ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+											ТОГДА РАЗНОСТЬДАТ(ОстаткиОстатки.Номенклатура.ДатаВводаВЭксплуатацию, &amp;ТекущаяДата, ДЕНЬ)
+										ИНАЧЕ РАЗНОСТЬДАТ(ОстаткиОстатки.Номенклатура.ДатаВводаВЭксплуатацию, &amp;ДатаОкончания, ДЕНЬ)
+									КОНЕЦ / (ОстаткиОстатки.Номенклатура.СрокПолезногоИспользования / 12) / 365 * 100
+							КОНЕЦ
+					КОНЕЦ * ОстаткиОстатки.Номенклатура.ПервоначальнаяСтоимость / 100 &gt;= ОстаткиОстатки.Номенклатура.ПервоначальнаяСтоимость
+					ТОГДА ОстаткиОстатки.Номенклатура.ПервоначальнаяСтоимость
+				ИНАЧЕ ВЫБОР
+						КОГДА ВЫБОР
+								КОГДА ОстаткиОстатки.Номенклатура.ДатаВводаВЭксплуатацию = ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+									ТОГДА 0
+								ИНАЧЕ ВЫБОР
+										КОГДА &amp;ДатаОкончания = ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+											ТОГДА РАЗНОСТЬДАТ(ОстаткиОстатки.Номенклатура.ДатаВводаВЭксплуатацию, &amp;ТекущаяДата, ДЕНЬ)
+										ИНАЧЕ РАЗНОСТЬДАТ(ОстаткиОстатки.Номенклатура.ДатаВводаВЭксплуатацию, &amp;ДатаОкончания, ДЕНЬ)
+									КОНЕЦ
+							КОНЕЦ = 0
+							ТОГДА 0
+						ИНАЧЕ ВЫБОР
+								КОГДА ОстаткиОстатки.Номенклатура.СрокПолезногоИспользования = 0
+									ТОГДА 0
+								ИНАЧЕ ВЫБОР
+										КОГДА &amp;ДатаОкончания = ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+											ТОГДА РАЗНОСТЬДАТ(ОстаткиОстатки.Номенклатура.ДатаВводаВЭксплуатацию, &amp;ТекущаяДата, ДЕНЬ)
+										ИНАЧЕ РАЗНОСТЬДАТ(ОстаткиОстатки.Номенклатура.ДатаВводаВЭксплуатацию, &amp;ДатаОкончания, ДЕНЬ)
+									КОНЕЦ / (ОстаткиОстатки.Номенклатура.СрокПолезногоИспользования / 12) / 365 * 100
+							КОНЕЦ
+					КОНЕЦ * ОстаткиОстатки.Номенклатура.ПервоначальнаяСтоимость / 100
+			КОНЕЦ &lt;= 0
+			ТОГДА 0
+		ИНАЧЕ ОстаткиОстатки.Номенклатура.ПервоначальнаяСтоимость - ВЫБОР
+				КОГДА ВЫБОР
+						КОГДА ВЫБОР
+								КОГДА ОстаткиОстатки.Номенклатура.ДатаВводаВЭксплуатацию = ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+									ТОГДА 0
+								ИНАЧЕ ВЫБОР
+										КОГДА &amp;ДатаОкончания = ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+											ТОГДА РАЗНОСТЬДАТ(ОстаткиОстатки.Номенклатура.ДатаВводаВЭксплуатацию, &amp;ТекущаяДата, ДЕНЬ)
+										ИНАЧЕ РАЗНОСТЬДАТ(ОстаткиОстатки.Номенклатура.ДатаВводаВЭксплуатацию, &amp;ДатаОкончания, ДЕНЬ)
+									КОНЕЦ
+							КОНЕЦ = 0
+							ТОГДА 0
+						ИНАЧЕ ВЫБОР
+								КОГДА ОстаткиОстатки.Номенклатура.СрокПолезногоИспользования = 0
+									ТОГДА 0
+								ИНАЧЕ ВЫБОР
+										КОГДА &amp;ДатаОкончания = ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+											ТОГДА РАЗНОСТЬДАТ(ОстаткиОстатки.Номенклатура.ДатаВводаВЭксплуатацию, &amp;ТекущаяДата, ДЕНЬ)
+										ИНАЧЕ РАЗНОСТЬДАТ(ОстаткиОстатки.Номенклатура.ДатаВводаВЭксплуатацию, &amp;ДатаОкончания, ДЕНЬ)
+									КОНЕЦ / (ОстаткиОстатки.Номенклатура.СрокПолезногоИспользования / 12) / 365 * 100
+							КОНЕЦ
+					КОНЕЦ * ОстаткиОстатки.Номенклатура.ПервоначальнаяСтоимость / 100 &gt;= ОстаткиОстатки.Номенклатура.ПервоначальнаяСтоимость
+					ТОГДА ОстаткиОстатки.Номенклатура.ПервоначальнаяСтоимость
+				ИНАЧЕ ВЫБОР
+						КОГДА ВЫБОР
+								КОГДА ОстаткиОстатки.Номенклатура.ДатаВводаВЭксплуатацию = ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+									ТОГДА 0
+								ИНАЧЕ ВЫБОР
+										КОГДА &amp;ДатаОкончания = ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+											ТОГДА РАЗНОСТЬДАТ(ОстаткиОстатки.Номенклатура.ДатаВводаВЭксплуатацию, &amp;ТекущаяДата, ДЕНЬ)
+										ИНАЧЕ РАЗНОСТЬДАТ(ОстаткиОстатки.Номенклатура.ДатаВводаВЭксплуатацию, &amp;ДатаОкончания, ДЕНЬ)
+									КОНЕЦ
+							КОНЕЦ = 0
+							ТОГДА 0
+						ИНАЧЕ ВЫБОР
+								КОГДА ОстаткиОстатки.Номенклатура.СрокПолезногоИспользования = 0
+									ТОГДА 0
+								ИНАЧЕ ВЫБОР
+										КОГДА &amp;ДатаОкончания = ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+											ТОГДА РАЗНОСТЬДАТ(ОстаткиОстатки.Номенклатура.ДатаВводаВЭксплуатацию, &amp;ТекущаяДата, ДЕНЬ)
+										ИНАЧЕ РАЗНОСТЬДАТ(ОстаткиОстатки.Номенклатура.ДатаВводаВЭксплуатацию, &amp;ДатаОкончания, ДЕНЬ)
+									КОНЕЦ / (ОстаткиОстатки.Номенклатура.СрокПолезногоИспользования / 12) / 365 * 100
+							КОНЕЦ
+					КОНЕЦ * ОстаткиОстатки.Номенклатура.ПервоначальнаяСтоимость / 100
+			КОНЕЦ
+	КОНЕЦ КАК ОстаточнаяСтоимость,
+	ОстаткиОстатки.Номенклатура.ВидНоменклатуры КАК ВидНоменклатуры
+ИЗ
+	РегистрНакопления.Остатки.Остатки КАК ОстаткиОстатки
+ГДЕ
+	ТИПЗНАЧЕНИЯ(ОстаткиОстатки.Номенклатура) = ТИП(Справочник.КарточкиНоменклатуры)</query>
+	</dataSet>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ДатаОкончания</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата расчета</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;Период</expression>
+	</parameter>
+	<parameter>
+		<name>ТекущаяДата</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Текущая дата</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>ТекущаяДата()</expression>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>ИзносОборудования</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Износ оборудования</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Организация</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>МестоХранения</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Номенклатура</dcsset:field>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Карточка номенклатуры</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НоменклатураИнвентарныйНомер</dcsset:field>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Инвентарный №</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НоменклатураСерийныйНомер</dcsset:field>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Серийный №</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НоменклатураПервоначальнаяСтоимость</dcsset:field>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Первоначальная стоимость, руб.</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НоменклатураСрокПолезногоИспользования</dcsset:field>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Срок полезного использования, мес.</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СрокЭксплуатации</dcsset:field>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Срок эксплуатации, дн.</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НоменклатураДатаВводаВЭксплуатацию</dcsset:field>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата ввода в эксплуатацию</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ФактическийИзносПроценты</dcsset:field>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Фактический износ,%</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ФактическийИзносСумма</dcsset:field>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Фактический износ, руб.</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ОстаточнаяСтоимость</dcsset:field>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Остаточная стоимость, руб</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Организация</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:userSettingID>904fffa7-79c1-4cd6-be6b-13a41b94420c</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">МестоХранения</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:userSettingID>76df5f25-7887-4910-a8ee-75395fd6a6e7</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ВидНоменклатуры</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:userSettingID>73134ee1-ab9e-4d63-91c7-ba086b5f03e7</dcsset:userSettingID>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Период</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+					<dcsset:userSettingID>3a286c4d-eeb5-4e1b-be01-a825b7579edf</dcsset:userSettingID>
+					<dcsset:userSettingPresentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата расчета</v8:content>
+						</v8:item>
+					</dcsset:userSettingPresentation>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>МестоХранения</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Номенклатура</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>НоменклатураПервоначальнаяСтоимость</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ОстаточнаяСтоимость</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ФактическийИзносСумма</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Формат</dcscor:parameter>
+							<dcscor:value xsi:type="v8:LocalStringType">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧДЦ=2</v8:content>
+								</v8:item>
+							</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>ФактическийИзносПроценты</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Формат</dcscor:parameter>
+							<dcscor:value xsi:type="v8:LocalStringType">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧДЦ=</v8:content>
+								</v8:item>
+							</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>НоменклатураИнвентарныйНомер</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>НоменклатураСерийныйНомер</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">20</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">20</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>ФактическийИзносПроценты</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemGroup">
+							<dcsset:groupType>AndGroup</dcsset:groupType>
+							<dcsset:item xsi:type="dcsset:FilterItemComparison">
+								<dcsset:left xsi:type="dcscor:Field">ФактическийИзносПроценты</dcsset:left>
+								<dcsset:comparisonType>GreaterOrEqual</dcsset:comparisonType>
+								<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:FilterItemComparison">
+								<dcsset:left xsi:type="dcscor:Field">ФактическийИзносПроценты</dcsset:left>
+								<dcsset:comparisonType>Less</dcsset:comparisonType>
+								<dcsset:right xsi:type="xs:decimal">50</dcsset:right>
+							</dcsset:item>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветТекста</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">#008000</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>ФактическийИзносПроценты</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemGroup">
+							<dcsset:groupType>AndGroup</dcsset:groupType>
+							<dcsset:item xsi:type="dcsset:FilterItemComparison">
+								<dcsset:left xsi:type="dcscor:Field">ФактическийИзносПроценты</dcsset:left>
+								<dcsset:comparisonType>GreaterOrEqual</dcsset:comparisonType>
+								<dcsset:right xsi:type="xs:decimal">50</dcsset:right>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:FilterItemComparison">
+								<dcsset:left xsi:type="dcscor:Field">ФактическийИзносПроценты</dcsset:left>
+								<dcsset:comparisonType>Less</dcsset:comparisonType>
+								<dcsset:right xsi:type="xs:decimal">80</dcsset:right>
+							</dcsset:item>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветТекста</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">#0000FF</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>ФактическийИзносПроценты</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemGroup">
+							<dcsset:groupType>AndGroup</dcsset:groupType>
+							<dcsset:item xsi:type="dcsset:FilterItemComparison">
+								<dcsset:left xsi:type="dcscor:Field">ФактическийИзносПроценты</dcsset:left>
+								<dcsset:comparisonType>GreaterOrEqual</dcsset:comparisonType>
+								<dcsset:right xsi:type="xs:decimal">80</dcsset:right>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:FilterItemComparison">
+								<dcsset:left xsi:type="dcscor:Field">ФактическийИзносПроценты</dcsset:left>
+								<dcsset:comparisonType>Less</dcsset:comparisonType>
+								<dcsset:right xsi:type="xs:decimal">100</dcsset:right>
+							</dcsset:item>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветТекста</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">#993300</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>ФактическийИзносПроценты</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ФактическийИзносПроценты</dcsset:left>
+							<dcsset:comparisonType>GreaterOrEqual</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:decimal">100</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветТекста</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">style:NegativeTextColor</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+			</dcsset:conditionalAppearance>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьЗаголовок</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Организация</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>МестоХранения</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:item xsi:type="dcsset:StructureItemGroup">
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+					</dcsset:item>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

@@ -1,0 +1,613 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа1" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа1</v8:content>
+				</v8:item>
+			</Title>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="17"/>
+			<ChildItems>
+				<InputField name="Родитель" id="7">
+					<DataPath>Объект.Parent</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<ContextMenu name="РодительКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="РодительРасширеннаяПодсказка" id="9"/>
+				</InputField>
+				<InputField name="Код" id="1">
+					<DataPath>Объект.Code</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Наименование" id="4">
+			<DataPath>Объект.Description</DataPath>
+			<DefaultItem>true</DefaultItem>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="ВариантРасчета" id="18">
+			<DataPath>Объект.ВариантРасчета</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ContextMenu name="ВариантРасчетаКонтекстноеМеню" id="19"/>
+			<ExtendedTooltip name="ВариантРасчетаРасширеннаяПодсказка" id="20"/>
+			<Events>
+				<Event name="OnChange">ВариантРасчетаПриИзменении</Event>
+			</Events>
+		</InputField>
+		<Pages name="Страницы" id="21">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</Title>
+			<HorizontalStretch>true</HorizontalStretch>
+			<VerticalStretch>true</VerticalStretch>
+			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="22"/>
+			<ChildItems>
+				<Page name="Нет" id="33">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Нет</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="НетРасширеннаяПодсказка" id="34"/>
+					<ChildItems>
+						<LabelDecoration name="Декорация6" id="131">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<HorizontalStretch>true</HorizontalStretch>
+							<VerticalStretch>true</VerticalStretch>
+							<ContextMenu name="Декорация6КонтекстноеМеню" id="132"/>
+							<ExtendedTooltip name="Декорация6РасширеннаяПодсказка" id="133"/>
+						</LabelDecoration>
+						<LabelDecoration name="Декорация1" id="35">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<TextColor>#3366FF</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Для сохранения и корректной работы определения времени, необходимо выбрать вариант расчета.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Декорация1КонтекстноеМеню" id="36"/>
+							<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="37"/>
+						</LabelDecoration>
+					</ChildItems>
+				</Page>
+				<Page name="Независимый" id="23">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Независимый</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="НезависимыйРасширеннаяПодсказка" id="24"/>
+					<ChildItems>
+						<InputField name="ВремяРеакции" id="10">
+							<DataPath>Объект.ВремяРеакции</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВремяРеакцииКонтекстноеМеню" id="11"/>
+							<ExtendedTooltip name="ВремяРеакцииРасширеннаяПодсказка" id="12"/>
+						</InputField>
+						<InputField name="ВремяРешения" id="13">
+							<DataPath>Объект.ВремяРешения</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВремяРешенияКонтекстноеМеню" id="14"/>
+							<ExtendedTooltip name="ВремяРешенияРасширеннаяПодсказка" id="15"/>
+						</InputField>
+						<LabelDecoration name="Декорация5" id="128">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<HorizontalStretch>true</HorizontalStretch>
+							<VerticalStretch>true</VerticalStretch>
+							<ContextMenu name="Декорация5КонтекстноеМеню" id="129"/>
+							<ExtendedTooltip name="Декорация5РасширеннаяПодсказка" id="130"/>
+						</LabelDecoration>
+						<LabelDecoration name="Декорация4" id="125">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<TextColor>#3366FF</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Можно ввести произвольные значения времени реакции и времени решения.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Декорация4КонтекстноеМеню" id="126"/>
+							<ExtendedTooltip name="Декорация4РасширеннаяПодсказка" id="127"/>
+						</LabelDecoration>
+					</ChildItems>
+				</Page>
+				<Page name="Вычисляемый" id="25">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вычисляемый</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ВычисляемыйРасширеннаяПодсказка" id="26"/>
+					<ChildItems>
+						<InputField name="ВычисляемоеВремяРеакции" id="171">
+							<DataPath>Объект.ВычисляемоеВремяРеакции</DataPath>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<ContextMenu name="ВычисляемоеВремяРеакцииКонтекстноеМеню" id="172"/>
+							<ExtendedTooltip name="ВычисляемоеВремяРеакцииРасширеннаяПодсказка" id="173"/>
+						</InputField>
+						<InputField name="ВычисляемоеВремяРешения" id="174">
+							<DataPath>Объект.ВычисляемоеВремяРешения</DataPath>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<ContextMenu name="ВычисляемоеВремяРешенияКонтекстноеМеню" id="175"/>
+							<ExtendedTooltip name="ВычисляемоеВремяРешенияРасширеннаяПодсказка" id="176"/>
+						</InputField>
+						<LabelDecoration name="Декорация9" id="177">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<HorizontalStretch>true</HorizontalStretch>
+							<VerticalStretch>true</VerticalStretch>
+							<ContextMenu name="Декорация9КонтекстноеМеню" id="178"/>
+							<ExtendedTooltip name="Декорация9РасширеннаяПодсказка" id="179"/>
+						</LabelDecoration>
+						<LabelDecoration name="Декорация10" id="180">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<TextColor>#3366FF</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Время расчитывается динамически по формулам. Например, "до конца недели" с момента поступления задания.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Декорация10КонтекстноеМеню" id="181"/>
+							<ExtendedTooltip name="Декорация10РасширеннаяПодсказка" id="182"/>
+						</LabelDecoration>
+					</ChildItems>
+				</Page>
+				<Page name="ЗависитОтВремениПоступившегоЗадания" id="27">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>От времени</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ЗависитОтВремениПоступившегоЗаданияРасширеннаяПодсказка" id="28"/>
+					<ChildItems>
+						<Table name="Время" id="38">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.Время</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Время</v8:content>
+								</v8:item>
+							</Title>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ВремяКонтекстноеМеню" id="39"/>
+							<AutoCommandBar name="ВремяКоманднаяПанель" id="40"/>
+							<ExtendedTooltip name="ВремяРасширеннаяПодсказка" id="41"/>
+							<SearchStringAddition name="ВремяСтрокаПоиска" id="42">
+								<AdditionSource>
+									<Item>Время</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ВремяСтрокаПоискаКонтекстноеМеню" id="43"/>
+								<ExtendedTooltip name="ВремяСтрокаПоискаРасширеннаяПодсказка" id="44"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ВремяСостояниеПросмотра" id="45">
+								<AdditionSource>
+									<Item>Время</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<HorizontalLocation>Left</HorizontalLocation>
+								<ContextMenu name="ВремяСостояниеПросмотраКонтекстноеМеню" id="46"/>
+								<ExtendedTooltip name="ВремяСостояниеПросмотраРасширеннаяПодсказка" id="47"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ВремяУправлениеПоиском" id="48">
+								<AdditionSource>
+									<Item>Время</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ВремяУправлениеПоискомКонтекстноеМеню" id="49"/>
+								<ExtendedTooltip name="ВремяУправлениеПоискомРасширеннаяПодсказка" id="50"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ВремяНомерСтроки" id="51">
+									<DataPath>Объект.Время.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ВремяНомерСтрокиКонтекстноеМеню" id="52"/>
+									<ExtendedTooltip name="ВремяНомерСтрокиРасширеннаяПодсказка" id="53"/>
+								</LabelField>
+								<InputField name="ВремяВремяНачала" id="54">
+									<DataPath>Объект.Время.ВремяНачала</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ВремяВремяНачалаКонтекстноеМеню" id="55"/>
+									<ExtendedTooltip name="ВремяВремяНачалаРасширеннаяПодсказка" id="56"/>
+								</InputField>
+								<InputField name="ВремяВремяОкончания" id="57">
+									<DataPath>Объект.Время.ВремяОкончания</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ВремяВремяОкончанияКонтекстноеМеню" id="58"/>
+									<ExtendedTooltip name="ВремяВремяОкончанияРасширеннаяПодсказка" id="59"/>
+								</InputField>
+								<InputField name="ВремяВремяРеакции" id="60">
+									<DataPath>Объект.Время.ВремяРеакции</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ВремяВремяРеакцииКонтекстноеМеню" id="61"/>
+									<ExtendedTooltip name="ВремяВремяРеакцииРасширеннаяПодсказка" id="62"/>
+								</InputField>
+								<InputField name="ВремяВремяРешения" id="63">
+									<DataPath>Объект.Время.ВремяРешения</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ВремяВремяРешенияКонтекстноеМеню" id="64"/>
+									<ExtendedTooltip name="ВремяВремяРешенияРасширеннаяПодсказка" id="65"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+						<LabelDecoration name="Декорация3" id="122">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<TextColor>#3366FF</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Введите диапазоны дней от 00:00 до 23:59. Например, если задание пришло с 18:00 до 23:59, то использовать вот такое время реакции и время решения.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Декорация3КонтекстноеМеню" id="123"/>
+							<ExtendedTooltip name="Декорация3РасширеннаяПодсказка" id="124"/>
+						</LabelDecoration>
+					</ChildItems>
+				</Page>
+				<Page name="ЗависитОтДняМесяцаПоступившегоЗадания" id="29">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>От дня месяца</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ЗависитОтДняМесяцаПоступившегоЗаданияРасширеннаяПодсказка" id="30"/>
+					<ChildItems>
+						<Table name="ДниМесяца" id="66">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.ДниМесяца</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ДниМесяца</v8:content>
+								</v8:item>
+							</Title>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ДниМесяцаКонтекстноеМеню" id="67"/>
+							<AutoCommandBar name="ДниМесяцаКоманднаяПанель" id="68"/>
+							<ExtendedTooltip name="ДниМесяцаРасширеннаяПодсказка" id="69"/>
+							<SearchStringAddition name="ДниМесяцаСтрокаПоиска" id="70">
+								<AdditionSource>
+									<Item>ДниМесяца</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДниМесяцаСтрокаПоискаКонтекстноеМеню" id="71"/>
+								<ExtendedTooltip name="ДниМесяцаСтрокаПоискаРасширеннаяПодсказка" id="72"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ДниМесяцаСостояниеПросмотра" id="73">
+								<AdditionSource>
+									<Item>ДниМесяца</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<HorizontalLocation>Left</HorizontalLocation>
+								<ContextMenu name="ДниМесяцаСостояниеПросмотраКонтекстноеМеню" id="74"/>
+								<ExtendedTooltip name="ДниМесяцаСостояниеПросмотраРасширеннаяПодсказка" id="75"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ДниМесяцаУправлениеПоиском" id="76">
+								<AdditionSource>
+									<Item>ДниМесяца</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ДниМесяцаУправлениеПоискомКонтекстноеМеню" id="77"/>
+								<ExtendedTooltip name="ДниМесяцаУправлениеПоискомРасширеннаяПодсказка" id="78"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ДатыНомерСтроки" id="79">
+									<DataPath>Объект.ДниМесяца.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДатыНомерСтрокиКонтекстноеМеню" id="80"/>
+									<ExtendedTooltip name="ДатыНомерСтрокиРасширеннаяПодсказка" id="81"/>
+								</LabelField>
+								<InputField name="ДатыДатаНачала" id="82">
+									<DataPath>Объект.ДниМесяца.ДеньНачала</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДатыДатаНачалаКонтекстноеМеню" id="83"/>
+									<ExtendedTooltip name="ДатыДатаНачалаРасширеннаяПодсказка" id="84"/>
+								</InputField>
+								<InputField name="ДатыДатаОкончания" id="85">
+									<DataPath>Объект.ДниМесяца.ДеньОкончания</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДатыДатаОкончанияКонтекстноеМеню" id="86"/>
+									<ExtendedTooltip name="ДатыДатаОкончанияРасширеннаяПодсказка" id="87"/>
+								</InputField>
+								<InputField name="ДатыВремяРеакции" id="88">
+									<DataPath>Объект.ДниМесяца.ВремяРеакции</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДатыВремяРеакцииКонтекстноеМеню" id="89"/>
+									<ExtendedTooltip name="ДатыВремяРеакцииРасширеннаяПодсказка" id="90"/>
+								</InputField>
+								<InputField name="ДатыВремяРешения" id="91">
+									<DataPath>Объект.ДниМесяца.ВремяРешения</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДатыВремяРешенияКонтекстноеМеню" id="92"/>
+									<ExtendedTooltip name="ДатыВремяРешенияРасширеннаяПодсказка" id="93"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+						<LabelDecoration name="Декорация2" id="119">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<TextColor>#3366FF</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Введите диапазоны дней от 1 до 31. Например, если задание пришло с 1 по 5 число месяца то использовать вот такое время реакции и время решения.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Декорация2КонтекстноеМеню" id="120"/>
+							<ExtendedTooltip name="Декорация2РасширеннаяПодсказка" id="121"/>
+						</LabelDecoration>
+					</ChildItems>
+				</Page>
+				<Page name="ЗависитОтПриоритетаПоступившегоЗадания" id="31">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>От приоритета</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ЗависитОтПриоритетаПоступившегоЗаданияРасширеннаяПодсказка" id="32"/>
+					<ChildItems>
+						<Table name="Приоритеты" id="94">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.Приоритеты</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Приоритеты</v8:content>
+								</v8:item>
+							</Title>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ПриоритетыКонтекстноеМеню" id="95"/>
+							<AutoCommandBar name="ПриоритетыКоманднаяПанель" id="96">
+								<ChildItems>
+									<Button name="ПриоритетыЗаполнитьПоПриоритетам" id="169">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ЗаполнитьПоПриоритетам</CommandName>
+										<ExtendedTooltip name="ПриоритетыЗаполнитьПоПриоритетамРасширеннаяПодсказка" id="170"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ПриоритетыРасширеннаяПодсказка" id="97"/>
+							<SearchStringAddition name="ПриоритетыСтрокаПоиска" id="98">
+								<AdditionSource>
+									<Item>Приоритеты</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПриоритетыСтрокаПоискаКонтекстноеМеню" id="99"/>
+								<ExtendedTooltip name="ПриоритетыСтрокаПоискаРасширеннаяПодсказка" id="100"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ПриоритетыСостояниеПросмотра" id="101">
+								<AdditionSource>
+									<Item>Приоритеты</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<HorizontalLocation>Left</HorizontalLocation>
+								<ContextMenu name="ПриоритетыСостояниеПросмотраКонтекстноеМеню" id="102"/>
+								<ExtendedTooltip name="ПриоритетыСостояниеПросмотраРасширеннаяПодсказка" id="103"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ПриоритетыУправлениеПоиском" id="104">
+								<AdditionSource>
+									<Item>Приоритеты</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ПриоритетыУправлениеПоискомКонтекстноеМеню" id="105"/>
+								<ExtendedTooltip name="ПриоритетыУправлениеПоискомРасширеннаяПодсказка" id="106"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ПриоритетыНомерСтроки" id="107">
+									<DataPath>Объект.Приоритеты.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПриоритетыНомерСтрокиКонтекстноеМеню" id="108"/>
+									<ExtendedTooltip name="ПриоритетыНомерСтрокиРасширеннаяПодсказка" id="109"/>
+								</LabelField>
+								<InputField name="ПриоритетыПриоритет" id="110">
+									<DataPath>Объект.Приоритеты.Приоритет</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПриоритетыПриоритетКонтекстноеМеню" id="111"/>
+									<ExtendedTooltip name="ПриоритетыПриоритетРасширеннаяПодсказка" id="112"/>
+								</InputField>
+								<InputField name="ПриоритетыВремяРеакции" id="113">
+									<DataPath>Объект.Приоритеты.ВремяРеакции</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПриоритетыВремяРеакцииКонтекстноеМеню" id="114"/>
+									<ExtendedTooltip name="ПриоритетыВремяРеакцииРасширеннаяПодсказка" id="115"/>
+								</InputField>
+								<InputField name="ПриоритетыВремяРешения" id="116">
+									<DataPath>Объект.Приоритеты.ВремяРешения</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПриоритетыВремяРешенияКонтекстноеМеню" id="117"/>
+									<ExtendedTooltip name="ПриоритетыВремяРешенияРасширеннаяПодсказка" id="118"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+						<LabelDecoration name="Декорация7" id="161">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<TextColor>#3366FF</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Введите разбивку по приоритетам. Например, если задание пришло с приоритетом высокий, то использовать вот такое время реакции и время решения.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Декорация7КонтекстноеМеню" id="162"/>
+							<ExtendedTooltip name="Декорация7РасширеннаяПодсказка" id="163"/>
+						</LabelDecoration>
+					</ChildItems>
+				</Page>
+				<Page name="ЗависитОтДняНеделиПоступившегоЗадания" id="134">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>От дня недели</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ЗависитОтДняНеделиПоступившегоЗаданияРасширеннаяПодсказка" id="135"/>
+					<ChildItems>
+						<Table name="ДниНедели" id="136">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.ДниНедели</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ДниНедели</v8:content>
+								</v8:item>
+							</Title>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ДниНеделиКонтекстноеМеню" id="137"/>
+							<AutoCommandBar name="ДниНеделиКоманднаяПанель" id="138">
+								<ChildItems>
+									<Button name="ДниНеделиЗаполнитьДниНедели" id="167">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ЗаполнитьДниНедели</CommandName>
+										<ExtendedTooltip name="ДниНеделиЗаполнитьДниНеделиРасширеннаяПодсказка" id="168"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ДниНеделиРасширеннаяПодсказка" id="139"/>
+							<SearchStringAddition name="ДниНеделиСтрокаПоиска" id="140">
+								<AdditionSource>
+									<Item>ДниНедели</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДниНеделиСтрокаПоискаКонтекстноеМеню" id="141"/>
+								<ExtendedTooltip name="ДниНеделиСтрокаПоискаРасширеннаяПодсказка" id="142"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ДниНеделиСостояниеПросмотра" id="143">
+								<AdditionSource>
+									<Item>ДниНедели</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<HorizontalLocation>Left</HorizontalLocation>
+								<ContextMenu name="ДниНеделиСостояниеПросмотраКонтекстноеМеню" id="144"/>
+								<ExtendedTooltip name="ДниНеделиСостояниеПросмотраРасширеннаяПодсказка" id="145"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ДниНеделиУправлениеПоиском" id="146">
+								<AdditionSource>
+									<Item>ДниНедели</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ДниНеделиУправлениеПоискомКонтекстноеМеню" id="147"/>
+								<ExtendedTooltip name="ДниНеделиУправлениеПоискомРасширеннаяПодсказка" id="148"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ДниНеделиНомерСтроки" id="149">
+									<DataPath>Объект.ДниНедели.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДниНеделиНомерСтрокиКонтекстноеМеню" id="150"/>
+									<ExtendedTooltip name="ДниНеделиНомерСтрокиРасширеннаяПодсказка" id="151"/>
+								</LabelField>
+								<InputField name="ДниНеделиДеньНедели" id="152">
+									<DataPath>Объект.ДниНедели.ДеньНедели</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДниНеделиДеньНеделиКонтекстноеМеню" id="153"/>
+									<ExtendedTooltip name="ДниНеделиДеньНеделиРасширеннаяПодсказка" id="154"/>
+								</InputField>
+								<InputField name="ДниНеделиВремяРеакции" id="155">
+									<DataPath>Объект.ДниНедели.ВремяРеакции</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДниНеделиВремяРеакцииКонтекстноеМеню" id="156"/>
+									<ExtendedTooltip name="ДниНеделиВремяРеакцииРасширеннаяПодсказка" id="157"/>
+								</InputField>
+								<InputField name="ДниНеделиВремяРешения" id="158">
+									<DataPath>Объект.ДниНедели.ВремяРешения</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДниНеделиВремяРешенияКонтекстноеМеню" id="159"/>
+									<ExtendedTooltip name="ДниНеделиВремяРешенияРасширеннаяПодсказка" id="160"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+						<LabelDecoration name="Декорация8" id="164">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<TextColor>#3366FF</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Введите разбивку по дням недели. Например, если задание пришло во вторник, то использовать вот такое время реакции и время решения.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Декорация8КонтекстноеМеню" id="165"/>
+							<ExtendedTooltip name="Декорация8РасширеннаяПодсказка" id="166"/>
+						</LabelDecoration>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.УровниРеакцииИВыполнения</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗаполнитьДниНедели" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить дни недели</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьДниНедели</Action>
+		</Command>
+		<Command name="ЗаполнитьПоПриоритетам" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить по приоритетам</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьПоПриоритетам</Action>
+		</Command>
+	</Commands>
+</Form>

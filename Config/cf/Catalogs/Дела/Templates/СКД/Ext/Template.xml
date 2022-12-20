@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Важность</dataPath>
+			<field>Важность</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Ссылка</dataPath>
+			<field>Ссылка</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидЦели</dataPath>
+			<field>ВидЦели</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаОбзора</dataPath>
+			<field>ДатаОбзора</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Выполнено</dataPath>
+			<field>Выполнено</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Избранное</dataPath>
+			<field>Избранное</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаВыполнения</dataPath>
+			<field>ДатаВыполнения</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаКорректировки</dataPath>
+			<field>ДатаКорректировки</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаСоздания</dataPath>
+			<field>ДатаСоздания</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Начало</dataPath>
+			<field>Начало</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Описание</dataPath>
+			<field>Описание</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Путь</dataPath>
+			<field>Путь</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Усилие</dataPath>
+			<field>Усилие</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Срочность</dataPath>
+			<field>Срочность</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Срок</dataPath>
+			<field>Срок</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Тема</dataPath>
+			<field>Тема</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЭтоПапка</dataPath>
+			<field>ЭтоПапка</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЭтоПроект</dataPath>
+			<field>ЭтоПроект</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Подсвечено</dataPath>
+			<field>Подсвечено</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИмяПредопределенныхДанных</dataPath>
+			<field>ИмяПредопределенныхДанных</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Предопределенный</dataPath>
+			<field>Предопределенный</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Родитель</dataPath>
+			<field>Родитель</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СрокЭтаНеделя</dataPath>
+			<field>СрокЭтаНеделя</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Срок эта неделя</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СрокСегодня</dataPath>
+			<field>СрокСегодня</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Срок сегодня</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СрокВчера</dataPath>
+			<field>СрокВчера</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Срок вчера</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СрокЭтотМесяц</dataPath>
+			<field>СрокЭтотМесяц</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Срок этот месяц</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СрокЗавтра</dataPath>
+			<field>СрокЗавтра</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Срок завтра</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТекущаяДата</dataPath>
+			<field>ТекущаяДата</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущая дата</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СрокПросрочен</dataPath>
+			<field>СрокПросрочен</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Срок просрочен</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИспользоватьВремя</dataPath>
+			<field>ИспользоватьВремя</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	Дела.Ссылка КАК Ссылка,
+	Дела.Важность КАК Важность,
+	Дела.ВидЦели КАК ВидЦели,
+	Дела.Выполнено КАК Выполнено,
+	Дела.ДатаВыполнения КАК ДатаВыполнения,
+	Дела.ДатаКорректировки КАК ДатаКорректировки,
+	Дела.ДатаСледующегоОбзора КАК ДатаСледующегоОбзора,
+	Дела.ДатаСоздания КАК ДатаСоздания,
+	Дела.Избранное КАК Избранное,
+	Дела.Начало КАК Начало,
+	Дела.Описание КАК Описание,
+	Дела.Путь КАК Путь,
+	Дела.Срок КАК Срок,
+	Дела.Срочность КАК Срочность,
+	Дела.Тема КАК Тема,
+	Дела.Усилие КАК Усилие,
+	Дела.ЭтоПапка КАК ЭтоПапка,
+	Дела.ЭтоПроект КАК ЭтоПроект,
+	Дела.Подсвечено КАК Подсвечено,
+	Дела.ИмяПредопределенныхДанных КАК ИмяПредопределенныхДанных,
+	Дела.Предопределенный КАК Предопределенный,
+	Дела.Родитель КАК Родитель,
+	&amp;ТекущаяДата КАК ТекущаяДата,
+	Дела.Срок &lt;&gt; ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+		И Дела.Срок &gt;= ДОБАВИТЬКДАТЕ(НАЧАЛОПЕРИОДА(&amp;ТекущаяДата, ДЕНЬ), ДЕНЬ, -1)
+		И Дела.Срок &lt;= ДОБАВИТЬКДАТЕ(КОНЕЦПЕРИОДА(&amp;ТекущаяДата, ДЕНЬ), ДЕНЬ, -1) КАК СрокВчера,
+	Дела.Срок &lt;&gt; ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+		И Дела.Срок &gt;= НАЧАЛОПЕРИОДА(&amp;ТекущаяДата, ДЕНЬ)
+		И Дела.Срок &lt;= КОНЕЦПЕРИОДА(&amp;ТекущаяДата, ДЕНЬ) КАК СрокСегодня,
+	Дела.Срок &lt;&gt; ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+		И Дела.Срок &gt;= ДОБАВИТЬКДАТЕ(НАЧАЛОПЕРИОДА(&amp;ТекущаяДата, ДЕНЬ), ДЕНЬ, 1)
+		И Дела.Срок &lt;= ДОБАВИТЬКДАТЕ(КОНЕЦПЕРИОДА(&amp;ТекущаяДата, ДЕНЬ), ДЕНЬ, 1) КАК СрокЗавтра,
+	Дела.Срок &lt;&gt; ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+		И Дела.Срок &gt;= НАЧАЛОПЕРИОДА(&amp;ТекущаяДата, НЕДЕЛЯ)
+		И Дела.Срок &lt;= КОНЕЦПЕРИОДА(&amp;ТекущаяДата, НЕДЕЛЯ) КАК СрокЭтаНеделя,
+	Дела.Срок &lt;&gt; ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+		И Дела.Срок &gt;= НАЧАЛОПЕРИОДА(&amp;ТекущаяДата, МЕСЯЦ)
+		И Дела.Срок &lt;= КОНЕЦПЕРИОДА(&amp;ТекущаяДата, МЕСЯЦ) КАК СрокЭтотМесяц,
+	Дела.ИспользоватьВремя КАК ИспользоватьВремя,
+	Дела.Срок &lt;&gt; ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+		И ВЫБОР
+			КОГДА Дела.ИспользоватьВремя
+				ТОГДА Дела.Срок &lt; &amp;ТекущаяДата
+			ИНАЧЕ НАЧАЛОПЕРИОДА(Дела.Срок, ДЕНЬ) &lt; НАЧАЛОПЕРИОДА(&amp;ТекущаяДата, ДЕНЬ)
+		КОНЕЦ КАК СрокПросрочен
+ИЗ
+	Справочник.Дела КАК Дела
+ГДЕ
+	Дела.ПометкаУдаления = ЛОЖЬ
+	И Дела.Пользователь = &amp;Пользователь</query>
+	</dataSet>
+	<parameter>
+		<name>Пользователь</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Пользователь</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Пользователи</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ТекущаяДата</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Текущая дата</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Ссылка</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

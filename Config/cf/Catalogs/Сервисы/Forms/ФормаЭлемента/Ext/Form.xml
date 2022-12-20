@@ -1,0 +1,1077 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWriteAtServer">ПослеЗаписиНаСервере</Event>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+		<Event name="FillCheckProcessingAtServer">ОбработкаПроверкиЗаполненияНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа1" id="35">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа1</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="36"/>
+			<ChildItems>
+				<InputField name="Родитель" id="7">
+					<DataPath>Объект.Parent</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<ContextMenu name="РодительКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="РодительРасширеннаяПодсказка" id="9"/>
+				</InputField>
+				<InputField name="КодСервиса" id="264">
+					<DataPath>Объект.КодСервиса</DataPath>
+					<InputHint>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>1.1</v8:content>
+						</v8:item>
+					</InputHint>
+					<ContextMenu name="КодСервисаКонтекстноеМеню" id="265"/>
+					<ExtendedTooltip name="КодСервисаРасширеннаяПодсказка" id="266"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Наименование" id="4">
+			<DataPath>Объект.Description</DataPath>
+			<DefaultItem>true</DefaultItem>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<UsualGroup name="Группа4" id="220">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа4</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="221"/>
+			<ChildItems>
+				<UsualGroup name="Группа2" id="51">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа2</v8:content>
+						</v8:item>
+					</Title>
+					<Group>AlwaysHorizontal</Group>
+					<Representation>None</Representation>
+					<United>false</United>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="52"/>
+					<ChildItems>
+						<InputField name="ТипСервиса" id="53">
+							<DataPath>Объект.ТипСервиса</DataPath>
+							<ToolTipRepresentation>Button</ToolTipRepresentation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<InputHint>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Пользовательский сервис</v8:content>
+								</v8:item>
+							</InputHint>
+							<ContextMenu name="ТипСервисаКонтекстноеМеню" id="54"/>
+							<ExtendedTooltip name="ТипСервисаРасширеннаяПодсказка" id="55"/>
+						</InputField>
+						<InputField name="Статус" id="56">
+							<DataPath>Объект.Статус</DataPath>
+							<ToolTipRepresentation>Button</ToolTipRepresentation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<InputHint>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>В работе/проектируется/не используется</v8:content>
+								</v8:item>
+							</InputHint>
+							<ContextMenu name="СтатусКонтекстноеМеню" id="57"/>
+							<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="58"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Группа3" id="62">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа3</v8:content>
+						</v8:item>
+					</Title>
+					<Group>AlwaysHorizontal</Group>
+					<Representation>None</Representation>
+					<United>false</United>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="63"/>
+					<ChildItems>
+						<InputField name="ВладелецСервиса" id="64">
+							<DataPath>Объект.Ответственный</DataPath>
+							<ToolTipRepresentation>Button</ToolTipRepresentation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<InputHint>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Иванов Иван Иванович</v8:content>
+								</v8:item>
+							</InputHint>
+							<ContextMenu name="ВладелецСервисаКонтекстноеМеню" id="65"/>
+							<ExtendedTooltip name="ВладелецСервисаРасширеннаяПодсказка" id="66"/>
+						</InputField>
+						<InputField name="Категория" id="37">
+							<DataPath>Объект.Категория</DataPath>
+							<ToolTipRepresentation>Button</ToolTipRepresentation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<InputHint>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Административный сервис</v8:content>
+								</v8:item>
+							</InputHint>
+							<ContextMenu name="КатегорияКонтекстноеМеню" id="38"/>
+							<ExtendedTooltip name="КатегорияРасширеннаяПодсказка" id="39"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Вес" id="267">
+			<DataPath>Объект.Вес</DataPath>
+			<ToolTipRepresentation>Button</ToolTipRepresentation>
+			<SpinButton>true</SpinButton>
+			<ContextMenu name="ВесКонтекстноеМеню" id="268"/>
+			<ExtendedTooltip name="ВесРасширеннаяПодсказка" id="269"/>
+			<Events>
+				<Event name="Tuning">ВесРегулирование</Event>
+			</Events>
+		</InputField>
+		<Pages name="Страницы" id="40">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="41"/>
+			<ChildItems>
+				<Page name="СтраницаОписание" id="44">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Описание</v8:content>
+						</v8:item>
+					</Title>
+					<Picture>
+						<xr:Ref>CommonPicture.сстКомментарий</xr:Ref>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="СтраницаОписаниеРасширеннаяПодсказка" id="45"/>
+					<ChildItems>
+						<InputField name="Описание" id="46">
+							<DataPath>Объект.Описание</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<HorizontalStretch>true</HorizontalStretch>
+							<VerticalStretch>true</VerticalStretch>
+							<MultiLine>true</MultiLine>
+							<InputHint>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Подробное описание сервиса и работ</v8:content>
+								</v8:item>
+							</InputHint>
+							<ContextMenu name="ОписаниеКонтекстноеМеню" id="47"/>
+							<ExtendedTooltip name="ОписаниеРасширеннаяПодсказка" id="48"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаУслуги" id="42">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Услуги</v8:content>
+						</v8:item>
+					</Title>
+					<Picture>
+						<xr:Ref>CommonPicture.Подпроцесс</xr:Ref>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</Picture>
+					<TitleDataPath>КоличествоУслуг</TitleDataPath>
+					<ExtendedTooltip name="СтраницаУслугиРасширеннаяПодсказка" id="43"/>
+					<ChildItems>
+						<Table name="Услуги" id="189">
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<DataPath>Услуги</DataPath>
+							<RowPictureDataPath>Услуги.DefaultPicture</RowPictureDataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Услуги</v8:content>
+								</v8:item>
+							</Title>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<ContextMenu name="УслугиКонтекстноеМеню" id="190"/>
+							<AutoCommandBar name="УслугиКоманднаяПанель" id="191"/>
+							<ExtendedTooltip name="УслугиРасширеннаяПодсказка" id="192"/>
+							<SearchStringAddition name="УслугиСтрокаПоиска" id="193">
+								<AdditionSource>
+									<Item>Услуги</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="УслугиСтрокаПоискаКонтекстноеМеню" id="194"/>
+								<ExtendedTooltip name="УслугиСтрокаПоискаРасширеннаяПодсказка" id="195"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="УслугиСостояниеПросмотра" id="196">
+								<AdditionSource>
+									<Item>Услуги</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<HorizontalLocation>Left</HorizontalLocation>
+								<ContextMenu name="УслугиСостояниеПросмотраКонтекстноеМеню" id="197"/>
+								<ExtendedTooltip name="УслугиСостояниеПросмотраРасширеннаяПодсказка" id="198"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="УслугиУправлениеПоиском" id="199">
+								<AdditionSource>
+									<Item>Услуги</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="УслугиУправлениеПоискомКонтекстноеМеню" id="200"/>
+								<ExtendedTooltip name="УслугиУправлениеПоискомРасширеннаяПодсказка" id="201"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="OnEditEnd">УслугиПриОкончанииРедактирования</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="УслугиНаименование" id="202">
+									<DataPath>Услуги.Description</DataPath>
+									<ContextMenu name="УслугиНаименованиеКонтекстноеМеню" id="203"/>
+									<ExtendedTooltip name="УслугиНаименованиеРасширеннаяПодсказка" id="204"/>
+								</LabelField>
+								<LabelField name="УслугиСтатус" id="217">
+									<DataPath>Услуги.Статус</DataPath>
+									<ContextMenu name="УслугиСтатусКонтекстноеМеню" id="218"/>
+									<ExtendedTooltip name="УслугиСтатусРасширеннаяПодсказка" id="219"/>
+								</LabelField>
+								<LabelField name="УслугиПроцесс" id="214">
+									<DataPath>Услуги.Процесс</DataPath>
+									<ContextMenu name="УслугиПроцессКонтекстноеМеню" id="215"/>
+									<ExtendedTooltip name="УслугиПроцессРасширеннаяПодсказка" id="216"/>
+								</LabelField>
+								<LabelField name="УслугиВладелец" id="208">
+									<DataPath>Услуги.Owner</DataPath>
+									<UserVisible>
+										<xr:Common>false</xr:Common>
+									</UserVisible>
+									<ContextMenu name="УслугиВладелецКонтекстноеМеню" id="209"/>
+									<ExtendedTooltip name="УслугиВладелецРасширеннаяПодсказка" id="210"/>
+								</LabelField>
+								<LabelField name="УслугиСсылка" id="270">
+									<DataPath>Услуги.Ref</DataPath>
+									<Visible>false</Visible>
+									<ContextMenu name="УслугиСсылкаКонтекстноеМеню" id="271"/>
+									<ExtendedTooltip name="УслугиСсылкаРасширеннаяПодсказка" id="272"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+						<LabelDecoration name="Декорация3" id="120">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<TextColor>style:ЦветПодписи</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Какие процессы используются в сервисе?</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Декорация3КонтекстноеМеню" id="121"/>
+							<ExtendedTooltip name="Декорация3РасширеннаяПодсказка" id="122"/>
+						</LabelDecoration>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаТарифы" id="123">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тарифы</v8:content>
+						</v8:item>
+					</Title>
+					<Picture>
+						<xr:Ref>CommonPicture.Деньги</xr:Ref>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</Picture>
+					<TitleDataPath>КоличествоТарифов</TitleDataPath>
+					<ExtendedTooltip name="СтраницаТарифыРасширеннаяПодсказка" id="124"/>
+					<ChildItems>
+						<InputField name="ДатаТарифов" id="162">
+							<DataPath>ДатаТарифов</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Дата актуальности тарифов</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДатаТарифовКонтекстноеМеню" id="163"/>
+							<ExtendedTooltip name="ДатаТарифовРасширеннаяПодсказка" id="164"/>
+							<Events>
+								<Event name="OnChange">ДатаТарифовПриИзменении</Event>
+							</Events>
+						</InputField>
+						<Table name="Тарифы" id="140">
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<DataPath>Тарифы</DataPath>
+							<RowPictureDataPath>Тарифы.DefaultPicture</RowPictureDataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Тарифы</v8:content>
+								</v8:item>
+							</Title>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<ContextMenu name="ТарифыКонтекстноеМеню" id="141"/>
+							<AutoCommandBar name="ТарифыКоманднаяПанель" id="142">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ТарифыРасширеннаяПодсказка" id="143"/>
+							<SearchStringAddition name="ТарифыСтрокаПоиска" id="144">
+								<AdditionSource>
+									<Item>Тарифы</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТарифыСтрокаПоискаКонтекстноеМеню" id="145"/>
+								<ExtendedTooltip name="ТарифыСтрокаПоискаРасширеннаяПодсказка" id="146"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ТарифыСостояниеПросмотра" id="147">
+								<AdditionSource>
+									<Item>Тарифы</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<HorizontalLocation>Left</HorizontalLocation>
+								<ContextMenu name="ТарифыСостояниеПросмотраКонтекстноеМеню" id="148"/>
+								<ExtendedTooltip name="ТарифыСостояниеПросмотраРасширеннаяПодсказка" id="149"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ТарифыУправлениеПоиском" id="150">
+								<AdditionSource>
+									<Item>Тарифы</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ТарифыУправлениеПоискомКонтекстноеМеню" id="151"/>
+								<ExtendedTooltip name="ТарифыУправлениеПоискомРасширеннаяПодсказка" id="152"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">ТарифыВыбор</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="ТарифыУслуга" id="261">
+									<DataPath>Тарифы.Услуга</DataPath>
+									<ContextMenu name="ТарифыУслугаКонтекстноеМеню" id="262"/>
+									<ExtendedTooltip name="ТарифыУслугаРасширеннаяПодсказка" id="263"/>
+								</LabelField>
+								<LabelField name="ТарифыТариф" id="153">
+									<DataPath>Тарифы.Тариф</DataPath>
+									<ContextMenu name="ТарифыТарифКонтекстноеМеню" id="154"/>
+									<ExtendedTooltip name="ТарифыТарифРасширеннаяПодсказка" id="155"/>
+								</LabelField>
+								<LabelField name="ТарифыЦена" id="156">
+									<DataPath>Тарифы.Цена</DataPath>
+									<ContextMenu name="ТарифыЦенаКонтекстноеМеню" id="157"/>
+									<ExtendedTooltip name="ТарифыЦенаРасширеннаяПодсказка" id="158"/>
+								</LabelField>
+								<LabelField name="ТарифыРегистратор" id="165">
+									<DataPath>Тарифы.Регистратор</DataPath>
+									<UserVisible>
+										<xr:Common>false</xr:Common>
+									</UserVisible>
+									<ContextMenu name="ТарифыРегистраторКонтекстноеМеню" id="166"/>
+									<ExtendedTooltip name="ТарифыРегистраторРасширеннаяПодсказка" id="167"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаКомпетенции" id="72">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Компетенции</v8:content>
+						</v8:item>
+					</Title>
+					<Picture>
+						<xr:Ref>CommonPicture.ВзятьНаИсполнение</xr:Ref>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</Picture>
+					<TitleDataPath>Объект.Компетенции.RowsCount</TitleDataPath>
+					<ExtendedTooltip name="СтраницаКомпетенцииРасширеннаяПодсказка" id="73"/>
+					<ChildItems>
+						<Table name="Компетенции" id="168">
+							<Representation>Tree</Representation>
+							<ChangeRowSet>false</ChangeRowSet>
+							<ChangeRowOrder>false</ChangeRowOrder>
+							<InitialTreeView>ExpandTopLevel</InitialTreeView>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Компетенции</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Компетенции</v8:content>
+								</v8:item>
+							</Title>
+							<CommandSet>
+								<ExcludedCommand>Add</ExcludedCommand>
+								<ExcludedCommand>Change</ExcludedCommand>
+								<ExcludedCommand>Copy</ExcludedCommand>
+								<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+								<ExcludedCommand>Delete</ExcludedCommand>
+								<ExcludedCommand>EndEdit</ExcludedCommand>
+								<ExcludedCommand>HierarchicalList</ExcludedCommand>
+								<ExcludedCommand>List</ExcludedCommand>
+								<ExcludedCommand>MoveDown</ExcludedCommand>
+								<ExcludedCommand>MoveUp</ExcludedCommand>
+								<ExcludedCommand>OutputList</ExcludedCommand>
+								<ExcludedCommand>SelectAll</ExcludedCommand>
+								<ExcludedCommand>ShowMultipleSelection</ExcludedCommand>
+								<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+								<ExcludedCommand>SortListAsc</ExcludedCommand>
+								<ExcludedCommand>SortListDesc</ExcludedCommand>
+								<ExcludedCommand>Tree</ExcludedCommand>
+							</CommandSet>
+							<ContextMenu name="КомпетенцииКонтекстноеМеню" id="169"/>
+							<AutoCommandBar name="КомпетенцииКоманднаяПанель" id="170">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="КомпетенцииРасширеннаяПодсказка" id="171"/>
+							<SearchStringAddition name="КомпетенцииСтрокаПоиска" id="172">
+								<AdditionSource>
+									<Item>Компетенции</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="КомпетенцииСтрокаПоискаКонтекстноеМеню" id="173"/>
+								<ExtendedTooltip name="КомпетенцииСтрокаПоискаРасширеннаяПодсказка" id="174"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="КомпетенцииСостояниеПросмотра" id="175">
+								<AdditionSource>
+									<Item>Компетенции</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<HorizontalLocation>Left</HorizontalLocation>
+								<ContextMenu name="КомпетенцииСостояниеПросмотраКонтекстноеМеню" id="176"/>
+								<ExtendedTooltip name="КомпетенцииСостояниеПросмотраРасширеннаяПодсказка" id="177"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="КомпетенцииУправлениеПоиском" id="178">
+								<AdditionSource>
+									<Item>Компетенции</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="КомпетенцииУправлениеПоискомКонтекстноеМеню" id="179"/>
+								<ExtendedTooltip name="КомпетенцииУправлениеПоискомРасширеннаяПодсказка" id="180"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<ColumnGroup name="КомпетенцииГруппа1" id="187">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>КомпетенцииГруппа1</v8:content>
+										</v8:item>
+									</Title>
+									<Group>InCell</Group>
+									<ExtendedTooltip name="КомпетенцииГруппа1РасширеннаяПодсказка" id="188"/>
+									<ChildItems>
+										<CheckBoxField name="КомпетенцииФлаг" id="184">
+											<DataPath>Компетенции.Флаг</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<EditMode>EnterOnInput</EditMode>
+											<ThreeState>true</ThreeState>
+											<ContextMenu name="КомпетенцииФлагКонтекстноеМеню" id="185"/>
+											<ExtendedTooltip name="КомпетенцииФлагРасширеннаяПодсказка" id="186"/>
+											<Events>
+												<Event name="OnChange">КомпетенцииФлагПриИзменении</Event>
+											</Events>
+										</CheckBoxField>
+										<InputField name="Компетенция" id="181">
+											<DataPath>Компетенции.Компетенция</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<EditMode>EnterOnInput</EditMode>
+											<TextEdit>false</TextEdit>
+											<ContextMenu name="КомпетенцияКонтекстноеМеню" id="182"/>
+											<ExtendedTooltip name="КомпетенцияРасширеннаяПодсказка" id="183"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+							</ChildItems>
+						</Table>
+						<LabelDecoration name="Декорация1" id="93">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<TextColor>style:ЦветПодписи</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Какие знания необходимы, чтобы выполнить работы по этому сервису?</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Декорация1КонтекстноеМеню" id="94"/>
+							<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="95"/>
+						</LabelDecoration>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаЗависимости" id="96">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Зависимости</v8:content>
+						</v8:item>
+					</Title>
+					<Picture>
+						<xr:Ref>StdPicture.RestoreValues</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<TitleDataPath>Объект.Зависимости.RowsCount</TitleDataPath>
+					<ExtendedTooltip name="СтраницаЗависимостиРасширеннаяПодсказка" id="97"/>
+					<ChildItems>
+						<Table name="Зависимости" id="98">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.Зависимости</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Зависимости</v8:content>
+								</v8:item>
+							</Title>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ЗависимостиКонтекстноеМеню" id="99"/>
+							<AutoCommandBar name="ЗависимостиКоманднаяПанель" id="100"/>
+							<ExtendedTooltip name="ЗависимостиРасширеннаяПодсказка" id="101"/>
+							<SearchStringAddition name="ЗависимостиСтрокаПоиска" id="102">
+								<AdditionSource>
+									<Item>Зависимости</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ЗависимостиСтрокаПоискаКонтекстноеМеню" id="103"/>
+								<ExtendedTooltip name="ЗависимостиСтрокаПоискаРасширеннаяПодсказка" id="104"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ЗависимостиСостояниеПросмотра" id="105">
+								<AdditionSource>
+									<Item>Зависимости</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<HorizontalLocation>Left</HorizontalLocation>
+								<ContextMenu name="ЗависимостиСостояниеПросмотраКонтекстноеМеню" id="106"/>
+								<ExtendedTooltip name="ЗависимостиСостояниеПросмотраРасширеннаяПодсказка" id="107"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ЗависимостиУправлениеПоиском" id="108">
+								<AdditionSource>
+									<Item>Зависимости</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ЗависимостиУправлениеПоискомКонтекстноеМеню" id="109"/>
+								<ExtendedTooltip name="ЗависимостиУправлениеПоискомРасширеннаяПодсказка" id="110"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ЗависимостиНомерСтроки" id="111">
+									<DataPath>Объект.Зависимости.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ЗависимостиНомерСтрокиКонтекстноеМеню" id="112"/>
+									<ExtendedTooltip name="ЗависимостиНомерСтрокиРасширеннаяПодсказка" id="113"/>
+								</LabelField>
+								<InputField name="ЗависимостиСервис" id="114">
+									<DataPath>Объект.Зависимости.Сервис</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ЗависимостиСервисКонтекстноеМеню" id="115"/>
+									<ExtendedTooltip name="ЗависимостиСервисРасширеннаяПодсказка" id="116"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+						<LabelDecoration name="Декорация2" id="117">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<TextColor>style:ЦветПодписи</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>От каких других сервисов зависит этот сервис?</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Декорация2КонтекстноеМеню" id="118"/>
+							<ExtendedTooltip name="Декорация2РасширеннаяПодсказка" id="119"/>
+						</LabelDecoration>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаОтклонения" id="222">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отклонения</v8:content>
+						</v8:item>
+					</Title>
+					<Picture>
+						<xr:Ref>CommonPicture.ВосклицательныйЗнакКрасный</xr:Ref>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</Picture>
+					<TitleDataPath>КоличествоОтклонений</TitleDataPath>
+					<ExtendedTooltip name="СтраницаОтклоненияРасширеннаяПодсказка" id="223"/>
+					<ChildItems>
+						<Table name="Отклонения" id="224">
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<DataPath>Отклонения</DataPath>
+							<RowPictureDataPath>Отклонения.DefaultPicture</RowPictureDataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Отклонения</v8:content>
+								</v8:item>
+							</Title>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<ContextMenu name="ОтклоненияКонтекстноеМеню" id="225"/>
+							<AutoCommandBar name="ОтклоненияКоманднаяПанель" id="226"/>
+							<ExtendedTooltip name="ОтклоненияРасширеннаяПодсказка" id="227"/>
+							<SearchStringAddition name="ОтклоненияСтрокаПоиска" id="228">
+								<AdditionSource>
+									<Item>Отклонения</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ОтклоненияСтрокаПоискаКонтекстноеМеню" id="229"/>
+								<ExtendedTooltip name="ОтклоненияСтрокаПоискаРасширеннаяПодсказка" id="230"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ОтклоненияСостояниеПросмотра" id="231">
+								<AdditionSource>
+									<Item>Отклонения</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<HorizontalLocation>Left</HorizontalLocation>
+								<ContextMenu name="ОтклоненияСостояниеПросмотраКонтекстноеМеню" id="232"/>
+								<ExtendedTooltip name="ОтклоненияСостояниеПросмотраРасширеннаяПодсказка" id="233"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ОтклоненияУправлениеПоиском" id="234">
+								<AdditionSource>
+									<Item>Отклонения</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ОтклоненияУправлениеПоискомКонтекстноеМеню" id="235"/>
+								<ExtendedTooltip name="ОтклоненияУправлениеПоискомРасширеннаяПодсказка" id="236"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ОтклоненияВидПричины" id="249">
+									<DataPath>Отклонения.ВидПричины</DataPath>
+									<ContextMenu name="ОтклоненияВидПричиныКонтекстноеМеню" id="250"/>
+									<ExtendedTooltip name="ОтклоненияВидПричиныРасширеннаяПодсказка" id="251"/>
+								</LabelField>
+								<LabelField name="ОтклоненияДатаНачала" id="252">
+									<DataPath>Отклонения.ДатаНачала</DataPath>
+									<ContextMenu name="ОтклоненияДатаНачалаКонтекстноеМеню" id="253"/>
+									<ExtendedTooltip name="ОтклоненияДатаНачалаРасширеннаяПодсказка" id="254"/>
+								</LabelField>
+								<LabelField name="ОтклоненияДатаОкончания" id="255">
+									<DataPath>Отклонения.ДатаОкончания</DataPath>
+									<ContextMenu name="ОтклоненияДатаОкончанияКонтекстноеМеню" id="256"/>
+									<ExtendedTooltip name="ОтклоненияДатаОкончанияРасширеннаяПодсказка" id="257"/>
+								</LabelField>
+								<LabelField name="ОтклоненияОбъект" id="243">
+									<DataPath>Отклонения.Объект</DataPath>
+									<UserVisible>
+										<xr:Common>false</xr:Common>
+									</UserVisible>
+									<ContextMenu name="ОтклоненияОбъектКонтекстноеМеню" id="244"/>
+									<ExtendedTooltip name="ОтклоненияОбъектРасширеннаяПодсказка" id="245"/>
+								</LabelField>
+								<LabelField name="ОтклоненияРегистратор" id="237">
+									<DataPath>Отклонения.Recorder</DataPath>
+									<UserVisible>
+										<xr:Common>false</xr:Common>
+									</UserVisible>
+									<ContextMenu name="ОтклоненияРегистраторКонтекстноеМеню" id="238"/>
+									<ExtendedTooltip name="ОтклоненияРегистраторРасширеннаяПодсказка" id="239"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+						<LabelDecoration name="Декорация4" id="258">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<TextColor>style:ЦветПодписи</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Периоды, когда сервис не был предоставлен по каким-то причинам.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Декорация4КонтекстноеМеню" id="259"/>
+							<ExtendedTooltip name="Декорация4РасширеннаяПодсказка" id="260"/>
+						</LabelDecoration>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаДополнительно" id="67">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дополнительно</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СтраницаДополнительноРасширеннаяПодсказка" id="68"/>
+				</Page>
+				<Page name="ГруппаДополнительныеРеквизиты" id="49">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа дополнительные реквизиты</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаДополнительныеРеквизитыРасширеннаяПодсказка" id="50"/>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<InputField name="Комментарий" id="59">
+			<DataPath>Объект.Комментарий</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ContextMenu name="КомментарийКонтекстноеМеню" id="60"/>
+			<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="61"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.Сервисы</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="Тарифы" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тарифы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>Тарифы.Регистратор</Field>
+				<Field>Тарифы.Сервис</Field>
+				<Field>Тарифы.Тариф</Field>
+				<Field>Тарифы.Услуга</Field>
+				<Field>Тарифы.Цена</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	ЦеныУслугСрезПоследних.Регистратор КАК Регистратор,
+	ЦеныУслугСрезПоследних.Тариф КАК Тариф,
+	ЦеныУслугСрезПоследних.Цена КАК Цена,
+	ЦеныУслугСрезПоследних.Услуга КАК Услуга,
+	ЦеныУслугСрезПоследних.Услуга.Владелец КАК Сервис
+ИЗ
+	РегистрСведений.ЦеныУслуг.СрезПоследних(&amp;ДатаАктуальности, Услуга.Владелец = &amp;Сервис) КАК ЦеныУслугСрезПоследних</QueryText>
+				<MainTable>InformationRegister.ЦеныУслуг.SliceLast</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>Тариф</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ДатаТарифов" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата тарифов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Компетенции" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Компетенции</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+			<Columns>
+				<Column name="Компетенция" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Компетенция</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Компетенции</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Флаг" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Флаг</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>2</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="Услуги" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Услуги</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>Услуги.Ref</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>Catalog.Услуги</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="КоличествоТарифов" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество тарифов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КоличествоУслуг" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество услуг</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Отклонения" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отклонения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>Отклонения.Recorder</Field>
+				<Field>Отклонения.ВидПричины</Field>
+				<Field>Отклонения.Объект</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>InformationRegister.ОтклоненияСервисов</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>ДатаНачала</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="КоличествоОтклонений" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество отклонений</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ШагКорректировкиВеса" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шаг корректировки веса</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>4</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>Услуги</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Услуги.Статус</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.СтатусыУслуг.НеИспользуется</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">#999999</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>Услуги</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Услуги.Статус</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.СтатусыУслуг.Проектируется</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">#3366FF</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+</Form>

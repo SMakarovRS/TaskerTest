@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>SLA</v8:content>
+		</v8:item>
+	</Title>
+	<Width>65</Width>
+	<Height>19</Height>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<LabelField name="Задание" id="1">
+			<DataPath>Задание</DataPath>
+			<TitleLocation>None</TitleLocation>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<HorizontalStretch>true</HorizontalStretch>
+			<BackColor>style:ЦветФонаАнтикБелый</BackColor>
+			<ContextMenu name="ЗаданиеКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ЗаданиеРасширеннаяПодсказка" id="3"/>
+		</LabelField>
+		<LabelField name="Информация" id="21">
+			<DataPath>Информация</DataPath>
+			<TitleLocation>None</TitleLocation>
+			<VerticalAlign>Top</VerticalAlign>
+			<GroupVerticalAlign>Top</GroupVerticalAlign>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<HorizontalStretch>true</HorizontalStretch>
+			<VerticalStretch>true</VerticalStretch>
+			<ContextMenu name="ИнформацияКонтекстноеМеню" id="22"/>
+			<ExtendedTooltip name="ИнформацияРасширеннаяПодсказка" id="23"/>
+		</LabelField>
+		<LabelField name="ДатаНачала" id="33">
+			<DataPath>ДатаНачала</DataPath>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата, от которой начинается отсчет крайних дат реакции и выполнения.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<HorizontalStretch>true</HorizontalStretch>
+			<ContextMenu name="ДатаНачалаКонтекстноеМеню" id="34"/>
+			<ExtendedTooltip name="ДатаНачалаРасширеннаяПодсказка" id="35"/>
+		</LabelField>
+		<LabelField name="SLA" id="24">
+			<DataPath>SLA</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Hiperlink>true</Hiperlink>
+			<ContextMenu name="SLAКонтекстноеМеню" id="25"/>
+			<ExtendedTooltip name="SLAРасширеннаяПодсказка" id="26"/>
+		</LabelField>
+		<LabelField name="Клиент" id="30">
+			<DataPath>Клиент</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<Hiperlink>true</Hiperlink>
+			<ContextMenu name="КлиентКонтекстноеМеню" id="31"/>
+			<ExtendedTooltip name="КлиентРасширеннаяПодсказка" id="32"/>
+		</LabelField>
+		<LabelField name="Сервис" id="4">
+			<DataPath>Сервис</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Hiperlink>true</Hiperlink>
+			<ContextMenu name="СервисКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="СервисРасширеннаяПодсказка" id="6"/>
+		</LabelField>
+		<LabelField name="Услуга" id="7">
+			<DataPath>Услуга</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Hiperlink>true</Hiperlink>
+			<ContextMenu name="УслугаКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="УслугаРасширеннаяПодсказка" id="9"/>
+		</LabelField>
+		<LabelField name="УровеньРеакцииИВыполнения" id="10">
+			<DataPath>УровеньРеакцииИВыполнения</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Hiperlink>true</Hiperlink>
+			<ContextMenu name="УровеньРеакцииИВыполненияКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="УровеньРеакцииИВыполненияРасширеннаяПодсказка" id="12"/>
+		</LabelField>
+		<LabelField name="График" id="27">
+			<DataPath>График</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<Hiperlink>true</Hiperlink>
+			<ContextMenu name="ГрафикКонтекстноеМеню" id="28"/>
+			<ExtendedTooltip name="ГрафикРасширеннаяПодсказка" id="29"/>
+		</LabelField>
+		<UsualGroup name="ГруппаКрайниеДаты" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Крайние даты</v8:content>
+				</v8:item>
+			</Title>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>StrongSeparation</Representation>
+			<ExtendedTooltip name="ГруппаКрайниеДатыРасширеннаяПодсказка" id="14"/>
+			<ChildItems>
+				<LabelField name="КрайняяДатаРеакции" id="15">
+					<DataPath>КрайняяДатаРеакции</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отреагировать до</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="КрайняяДатаРеакцииКонтекстноеМеню" id="16"/>
+					<ExtendedTooltip name="КрайняяДатаРеакцииРасширеннаяПодсказка" id="17"/>
+				</LabelField>
+				<LabelField name="КрайняяДатаВыполнения" id="18">
+					<DataPath>КрайняяДатаВыполнения</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выполнить до</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="КрайняяДатаВыполненияКонтекстноеМеню" id="19"/>
+					<ExtendedTooltip name="КрайняяДатаВыполненияРасширеннаяПодсказка" id="20"/>
+				</LabelField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Задание" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Задание</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DocumentRef.Задание</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Сервис" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сервис</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Сервисы</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Услуга" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Услуга</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Услуги</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="УровеньРеакцииИВыполнения" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Уровень реакции и выполнения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.УровниРеакцииИВыполнения</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="КрайняяДатаВыполнения" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Крайняя дата выполнения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КрайняяДатаРеакции" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Крайняя дата реакции</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Информация" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Информация</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="SLA" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Соглашение SLA</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DocumentRef.СоглашениеSLA</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="График" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>График</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Календари</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Клиент" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Клиент</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:TypeSet>cfg:DefinedType.КлиентSLA</v8:TypeSet>
+			</Type>
+		</Attribute>
+		<Attribute name="ДатаНачала" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата начала</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+</Form>

@@ -1,0 +1,357 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа1" id="34">
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="35"/>
+			<ChildItems>
+				<InputField name="Наименование" id="4">
+					<DataPath>Объект.Description</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+				</InputField>
+				<InputField name="Код" id="1">
+					<DataPath>Объект.Code</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа4" id="92">
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="93"/>
+			<ChildItems>
+				<InputField name="Столбец" id="76">
+					<DataPath>Объект.Столбец</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Оформляемый столбец</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTipRepresentation>Button</ToolTipRepresentation>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<DropListButton>true</DropListButton>
+					<ClearButton>true</ClearButton>
+					<TextEdit>false</TextEdit>
+					<ContextMenu name="СтолбецКонтекстноеМеню" id="77"/>
+					<ExtendedTooltip name="СтолбецРасширеннаяПодсказка" id="78"/>
+				</InputField>
+				<CheckBoxField name="Включено" id="89">
+					<DataPath>Объект.Использование</DataPath>
+					<ToolTipRepresentation>Button</ToolTipRepresentation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ВключеноКонтекстноеМеню" id="90"/>
+					<ExtendedTooltip name="ВключеноРасширеннаяПодсказка" id="91"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа2" id="82">
+			<Group>Vertical</Group>
+			<Representation>StrongSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="83"/>
+			<ChildItems>
+				<CommandBar name="ОбразецГруппа1" id="68">
+					<ExtendedTooltip name="ОбразецГруппа1РасширеннаяПодсказка" id="69"/>
+					<ChildItems>
+						<Button name="СтильЖирный" id="66">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.СтильЖирный</CommandName>
+							<ExtendedTooltip name="СтильЖирныйРасширеннаяПодсказка" id="67"/>
+						</Button>
+						<Button name="СтильКурсив" id="58">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.СтильКурсив</CommandName>
+							<ExtendedTooltip name="СтильКурсивРасширеннаяПодсказка" id="59"/>
+						</Button>
+						<Button name="СтильПодчеркнутый" id="60">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.СтильПодчеркнутый</CommandName>
+							<ExtendedTooltip name="СтильПодчеркнутыйРасширеннаяПодсказка" id="61"/>
+						</Button>
+						<Button name="СтильЦветТекста" id="62">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.СтильЦветТекста</CommandName>
+							<ExtendedTooltip name="СтильЦветТекстаРасширеннаяПодсказка" id="63"/>
+						</Button>
+						<Button name="СтильЦветФона" id="64">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.СтильЦветФона</CommandName>
+							<ExtendedTooltip name="СтильЦветФонаРасширеннаяПодсказка" id="65"/>
+						</Button>
+						<Button name="ВыбратьКартинку" id="97">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.ВыбратьКартинку</CommandName>
+							<ExtendedTooltip name="ВыбратьКартинкуРасширеннаяПодсказка" id="98"/>
+						</Button>
+						<Button name="ОчиститьКартинку" id="99">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.ОчиститьКартинку</CommandName>
+							<ExtendedTooltip name="ОчиститьКартинкуРасширеннаяПодсказка" id="100"/>
+						</Button>
+					</ChildItems>
+				</CommandBar>
+				<UsualGroup name="Группа3" id="87">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Образец</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalSpacing>None</HorizontalSpacing>
+					<Representation>None</Representation>
+					<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="88"/>
+					<ChildItems>
+						<CheckBoxField name="Галочка" id="84">
+							<DataPath>Галочка</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ГалочкаКонтекстноеМеню" id="85"/>
+							<ExtendedTooltip name="ГалочкаРасширеннаяПодсказка" id="86"/>
+						</CheckBoxField>
+						<PictureField name="Картинка" id="94">
+							<DataPath>Объект.Картинка</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+							<GroupVerticalAlign>Center</GroupVerticalAlign>
+							<Width>2</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Height>1</Height>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<HorizontalStretch>false</HorizontalStretch>
+							<VerticalStretch>false</VerticalStretch>
+							<ValuesPicture>
+								<xr:Ref>CommonPicture.КартинкиДел</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</ValuesPicture>
+							<Border width="1">
+								<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+							</Border>
+							<ContextMenu name="КартинкаКонтекстноеМеню" id="95"/>
+							<ExtendedTooltip name="КартинкаРасширеннаяПодсказка" id="96"/>
+						</PictureField>
+						<LabelField name="Образец" id="79">
+							<DataPath>Образец</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Border width="1">
+								<v8ui:style xsi:type="v8ui:ControlBorderType">Indented</v8ui:style>
+							</Border>
+							<BorderColor>#000000</BorderColor>
+							<ContextMenu name="ОбразецКонтекстноеМеню" id="80"/>
+							<ExtendedTooltip name="ОбразецРасширеннаяПодсказка" id="81"/>
+						</LabelField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<TextDocumentField name="Условие" id="28">
+			<DataPath>Объект.Условие</DataPath>
+			<TitleLocation>None</TitleLocation>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="УсловиеКонтекстноеМеню" id="29"/>
+			<ExtendedTooltip name="УсловиеРасширеннаяПодсказка" id="30"/>
+		</TextDocumentField>
+		<InputField name="Пользователь" id="7">
+			<DataPath>Объект.Пользователь</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ContextMenu name="ПользовательКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ПользовательРасширеннаяПодсказка" id="9"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.АвтоформатированиеДел</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="Образец" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Образец</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Галочка" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Галочка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Реквизит1" id="4">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="СтильКурсив" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Стиль курсив</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Стиль курсив</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ФорматированиеШрифтКурсив</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СтильКурсив</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+		</Command>
+		<Command name="СтильПодчеркнутый" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Стиль подчеркнутый</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Стиль подчеркнутый</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ФорматированиеШрифтПодчеркнутый</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СтильПодчеркнутый</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+		</Command>
+		<Command name="СтильЦветТекста" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Стиль цвет текста</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Стиль цвет текста</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ФорматированиеШрифтЦветТекста</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СтильЦветТекста</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+		</Command>
+		<Command name="СтильЦветФона" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Стиль цвет фона</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Стиль цвет фона</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ФорматированиеШрифтЦветФона</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СтильЦветФона</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+		</Command>
+		<Command name="СтильЖирный" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Жирный</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Стиль жирный</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ФорматированиеШрифтЖирный</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СтильЖирный</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+		</Command>
+		<Command name="ВыбратьКартинку" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать картинку</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать картинку</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыбратьКартинку</Action>
+		</Command>
+		<Command name="ОчиститьКартинку" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить картинку</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить картинку</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ПользовательскийМакетУдалить</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОчиститьКартинку</Action>
+		</Command>
+	</Commands>
+</Form>

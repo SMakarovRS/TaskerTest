@@ -1,0 +1,376 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИнвентарныйНомер</dataPath>
+			<field>ИнвентарныйНомер</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СетевоеИмя</dataPath>
+			<field>СетевоеИмя</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СетевыеИнтерфейсы.Ссылка</dataPath>
+			<field>СетевыеИнтерфейсы.Ссылка</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ГарантияМесяцев</dataPath>
+			<field>ГарантияМесяцев</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КлючАктивации</dataPath>
+			<field>КлючАктивации</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВерсияПО</dataPath>
+			<field>ВерсияПО</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Код</dataPath>
+			<field>Код</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидНоменклатуры</dataPath>
+			<field>ВидНоменклатуры</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЕстьОграниченияПоКоличествуПользователейЛицензии</dataPath>
+			<field>ЕстьОграниченияПоКоличествуПользователейЛицензии</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СетевыеИнтерфейсы.IPАдрес</dataPath>
+			<field>СетевыеИнтерфейсы.IPАдрес</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаУстановкиПО</dataPath>
+			<field>ДатаУстановкиПО</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СетевыеИнтерфейсы.НомерСтроки</dataPath>
+			<field>СетевыеИнтерфейсы.НомерСтроки</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЕстьГарантия</dataPath>
+			<field>ЕстьГарантия</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДополнительныеРеквизиты.НомерСтроки</dataPath>
+			<field>ДополнительныеРеквизиты.НомерСтроки</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СетевыеИнтерфейсы.МаскаПодсети</dataPath>
+			<field>СетевыеИнтерфейсы.МаскаПодсети</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Комментарий</dataPath>
+			<field>Комментарий</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДополнительныеРеквизиты.Ссылка</dataPath>
+			<field>ДополнительныеРеквизиты.Ссылка</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СерийныйНомер</dataPath>
+			<field>СерийныйНомер</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаОкончанияЛицензии</dataPath>
+			<field>ДатаОкончанияЛицензии</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоПользователейЛицензии</dataPath>
+			<field>КоличествоПользователейЛицензии</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаНачалаЛицензии</dataPath>
+			<field>ДатаНачалаЛицензии</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СетевыеИнтерфейсы.MACАдрес</dataPath>
+			<field>СетевыеИнтерфейсы.MACАдрес</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СетевойПользователь</dataPath>
+			<field>СетевойПользователь</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СетевыеИнтерфейсы.DHCP</dataPath>
+			<field>СетевыеИнтерфейсы.DHCP</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаОкончанияПодпискиОбновлений</dataPath>
+			<field>ДатаОкончанияПодпискиОбновлений</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Ссылка</dataPath>
+			<field>Ссылка</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДополнительныеРеквизиты.Значение</dataPath>
+			<field>ДополнительныеРеквизиты.Значение</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СетевыеИнтерфейсы.WINS</dataPath>
+			<field>СетевыеИнтерфейсы.WINS</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПометкаУдаления</dataPath>
+			<field>ПометкаУдаления</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СрокПолезногоИспользования</dataPath>
+			<field>СрокПолезногоИспользования</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СетевыеИнтерфейсы.DNS1</dataPath>
+			<field>СетевыеИнтерфейсы.DNS1</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СетевыеИнтерфейсы.DNS2</dataPath>
+			<field>СетевыеИнтерфейсы.DNS2</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>БухНомер</dataPath>
+			<field>БухНомер</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаНачалаПодпискиОбновлений</dataPath>
+			<field>ДатаНачалаПодпискиОбновлений</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>АмортизационнаяГруппа</dataPath>
+			<field>АмортизационнаяГруппа</field>
+		</field>
+		<field xsi:type="DataSetFieldNestedDataSet">
+			<dataPath>ДополнительныеРеквизиты</dataPath>
+			<field>ДополнительныеРеквизиты</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПервоначальнаяСтоимость</dataPath>
+			<field>ПервоначальнаяСтоимость</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаВводаВЭксплуатацию</dataPath>
+			<field>ДатаВводаВЭксплуатацию</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаОкончанияГарантии</dataPath>
+			<field>ДатаОкончанияГарантии</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИмяПредопределенныхДанных</dataPath>
+			<field>ИмяПредопределенныхДанных</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДополнительныеРеквизиты.ТекстоваяСтрока</dataPath>
+			<field>ДополнительныеРеквизиты.ТекстоваяСтрока</field>
+		</field>
+		<field xsi:type="DataSetFieldNestedDataSet">
+			<dataPath>СетевыеИнтерфейсы</dataPath>
+			<field>СетевыеИнтерфейсы</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Наименование</dataPath>
+			<field>Наименование</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СетевыеИнтерфейсы.Шлюз</dataPath>
+			<field>СетевыеИнтерфейсы.Шлюз</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Предопределенный</dataPath>
+			<field>Предопределенный</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДополнительныеРеквизиты.Свойство</dataPath>
+			<field>ДополнительныеРеквизиты.Свойство</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КодПоОКОФ</dataPath>
+			<field>КодПоОКОФ</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПорядковыйНомер</dataPath>
+			<field>ПорядковыйНомер</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДокументПоступления</dataPath>
+			<field>ДокументПоступления</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>АвтоНаименование</dataPath>
+			<field>АвтоНаименование</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СетевыеИнтерфейсы.ПортRadmin</dataPath>
+			<field>СетевыеИнтерфейсы.ПортRadmin</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЕстьОграниченияПоСрокуДействияЛицензии</dataPath>
+			<field>ЕстьОграниченияПоСрокуДействияЛицензии</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Владелец</dataPath>
+			<field>Владелец</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЕстьОграниченияПоСрокуДействияОбновлений</dataPath>
+			<field>ЕстьОграниченияПоСрокуДействияОбновлений</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТекущаяДата</dataPath>
+			<field>ТекущаяДата</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущая дата</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	КарточкиНоменклатуры.Ссылка,
+	КарточкиНоменклатуры.ПометкаУдаления,
+	КарточкиНоменклатуры.Владелец,
+	КарточкиНоменклатуры.Код,
+	КарточкиНоменклатуры.Наименование,
+	КарточкиНоменклатуры.ИнвентарныйНомер,
+	КарточкиНоменклатуры.СерийныйНомер,
+	КарточкиНоменклатуры.БухНомер,
+	КарточкиНоменклатуры.Комментарий,
+	КарточкиНоменклатуры.ЕстьОграниченияПоСрокуДействияЛицензии,
+	КарточкиНоменклатуры.ДатаНачалаЛицензии,
+	КарточкиНоменклатуры.ДатаОкончанияЛицензии,
+	КарточкиНоменклатуры.ЕстьОграниченияПоСрокуДействияОбновлений,
+	КарточкиНоменклатуры.ДатаНачалаПодпискиОбновлений,
+	КарточкиНоменклатуры.ДатаОкончанияПодпискиОбновлений,
+	КарточкиНоменклатуры.КоличествоПользователейЛицензии,
+	КарточкиНоменклатуры.ЕстьОграниченияПоКоличествуПользователейЛицензии,
+	КарточкиНоменклатуры.ВерсияПО,
+	КарточкиНоменклатуры.ДатаУстановкиПО,
+	КарточкиНоменклатуры.КлючАктивации,
+	КарточкиНоменклатуры.ДокументПоступления,
+	КарточкиНоменклатуры.ЕстьГарантия,
+	КарточкиНоменклатуры.ГарантияМесяцев,
+	КарточкиНоменклатуры.ДатаОкончанияГарантии,
+	КарточкиНоменклатуры.ВидНоменклатуры,
+	КарточкиНоменклатуры.АвтоНаименование,
+	КарточкиНоменклатуры.СрокПолезногоИспользования,
+	КарточкиНоменклатуры.ПервоначальнаяСтоимость,
+	КарточкиНоменклатуры.ДатаВводаВЭксплуатацию,
+	КарточкиНоменклатуры.СетевоеИмя,
+	КарточкиНоменклатуры.СетевойПользователь,
+	КарточкиНоменклатуры.ПорядковыйНомер,
+	КарточкиНоменклатуры.АмортизационнаяГруппа,
+	КарточкиНоменклатуры.КодПоОКОФ,
+	КарточкиНоменклатуры.ДополнительныеРеквизиты.(
+		Ссылка,
+		НомерСтроки,
+		Свойство,
+		Значение,
+		ТекстоваяСтрока
+	),
+	КарточкиНоменклатуры.СетевыеИнтерфейсы.(
+		Ссылка,
+		НомерСтроки,
+		IPАдрес,
+		МаскаПодсети,
+		DNS1,
+		DNS2,
+		WINS,
+		DHCP,
+		Шлюз,
+		ПортRadmin,
+		MACАдрес
+	),
+	КарточкиНоменклатуры.Предопределенный,
+	КарточкиНоменклатуры.ИмяПредопределенныхДанных,
+	КарточкиНоменклатуры.Представление,
+	&amp;ТекущаяДата
+ИЗ
+	Справочник.КарточкиНоменклатуры КАК КарточкиНоменклатуры
+ГДЕ
+	КарточкиНоменклатуры.Ссылка = &amp;Основание</query>
+	</dataSet>
+	<parameter>
+		<name>Основание</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Основание</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.КарточкиНоменклатуры</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>ТекущаяДата</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Текущая дата</v8:content>
+			</v8:item>
+		</title>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+		<expression>ТекущаяДата()</expression>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Ссылка</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ВидНоменклатуры</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ГарантияМесяцев</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ДатаОкончанияЛицензии</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Владелец</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:userSettingPresentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номенклатура</v8:content>
+						</v8:item>
+					</dcsset:userSettingPresentation>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="ВладелецКомментария" id="4">
+			<DataPath>Объект.ВладелецКомментария</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ContextMenu name="ВладелецКомментарияКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ВладелецКомментарияРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="Заголовок" id="25">
+			<DataPath>Объект.Заголовок</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ContextMenu name="ЗаголовокКонтекстноеМеню" id="26"/>
+			<ExtendedTooltip name="ЗаголовокРасширеннаяПодсказка" id="27"/>
+		</InputField>
+		<InputField name="Текст" id="13">
+			<DataPath>Объект.Текст</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ContextMenu name="ТекстКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ТекстРасширеннаяПодсказка" id="15"/>
+		</InputField>
+		<InputField name="ТекстHTML" id="16">
+			<DataPath>Объект.ТекстHTML</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ContextMenu name="ТекстHTMLКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="ТекстHTMLРасширеннаяПодсказка" id="18"/>
+		</InputField>
+		<CheckBoxField name="Приватный" id="19">
+			<DataPath>Объект.Приватный</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<EditMode>EnterOnInput</EditMode>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ПриватныйКонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="ПриватныйРасширеннаяПодсказка" id="21"/>
+		</CheckBoxField>
+		<InputField name="ИдентификаторСообщения" id="22">
+			<DataPath>Объект.ИдентификаторСообщения</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ContextMenu name="ИдентификаторСообщенияКонтекстноеМеню" id="23"/>
+			<ExtendedTooltip name="ИдентификаторСообщенияРасширеннаяПодсказка" id="24"/>
+		</InputField>
+		<InputField name="УчетнаяЗаписьЭлектроннойПочты" id="28">
+			<DataPath>Объект.УчетнаяЗаписьЭлектроннойПочты</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ContextMenu name="УчетнаяЗаписьЭлектроннойПочтыКонтекстноеМеню" id="29"/>
+			<ExtendedTooltip name="УчетнаяЗаписьЭлектроннойПочтыРасширеннаяПодсказка" id="30"/>
+		</InputField>
+		<UsualGroup name="ГруппаПодвал" id="50">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа подвал</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа подвал</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПодвалРасширеннаяПодсказка" id="51"/>
+			<ChildItems>
+				<InputField name="Автор" id="10">
+					<DataPath>Объект.Автор</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<ContextMenu name="АвторКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="АвторРасширеннаяПодсказка" id="12"/>
+				</InputField>
+				<LabelField name="Период" id="7">
+					<DataPath>Объект.Период</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>от</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПериодКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="ПериодРасширеннаяПодсказка" id="9"/>
+				</LabelField>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="Адресаты" id="52">
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Объект.Адресаты</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="АдресатыКонтекстноеМеню" id="53"/>
+			<AutoCommandBar name="АдресатыКоманднаяПанель" id="54"/>
+			<ExtendedTooltip name="АдресатыРасширеннаяПодсказка" id="55"/>
+			<SearchStringAddition name="АдресатыСтрокаПоиска" id="56">
+				<AdditionSource>
+					<Item>Адресаты</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="АдресатыСтрокаПоискаКонтекстноеМеню" id="57"/>
+				<ExtendedTooltip name="АдресатыСтрокаПоискаРасширеннаяПодсказка" id="58"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="АдресатыСостояниеПросмотра" id="59">
+				<AdditionSource>
+					<Item>Адресаты</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<HorizontalLocation>Left</HorizontalLocation>
+				<ContextMenu name="АдресатыСостояниеПросмотраКонтекстноеМеню" id="60"/>
+				<ExtendedTooltip name="АдресатыСостояниеПросмотраРасширеннаяПодсказка" id="61"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="АдресатыУправлениеПоиском" id="62">
+				<AdditionSource>
+					<Item>Адресаты</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="АдресатыУправлениеПоискомКонтекстноеМеню" id="63"/>
+				<ExtendedTooltip name="АдресатыУправлениеПоискомРасширеннаяПодсказка" id="64"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="АдресатыНомерСтроки" id="65">
+					<DataPath>Объект.Адресаты.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="АдресатыНомерСтрокиКонтекстноеМеню" id="66"/>
+					<ExtendedTooltip name="АдресатыНомерСтрокиРасширеннаяПодсказка" id="67"/>
+				</LabelField>
+				<InputField name="АдресатыАдресат" id="68">
+					<DataPath>Объект.Адресаты.Адресат</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="АдресатыАдресатКонтекстноеМеню" id="69"/>
+					<ExtendedTooltip name="АдресатыАдресатРасширеннаяПодсказка" id="70"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.Комментарии</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

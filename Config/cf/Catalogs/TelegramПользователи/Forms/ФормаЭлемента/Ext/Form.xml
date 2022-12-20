@@ -1,0 +1,299 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Пользователь Telegram</v8:content>
+		</v8:item>
+	</Title>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="Страницы" id="55">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="56"/>
+			<ChildItems>
+				<Page name="СтраницаОсновное" id="57">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Основное</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СтраницаОсновноеРасширеннаяПодсказка" id="58"/>
+					<ChildItems>
+						<UsualGroup name="Группа1" id="28">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Наименование, код</v8:content>
+								</v8:item>
+							</Title>
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="29"/>
+							<ChildItems>
+								<InputField name="Наименование" id="4">
+									<DataPath>Объект.Description</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+									<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+								</InputField>
+								<InputField name="Код" id="1">
+									<DataPath>Объект.Code</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+									<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Группа3" id="32">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа имя профиля, активность</v8:content>
+								</v8:item>
+							</Title>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="33"/>
+							<ChildItems>
+								<InputField name="ИмяПрофиля" id="16">
+									<DataPath>Объект.ИмяПрофиля</DataPath>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<EditMode>EnterOnInput</EditMode>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<TextEdit>false</TextEdit>
+									<ContextMenu name="ИмяПрофиляКонтекстноеМеню" id="17"/>
+									<ExtendedTooltip name="ИмяПрофиляРасширеннаяПодсказка" id="18"/>
+								</InputField>
+								<UsualGroup name="ГруппаАктиновсти" id="66">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа актиновсти</v8:content>
+										</v8:item>
+									</Title>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<BackColor>style:ЦветФонаАнтикБелый</BackColor>
+									<ExtendedTooltip name="ГруппаАктиновстиРасширеннаяПодсказка" id="67"/>
+									<ChildItems>
+										<CheckBoxField name="Активно" id="7">
+											<DataPath>Объект.Активность</DataPath>
+											<ToolTipRepresentation>Button</ToolTipRepresentation>
+											<EditMode>EnterOnInput</EditMode>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="АктивноКонтекстноеМеню" id="8"/>
+											<ExtendedTooltip name="АктивноРасширеннаяПодсказка" id="9"/>
+										</CheckBoxField>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Группа2" id="30">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Фамилия, имя</v8:content>
+								</v8:item>
+							</Title>
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="31"/>
+							<ChildItems>
+								<InputField name="Фамилия" id="22">
+									<DataPath>Объект.Фамилия</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<TextEdit>false</TextEdit>
+									<ContextMenu name="ФамилияКонтекстноеМеню" id="23"/>
+									<ExtendedTooltip name="ФамилияРасширеннаяПодсказка" id="24"/>
+								</InputField>
+								<InputField name="Имя" id="13">
+									<DataPath>Объект.Имя</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<TextEdit>false</TextEdit>
+									<ContextMenu name="ИмяКонтекстноеМеню" id="14"/>
+									<ExtendedTooltip name="ИмяРасширеннаяПодсказка" id="15"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Группа4" id="34">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Бот, язык</v8:content>
+								</v8:item>
+							</Title>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="35"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаПользователя" id="61">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа пользователя</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<BackColor>style:ЦветФонаАнтикБелый</BackColor>
+									<ExtendedTooltip name="ГруппаПользователяРасширеннаяПодсказка" id="62"/>
+									<ChildItems>
+										<InputField name="Пользователь" id="19">
+											<DataPath>Объект.Пользователь</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Объект ИБ</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTipRepresentation>Button</ToolTipRepresentation>
+											<EditMode>EnterOnInput</EditMode>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<AutoMarkIncomplete>true</AutoMarkIncomplete>
+											<InputHint>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Заполните, иначе подсистема не сможет работать должным образом</v8:content>
+												</v8:item>
+											</InputHint>
+											<ContextMenu name="ПользовательКонтекстноеМеню" id="20"/>
+											<ExtendedTooltip name="ПользовательРасширеннаяПодсказка" id="21"/>
+										</InputField>
+										<LabelDecoration name="ДекорацияСвязьПользователя" id="63">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<TextColor>style:ЦветПодписи</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Заполните этот реквизит для того, чтобы связать профиль пользователя Telegram и (пользователя, сотрудника, контрагента и т.д.) информационной базы 1С</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияСвязьПользователяКонтекстноеМеню" id="64"/>
+											<ExtendedTooltip name="ДекорацияСвязьПользователяРасширеннаяПодсказка" id="65"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+								<InputField name="Язык" id="25">
+									<DataPath>Объект.Язык</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<TextEdit>false</TextEdit>
+									<ContextMenu name="ЯзыкКонтекстноеМеню" id="26"/>
+									<ExtendedTooltip name="ЯзыкРасширеннаяПодсказка" id="27"/>
+								</InputField>
+								<CheckBoxField name="Бот" id="10">
+									<DataPath>Объект.Бот</DataPath>
+									<Enabled>false</Enabled>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Это бот</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="БотКонтекстноеМеню" id="11"/>
+									<ExtendedTooltip name="БотРасширеннаяПодсказка" id="12"/>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаОбозначения" id="59">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Обозначения</v8:content>
+						</v8:item>
+					</Title>
+					<TitleDataPath>Объект.Обозначения.RowsCount</TitleDataPath>
+					<ExtendedTooltip name="СтраницаОбозначенияРасширеннаяПодсказка" id="60"/>
+					<ChildItems>
+						<Table name="Обозначения" id="36">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.Обозначения</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Обозначения</v8:content>
+								</v8:item>
+							</Title>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ОбозначенияКонтекстноеМеню" id="37"/>
+							<AutoCommandBar name="ОбозначенияКоманднаяПанель" id="38"/>
+							<ExtendedTooltip name="ОбозначенияРасширеннаяПодсказка" id="39"/>
+							<SearchStringAddition name="ОбозначенияСтрокаПоиска" id="40">
+								<AdditionSource>
+									<Item>Обозначения</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ОбозначенияСтрокаПоискаКонтекстноеМеню" id="41"/>
+								<ExtendedTooltip name="ОбозначенияСтрокаПоискаРасширеннаяПодсказка" id="42"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ОбозначенияСостояниеПросмотра" id="43">
+								<AdditionSource>
+									<Item>Обозначения</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<HorizontalLocation>Left</HorizontalLocation>
+								<ContextMenu name="ОбозначенияСостояниеПросмотраКонтекстноеМеню" id="44"/>
+								<ExtendedTooltip name="ОбозначенияСостояниеПросмотраРасширеннаяПодсказка" id="45"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ОбозначенияУправлениеПоиском" id="46">
+								<AdditionSource>
+									<Item>Обозначения</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ОбозначенияУправлениеПоискомКонтекстноеМеню" id="47"/>
+								<ExtendedTooltip name="ОбозначенияУправлениеПоискомРасширеннаяПодсказка" id="48"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ОбозначенияНомерСтроки" id="49">
+									<DataPath>Объект.Обозначения.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОбозначенияНомерСтрокиКонтекстноеМеню" id="50"/>
+									<ExtendedTooltip name="ОбозначенияНомерСтрокиРасширеннаяПодсказка" id="51"/>
+								</LabelField>
+								<InputField name="ОбозначенияПодстрока" id="52">
+									<DataPath>Объект.Обозначения.Подстрока</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОбозначенияПодстрокаКонтекстноеМеню" id="53"/>
+									<ExtendedTooltip name="ОбозначенияПодстрокаРасширеннаяПодсказка" id="54"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.TelegramПользователи</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

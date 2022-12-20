@@ -1,0 +1,383 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Статьи базы знаний</v8:content>
+		</v8:item>
+	</Title>
+	<CommandSet>
+		<ExcludedCommand>Copy</ExcludedCommand>
+		<ExcludedCommand>Create</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаДобавитьСтатью" id="49">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ДобавитьСтатью</CommandName>
+				<ExtendedTooltip name="ФормаДобавитьСтатьюРасширеннаяПодсказка" id="50"/>
+			</Button>
+			<Button name="ФормаДобавитьСписокСтатей" id="51">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ДобавитьСписокСтатей</CommandName>
+				<ExtendedTooltip name="ФормаДобавитьСписокСтатейРасширеннаяПодсказка" id="52"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="СписокКомпоновщикНастроекПользовательскиеНастройки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа пользовательских настроек</v8:content>
+				</v8:item>
+			</Title>
+			<VerticalStretch>false</VerticalStretch>
+			<Group>Vertical</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="СписокКомпоновщикНастроекПользовательскиеНастройкиРасширеннаяПодсказка" id="2"/>
+		</UsualGroup>
+		<Table name="Список" id="3">
+			<Representation>List</Representation>
+			<CommandBarLocation>None</CommandBarLocation>
+			<DefaultItem>true</DefaultItem>
+			<RowSelectionMode>Row</RowSelectionMode>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<InitialTreeView>ExpandAllLevels</InitialTreeView>
+			<EnableStartDrag>true</EnableStartDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Список</DataPath>
+			<RowPictureDataPath>Список.Картинка</RowPictureDataPath>
+			<RowsPicture>
+				<xr:Ref>CommonPicture.БазаЗнанийКоллекцияСтатьи</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</RowsPicture>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<UserSettingsGroup>СписокКомпоновщикНастроекПользовательскиеНастройки</UserSettingsGroup>
+			<ContextMenu name="СписокКонтекстноеМеню" id="4"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="5">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="6"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="7">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="8"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="9"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="10">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<HorizontalLocation>Left</HorizontalLocation>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="11"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="12"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокУправлениеПоиском" id="13">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="14"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="15"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="Selection">СписокВыбор</Event>
+				<Event name="AfterDeleteRow">СписокПослеУдаления</Event>
+			</Events>
+			<ChildItems>
+				<PictureField name="ИндексКартинкиФайлов" id="53">
+					<DataPath>Список.ИндексКартинкиФайлов</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<HeaderPicture>
+						<xr:Ref>CommonPicture.ТолькоСкрепка</xr:Ref>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</HeaderPicture>
+					<Width>1</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ValuesPicture>
+						<xr:Ref>CommonPicture.СкрепкаИПусто</xr:Ref>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</ValuesPicture>
+					<FileDragMode>AsFile</FileDragMode>
+					<ContextMenu name="ИндексКартинкиФайловКонтекстноеМеню" id="54"/>
+					<ExtendedTooltip name="ИндексКартинкиФайловРасширеннаяПодсказка" id="55"/>
+				</PictureField>
+				<LabelField name="Статья" id="16">
+					<DataPath>Список.Статья</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="СтатьяКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="СтатьяРасширеннаяПодсказка" id="18"/>
+				</LabelField>
+				<LabelField name="СтатьяКраткоеОписание" id="34">
+					<DataPath>Список.КраткоеОписание</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Краткое описание</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="СтатьяКраткоеОписаниеКонтекстноеМеню" id="35"/>
+					<ExtendedTooltip name="СтатьяКраткоеОписаниеРасширеннаяПодсказка" id="36"/>
+				</LabelField>
+				<LabelField name="СтатьяАвтор" id="31">
+					<DataPath>Список.Автор</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Автор</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="СтатьяАвторКонтекстноеМеню" id="32"/>
+					<ExtendedTooltip name="СтатьяАвторРасширеннаяПодсказка" id="33"/>
+				</LabelField>
+				<LabelField name="СтатьяДатаСоздания" id="37">
+					<DataPath>Список.ДатаСоздания</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата создания</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="СтатьяДатаСозданияКонтекстноеМеню" id="38"/>
+					<ExtendedTooltip name="СтатьяДатаСозданияРасширеннаяПодсказка" id="39"/>
+				</LabelField>
+				<LabelField name="Объект" id="19">
+					<DataPath>Список.Объект</DataPath>
+					<Visible>false</Visible>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="ОбъектКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="ОбъектРасширеннаяПодсказка" id="21"/>
+				</LabelField>
+				<LabelField name="СтатьяАвторКорректировки" id="43">
+					<DataPath>Список.АвторКорректировки</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Автор корректировки</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="СтатьяАвторКорректировкиКонтекстноеМеню" id="44"/>
+					<ExtendedTooltip name="СтатьяАвторКорректировкиРасширеннаяПодсказка" id="45"/>
+				</LabelField>
+				<LabelField name="СтатьяДатаКорректировки" id="46">
+					<DataPath>Список.ДатаКорректировки</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата корректировки</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="СтатьяДатаКорректировкиКонтекстноеМеню" id="47"/>
+					<ExtendedTooltip name="СтатьяДатаКорректировкиРасширеннаяПодсказка" id="48"/>
+				</LabelField>
+				<LabelField name="Редактирует" id="40">
+					<DataPath>Список.Редактирует</DataPath>
+					<ContextMenu name="РедактируетКонтекстноеМеню" id="41"/>
+					<ExtendedTooltip name="РедактируетРасширеннаяПодсказка" id="42"/>
+				</LabelField>
+				<LabelField name="Пользователь" id="25">
+					<DataPath>Список.Пользователь</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="ПользовательКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="ПользовательРасширеннаяПодсказка" id="27"/>
+				</LabelField>
+				<LabelField name="Дата" id="22">
+					<DataPath>Список.Дата</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="24"/>
+				</LabelField>
+				<LabelField name="Комментарий" id="28">
+					<DataPath>Список.Комментарий</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="КомментарийКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="30"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>~Список.ЭтоРешение</Field>
+				<Field>Список.Объект</Field>
+				<Field>Список.Статья</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	РегистрСведенийСвязьСтатейБазыЗнаний.Статья КАК Статья,
+	РегистрСведенийСвязьСтатейБазыЗнаний.Объект КАК Объект,
+	РегистрСведенийСвязьСтатейБазыЗнаний.Дата КАК Дата,
+	РегистрСведенийСвязьСтатейБазыЗнаний.Пользователь КАК Пользователь,
+	РегистрСведенийСвязьСтатейБазыЗнаний.Комментарий КАК Комментарий,
+	ВЫБОР
+		КОГДА РегистрСведенийСвязьСтатейБазыЗнаний.Статья.ПометкаУдаления
+			ТОГДА 2
+		ИНАЧЕ ВЫБОР
+				КОГДА ЕСТЬNULL(БлокировкаСтатьейБазыЗнаний.Пользователь, ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка)) = ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка)
+					ТОГДА 1
+				ИНАЧЕ 0
+			КОНЕЦ
+	КОНЕЦ КАК Картинка,
+	СтатьиБазыЗнаний.Автор КАК Автор,
+	СтатьиБазыЗнаний.КраткоеОписание КАК КраткоеОписание,
+	СтатьиБазыЗнаний.ДатаСоздания КАК ДатаСоздания,
+	ЕСТЬNULL(БлокировкаСтатьейБазыЗнаний.Пользователь, ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка)) КАК Редактирует,
+	СтатьиБазыЗнаний.АвторКорректировки КАК АвторКорректировки,
+	СтатьиБазыЗнаний.ДатаКорректировки КАК ДатаКорректировки,
+	ВЫБОР
+		КОГДА НаличиеПрисоединенныхФайлов.ЕстьФайлы ЕСТЬ NULL
+			ТОГДА 0
+		КОГДА НаличиеПрисоединенныхФайлов.ЕстьФайлы
+			ТОГДА 1
+		ИНАЧЕ 0
+	КОНЕЦ КАК ИндексКартинкиФайлов
+ИЗ
+	РегистрСведений.СвязьСтатейБазыЗнаний КАК РегистрСведенийСвязьСтатейБазыЗнаний
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.БлокировкаСтатьейБазыЗнаний КАК БлокировкаСтатьейБазыЗнаний
+		ПО РегистрСведенийСвязьСтатейБазыЗнаний.Статья = БлокировкаСтатьейБазыЗнаний.СтатьяБазыЗнаний
+			И (БлокировкаСтатьейБазыЗнаний.Область = "")
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.СтатьиБазыЗнаний КАК СтатьиБазыЗнаний
+		ПО РегистрСведенийСвязьСтатейБазыЗнаний.Статья = СтатьиБазыЗнаний.Ссылка
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.НаличиеФайлов КАК НаличиеПрисоединенныхФайлов
+		ПО (СтатьиБазыЗнаний.Ссылка = НаличиеПрисоединенныхФайлов.ОбъектСФайлами)
+ГДЕ
+	СтатьиБазыЗнаний.Категории.Категория В
+			(ВЫБРАТЬ
+				СправочникКатегорииБазыЗнаний.Ссылка
+			ИЗ
+				Справочник.КатегорииБазыЗнаний КАК СправочникКатегорииБазыЗнаний
+			ГДЕ
+				ВЫБОР
+					КОГДА СправочникКатегорииБазыЗнаний.ТипКатегории = ЗНАЧЕНИЕ(Перечисление.ТипыКатегорийСтатейБазыЗнаний.Приватная)
+						ТОГДА ВЫБОР
+								КОГДА СправочникКатегорииБазыЗнаний.Автор = &amp;ТекущийПользователь
+									ТОГДА ИСТИНА
+								ИНАЧЕ ЛОЖЬ
+							КОНЕЦ
+					ИНАЧЕ ИСТИНА
+				КОНЕЦ)</QueryText>
+				<MainTable>InformationRegister.СвязьСтатейБазыЗнаний</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ПредметСтатьи" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Предмет статьи</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:TypeSet>cfg:DefinedType.ПредметСтатейБазыЗнаний</v8:TypeSet>
+			</Type>
+		</Attribute>
+		<Attribute name="ДополнительныйСписокПредметов" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дополнительный список предметов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription"/>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ДобавитьСтатью" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить статью</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.БазаЗнанийДобавитьСтатью</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ДобавитьСтатью</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ДобавитьСписокСтатей" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подбор</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить список статей</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.Подбор</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ДобавитьСписокСтатей</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

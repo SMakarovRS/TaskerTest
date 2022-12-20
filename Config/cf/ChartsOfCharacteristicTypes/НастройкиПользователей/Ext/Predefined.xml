@@ -1,0 +1,889 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<PredefinedData xmlns="http://v8.1c.ru/8.3/xcf/predef" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="PlanOfCharacteristicKindPredefinedItems" version="2.11">
+	<Item id="c4f4c69f-5da7-4901-80a7-28d18d1cd526">
+		<Name>ServiceDesk</Name>
+		<Code>00013</Code>
+		<Description>Service Desk</Description>
+		<Type/>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="80bb8126-6f57-46ef-91e6-b449e7fb9ff3">
+				<Name>ДобавлятьСебяВНаблюдателиДляВсехНовыхЗадания</Name>
+				<Code>00017</Code>
+				<Description>Добавлять себя в наблюдатели для всех новых заданий (только если есть роль "Просмотр чужих заданий")</Description>
+				<Type>
+					<v8:Type>xs:boolean</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="4ef1d5fa-c463-46a9-b078-9ba6938cc758">
+				<Name>ИнтервалПроверкиИзмененийЗаданийДляВсплывающихОповещений</Name>
+				<Code>00088</Code>
+				<Description>Интервал проверки изменений заданий для всплывающих оповещений в секундах (-1 - отключить, по умолчанию - 5 минут)</Description>
+				<Type>
+					<v8:Type>xs:decimal</v8:Type>
+					<v8:NumberQualifiers>
+						<v8:Digits>10</v8:Digits>
+						<v8:FractionDigits>0</v8:FractionDigits>
+						<v8:AllowedSign>Any</v8:AllowedSign>
+					</v8:NumberQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="f0db4088-bf15-48ac-bee5-eb1d667c2b58">
+				<Name>ОповещатьПриСобственныхИзменениях</Name>
+				<Code>00015</Code>
+				<Description>Оповещать при собственных изменениях</Description>
+				<Type>
+					<v8:Type>xs:boolean</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="11aebfb3-520b-4cc8-b5a3-8dd15dfcf4fd">
+				<Name>ОсновнаяГруппаДоступаКатегорийБазыЗнаний</Name>
+				<Code>00059</Code>
+				<Description>Основная группа доступа категорий базы знаний</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ГруппыДоступаКатегорийБазыЗнаний</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="801bee61-6128-4397-9f25-b35450c54521">
+				<Name>ОсновнойИнициатор</Name>
+				<Code>00020</Code>
+				<Description>Основной инициатор</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ФизическиеЛица</v8:Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.КонтактныеЛица</v8:Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.Подразделения</v8:Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.Контрагенты</v8:Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.Пользователи</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="8eb7f41b-8ab5-4ef5-808a-5a4d027c0fd9">
+				<Name>ОсновнойПроцесс</Name>
+				<Code>00011</Code>
+				<Description>Основной процесс</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.Процессы</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="7cea73c7-983f-434c-93ab-38971ebe9210">
+				<Name>ОсновнойПроцессДляСоздаваемыхДочернихЗаданий</Name>
+				<Code>00014</Code>
+				<Description>Основной процесс для создаваемых дочерних заданий</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.Процессы</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="5ca1b8e9-fe6d-4c6a-a780-bba68445690e">
+				<Name>ОткрыватьНеНовоеЗаданиеНаВкладеСообщение</Name>
+				<Code>00044</Code>
+				<Description>Открывать задание на вкладе "Комментарии", если есть комментарии</Description>
+				<Type>
+					<v8:Type>xs:boolean</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="72cf397f-6caa-46ff-9f00-829fc442de5c">
+				<Name>ПриДобавленииСообщенияПоУмолчаниюНеУведомлятьИнициатора</Name>
+				<Code>00057</Code>
+				<Description>При добавлении комментария по умолчанию не уведомлять Инициатора</Description>
+				<Type>
+					<v8:Type>xs:boolean</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="7fcd2539-1609-40a4-86b6-5f9aa2391474">
+				<Name>РабочийСтолПоУмолчанию</Name>
+				<Code>00077</Code>
+				<Description>Рабочий стол по умолчанию</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.РабочиеСтолы</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="9e8ca363-3003-461f-9b11-56a3753337db">
+				<Name>УпорядочиваниеКомментариевВЗадании</Name>
+				<Code>00073</Code>
+				<Description>Упорядочивание комментариев в задании</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:EnumRef.УпорядочиваниеКомментариевВЗадании</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="11434b16-c9df-4cf6-81d9-33de6c642df8">
+		<Name>ИзменениеПоказателейОборудования</Name>
+		<Code>00078</Code>
+		<Description>Изменение показателей оборудования</Description>
+		<Type/>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="7bb3e50e-2d10-49a1-aef5-395f41a35167">
+				<Name>ВидЗначенияИзменениеПоказателейОборудования</Name>
+				<Code>00083</Code>
+				<Description>Вид значения</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:EnumRef.ВидЗначенияПоказателяОборудования</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="45d001e9-fcde-4158-b10d-5d3a24c64f80">
+				<Name>ПоложениеВидаЗначенияИзменениеПоказателейОборудования</Name>
+				<Code>00079</Code>
+				<Description>Положение вида значения</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:EnumRef.ПоложениеРеквизитаНаФорме</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="a3353697-3b2a-480e-8229-40d86452e01c">
+		<Name>Календарь</Name>
+		<Code>00036</Code>
+		<Description>Календарь</Description>
+		<Type/>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="47d23d14-8db5-435b-b3a5-b87e3abb86ad">
+				<Name>НачалоРабочегоДня</Name>
+				<Code>00039</Code>
+				<Description>Начало рабочего дня</Description>
+				<Type>
+					<v8:Type>xs:dateTime</v8:Type>
+					<v8:DateQualifiers>
+						<v8:DateFractions>Time</v8:DateFractions>
+					</v8:DateQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="37518d11-663a-44f3-882c-97cfa9a11846">
+				<Name>ОкончаниеРабочегоДня</Name>
+				<Code>00040</Code>
+				<Description>Окончание рабочего дня</Description>
+				<Type>
+					<v8:Type>xs:dateTime</v8:Type>
+					<v8:DateQualifiers>
+						<v8:DateFractions>Time</v8:DateFractions>
+					</v8:DateQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="6944f9d5-30b1-4231-a251-dba83b324d44">
+				<Name>ОтображатьТекущуюДату</Name>
+				<Code>00038</Code>
+				<Description>Отображать текущую дату</Description>
+				<Type>
+					<v8:Type>xs:boolean</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="bac15065-b074-4701-937a-2fd69db895db">
+		<Name>ЛогиныИПароли</Name>
+		<Code>00055</Code>
+		<Description>Логины и пароли</Description>
+		<Type/>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="067e267c-128a-4f53-96c6-0df55310ec04">
+				<Name>ОсновнойТипПароляПриСоздании</Name>
+				<Code>00056</Code>
+				<Description>Основной тип пароля при создании</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:EnumRef.ТипыПаролей</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="cc84eb75-e31f-43d2-84f7-d37a5d9f7d81">
+		<Name>НарядыНаРаботы</Name>
+		<Code>00030</Code>
+		<Description>Наряды на работы</Description>
+		<Type/>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="b82774bb-fd60-4dd1-905f-df515b2d80d7">
+				<Name>СостояниеНовогоНарядаНаРаботы</Name>
+				<Code>00031</Code>
+				<Description>Состояние нового наряда на работы</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.СостояниеНарядовНаРаботы</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="b21451a1-7190-4b75-9b52-7b32c341f670">
+		<Name>РС_Настройки</Name>
+		<Code>90001</Code>
+		<Description>Настройки (РС)</Description>
+		<Type/>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="c53fc26d-1e28-4f2a-96a2-f145f0a8512b">
+				<Name>РС_ОбновлениеИнформацииОЗвонках</Name>
+				<Code>90004</Code>
+				<Description>Обновление информации о звонках (потребуется перезапуск 1С)</Description>
+				<Type/>
+				<IsFolder>true</IsFolder>
+				<ChildItems>
+					<Item id="4d2b4594-e32d-48cb-ace4-cc4b84ea09f8">
+						<Name>РС_ВнутреннийНомер</Name>
+						<Code>90003</Code>
+						<Description>Внутренний номер</Description>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>3</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+						<IsFolder>false</IsFolder>
+					</Item>
+					<Item id="81dd0486-6c86-4cfa-8c48-5fb2a00e7f4d">
+						<Name>РС_ПериодОбновленияНовыхЗвонков</Name>
+						<Code>90002</Code>
+						<Description>Период обновления новых звонков</Description>
+						<Type>
+							<v8:Type>xs:decimal</v8:Type>
+							<v8:NumberQualifiers>
+								<v8:Digits>3</v8:Digits>
+								<v8:FractionDigits>0</v8:FractionDigits>
+								<v8:AllowedSign>Any</v8:AllowedSign>
+							</v8:NumberQualifiers>
+						</Type>
+						<IsFolder>false</IsFolder>
+					</Item>
+					<Item id="5b012af4-fab6-4f10-a5b1-5eff3f153096">
+						<Name>РС_СоздаватьДокументТелефонныйЗвонокПриЗвонке</Name>
+						<Code>90005</Code>
+						<Description>Создавать документ "Телефонный звонок" при звонке</Description>
+						<Type>
+							<v8:Type>xs:boolean</v8:Type>
+						</Type>
+						<IsFolder>false</IsFolder>
+					</Item>
+				</ChildItems>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="8fe4aa2e-b37a-427a-8389-30b7e05d224d">
+		<Name>сфпНастройкиСофтФон</Name>
+		<Code>00061</Code>
+		<Description>Настройки СофтФон</Description>
+		<Type/>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="daf1d283-84b5-4456-8661-a3b1e216d53d">
+				<Name>сфпАвторизацияНаСерверСофтфона</Name>
+				<Code>00062</Code>
+				<Description>Ввод данных для авторизации на сервер Софтфона</Description>
+				<Type/>
+				<IsFolder>true</IsFolder>
+				<ChildItems>
+					<Item id="190c6eed-8375-43b1-ab39-bb29328ed2e0">
+						<Name>сфпЛогинНаСерверСофтФон</Name>
+						<Code>00064</Code>
+						<Description>Логин на сервер Софтфона</Description>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>100</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+						<IsFolder>false</IsFolder>
+					</Item>
+					<Item id="dd4ed2f7-5706-47bd-b04c-e41205e067a7">
+						<Name>сфпПарольНаСерверСофтФон</Name>
+						<Code>00065</Code>
+						<Description>Пароль на сервер Софтфона</Description>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>100</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+						<IsFolder>false</IsFolder>
+					</Item>
+				</ChildItems>
+			</Item>
+			<Item id="79c73ff8-6c62-4cbe-aa10-972a94de0619">
+				<Name>сфпДействияПриЗвонке</Name>
+				<Code>00063</Code>
+				<Description>Настройка действий при звонке (только для внешних звонков)</Description>
+				<Type/>
+				<IsFolder>true</IsFolder>
+				<ChildItems>
+					<Item id="8f4fa3ed-7e8b-4dc4-a0e5-4ac38accd1af">
+						<Name>сфпДействиеПриВходящемЗвонке</Name>
+						<Code>00066</Code>
+						<Description>Действие при входящем звонке</Description>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>100</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+						<IsFolder>false</IsFolder>
+					</Item>
+					<Item id="f7b09934-6415-4501-9578-6b4928397542">
+						<Name>сфпДействиеПриИсходящемЗвонке</Name>
+						<Code>00067</Code>
+						<Description>Действие при исходящем звонке</Description>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>100</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+						<IsFolder>false</IsFolder>
+					</Item>
+				</ChildItems>
+			</Item>
+			<Item id="b51bd46c-4d04-4c07-b8f4-51cafc8cc3b3">
+				<Name>сфпЗакрыватьПанельПриЗавершенииРаботы</Name>
+				<Code>00068</Code>
+				<Description>Закрывать панель при завершении работы</Description>
+				<Type>
+					<v8:Type>xs:boolean</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="582c4ce8-732c-4e4d-93ee-68a064dcab81">
+				<Name>сфпИспользоватьВнутреннююПанель</Name>
+				<Code>00069</Code>
+				<Description>Использовать внутреннюю панель (форма 1С)</Description>
+				<Type>
+					<v8:Type>xs:boolean</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="ceb3c352-aa00-4a33-b049-dfacf3e8f729">
+				<Name>сфпИспользоватьСофтФон</Name>
+				<Code>00070</Code>
+				<Description>Использовать СофтФон</Description>
+				<Type>
+					<v8:Type>xs:boolean</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="e482c6d9-89a3-4817-a325-7d3f99c7a574">
+				<Name>сфпПривязатьВнутреннийНомер</Name>
+				<Code>00071</Code>
+				<Description>Привязать внутр. номер</Description>
+				<Type>
+					<v8:Type>xs:boolean</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="41ac426b-0c5e-4fe8-a4d5-b30d7e915d8f">
+				<Name>сфпТекущийВнутреннийНомер</Name>
+				<Code>00072</Code>
+				<Description>Текущий внутренний номер</Description>
+				<Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>100</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="a802452c-a652-4e52-abe7-bd0dcfc04b23">
+		<Name>Обслуживание</Name>
+		<Code>00041</Code>
+		<Description>Обслуживание</Description>
+		<Type/>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="1fdf35dd-3249-4ffa-9196-1455b5890c8d">
+				<Name>ОсновноеМестоХраненияНаСклад</Name>
+				<Code>00042</Code>
+				<Description>Основное место хранения (на склад)</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.МестаХранения</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="d5223f5f-7e33-4cea-9f26-6e242e8eb0c5">
+				<Name>ОсновноеМестоХраненияСоСклада</Name>
+				<Code>00043</Code>
+				<Description>Основное место хранения (со склада)</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.МестаХранения</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="a5ed43a6-38e3-44a7-b9f3-2ec8c5720a51">
+		<Name>ОсновныеЗначенияДляПодстановки</Name>
+		<Code>00001</Code>
+		<Description>Основные значения для подстановки в документы и справочники</Description>
+		<Type/>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="866ab421-e2ec-481e-92cf-1a3e32d87586">
+				<Name>ОсновнаяГруппаДоступаКонтрагентов</Name>
+				<Code>00053</Code>
+				<Description>Основная группа доступа контрагентов</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ГруппыДоступаКонтрагентов</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="19790293-f18a-4cd4-b429-ab7fa061c1e2">
+				<Name>ОсновнаяГруппаДоступаМестХранения</Name>
+				<Code>00054</Code>
+				<Description>Основная группа доступа мест хранения</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ГруппыДоступаМестХранения</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="11e6a2bb-be27-4bc9-bca5-4ba607a33319">
+				<Name>ОсновнаяКомиссия</Name>
+				<Code>00058</Code>
+				<Description>Основная комиссия</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.Комиссии</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="5f173406-6062-4875-997e-ba0e9f72afcb">
+				<Name>ОсновнаяОрганизация</Name>
+				<Code>00002</Code>
+				<Description>Основная организация</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.Организации</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="aa14ab16-b427-4cdb-a698-f46b627481b0">
+				<Name>ОсновнаяСтавкаНДС</Name>
+				<Code>00007</Code>
+				<Description>Основная ставка НДС</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.СтавкиНДС</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="8228b8cd-2bdf-4323-b875-adf61e240351">
+				<Name>ОсновнаяСтатьяДоходовРасходов</Name>
+				<Code>00032</Code>
+				<Description>Основная статья затрат</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.СтатьиДоходовРасходов</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="322f34aa-a990-426c-a285-bf26b3f1c878">
+				<Name>ОсновноеМестоХранения</Name>
+				<Code>00004</Code>
+				<Description>Основное место хранения</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.МестаХранения</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="5c8de5df-4694-4d00-a500-854b606c061e">
+				<Name>ОсновноеПодразделение</Name>
+				<Code>00003</Code>
+				<Description>Основное подразделение</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.Подразделения</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="f47ffc1c-0e40-4c47-9dbb-5d12f3c8104d">
+				<Name>ОсновнойВидРасходаДенежныхСредств</Name>
+				<Code>00008</Code>
+				<Description>Основной вид расхода денежных средств</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ВидыДенежныхСредств</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="e88814f2-bc2c-40f5-8451-ad2a8ce78192">
+				<Name>ОсновнойКлиент</Name>
+				<Code>90006</Code>
+				<Description>Основной клиент SLA</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ФизическиеЛица</v8:Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.КонтактныеЛица</v8:Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.Подразделения</v8:Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.Контрагенты</v8:Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.Пользователи</v8:Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.Организации</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="27762b52-b794-411c-9d00-cec79f42567a">
+				<Name>ОсновнойШаблонЭтикетки</Name>
+				<Code>00016</Code>
+				<Description>Основной шаблон этикетки</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ШаблоныЭтикеток</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="c7337de6-b4d8-48e6-8ae9-aa96d3cc9c45">
+				<Name>ПоложениеДаты</Name>
+				<Code>00076</Code>
+				<Description>Положение даты в ежедневном отчете</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:EnumRef.ПоложениеРеквизитаНаФорме</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="ddd3c90c-7379-4cf4-ae32-d0d0fa4d3350">
+				<Name>ПоложениеДатыПоступленияВЗаказеПоставщику</Name>
+				<Code>00023</Code>
+				<Description>Положение даты поступления в заказе поставщику</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:EnumRef.ПоложениеРеквизитаНаФорме</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="353ef62e-36f6-4def-9b27-bfe564f04396">
+				<Name>ПоложениеЗаказаКлиентаВДокументахПоступления</Name>
+				<Code>00081</Code>
+				<Description>Положение заказа клиента в документах поступления</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:EnumRef.ПоложениеРеквизитаНаФорме</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="6f3c9ca3-635c-4f50-9d13-9b62111a49d3">
+				<Name>ПоложениеЗаказаКлиентаВДокументахПродажа</Name>
+				<Code>00082</Code>
+				<Description>Положение заказа клиента в документах продажа</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:EnumRef.ПоложениеРеквизитаНаФорме</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="d4f941e5-ff5a-42b5-b189-fec08734477b">
+				<Name>ПоложениеЗаказаПоставщикуВДокументахПоступления</Name>
+				<Code>00010</Code>
+				<Description>Положение заказа поставщику в документах поступления</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:EnumRef.ПоложениеРеквизитаНаФорме</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="33fc9eeb-f750-4539-9d9c-b4cefb6da7e1">
+				<Name>ПоложениеИнициатора</Name>
+				<Code>00033</Code>
+				<Description>Положение инициатора в справочнике "Шаблоны правил заполнения заданий"</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:EnumRef.ПоложениеРеквизитаНаФорме</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="e527cc29-015b-4399-a1f2-48d641a982c1">
+				<Name>ПоложениеОснованияВДокументах</Name>
+				<Code>00075</Code>
+				<Description>Положение основания в документах</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:EnumRef.ПоложениеРеквизитаНаФорме</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="2f9bca73-9c01-44a4-bb95-aff0ab1f6a2b">
+				<Name>ПоложениеРеквизитаПодразделениеВДокументах</Name>
+				<Code>00006</Code>
+				<Description>Положение реквизита "Подразделение" в документах</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:EnumRef.ПоложениеРеквизитаНаФорме</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="120c1e38-f5ba-48cb-a05f-977aa6e8da8a">
+				<Name>ПоложениеРеквизитаСтатьяДоходовРасходовВДокументах</Name>
+				<Code>00005</Code>
+				<Description>Положение реквизита "Статья доходов расходов" в документах</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:EnumRef.ПоложениеРеквизитаНаФорме</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="088efbec-e705-455b-8da4-6cf7ea842433">
+				<Name>СостояниеНовогоЗаказаКлиента</Name>
+				<Code>00080</Code>
+				<Description>Состояние нового заказа клиента</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.СостоянияЗаказовКлиентов</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="3fb0d397-f359-4584-b1c9-6cab9112a836">
+				<Name>СостояниеНовогоЗаказаПоставщику</Name>
+				<Code>00009</Code>
+				<Description>Состояние нового заказа поставщику</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.СостоянияЗаказовПоставщикам</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="806c8d9a-4f47-4b50-9bf8-09617af9205e">
+				<Name>СостояниеНовогоОбслуживания</Name>
+				<Code>00021</Code>
+				<Description>Состояние нового обслуживания</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.СостоянияОбслуживания</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="ca2eb809-4269-421c-bf28-7e431b369c56">
+		<Name>ПланированиеБюджета</Name>
+		<Code>00035</Code>
+		<Description>Планирование бюджета</Description>
+		<Type/>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="74c533cf-2ef5-4cba-8bec-20fa14e3f512">
+				<Name>ПоложениеПериодаБюджета</Name>
+				<Code>00034</Code>
+				<Description>Положение "Периода бюджета" в документе</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:EnumRef.ПоложениеРеквизитаНаФорме</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="9de544e1-125f-437a-b51f-0d6a172ec98f">
+		<Name>ПланыРабот</Name>
+		<Code>00024</Code>
+		<Description>Планы работ</Description>
+		<Type/>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="036a959f-2585-4284-af0f-073549b6935a">
+				<Name>ПоложениеРеквизитаВидРаботы</Name>
+				<Code>00027</Code>
+				<Description>Положение реквизита "Вид работы"</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:EnumRef.ПоложениеРеквизитаНаФорме</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="b344a418-8a62-48f1-af56-6e7ae785aca7">
+				<Name>ПоложениеРеквизитаЗадание</Name>
+				<Code>00026</Code>
+				<Description>Положение реквизита "Задание"</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:EnumRef.ПоложениеРеквизитаНаФорме</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="21fe1c67-cd46-4484-89b8-9a24452349b7">
+				<Name>ПоложениеРеквизитаПользователь</Name>
+				<Code>00025</Code>
+				<Description>Положение реквизита "Пользователь"</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:EnumRef.ПоложениеРеквизитаНаФорме</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="caf798d5-9f86-4d8d-91bb-6e75034512f4">
+		<Name>ПраваДоступа</Name>
+		<Code>00028</Code>
+		<Description>Права доступа</Description>
+		<Type/>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="895e1803-2965-492a-a5ec-b572a1bf3fc1">
+				<Name>ПоложениеСотрудника</Name>
+				<Code>00029</Code>
+				<Description>Положение реквизита "Сотрудник"</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:EnumRef.ПоложениеРеквизитаНаФорме</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="c2c31a15-eb68-4ff0-b8af-a0ac8e078e05">
+		<Name>СтильОформления</Name>
+		<Code>00086</Code>
+		<Description>Стиль оформления</Description>
+		<Type/>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="868cfc61-f235-4ff9-b795-0d5bd13adfc0">
+				<Name>ОсновнойСтиль</Name>
+				<Code>00087</Code>
+				<Description>Основной стиль</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:EnumRef.СтилиОформления</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="fc2d7e10-3b09-44ec-83a8-42b55e6fa812">
+		<Name>Трудозатраты</Name>
+		<Code>00047</Code>
+		<Description>Трудозатраты</Description>
+		<Type/>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="56f939d1-cc9e-4c0a-8b19-f448c1ce972f">
+				<Name>АвторасчетТрудозатратВДокументах</Name>
+				<Code>00048</Code>
+				<Description>Авторасчет трудозатрат в документах</Description>
+				<Type>
+					<v8:Type>xs:boolean</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="31e757d4-95a0-4f11-a916-83f2ecb0fd5e">
+		<Name>УдаленноеУправление</Name>
+		<Code>00045</Code>
+		<Description>Удаленное управление</Description>
+		<Type/>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="202ede1f-44bf-43e0-95f1-a7797951dd2f">
+				<Name>ЛокальныйПутьКAeroAdmin</Name>
+				<Code>00084</Code>
+				<Description>Локальный путь к AeroAdmin</Description>
+				<Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>1024</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="1b00ec80-1471-4191-b822-f1b349f4dd9d">
+				<Name>ЛокальныйПутьКAmmyAdmin</Name>
+				<Code>00085</Code>
+				<Description>Локальный путь к Ammy Admin</Description>
+				<Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>1024</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="d504f669-576b-4aa1-a2f4-734c317ba3bd">
+				<Name>ЛокальныйПутьКAnyDesk</Name>
+				<Code>00074</Code>
+				<Description>Локальный путь к AnyDesk</Description>
+				<Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>1024</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="c6f14d8d-41b1-4b35-b660-25f44f7a5592">
+				<Name>ЛокальныйПутьКDameWareMiniRemoteControl</Name>
+				<Code>00050</Code>
+				<Description>Локальный путь к DameWare Mini Remote Control (DWRCC.exe)</Description>
+				<Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>1024</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="73ff141d-4450-4ae7-b913-4f110346ba25">
+				<Name>ЛокальныйПутьКLiteManager</Name>
+				<Code>00046</Code>
+				<Description>Локальный путь к LiteManager (ROMViewer.exe)</Description>
+				<Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>1024</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="8c30a2f5-8e2a-4311-af87-bd8c476dbd0a">
+				<Name>ЛокальныйПутьКRAdmin</Name>
+				<Code>00049</Code>
+				<Description>Локальный путь к RAdmin (Radmin.exe)</Description>
+				<Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>1024</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="4e9c9c85-dfac-4f85-88e5-f97a2c1305d4">
+				<Name>ЛокальныйПутьКRemoteManupulatorSystem</Name>
+				<Code>00052</Code>
+				<Description>Локальный путь к Remote Manupulator System (rutview.exe)</Description>
+				<Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>1024</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="834b5483-2c10-4ae9-8309-edbb3d499d90">
+				<Name>ЛокальныйПутьКTeamViewer</Name>
+				<Code>00060</Code>
+				<Description>Локальный путь к Team Viewer (teamviewer.exe)</Description>
+				<Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>1024</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="cb3438fb-babb-4de5-afe8-2fa7d57166ba">
+				<Name>ЛокальныйПутьКUltraVNC</Name>
+				<Code>00051</Code>
+				<Description>Локальный путь к UltraVNC (vncviewer.exe)</Description>
+				<Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>1024</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+</PredefinedData>

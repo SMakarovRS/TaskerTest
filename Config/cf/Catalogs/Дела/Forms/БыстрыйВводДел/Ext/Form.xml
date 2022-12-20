@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Быстрый ввод дел</v8:content>
+		</v8:item>
+	</Title>
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<AutoTitle>false</AutoTitle>
+	<Customizable>false</Customizable>
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаДобавитьДела" id="22">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.ДобавитьДела</CommandName>
+				<ExtendedTooltip name="ФормаДобавитьДелаРасширеннаяПодсказка" id="23"/>
+			</Button>
+			<Button name="ФормаЗакрыть" id="24">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Close</CommandName>
+				<ExtendedTooltip name="ФормаЗакрытьРасширеннаяПодсказка" id="25"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="BeforeLoadDataFromSettingsAtServer">ПередЗагрузкойДанныхИзНастроекНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаРодитель" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа родитель</v8:content>
+				</v8:item>
+			</Title>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаРодительРасширеннаяПодсказка" id="7"/>
+			<ChildItems>
+				<InputField name="Родитель" id="1">
+					<DataPath>Родитель</DataPath>
+					<ContextMenu name="РодительКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="РодительРасширеннаяПодсказка" id="3"/>
+				</InputField>
+				<Button name="ОткрытьДела" id="4">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ОткрытьДела</CommandName>
+					<ExtendedTooltip name="ОткрытьДелаРасширеннаяПодсказка" id="5"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Текст" id="8">
+			<DataPath>Текст</DataPath>
+			<DefaultItem>true</DefaultItem>
+			<TitleLocation>None</TitleLocation>
+			<Width>45</Width>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<Height>8</Height>
+			<MultiLine>true</MultiLine>
+			<ContextMenu name="ТекстКонтекстноеМеню" id="9"/>
+			<ExtendedTooltip name="ТекстРасширеннаяПодсказка" id="10"/>
+		</InputField>
+		<UsualGroup name="ГруппаНастройки" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаНастройкиРасширеннаяПодсказка" id="15"/>
+			<ChildItems>
+				<CheckBoxField name="ВводНесколькихЗадач" id="16">
+					<DataPath>ВводНесколькихЗадач</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ВводНесколькихЗадачКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="ВводНесколькихЗадачРасширеннаяПодсказка" id="18"/>
+				</CheckBoxField>
+				<CheckBoxField name="УмныйАнализВвода" id="26">
+					<DataPath>УмныйАнализВвода</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="УмныйАнализВводаКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="УмныйАнализВводаРасширеннаяПодсказка" id="28"/>
+				</CheckBoxField>
+				<CheckBoxField name="НаследоватьРодительскиеКонтексты" id="19">
+					<DataPath>НаследоватьРодительскиеКонтексты</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="НаследоватьРодительскиеКонтекстыКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="НаследоватьРодительскиеКонтекстыРасширеннаяПодсказка" id="21"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Родитель" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Родитель</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Дела</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Текст" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текст</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ВводНесколькихЗадач" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ввод нескольких задач (1 дело на строку, отступ для подчиненных дел)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>ВводНесколькихЗадач</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="НаследоватьРодительскиеКонтексты" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Наследовать родительские контексты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>НаследоватьРодительскиеКонтексты</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="УмныйАнализВвода" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Умный анализ ввода (Звонок Сергею завтра в 17:00)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>УмныйАнализВвода</Field>
+			</Save>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ОткрытьДела" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть дела</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть дела</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.сстВиды</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОткрытьДела</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="ДобавитьДела" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить дела</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить дела</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДобавитьДела</Action>
+		</Command>
+	</Commands>
+</Form>

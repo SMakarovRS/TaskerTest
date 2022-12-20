@@ -1,0 +1,1237 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Интеграция с телефонией (СофтФон)</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="AfterWriteAtServer">ПослеЗаписиНаСервере</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="сфпГруппаСофтФон" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>сфпГруппаСофтФон</v8:content>
+				</v8:item>
+			</Title>
+			<TitleFont ref="style:NormalTextFont" height="12" kind="StyleItem"/>
+			<HorizontalStretch>false</HorizontalStretch>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="сфпГруппаСофтФонРасширеннаяПодсказка" id="4"/>
+			<ChildItems>
+				<UsualGroup name="сфпГруппаИспользоватьСофтФон" id="123">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>сфпГруппаИспользоватьСофтФон</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="сфпГруппаИспользоватьСофтФонРасширеннаяПодсказка" id="124"/>
+					<ChildItems>
+						<CheckBoxField name="сфпИспользоватьСофтФон" id="5">
+							<DataPath>НаборКонстант.сфпИспользоватьСофтФон</DataPath>
+							<TitleFont ref="sys:DefaultGUIFont" height="12" kind="WindowsFont"/>
+							<TitleLocation>Right</TitleLocation>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Использовать подсистему СофтФон</v8:content>
+								</v8:item>
+							</ToolTip>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="сфпИспользоватьСофтФонКонтекстноеМеню" id="6"/>
+							<ExtendedTooltip name="сфпИспользоватьСофтФонExtendedTooltip" id="7"/>
+							<Events>
+								<Event name="OnChange">сфпИспользоватьСофтФонПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<Button name="сфпКомандаОписаниеСофтФон" id="125">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.сфпКомандаОписаниеСофтФон</CommandName>
+							<TextColor>web:SaddleBrown</TextColor>
+							<ExtendedTooltip name="сфпКомандаОписаниеСофтФонРасширеннаяПодсказка" id="126"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="сфпГруппаСофтФонПодключение" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>сфпГруппаСофтФонПодключение</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="сфпГруппаСофтФонПодключениеРасширеннаяПодсказка" id="9"/>
+					<ChildItems>
+						<UsualGroup name="сфпГруппаОбщиеНастройки" id="10">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Общие настройки</v8:content>
+								</v8:item>
+							</Title>
+							<TitleFont ref="style:NormalTextFont" height="12" kind="StyleItem"/>
+							<Group>Vertical</Group>
+							<Behavior>Collapsible</Behavior>
+							<Collapsed>true</Collapsed>
+							<ControlRepresentation>Picture</ControlRepresentation>
+							<Representation>NormalSeparation</Representation>
+							<ExtendedTooltip name="сфпГруппаОбщиеНастройкиРасширеннаяПодсказка" id="11"/>
+							<ChildItems>
+								<UsualGroup name="сфпГруппаКодСтраныГорода" id="12">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>сфпГруппаКодСтраныГорода</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTipRepresentation>None</ToolTipRepresentation>
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="сфпГруппаКодСтраныГородаРасширеннаяПодсказка" id="13"/>
+									<ChildItems>
+										<InputField name="сфпКодСтраны" id="14">
+											<DataPath>НаборКонстант.сфпКодСтраны</DataPath>
+											<Visible>false</Visible>
+											<ReadOnly>true</ReadOnly>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Код страны</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ContextMenu name="сфпКодСтраныКонтекстноеМеню" id="15"/>
+											<ExtendedTooltip name="сфпКодСтраныExtendedTooltip" id="16"/>
+										</InputField>
+										<InputField name="сфпКодГорода" id="17">
+											<DataPath>НаборКонстант.сфпКодГорода</DataPath>
+											<Visible>false</Visible>
+											<ReadOnly>true</ReadOnly>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Код города</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Width>7</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ContextMenu name="сфпКодГородаКонтекстноеМеню" id="18"/>
+											<ExtendedTooltip name="сфпКодГородаExtendedTooltip" id="19"/>
+										</InputField>
+										<LabelDecoration name="ДекорацияКодСтраныКодГорода" id="133">
+											<TextColor>style:FieldSelectionBackColor</TextColor>
+											<Title formatted="true">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Код страны и код города в программе не редактируются, они считываются с сервера Софтфона.</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияКодСтраныКодГородаКонтекстноеМеню" id="134"/>
+											<ExtendedTooltip name="ДекорацияКодСтраныКодГородаРасширеннаяПодсказка" id="135"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+								<LabelDecoration name="сфпДекорацияПерезаполнитьРегистрПоискаПоНомерам" id="23">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Перезаполнить регистр поиска по номерам</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Перезаполняет регистр, в котором сопоставляются номера телефонов и абонентов.
+Данный регистр используется для поиска абонента по номеру его телефона при входящем звонке.</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<Hyperlink>true</Hyperlink>
+									<ContextMenu name="сфпДекорацияПерезаполнитьРегистрПоискаПоНомерамКонтекстноеМеню" id="24"/>
+									<ExtendedTooltip name="сфпДекорацияПерезаполнитьРегистрПоискаПоНомерамExtendedTooltip" id="25"/>
+									<Events>
+										<Event name="Click">сфпДекорацияПерезаполнитьРегистрПоискаПоНомерамНажатие</Event>
+									</Events>
+								</LabelDecoration>
+								<CheckBoxField name="сфпОграничениеНаПросмотрТелефонныхЗвонков" id="148">
+									<DataPath>НаборКонстант.сфпОграничениеНаПросмотрТелефонныхЗвонков</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>При включенной настройке текущий пользователь может просматривать телефонные звонки других пользователей в соответствии с механизмом "Прослушиваемые пользователи"</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="сфпОграничениеНаПросмотрТелефонныхЗвонковКонтекстноеМеню" id="149"/>
+									<ExtendedTooltip name="сфпОграничениеНаПросмотрТелефонныхЗвонковРасширеннаяПодсказка" id="150"/>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="сфпГруппаСистемыЗаписиТелефонныхПереговоров" id="26">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Системы записи телефонных переговоров</v8:content>
+								</v8:item>
+							</Title>
+							<TitleFont ref="style:NormalTextFont" height="12" kind="StyleItem"/>
+							<Group>Vertical</Group>
+							<Behavior>Collapsible</Behavior>
+							<Collapsed>true</Collapsed>
+							<ControlRepresentation>Picture</ControlRepresentation>
+							<Representation>NormalSeparation</Representation>
+							<ExtendedTooltip name="сфпГруппаСистемыЗаписиТелефонныхПереговоровРасширеннаяПодсказка" id="27"/>
+							<ChildItems>
+								<CheckBoxField name="сфпИспользоватьСпрут7" id="28">
+									<DataPath>НаборКонстант.сфпИспользоватьСпрут7</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Система записи переговоров, настроенная на сервере СофтФон</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Использовать систему записи переговоров, настроенную на сервере СофтФон.
+Поддерживаются системы записи АТС Астериск и FreeSwitch, а также система записи Спрут для АТС серии Агат UX.</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="сфпИспользоватьСпрут7КонтекстноеМеню" id="29"/>
+									<ExtendedTooltip name="сфпИспользоватьСпрут7ExtendedTooltip" id="30"/>
+									<Events>
+										<Event name="OnChange">сфпИспользоватьСпрут7ПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<UsualGroup name="сфпГруппаCLON" id="31">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>сфпГруппаCLON</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="сфпГруппаCLONРасширеннаяПодсказка" id="32"/>
+									<ChildItems>
+										<UsualGroup name="сфпГруппаИспользованиеCLON" id="33">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>сфпГруппаИспользованиеCLON</v8:content>
+												</v8:item>
+											</Title>
+											<Group>Horizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="сфпГруппаИспользованиеCLONРасширеннаяПодсказка" id="34"/>
+											<ChildItems>
+												<CheckBoxField name="сфпИспользоватьCLON" id="35">
+													<DataPath>НаборКонстант.сфпИспользоватьCLON</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Система записи переговоров CLON</v8:content>
+														</v8:item>
+													</Title>
+													<TitleLocation>Right</TitleLocation>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Использовать систему записи телефонных переговоров CLON</v8:content>
+														</v8:item>
+													</ToolTip>
+													<ToolTipRepresentation>Button</ToolTipRepresentation>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="сфпИспользоватьCLONКонтекстноеМеню" id="36"/>
+													<ExtendedTooltip name="сфпИспользоватьCLONExtendedTooltip" id="37"/>
+													<Events>
+														<Event name="OnChange">сфпИспользоватьCLONПриИзменении</Event>
+													</Events>
+												</CheckBoxField>
+												<Button name="сфпПодключитьCLON" id="38">
+													<Type>Hyperlink</Type>
+													<Representation>Text</Representation>
+													<CommandName>Form.Command.сфпПодключитьCLON</CommandName>
+													<ExtendedTooltip name="сфпПодключитьCLONРасширеннаяПодсказка" id="39"/>
+												</Button>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="сфпГруппаНастроекCLON" id="40">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>сфпГруппаНастроекCLON</v8:content>
+												</v8:item>
+											</Title>
+											<Width>44</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<VerticalStretch>false</VerticalStretch>
+											<Group>Vertical</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="сфпГруппаНастроекCLONРасширеннаяПодсказка" id="41"/>
+											<ChildItems>
+												<UsualGroup name="сфпГруппаПараметрыСервераCLON" id="42">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>сфпГруппаПараметрыСервераCLON</v8:content>
+														</v8:item>
+													</Title>
+													<Group>Horizontal</Group>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="сфпГруппаПараметрыСервераCLONРасширеннаяПодсказка" id="43"/>
+													<ChildItems>
+														<InputField name="сфпCLONServerIP" id="44">
+															<DataPath>НаборКонстант.сфпCLONServerIP</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>IP-адрес</v8:content>
+																</v8:item>
+															</Title>
+															<Width>12</Width>
+															<ContextMenu name="сфпCLONServerIPКонтекстноеМеню" id="45"/>
+															<ExtendedTooltip name="сфпCLONServerIPРасширеннаяПодсказка" id="46"/>
+														</InputField>
+														<LabelDecoration name="Декорация_сфпCLONServerPort" id="151">
+															<Width>5</Width>
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Порт:</v8:content>
+																</v8:item>
+															</Title>
+															<ContextMenu name="Декорация_сфпCLONServerPortКонтекстноеМеню" id="152"/>
+															<ExtendedTooltip name="Декорация_сфпCLONServerPortРасширеннаяПодсказка" id="153"/>
+														</LabelDecoration>
+														<InputField name="сфпCLONServerPort" id="47">
+															<DataPath>НаборКонстант.сфпCLONServerPort</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Порт</v8:content>
+																</v8:item>
+															</Title>
+															<TitleLocation>None</TitleLocation>
+															<Width>5</Width>
+															<ContextMenu name="сфпCLONServerPortКонтекстноеМеню" id="48"/>
+															<ExtendedTooltip name="сфпCLONServerPortРасширеннаяПодсказка" id="49"/>
+														</InputField>
+														<InputField name="сфпCLONType" id="50">
+															<DataPath>НаборКонстант.сфпCLONType</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Тип</v8:content>
+																</v8:item>
+															</Title>
+															<Width>5</Width>
+															<ChoiceButton>true</ChoiceButton>
+															<ClearButton>false</ClearButton>
+															<SpinButton>false</SpinButton>
+															<OpenButton>false</OpenButton>
+															<ChoiceListButton>false</ChoiceListButton>
+															<DropListWidth>5</DropListWidth>
+															<ContextMenu name="сфпCLONTypeКонтекстноеМеню" id="51"/>
+															<ExtendedTooltip name="сфпCLONTypeРасширеннаяПодсказка" id="52"/>
+														</InputField>
+													</ChildItems>
+												</UsualGroup>
+												<UsualGroup name="сфпГруппаПараметрыПользователя" id="53">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>сфпГруппаПараметрыПользователя</v8:content>
+														</v8:item>
+													</Title>
+													<Group>Horizontal</Group>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="сфпГруппаПараметрыПользователяРасширеннаяПодсказка" id="54"/>
+													<ChildItems>
+														<InputField name="сфпCLONServerLogin" id="55">
+															<DataPath>НаборКонстант.сфпCLONServerLogin</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Логин</v8:content>
+																</v8:item>
+															</Title>
+															<Width>13</Width>
+															<ContextMenu name="сфпCLONServerLoginКонтекстноеМеню" id="56"/>
+															<ExtendedTooltip name="сфпCLONServerLoginРасширеннаяПодсказка" id="57"/>
+														</InputField>
+														<InputField name="сфпCLONServerPassword" id="58">
+															<DataPath>НаборКонстант.сфпCLONServerPassword</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Пароль</v8:content>
+																</v8:item>
+															</Title>
+															<Width>16</Width>
+															<ContextMenu name="сфпCLONServerPasswordКонтекстноеМеню" id="59"/>
+															<ExtendedTooltip name="сфпCLONServerPasswordРасширеннаяПодсказка" id="60"/>
+														</InputField>
+													</ChildItems>
+												</UsualGroup>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="сфпГруппаИсторияЗвонков" id="61">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>История звонков</v8:content>
+								</v8:item>
+							</Title>
+							<TitleFont ref="style:NormalTextFont" height="12" kind="StyleItem"/>
+							<Group>Vertical</Group>
+							<Behavior>Collapsible</Behavior>
+							<Collapsed>true</Collapsed>
+							<ControlRepresentation>Picture</ControlRepresentation>
+							<Representation>NormalSeparation</Representation>
+							<ExtendedTooltip name="сфпГруппаИсторияЗвонковРасширеннаяПодсказка" id="62"/>
+							<ChildItems>
+								<CheckBoxField name="сфпИспользоватьРегламентноеЗаданиеИсторииЗвонков" id="63">
+									<DataPath>НаборКонстант.сфпИспользоватьРегламентноеЗаданиеИсторииЗвонков</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Использовать регламентное задание для загрузки истории звонков</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Использовать регламентное задание для загрузки истории звонков</v8:content>
+										</v8:item>
+									</ToolTip>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="сфпИспользоватьРегламентноеЗаданиеИсторииЗвонковКонтекстноеМеню" id="64"/>
+									<ExtendedTooltip name="сфпИспользоватьРегламентноеЗаданиеИсторииЗвонковРасширеннаяПодсказка" id="65"/>
+									<Events>
+										<Event name="OnChange">сфпИспользоватьРегламентноеЗаданиеИсторииЗвонковПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<InputField name="сфпДействиеПриОшибкеЗагрузкиИсторииЗвонков" id="168">
+									<DataPath>НаборКонстант.сфпДействиеПриОшибкеЗагрузкиИсторииЗвонков</DataPath>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Действие, которое будет выполнено при возникновении ошибки: Прервать выполнение - задание будет завершено с ошибкой; Продолжить выполнение - задание продолжит выполнение, информация об ошибке будет добавлена в Журнал регистрации;</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<ContextMenu name="сфпДействиеПриОшибкеЗагрузкиИсторииЗвонковКонтекстноеМеню" id="169"/>
+									<ExtendedTooltip name="сфпДействиеПриОшибкеЗагрузкиИсторииЗвонковРасширеннаяПодсказка" id="170"/>
+								</InputField>
+								<UsualGroup name="сфпГруппаИсторияЗвонковНастройки" id="66">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>сфпГруппаИсторияЗвонковНастройки</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="сфпГруппаИсторияЗвонковНастройкиРасширеннаяПодсказка" id="67"/>
+									<ChildItems>
+										<LabelDecoration name="ДекорацияДатаПоследнейЗагрузки" id="139">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Дата последней загрузки</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияДатаПоследнейЗагрузкиКонтекстноеМеню" id="140"/>
+											<ExtendedTooltip name="ДекорацияДатаПоследнейЗагрузкиРасширеннаяПодсказка" id="141"/>
+										</LabelDecoration>
+										<InputField name="сфпДатаИстории" id="142">
+											<DataPath>сфпДатаИстории</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ContextMenu name="сфпДатаИсторииКонтекстноеМеню" id="143"/>
+											<ExtendedTooltip name="сфпДатаИсторииРасширеннаяПодсказка" id="144"/>
+										</InputField>
+										<InputField name="сфпВремяИстории" id="145">
+											<DataPath>сфпВремяИстории</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<Width>6</Width>
+											<EditFormat>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ДФ=HH:mm:ss; ДП=00:00:00</v8:content>
+												</v8:item>
+											</EditFormat>
+											<ContextMenu name="сфпВремяИсторииКонтекстноеМеню" id="146"/>
+											<ExtendedTooltip name="сфпВремяИсторииРасширеннаяПодсказка" id="147"/>
+										</InputField>
+										<InputField name="сфпДатаИсторииЗвонков" id="68">
+											<DataPath>НаборКонстант.сфпДатаИсторииЗвонков</DataPath>
+											<Visible>false</Visible>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Дата последней загрузки</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Дата последней загрузки истории звонков</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Width>10</Width>
+											<EditFormat>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ДФ=dd.MM.yyyy</v8:content>
+												</v8:item>
+											</EditFormat>
+											<ContextMenu name="сфпДатаИсторииЗвонковКонтекстноеМеню" id="69"/>
+											<ExtendedTooltip name="сфпДатаИсторииЗвонковРасширеннаяПодсказка" id="70"/>
+										</InputField>
+										<LabelDecoration name="сфпНастройкаРасписанияИсторииЗвонков" id="71">
+											<VerticalStretch>false</VerticalStretch>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Настройка регламентного задания</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Настройка расписания регламентного задания</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Hyperlink>true</Hyperlink>
+											<ContextMenu name="сфпНастройкаРасписанияИсторииЗвонковКонтекстноеМеню" id="72"/>
+											<ExtendedTooltip name="сфпНастройкаРасписанияИсторииЗвонковРасширеннаяПодсказка" id="73"/>
+											<Events>
+												<Event name="Click">сфпНастройкаРасписанияИсторииЗвонковНажатие</Event>
+											</Events>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+								<CheckBoxField name="сфпОповещатьОПропущенныхЗвонках" id="127">
+									<DataPath>НаборКонстант.сфпОповещатьОПропущенныхЗвонках</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="сфпОповещатьОПропущенныхЗвонкахКонтекстноеМеню" id="128"/>
+									<ExtendedTooltip name="сфпОповещатьОПропущенныхЗвонкахРасширеннаяПодсказка" id="129"/>
+									<Events>
+										<Event name="OnChange">сфпОповещатьОПропущенныхЗвонкахПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<InputField name="сфпПользовательДляОповещений" id="120">
+									<DataPath>НаборКонстант.сфпПользовательДляОповещений</DataPath>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Пользователь, которому будут автоматически формироваться напоминания о пропущенных
+звонках  от абонентов, которых нет в информационной базе, или которым не сопоставлен
+ответственный менеджер или пользователь для переключения звонков</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<DropListButton>false</DropListButton>
+									<ChoiceButton>true</ChoiceButton>
+									<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+									<ClearButton>true</ClearButton>
+									<SpinButton>false</SpinButton>
+									<OpenButton>false</OpenButton>
+									<CreateButton>false</CreateButton>
+									<ChooseType>false</ChooseType>
+									<ContextMenu name="сфпПользовательДляОповещенийКонтекстноеМеню" id="121"/>
+									<ExtendedTooltip name="сфпПользовательДляОповещенийРасширеннаяПодсказка" id="122"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="сфпГруппаДинамическаяМаршрутизация" id="74">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Динамическая маршрутизация</v8:content>
+								</v8:item>
+							</Title>
+							<TitleFont ref="style:NormalTextFont" height="12" kind="StyleItem"/>
+							<Group>Vertical</Group>
+							<Behavior>Collapsible</Behavior>
+							<Collapsed>true</Collapsed>
+							<ControlRepresentation>Picture</ControlRepresentation>
+							<Representation>NormalSeparation</Representation>
+							<ExtendedTooltip name="сфпГруппаДинамическаяМаршрутизацияРасширеннаяПодсказка" id="75"/>
+							<ChildItems>
+								<LabelDecoration name="сфпДекорацияИспользованиеМаршрутизации" id="130">
+									<TextColor>style:FieldSelectionBackColor</TextColor>
+									<Font ref="style:NormalTextFont" bold="false" italic="false" underline="true" strikeout="false" kind="StyleItem"/>
+									<Title formatted="true">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Для отображения настроек маршрутизации необходимо: 
+на сервере СофтФона установить настройку "Использовать маршрутизацию звонков сервером по переданной таблице"</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTipRepresentation>None</ToolTipRepresentation>
+									<ContextMenu name="сфпДекорацияИспользованиеМаршрутизацииКонтекстноеМеню" id="131"/>
+									<ExtendedTooltip name="сфпДекорацияИспользованиеМаршрутизацииРасширеннаяПодсказка" id="132"/>
+								</LabelDecoration>
+								<CheckBoxField name="сфпИспользоватьМаршрутизацию" id="76">
+									<DataPath>НаборКонстант.сфпИспользоватьМаршрутизацию</DataPath>
+									<Visible>false</Visible>
+									<TitleLocation>Right</TitleLocation>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Использовать динамическую маршрутизацию входящих звонков средствами сервера СофтФон</v8:content>
+										</v8:item>
+									</ToolTip>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="сфпИспользоватьМаршрутизациюКонтекстноеМеню" id="77"/>
+									<ExtendedTooltip name="сфпИспользоватьМаршрутизациюРасширеннаяПодсказка" id="78"/>
+									<Events>
+										<Event name="OnChange">сфпИспользоватьМаршрутизациюПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<InputField name="сфпКоличествоВзаимодействийДляМаршрутизации" id="79">
+									<DataPath>НаборКонстант.сфпКоличествоВзаимодействийДляМаршрутизации</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Количество входящих звонков</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Количество документов "Телефонный звонок", по достижении которого
+включается автоматический перевод входящих звонков данного клиента
+средствами сервера СофтФон на пользователя, с которым его соединяли.
+(0 - маршрутизация отключена)</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<ContextMenu name="сфпКоличествоВзаимодействийДляМаршрутизацииКонтекстноеМеню" id="80"/>
+									<ExtendedTooltip name="сфпКоличествоВзаимодействийДляМаршрутизацииExtendedTooltip" id="81"/>
+								</InputField>
+								<RadioButtonField name="сфпПолеПереключателяМаршрутизация" id="136">
+									<DataPath>сфпПолеПереключателяМаршрутизация</DataPath>
+									<TitleLocation>Left</TitleLocation>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Данная настройка позволяет авторизоваться в базе 1С другим пользователям на текущем рабочем месте, имеющим подключение к Софтфону, без изменения маршрутизации на номер авторизованного пользователя.</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<RadioButtonType>Tumbler</RadioButtonType>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Текущий номер Софтфона (по умолчанию)</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">ПоУмолчанию</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Номер из контакт. информации пользователя</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">Альтернатива</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ContextMenu name="сфпПолеПереключателяМаршрутизацияКонтекстноеМеню" id="137"/>
+									<ExtendedTooltip name="сфпПолеПереключателяМаршрутизацияРасширеннаяПодсказка" id="138"/>
+									<Events>
+										<Event name="OnChange">сфпПолеПереключателяМаршрутизацияПриИзменении</Event>
+									</Events>
+								</RadioButtonField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="сфпПланНумерации" id="154">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>План нумерации ФАС (Россвязь)</v8:content>
+								</v8:item>
+							</Title>
+							<TitleFont ref="style:TextFont" height="12" kind="StyleItem"/>
+							<Group>Horizontal</Group>
+							<Behavior>Collapsible</Behavior>
+							<Collapsed>true</Collapsed>
+							<ControlRepresentation>Picture</ControlRepresentation>
+							<Representation>NormalSeparation</Representation>
+							<ExtendedTooltip name="сфпПланНумерацииРасширеннаяПодсказка" id="155"/>
+							<ChildItems>
+								<UsualGroup name="сфпГруппаПланНумерацииЛевая" id="176">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>сфпГруппаПланНумерацииЛевая</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="сфпГруппаПланНумерацииЛеваяРасширеннаяПодсказка" id="177"/>
+									<ChildItems>
+										<CheckBoxField name="сфпПланНумерацииАвтоопределениеБизнесРегиона" id="162">
+											<DataPath>НаборКонстант.сфпПланНумерацииАвтоопределениеБизнесРегиона</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Автоопределение Бизнес-региона</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="сфпПланНумерацииАвтоопределениеБизнесРегионаКонтекстноеМеню" id="163"/>
+											<ExtendedTooltip name="сфпПланНумерацииАвтоопределениеБизнесРегионаРасширеннаяПодсказка" id="164"/>
+											<Events>
+												<Event name="OnChange">сфпПланНумерацииАвтоопределениеБизнесРегионаПриИзменении</Event>
+											</Events>
+										</CheckBoxField>
+										<InputField name="сфпПланНумерацииАдресРеестра" id="156">
+											<DataPath>НаборКонстант.сфпПланНумерацииАдресРеестра</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Адрес реестра нумерации</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Указывается адрес, отличный от адреса по умолчанию (https://rossvyaz.gov.ru/docs/articles/)</v8:content>
+												</v8:item>
+											</ToolTip>
+											<InputHint>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>https://rossvyaz.gov.ru/docs/articles/</v8:content>
+												</v8:item>
+											</InputHint>
+											<ContextMenu name="сфпПланНумерацииАдресРеестраКонтекстноеМеню" id="157"/>
+											<ExtendedTooltip name="сфпПланНумерацииАдресРеестраРасширеннаяПодсказка" id="158"/>
+										</InputField>
+										<InputField name="сфпПланНумерацииФайлыРеестра" id="159">
+											<DataPath>НаборКонстант.сфпПланНумерацииФайлыРеестра</DataPath>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Указывается состав файлов, отличный от состава по умолчанию (Kody_ABC-3kh.csv,Kody_ABC-4kh.csv,Kody_ABC-8kh.csv,Kody_DEF-9kh.csv)</v8:content>
+												</v8:item>
+											</ToolTip>
+											<InputHint>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Kody_ABC-3kh.csv,Kody_ABC-4kh.csv,Kody_ABC-8kh.csv,Kody_DEF-9kh.csv</v8:content>
+												</v8:item>
+											</InputHint>
+											<ContextMenu name="сфпПланНумерацииФайлыРеестраКонтекстноеМеню" id="160"/>
+											<ExtendedTooltip name="сфпПланНумерацииФайлыРеестраРасширеннаяПодсказка" id="161"/>
+										</InputField>
+										<InputField name="сфпПланНумерацииАдресДетализацииНомера" id="165">
+											<DataPath>НаборКонстант.сфпПланНумерацииАдресДетализацииНомера</DataPath>
+											<Visible>false</Visible>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Адрес детализации номера</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="сфпПланНумерацииАдресДетализацииНомераКонтекстноеМеню" id="166"/>
+											<ExtendedTooltip name="сфпПланНумерацииАдресДетализацииНомераРасширеннаяПодсказка" id="167"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="сфпГруппаПланНумерацииПравая" id="171">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>сфпГруппаПланНумерацииПравая</v8:content>
+										</v8:item>
+									</Title>
+									<Width>42</Width>
+									<Height>2</Height>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="сфпГруппаПланНумерацииПраваяРасширеннаяПодсказка" id="172"/>
+									<ChildItems>
+										<LabelDecoration name="сфпНастройкаРасписанияЗагрузкаПланаНумерации" id="173">
+											<VerticalStretch>false</VerticalStretch>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Настройка регламентного задания обновления Плана нумерации</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Продолжительность загрузки Плана нумерации может составить от 15 до 45 минут. Рекомендуется настраивать расписание регламентного задания на выполнение "раз в неделю" в нерабочее время.</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+											<Hyperlink>true</Hyperlink>
+											<ContextMenu name="сфпНастройкаРасписанияЗагрузкаПланаНумерацииКонтекстноеМеню" id="174"/>
+											<ExtendedTooltip name="сфпНастройкаРасписанияЗагрузкаПланаНумерацииРасширеннаяПодсказка" id="175"/>
+											<Events>
+												<Event name="Click">сфпНастройкаРасписанияЗагрузкаПланаНумерацииНажатие</Event>
+											</Events>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="сфпГруппаТелефонныеКнигиСофтФон" id="87">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Общие телефонные книги</v8:content>
+								</v8:item>
+							</Title>
+							<TitleFont ref="style:NormalTextFont" height="12" kind="StyleItem"/>
+							<Group>Vertical</Group>
+							<Behavior>Collapsible</Behavior>
+							<Collapsed>true</Collapsed>
+							<ControlRepresentation>Picture</ControlRepresentation>
+							<Representation>NormalSeparation</Representation>
+							<ExtendedTooltip name="сфпГруппаТелефонныеКнигиСофтФонРасширеннаяПодсказка" id="88"/>
+							<ChildItems>
+								<CheckBoxField name="сфпИспользоватьРегламентноеЗаданиеТелефонныхКниг" id="89">
+									<DataPath>НаборКонстант.сфпИспользоватьРегламентноеЗаданиеТелефонныхКниг</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Использовать регламентное задание для обновления телефонных книг </v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Использовать регламентное задание для обновления телефонных книг СофтФон</v8:content>
+										</v8:item>
+									</ToolTip>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="сфпИспользоватьРегламентноеЗаданиеТелефонныхКнигКонтекстноеМеню" id="90"/>
+									<ExtendedTooltip name="сфпИспользоватьРегламентноеЗаданиеТелефонныхКнигРасширеннаяПодсказка" id="91"/>
+									<Events>
+										<Event name="OnChange">сфпИспользоватьРегламентноеЗаданиеТелефонныхКнигПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<UsualGroup name="ГруппаОткрытьТелефонныеКниги" id="92">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ГруппаОткрытьТелефонныеКниги</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаОткрытьТелефонныеКнигиРасширеннаяПодсказка" id="93"/>
+									<ChildItems>
+										<LabelDecoration name="сфпДекорацияТелефонныеКнигиСофтФон" id="94">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Открыть общие телефонные книги</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>В книге указываются сотрудники компании, отобранные по определенному условию, например по офису или подразделению.
+Общие телефонные книги автоматически доступны всем пользователям в панели СофтФон.
+</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ToolTipRepresentation>Button</ToolTipRepresentation>
+											<Hyperlink>true</Hyperlink>
+											<ContextMenu name="сфпДекорацияТелефонныеКнигиСофтФонКонтекстноеМеню" id="95"/>
+											<ExtendedTooltip name="сфпДекорацияТелефонныеКнигиСофтФонРасширеннаяПодсказка" id="96"/>
+											<Events>
+												<Event name="Click">сфпДекорацияТелефонныеКнигиСофтФонНажатие</Event>
+											</Events>
+										</LabelDecoration>
+										<LabelDecoration name="сфпНастройкаРасписанияТелефонныхКниг" id="97">
+											<VerticalStretch>false</VerticalStretch>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Настройка регламентного задания</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Настройка расписания регламентного задания</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Hyperlink>true</Hyperlink>
+											<ContextMenu name="сфпНастройкаРасписанияТелефонныхКнигКонтекстноеМеню" id="98"/>
+											<ExtendedTooltip name="сфпНастройкаРасписанияТелефонныхКнигРасширеннаяПодсказка" id="99"/>
+											<Events>
+												<Event name="Click">сфпНастройкаРасписанияТелефонныхКнигНажатие</Event>
+											</Events>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="сфпГруппаСервисCoMagic" id="103">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сервис CoMagic</v8:content>
+								</v8:item>
+							</Title>
+							<TitleFont ref="style:NormalTextFont" height="12" kind="StyleItem"/>
+							<Group>Vertical</Group>
+							<Behavior>Collapsible</Behavior>
+							<Collapsed>true</Collapsed>
+							<ControlRepresentation>Picture</ControlRepresentation>
+							<Representation>NormalSeparation</Representation>
+							<ExtendedTooltip name="сфпГруппаСервисCoMagicРасширеннаяПодсказка" id="104"/>
+							<ChildItems>
+								<UsualGroup name="сфпГруппаОписаниеСервиса" id="105">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>сфпГруппаОписаниеСервиса</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="сфпГруппаОписаниеСервисаРасширеннаяПодсказка" id="106"/>
+									<ChildItems>
+										<CheckBoxField name="сфпИспользоватьCoMagic" id="107">
+											<DataPath>НаборКонстант.сфпИспользоватьCoMagic</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Использовать сервис CoMagic</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>Right</TitleLocation>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Использовать сервис повышения продаж и отдачи от интернет-рекламы CoMagic</v8:content>
+												</v8:item>
+											</ToolTip>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="сфпИспользоватьCoMagicКонтекстноеМеню" id="108"/>
+											<ExtendedTooltip name="сфпИспользоватьCoMagicРасширеннаяПодсказка" id="109"/>
+											<Events>
+												<Event name="OnChange">сфпИспользоватьCoMagicПриИзменении</Event>
+											</Events>
+										</CheckBoxField>
+										<Button name="сфпСправкаCoMagic" id="110">
+											<Type>Hyperlink</Type>
+											<Representation>PictureAndText</Representation>
+											<CommandName>Form.Command.сфпКомандаОписаниеCoMagic</CommandName>
+											<TextColor>web:SaddleBrown</TextColor>
+											<BackColor>style:FormBackColor</BackColor>
+											<BorderColor>style:FormBackColor</BorderColor>
+											<ExtendedTooltip name="сфпСправкаCoMagicРасширеннаяПодсказка" id="111"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаНастройкаПараметровCoMagic" id="112">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ГруппаНастройкаПараметровCoMagic</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalStretch>false</HorizontalStretch>
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаНастройкаПараметровCoMagicРасширеннаяПодсказка" id="113"/>
+									<ChildItems>
+										<InputField name="сфпЛогинCoMagic" id="114">
+											<DataPath>НаборКонстант.сфпЛогинCoMagic</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Логин</v8:content>
+												</v8:item>
+											</Title>
+											<Width>12</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<VerticalStretch>false</VerticalStretch>
+											<ContextMenu name="сфпЛогинCoMagicКонтекстноеМеню" id="115"/>
+											<ExtendedTooltip name="сфпЛогинCoMagicРасширеннаяПодсказка" id="116"/>
+										</InputField>
+										<InputField name="сфпПарольCoMagic" id="117">
+											<DataPath>НаборКонстант.сфпПарольCoMagic</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Пароль</v8:content>
+												</v8:item>
+											</Title>
+											<Width>12</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<VerticalStretch>false</VerticalStretch>
+											<PasswordMode>true</PasswordMode>
+											<ContextMenu name="сфпПарольCoMagicКонтекстноеМеню" id="118"/>
+											<ExtendedTooltip name="сфпПарольCoMagicРасширеннаяПодсказка" id="119"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="сфпГруппаМастерНастройкиAgatUX" id="82">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Мастер настройки IP-АТС Агат UX</v8:content>
+								</v8:item>
+							</Title>
+							<TitleFont ref="style:NormalTextFont" height="12" kind="StyleItem"/>
+							<Group>Vertical</Group>
+							<Behavior>Collapsible</Behavior>
+							<Collapsed>true</Collapsed>
+							<ControlRepresentation>Picture</ControlRepresentation>
+							<Representation>NormalSeparation</Representation>
+							<ExtendedTooltip name="сфпГруппаМастерНастройкиAgatUXРасширеннаяПодсказка" id="83"/>
+							<ChildItems>
+								<LabelDecoration name="сфпДекорацияМастерНастройкиAgatUX" id="84">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Использовать мастер для быстрой настройки IP АТС Агат UX</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Установить мастер для быстрой настройки АТС серии AgatUX.
+Мастер позволяет выполнить первоначальную настройку АТС для использования с сервером СофтФон.</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<Hyperlink>true</Hyperlink>
+									<ContextMenu name="сфпДекорацияМастерНастройкиAgatUXКонтекстноеМеню" id="85"/>
+									<ExtendedTooltip name="сфпДекорацияМастерНастройкиAgatUXExtendedTooltip" id="86"/>
+									<Events>
+										<Event name="Click">сфпДекорацияМастерНастройкиAgatUXНажатие</Event>
+									</Events>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="НаборКонстант" id="1">
+			<Type>
+				<v8:Type>cfg:ConstantsSet</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>НаборКонстант.сфпCLONServerIP</Field>
+				<Field>НаборКонстант.сфпCLONServerLogin</Field>
+				<Field>НаборКонстант.сфпCLONServerPassword</Field>
+				<Field>НаборКонстант.сфпCLONServerPort</Field>
+				<Field>НаборКонстант.сфпCLONType</Field>
+				<Field>НаборКонстант.сфпДатаИсторииЗвонков</Field>
+				<Field>НаборКонстант.сфпДействиеПриОшибкеЗагрузкиИсторииЗвонков</Field>
+				<Field>НаборКонстант.сфпИдентификаторМаршрутизации</Field>
+				<Field>НаборКонстант.сфпИмяСервера</Field>
+				<Field>НаборКонстант.сфпИспользоватьCLON</Field>
+				<Field>НаборКонстант.сфпИспользоватьCoMagic</Field>
+				<Field>НаборКонстант.сфпИспользоватьSMS</Field>
+				<Field>НаборКонстант.сфпИспользоватьВнутреннийНомерИзКИПользователя</Field>
+				<Field>НаборКонстант.сфпИспользоватьЗаписьПереговоров</Field>
+				<Field>НаборКонстант.сфпИспользоватьИсториюЗвонков</Field>
+				<Field>НаборКонстант.сфпИспользоватьМаршрутизацию</Field>
+				<Field>НаборКонстант.сфпИспользоватьРегламентноеЗаданиеИсторииЗвонков</Field>
+				<Field>НаборКонстант.сфпИспользоватьРегламентноеЗаданиеТелефонныхКниг</Field>
+				<Field>НаборКонстант.сфпИспользоватьСофтФон</Field>
+				<Field>НаборКонстант.сфпИспользоватьСпрут7</Field>
+				<Field>НаборКонстант.сфпКодГорода</Field>
+				<Field>НаборКонстант.сфпКодСтраны</Field>
+				<Field>НаборКонстант.сфпКоличествоВзаимодействийДляМаршрутизации</Field>
+				<Field>НаборКонстант.сфпЛогинCoMagic</Field>
+				<Field>НаборКонстант.сфпМаксимальнаяДлинаВнутреннихНомеров</Field>
+				<Field>НаборКонстант.сфпМинимальнаяДлинаВнутреннихНомеров</Field>
+				<Field>НаборКонстант.сфпОграничениеНаПросмотрТелефонныхЗвонков</Field>
+				<Field>НаборКонстант.сфпОповещатьОПропущенныхЗвонках</Field>
+				<Field>НаборКонстант.сфпПарольCoMagic</Field>
+				<Field>НаборКонстант.сфпПланНумерацииАвтоопределениеБизнесРегиона</Field>
+				<Field>НаборКонстант.сфпПланНумерацииАдресДетализацииНомера</Field>
+				<Field>НаборКонстант.сфпПланНумерацииАдресРеестра</Field>
+				<Field>НаборКонстант.сфпПланНумерацииФайлыРеестра</Field>
+				<Field>НаборКонстант.сфпПользовательДляОповещений</Field>
+				<Field>НаборКонстант.сфпПорт</Field>
+				<Field>НаборКонстант.сфпПоследниеЦифрыТелефонногоНомера</Field>
+				<Field>НаборКонстант.сфпПрефиксВыходаВГород</Field>
+				<Field>НаборКонстант.сфпПрефиксВыходаВМежгород</Field>
+				<Field>НаборКонстант.сфпПрефиксВыходаНаМеждународную</Field>
+				<Field>НаборКонстант.сфпСтрокаПодключенияИстории</Field>
+			</UseAlways>
+		</Attribute>
+		<Attribute name="сфпПолеПереключателяМаршрутизация" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переводить на номер пользователя</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="сфпВремяИстории" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата истории звонков (только время)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Time</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="сфпДатаИстории" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата истории звонков (только дата)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="сфпПодключитьCLON" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подключиться к системе CLON</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подключиться к системе записи телефонных переговоров CLON</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.сфпCLON</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>сфпПодключитьCLON</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="сфпКомандаОписаниеCoMagic" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content> Справочная информация</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Описание сервиса CoMagic</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.FormHelp</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>сфпКомандаОписаниеCoMagic</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="сфпКомандаОписаниеСофтФон" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content> Справочная информация</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Описание подсистемы СофтФон</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.FormHelp</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>сфпКомандаОписаниеСофтФон</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

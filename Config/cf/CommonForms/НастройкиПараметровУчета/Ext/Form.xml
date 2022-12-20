@@ -1,0 +1,3114 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Настройка параметров учета</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>None</CommandBarLocation>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаВсеНастройки" id="18">
+			<EnableContentChange>true</EnableContentChange>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа все настройки</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаВсеНастройкиРасширеннаяПодсказка" id="343"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаВсеОбъекты" id="1">
+					<EnableContentChange>true</EnableContentChange>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа все объекты</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаВсеОбъектыРасширеннаяПодсказка" id="344"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаКнопок" id="2">
+							<EnableContentChange>true</EnableContentChange>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Перейти</v8:content>
+								</v8:item>
+							</Title>
+							<Width>25</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<VerticalStretch>true</VerticalStretch>
+							<Group>Vertical</Group>
+							<ChildItemsWidth>Equal</ChildItemsWidth>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКнопокРасширеннаяПодсказка" id="345"/>
+							<ChildItems>
+								<Table name="ДеревоДействий" id="754">
+									<Representation>Tree</Representation>
+									<CommandBarLocation>None</CommandBarLocation>
+									<ChangeRowSet>false</ChangeRowSet>
+									<ChangeRowOrder>false</ChangeRowOrder>
+									<Width>25</Width>
+									<SelectionMode>SingleRow</SelectionMode>
+									<Header>false</Header>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<InitialTreeView>ExpandAllLevels</InitialTreeView>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<DataPath>ДеревоДействий</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дерево действий</v8:content>
+										</v8:item>
+									</Title>
+									<CommandSet>
+										<ExcludedCommand>Add</ExcludedCommand>
+										<ExcludedCommand>Change</ExcludedCommand>
+										<ExcludedCommand>Copy</ExcludedCommand>
+										<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+										<ExcludedCommand>Delete</ExcludedCommand>
+										<ExcludedCommand>EndEdit</ExcludedCommand>
+										<ExcludedCommand>HierarchicalList</ExcludedCommand>
+										<ExcludedCommand>List</ExcludedCommand>
+										<ExcludedCommand>MoveDown</ExcludedCommand>
+										<ExcludedCommand>MoveUp</ExcludedCommand>
+										<ExcludedCommand>OutputList</ExcludedCommand>
+										<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+										<ExcludedCommand>SortListAsc</ExcludedCommand>
+										<ExcludedCommand>SortListDesc</ExcludedCommand>
+										<ExcludedCommand>Tree</ExcludedCommand>
+									</CommandSet>
+									<ContextMenu name="ДеревоДействийКонтекстноеМеню" id="755"/>
+									<AutoCommandBar name="ДеревоДействийКоманднаяПанель" id="756">
+										<Autofill>false</Autofill>
+									</AutoCommandBar>
+									<ExtendedTooltip name="ДеревоДействийРасширеннаяПодсказка" id="757"/>
+									<SearchStringAddition name="ДеревоДействийСтрокаПоиска" id="758">
+										<AdditionSource>
+											<Item>ДеревоДействий</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ДеревоДействийСтрокаПоискаКонтекстноеМеню" id="759"/>
+										<ExtendedTooltip name="ДеревоДействийСтрокаПоискаРасширеннаяПодсказка" id="760"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ДеревоДействийСостояниеПросмотра" id="761">
+										<AdditionSource>
+											<Item>ДеревоДействий</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<HorizontalLocation>Left</HorizontalLocation>
+										<ContextMenu name="ДеревоДействийСостояниеПросмотраКонтекстноеМеню" id="762"/>
+										<ExtendedTooltip name="ДеревоДействийСостояниеПросмотраРасширеннаяПодсказка" id="763"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ДеревоДействийУправлениеПоиском" id="764">
+										<AdditionSource>
+											<Item>ДеревоДействий</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ДеревоДействийУправлениеПоискомКонтекстноеМеню" id="765"/>
+										<ExtendedTooltip name="ДеревоДействийУправлениеПоискомРасширеннаяПодсказка" id="766"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="OnActivateRow">ДеревоДействийПриАктивизацииСтроки</Event>
+									</Events>
+									<ChildItems>
+										<ColumnGroup name="ДеревоДействийГруппа1" id="776">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Дереов действий группа</v8:content>
+												</v8:item>
+											</Title>
+											<Group>InCell</Group>
+											<ExtendedTooltip name="ДеревоДействийГруппа1РасширеннаяПодсказка" id="777"/>
+											<ChildItems>
+												<PictureField name="ДеревоДействийКартинка" id="767">
+													<DataPath>ДеревоДействий.Картинка</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ДеревоДействийКартинкаКонтекстноеМеню" id="768"/>
+													<ExtendedTooltip name="ДеревоДействийКартинкаРасширеннаяПодсказка" id="769"/>
+												</PictureField>
+												<InputField name="ДеревоДействийЗаголовок" id="770">
+													<DataPath>ДеревоДействий.Заголовок</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ДеревоДействийЗаголовокКонтекстноеМеню" id="771"/>
+													<ExtendedTooltip name="ДеревоДействийЗаголовокРасширеннаяПодсказка" id="772"/>
+												</InputField>
+											</ChildItems>
+										</ColumnGroup>
+										<InputField name="ДеревоДействийИдентификатор" id="773">
+											<DataPath>ДеревоДействий.Идентификатор</DataPath>
+											<UserVisible>
+												<xr:Common>false</xr:Common>
+											</UserVisible>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ДеревоДействийИдентификаторКонтекстноеМеню" id="774"/>
+											<ExtendedTooltip name="ДеревоДействийИдентификаторРасширеннаяПодсказка" id="775"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</UsualGroup>
+						<Pages name="ПанельОбщая" id="3">
+							<EnableContentChange>true</EnableContentChange>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Панель общая</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ПанельОбщаяРасширеннаяПодсказка" id="358"/>
+							<ChildItems>
+								<Page name="СтраницаОсновныеДанные" id="4">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Основные данные</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="СтраницаОсновныеДанныеРасширеннаяПодсказка" id="359"/>
+									<ChildItems>
+										<LabelDecoration name="Декорация3" id="25">
+											<Width>40</Width>
+											<Height>1</Height>
+											<Font ref="sys:DefaultGUIFont" faceName="Verdana" height="14" kind="WindowsFont"/>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Версия конфигурации</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="Декорация3КонтекстноеМеню" id="26"/>
+											<ExtendedTooltip name="Декорация3РасширеннаяПодсказка" id="360"/>
+										</LabelDecoration>
+										<InputField name="НомерВерсииКонфигурации" id="5">
+											<DataPath>НомерВерсииКонфигурации</DataPath>
+											<Width>12</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ContextMenu name="НомерВерсииКонфигурацииКонтекстноеМеню" id="6"/>
+											<ExtendedTooltip name="НомерВерсииКонфигурацииРасширеннаяПодсказка" id="361"/>
+										</InputField>
+										<LabelDecoration name="Декорация1" id="7">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<HorizontalStretch>true</HorizontalStretch>
+											<TextColor>#3366FF</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Определяется автоматически. При установке новой версии
+выполняются необходимые обновления информационной базы.</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="Декорация1КонтекстноеМеню" id="8"/>
+											<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="362"/>
+										</LabelDecoration>
+										<UsualGroup name="ГруппаЗаголовокГлавногоОкна" id="13">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Заголовок главного окна</v8:content>
+												</v8:item>
+											</Title>
+											<Group>Vertical</Group>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаЗаголовокГлавногоОкнаРасширеннаяПодсказка" id="363"/>
+											<ChildItems>
+												<LabelDecoration name="Декорация4" id="27">
+													<Width>40</Width>
+													<Height>1</Height>
+													<Font ref="sys:DefaultGUIFont" faceName="Verdana" height="14" kind="WindowsFont"/>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Заголовок главного окна</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="Декорация4КонтекстноеМеню" id="28"/>
+													<ExtendedTooltip name="Декорация4РасширеннаяПодсказка" id="364"/>
+												</LabelDecoration>
+												<InputField name="ЗаголовокСистемы" id="14">
+													<DataPath>НаборКонстант.ЗаголовокСистемы</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Заголовок</v8:content>
+														</v8:item>
+													</Title>
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<ContextMenu name="ЗаголовокСистемыКонтекстноеМеню" id="15"/>
+													<ExtendedTooltip name="ЗаголовокСистемыРасширеннаяПодсказка" id="365"/>
+												</InputField>
+												<LabelDecoration name="Декорация2" id="16">
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<TextColor>#3366FF</TextColor>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Текст, отображаемый в заголовке главного окна. Если текст не указан, отображается название конфигурации.</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="Декорация2КонтекстноеМеню" id="17"/>
+													<ExtendedTooltip name="Декорация2РасширеннаяПодсказка" id="366"/>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаОбщегоНазначения" id="38">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Общего назначения</v8:content>
+												</v8:item>
+											</Title>
+											<Group>Vertical</Group>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаОбщегоНазначенияРасширеннаяПодсказка" id="367"/>
+											<ChildItems>
+												<LabelDecoration name="Декорация7" id="49">
+													<Width>40</Width>
+													<Height>1</Height>
+													<Font ref="sys:DefaultGUIFont" faceName="Verdana" height="14" kind="WindowsFont"/>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Общего назначения</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="Декорация7КонтекстноеМеню" id="50"/>
+													<ExtendedTooltip name="Декорация7РасширеннаяПодсказка" id="368"/>
+												</LabelDecoration>
+												<InputField name="ОсновнаяОрганизация" id="138">
+													<DataPath>НаборКонстант.ОсновнаяОрганизация</DataPath>
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<ContextMenu name="ОсновнаяОрганизацияКонтекстноеМеню" id="139"/>
+													<ExtendedTooltip name="ОсновнаяОрганизацияРасширеннаяПодсказка" id="369"/>
+												</InputField>
+												<InputField name="ОсновноеМестоОбслуживанияРемонта" id="225">
+													<DataPath>НаборКонстант.ОсновноеМестоОбслуживанияРемонта</DataPath>
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<ContextMenu name="ОсновноеМестоОбслуживанияРемонтаКонтекстноеМеню" id="226"/>
+													<ExtendedTooltip name="ОсновноеМестоОбслуживанияРемонтаРасширеннаяПодсказка" id="370"/>
+												</InputField>
+												<CheckBoxField name="ИспользоватьПочтовыйКлиент" id="164">
+													<DataPath>НаборКонстант.ИспользоватьПочтовыйКлиент</DataPath>
+													<Visible>false</Visible>
+													<TitleLocation>Right</TitleLocation>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ИспользоватьПочтовыйКлиентКонтекстноеМеню" id="165"/>
+													<ExtendedTooltip name="ИспользоватьПочтовыйКлиентРасширеннаяПодсказка" id="376"/>
+												</CheckBoxField>
+												<UsualGroup name="Группа10" id="533">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Масштаб форм</v8:content>
+														</v8:item>
+													</Title>
+													<HorizontalStretch>true</HorizontalStretch>
+													<Group>Vertical</Group>
+													<Representation>StrongSeparation</Representation>
+													<ExtendedTooltip name="Группа10РасширеннаяПодсказка" id="534"/>
+												</UsualGroup>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</Page>
+								<Page name="СтраницаФункциональность" id="589">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Функциональность</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="СтраницаФункциональностьРасширеннаяПодсказка" id="590"/>
+									<ChildItems>
+										<LabelDecoration name="Декорация25" id="591">
+											<Width>40</Width>
+											<Height>1</Height>
+											<Font ref="sys:DefaultGUIFont" faceName="Verdana" height="14" kind="WindowsFont"/>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Функциональность</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="Декорация25КонтекстноеМеню" id="592"/>
+											<ExtendedTooltip name="Декорация25РасширеннаяПодсказка" id="593"/>
+										</LabelDecoration>
+										<CheckBoxField name="ИспользоватьСкладскойУчет" id="600">
+											<DataPath>НаборКонстант.ИспользоватьСкладскойУчет</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<ToolTipRepresentation>Button</ToolTipRepresentation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ИспользоватьСкладскойУчетКонтекстноеМеню" id="601"/>
+											<ExtendedTooltip name="ИспользоватьСкладскойУчетРасширеннаяПодсказка" id="602"/>
+										</CheckBoxField>
+										<CheckBoxField name="ИспользоватьServiceDesk" id="603">
+											<DataPath>НаборКонстант.ИспользоватьServiceDesk</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<ToolTipRepresentation>Button</ToolTipRepresentation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ИспользоватьServiceDeskКонтекстноеМеню" id="604"/>
+											<ExtendedTooltip name="ИспользоватьServiceDeskРасширеннаяПодсказка" id="605"/>
+										</CheckBoxField>
+										<CheckBoxField name="SLAСервисыРаботы" id="606">
+											<DataPath>НаборКонстант.SLAСервисыРаботы</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="SLAСервисыРаботыКонтекстноеМеню" id="607"/>
+											<ExtendedTooltip name="SLAСервисыРаботыРасширеннаяПодсказка" id="608"/>
+										</CheckBoxField>
+										<CheckBoxField name="ИспользоватьПроблемы" id="707">
+											<DataPath>НаборКонстант.ИспользоватьПроблемы</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ИспользоватьПроблемыКонтекстноеМеню" id="708"/>
+											<ExtendedTooltip name="ИспользоватьПроблемыРасширеннаяПодсказка" id="709"/>
+										</CheckBoxField>
+										<CheckBoxField name="ИспользоватьРемонтыИОбслуживание" id="594">
+											<DataPath>НаборКонстант.ИспользоватьРемонтыИОбслуживание</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ИспользоватьРемонтыИОбслуживаниеКонтекстноеМеню" id="595"/>
+											<ExtendedTooltip name="ИспользоватьРемонтыИОбслуживаниеРасширеннаяПодсказка" id="596"/>
+										</CheckBoxField>
+										<CheckBoxField name="ИспользоватьУчетВремени" id="560">
+											<DataPath>НаборКонстант.ИспользоватьУчетВремени</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ИспользоватьУчетВремениКонтекстноеМеню" id="561"/>
+											<ExtendedTooltip name="ИспользоватьУчетВремениРасширеннаяПодсказка" id="562"/>
+										</CheckBoxField>
+										<CheckBoxField name="ИспользоватьБюджетирование" id="575">
+											<DataPath>НаборКонстант.ИспользоватьБюджетирование</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ИспользоватьБюджетированиеКонтекстноеМеню" id="576"/>
+											<ExtendedTooltip name="ИспользоватьБюджетированиеРасширеннаяПодсказка" id="577"/>
+										</CheckBoxField>
+										<CheckBoxField name="ИспользоватьДоступКИнформационнымРесурсам" id="578">
+											<DataPath>НаборКонстант.ИспользоватьДоступКИнформационнымРесурсам</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ИспользоватьДоступКИнформационнымРесурсамКонтекстноеМеню" id="579"/>
+											<ExtendedTooltip name="ИспользоватьДоступКИнформационнымРесурсамРасширеннаяПодсказка" id="580"/>
+										</CheckBoxField>
+										<CheckBoxField name="ИспользоватьПодключаемоеОборудование" id="267">
+											<DataPath>НаборКонстант.ИспользоватьПодключаемоеОборудование</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ИспользоватьПодключаемоеОборудованиеКонтекстноеМеню" id="268"/>
+											<ExtendedTooltip name="ИспользоватьПодключаемоеОборудованиеРасширеннаяПодсказка" id="378"/>
+										</CheckBoxField>
+										<CheckBoxField name="ИспользоватьСинхронизациюДанных" id="609">
+											<DataPath>НаборКонстант.ИспользоватьСинхронизациюДанных</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ИспользоватьСинхронизациюДанныхКонтекстноеМеню" id="610"/>
+											<ExtendedTooltip name="ИспользоватьСинхронизациюДанныхРасширеннаяПодсказка" id="611"/>
+										</CheckBoxField>
+										<CheckBoxField name="ИспользоватьУдаленноеУправление" id="648">
+											<DataPath>НаборКонстант.ИспользоватьУдаленноеУправление</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ИспользоватьУдаленноеУправлениеКонтекстноеМеню" id="649"/>
+											<ExtendedTooltip name="ИспользоватьУдаленноеУправлениеРасширеннаяПодсказка" id="650"/>
+										</CheckBoxField>
+										<CheckBoxField name="ИспользоватьУправлениеПроектами" id="964">
+											<DataPath>НаборКонстант.ИспользоватьУправлениеПроектами</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ИспользоватьУправлениеПроектамиКонтекстноеМеню" id="965"/>
+											<ExtendedTooltip name="ИспользоватьУправлениеПроектамиРасширеннаяПодсказка" id="966"/>
+										</CheckBoxField>
+										<CheckBoxField name="СкладскойУчетКлиентов" id="682">
+											<DataPath>НаборКонстант.СкладскойУчетКлиентов</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<ToolTipRepresentation>Button</ToolTipRepresentation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="СкладскойУчетКлиентовКонтекстноеМеню" id="683"/>
+											<ExtendedTooltip name="СкладскойУчетКлиентовРасширеннаяПодсказка" id="684"/>
+											<Events>
+												<Event name="OnChange">СкладскойУчетКлиентовПриИзменении</Event>
+											</Events>
+										</CheckBoxField>
+										<CheckBoxField name="ИспользоватьТелефонию" id="698">
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ИспользоватьТелефониюКонтекстноеМеню" id="699"/>
+											<ExtendedTooltip name="ИспользоватьТелефониюРасширеннаяПодсказка" id="700"/>
+										</CheckBoxField>
+										<CheckBoxField name="ИспользоватьCRM" id="726">
+											<DataPath>НаборКонстант.ИспользоватьCRM</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<ToolTipRepresentation>Button</ToolTipRepresentation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ИспользоватьCRMКонтекстноеМеню" id="727"/>
+											<ExtendedTooltip name="ИспользоватьCRMРасширеннаяПодсказка" id="728"/>
+										</CheckBoxField>
+										<CheckBoxField name="ИспользоватьМетрики" id="751">
+											<DataPath>НаборКонстант.ИспользоватьМетрики</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<ToolTipRepresentation>Button</ToolTipRepresentation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ИспользоватьМетрикиКонтекстноеМеню" id="752"/>
+											<ExtendedTooltip name="ИспользоватьМетрикиРасширеннаяПодсказка" id="753"/>
+										</CheckBoxField>
+										<CheckBoxField name="ИспользоватьДела" id="830">
+											<DataPath>НаборКонстант.ИспользоватьДела</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<ToolTipRepresentation>Button</ToolTipRepresentation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ИспользоватьДелаКонтекстноеМеню" id="831"/>
+											<ExtendedTooltip name="ИспользоватьДелаРасширеннаяПодсказка" id="832"/>
+										</CheckBoxField>
+										<CheckBoxField name="ИспользоватьПервичныеДокументы" id="868">
+											<DataPath>НаборКонстант.ИспользоватьПервичныеДокументы</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Подсистема позволяет вести учет первичных документов (актов, накладных и т.д.), контролировать наличие оригиналов документов, оплату документов, передачу документов в архив.</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ToolTipRepresentation>Button</ToolTipRepresentation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ИспользоватьПервичныеДокументыКонтекстноеМеню" id="869"/>
+											<ExtendedTooltip name="ИспользоватьПервичныеДокументыРасширеннаяПодсказка" id="870"/>
+										</CheckBoxField>
+										<CheckBoxField name="ИспользоватьПодсистемуЗаработнаяПлата" id="911">
+											<DataPath>НаборКонстант.ИспользоватьПодсистемуЗаработнаяПлата</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ИспользоватьПодсистемуЗаработнаяПлатаКонтекстноеМеню" id="912"/>
+											<ExtendedTooltip name="ИспользоватьПодсистемуЗаработнаяПлатаРасширеннаяПодсказка" id="913"/>
+										</CheckBoxField>
+										<CheckBoxField name="ИспользоватьTelegram" id="838">
+											<DataPath>НаборКонстант.ИспользоватьTelegram</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ИспользоватьTelegramКонтекстноеМеню" id="839"/>
+											<ExtendedTooltip name="ИспользоватьTelegramРасширеннаяПодсказка" id="840"/>
+										</CheckBoxField>
+										<LabelDecoration name="ДекорацияРедакция" id="685">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<Title formatted="true">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>&lt;img 0:f8106dc4-f1c4-40b1-8603-53cf1315148c/&gt; Если какая-то опция недоступна, а Вам нужна данная возможность, Вам необходимо перейти на другую редакцию. &lt;link https://softonit.ru/catalog/products/it/#buy&gt;https://softonit.ru/catalog/products/it/#buy&lt;/&gt;
+</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияРедакцияКонтекстноеМеню" id="686"/>
+											<ExtendedTooltip name="ДекорацияРедакцияРасширеннаяПодсказка" id="687"/>
+										</LabelDecoration>
+									</ChildItems>
+								</Page>
+								<Page name="СтраницаСклад" id="211">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Склад</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="СтраницаСкладРасширеннаяПодсказка" id="380"/>
+									<ChildItems>
+										<LabelDecoration name="Декорация20" id="212">
+											<Width>40</Width>
+											<Height>1</Height>
+											<Font ref="sys:DefaultGUIFont" faceName="Verdana" height="14" kind="WindowsFont"/>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Склад</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="Декорация20КонтекстноеМеню" id="213"/>
+											<ExtendedTooltip name="Декорация20РасширеннаяПодсказка" id="381"/>
+										</LabelDecoration>
+										<UsualGroup name="ГруппаВыражениеПредставления" id="545">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа выражение представления</v8:content>
+												</v8:item>
+											</Title>
+											<Group>Vertical</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаВыражениеПредставленияРасширеннаяПодсказка" id="546"/>
+											<ChildItems>
+												<TextDocumentField name="ФормулаПредставленияКарточкиНоменклатурыПоУмолчанию" id="152">
+													<DataPath>НаборКонстант.ВыражениеПредставленияКарточкиНоменклатурыПоУмолчанию</DataPath>
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<Height>5</Height>
+													<VerticalStretch>false</VerticalStretch>
+													<ContextMenu name="ФормулаПредставленияКарточкиНоменклатурыПоУмолчаниюКонтекстноеМеню" id="153"/>
+													<ExtendedTooltip name="ФормулаПредставленияКарточкиНоменклатурыПоУмолчаниюРасширеннаяПодсказка" id="382"/>
+												</TextDocumentField>
+												<CommandBar name="ГруппаСкладПоУмолчанию" id="272">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа склад по умолчанию</v8:content>
+														</v8:item>
+													</Title>
+													<HorizontalLocation>Right</HorizontalLocation>
+													<ExtendedTooltip name="ГруппаСкладПоУмолчаниюРасширеннаяПодсказка" id="383"/>
+													<ChildItems>
+														<Button name="УстановитьФорумулуПредставленияКарточкиПоУмолчанию" id="271">
+															<Type>CommandBarButton</Type>
+															<CommandName>Form.Command.УстановитьВыражениеПредставленияКарточкиПоУмолчанию</CommandName>
+															<ExtendedTooltip name="УстановитьФорумулуПредставленияКарточкиПоУмолчаниюРасширеннаяПодсказка" id="384"/>
+														</Button>
+													</ChildItems>
+												</CommandBar>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаФормулаМестаХранения" id="547">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа формула места хранения</v8:content>
+												</v8:item>
+											</Title>
+											<Group>Vertical</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаФормулаМестаХраненияРасширеннаяПодсказка" id="548"/>
+											<ChildItems>
+												<TextDocumentField name="ФормулаПредставленияМестаХранения" id="538">
+													<DataPath>НаборКонстант.ВыражениеПредставленияМестаХранения</DataPath>
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<Height>5</Height>
+													<VerticalStretch>false</VerticalStretch>
+													<ContextMenu name="ФормулаПредставленияМестаХраненияКонтекстноеМеню" id="539"/>
+													<ExtendedTooltip name="ФормулаПредставленияМестаХраненияРасширеннаяПодсказка" id="540"/>
+												</TextDocumentField>
+												<CommandBar name="ГруппаМестоХраненияПоУмолчанию" id="541">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа место хранения по умолчанию</v8:content>
+														</v8:item>
+													</Title>
+													<HorizontalLocation>Right</HorizontalLocation>
+													<ExtendedTooltip name="ГруппаМестоХраненияПоУмолчаниюРасширеннаяПодсказка" id="542"/>
+													<ChildItems>
+														<Button name="УстановитьФормулуПредставленияМестаХраненияПоУмолчанию" id="543">
+															<Type>CommandBarButton</Type>
+															<CommandName>Form.Command.УстановитьВыражениеПредставленияМестаХраненияПоУмолчанию</CommandName>
+															<ExtendedTooltip name="УстановитьФормулуПредставленияМестаХраненияПоУмолчаниюРасширеннаяПодсказка" id="544"/>
+														</Button>
+													</ChildItems>
+												</CommandBar>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаСрокПолезногоИспользования" id="552">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа срок полезного использования</v8:content>
+												</v8:item>
+											</Title>
+											<Group>Horizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаСрокПолезногоИспользованияРасширеннаяПодсказка" id="553"/>
+											<ChildItems>
+												<InputField name="СрокПолезногоИспользованияКомплектующих" id="549">
+													<DataPath>НаборКонстант.СрокПолезногоИспользованияКомплектующих</DataPath>
+													<ContextMenu name="СрокПолезногоИспользованияКомплектующихКонтекстноеМеню" id="550"/>
+													<ExtendedTooltip name="СрокПолезногоИспользованияКомплектующихРасширеннаяПодсказка" id="551"/>
+												</InputField>
+												<LabelDecoration name="Декорация23" id="554">
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>мес.</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="Декорация23КонтекстноеМеню" id="555"/>
+													<ExtendedTooltip name="Декорация23РасширеннаяПодсказка" id="556"/>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаПроверкиУникальности" id="612">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа проверки уникальности</v8:content>
+												</v8:item>
+											</Title>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаПроверкиУникальностиРасширеннаяПодсказка" id="613"/>
+											<ChildItems>
+												<CheckBoxField name="ПроверятьУникальностьСерийногоНомера" id="216">
+													<DataPath>НаборКонстант.ПроверятьУникальностьСерийногоНомера</DataPath>
+													<TitleLocation>Right</TitleLocation>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ПроверятьУникальностьСерийногоНомераКонтекстноеМеню" id="217"/>
+													<ExtendedTooltip name="ПроверятьУникальностьСерийногоНомераРасширеннаяПодсказка" id="385"/>
+												</CheckBoxField>
+												<CheckBoxField name="ПроверятьУникальностьИнвентарногоНомера" id="214">
+													<DataPath>НаборКонстант.ПроверятьУникальностьИнвентарногоНомера</DataPath>
+													<TitleLocation>Right</TitleLocation>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ПроверятьУникальностьИнвентарногоНомераКонтекстноеМеню" id="215"/>
+													<ExtendedTooltip name="ПроверятьУникальностьИнвентарногоНомераРасширеннаяПодсказка" id="386"/>
+												</CheckBoxField>
+											</ChildItems>
+										</UsualGroup>
+										<CheckBoxField name="СозданиеИзменениеМестХраненияПриИзмененииСотрудников" id="614">
+											<DataPath>НаборКонстант.СозданиеИзменениеМестХраненияПриИзмененииСотрудников</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<ToolTipRepresentation>Button</ToolTipRepresentation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="СозданиеИзменениеМестХраненияПриИзмененииСотрудниковКонтекстноеМеню" id="615"/>
+											<ExtendedTooltip name="СозданиеИзменениеМестХраненияПриИзмененииСотрудниковРасширеннаяПодсказка" id="616"/>
+										</CheckBoxField>
+										<UsualGroup name="ГруппаИнвентарныеНомера" id="227">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Инвентарные номера</v8:content>
+												</v8:item>
+											</Title>
+											<HorizontalStretch>true</HorizontalStretch>
+											<Group>Horizontal</Group>
+											<ExtendedTooltip name="ГруппаИнвентарныеНомераРасширеннаяПодсказка" id="387"/>
+											<ChildItems>
+												<UsualGroup name="ГруппаНастройкиНомера" id="242">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа настройки номера</v8:content>
+														</v8:item>
+													</Title>
+													<Group>Horizontal</Group>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаНастройкиНомераРасширеннаяПодсказка" id="388"/>
+													<ChildItems>
+														<CheckBoxField name="ДобавлятьЛидирующиеНулиВИнвентарномНомере" id="232">
+															<DataPath>НаборКонстант.ДобавлятьЛидирующиеНулиВИнвентарномНомере</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Добавлять лидирующие нули</v8:content>
+																</v8:item>
+															</Title>
+															<TitleLocation>Right</TitleLocation>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="ДобавлятьЛидирующиеНулиВИнвентарномНомереКонтекстноеМеню" id="233"/>
+															<ExtendedTooltip name="ДобавлятьЛидирующиеНулиВИнвентарномНомереРасширеннаяПодсказка" id="389"/>
+														</CheckBoxField>
+														<InputField name="ПрефиксИнвентарныхНомеров" id="228">
+															<DataPath>НаборКонстант.ПрефиксИнвентарныхНомеров</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Префикс</v8:content>
+																</v8:item>
+															</Title>
+															<ContextMenu name="ПрефиксИнвентарныхНомеровКонтекстноеМеню" id="229"/>
+															<ExtendedTooltip name="ПрефиксИнвентарныхНомеровРасширеннаяПодсказка" id="390"/>
+														</InputField>
+														<InputField name="ДлинаИнвентарногоНомера" id="230">
+															<DataPath>НаборКонстант.ДлинаИнвентарногоНомера</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Длина симолов</v8:content>
+																</v8:item>
+															</Title>
+															<ContextMenu name="ДлинаИнвентарногоНомераКонтекстноеМеню" id="231"/>
+															<ExtendedTooltip name="ДлинаИнвентарногоНомераРасширеннаяПодсказка" id="391"/>
+														</InputField>
+													</ChildItems>
+												</UsualGroup>
+												<UsualGroup name="ГруппаПроверкаНомера" id="243">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа проверка номера</v8:content>
+														</v8:item>
+													</Title>
+													<Group>Vertical</Group>
+													<ExtendedTooltip name="ГруппаПроверкаНомераРасширеннаяПодсказка" id="392"/>
+												</UsualGroup>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</Page>
+								<Page name="СтраницаФинансы" id="778">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Финансы</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="СтраницаФинансыРасширеннаяПодсказка" id="779"/>
+									<ChildItems>
+										<LabelDecoration name="Декорация22" id="798">
+											<Width>40</Width>
+											<Height>1</Height>
+											<Font ref="sys:DefaultGUIFont" faceName="Verdana" height="14" kind="WindowsFont"/>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Финансирование</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="Декорация22КонтекстноеМеню" id="799"/>
+											<ExtendedTooltip name="Декорация22РасширеннаяПодсказка" id="800"/>
+										</LabelDecoration>
+										<InputField name="НациональнаяВалюта" id="581">
+											<DataPath>НаборКонстант.НациональнаяВалюта</DataPath>
+											<ContextMenu name="НациональнаяВалютаКонтекстноеМеню" id="582"/>
+											<ExtendedTooltip name="НациональнаяВалютаРасширеннаяПодсказка" id="583"/>
+										</InputField>
+									</ChildItems>
+								</Page>
+								<Page name="СтраницаПравилаСобытий" id="784">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Правила событий</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="СтраницаПравилаСобытийРасширеннаяПодсказка" id="785"/>
+									<ChildItems>
+										<LabelDecoration name="Декорация24" id="801">
+											<Width>40</Width>
+											<Height>1</Height>
+											<Font ref="sys:DefaultGUIFont" faceName="Verdana" height="14" kind="WindowsFont"/>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Правила событий</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="Декорация24КонтекстноеМеню" id="802"/>
+											<ExtendedTooltip name="Декорация24РасширеннаяПодсказка" id="803"/>
+										</LabelDecoration>
+										<Table name="ПравилаСобытий" id="332">
+											<Height>7</Height>
+											<UseAlternationRowColor>true</UseAlternationRowColor>
+											<EnableStartDrag>true</EnableStartDrag>
+											<EnableDrag>true</EnableDrag>
+											<FileDragMode>AsFile</FileDragMode>
+											<DataPath>ПравилаСобытий</DataPath>
+											<RowPictureDataPath>ПравилаСобытий.DefaultPicture</RowPictureDataPath>
+											<SearchStringLocation>None</SearchStringLocation>
+											<ViewStatusLocation>None</ViewStatusLocation>
+											<SearchControlLocation>None</SearchControlLocation>
+											<AutoRefresh>false</AutoRefresh>
+											<AutoRefreshPeriod>60</AutoRefreshPeriod>
+											<Period>
+												<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+												<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+												<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+											</Period>
+											<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+											<RestoreCurrentRow>false</RestoreCurrentRow>
+											<TopLevelParent xsi:nil="true"/>
+											<ShowRoot>true</ShowRoot>
+											<AllowRootChoice>false</AllowRootChoice>
+											<UpdateOnDataChange>Auto</UpdateOnDataChange>
+											<ContextMenu name="ПравилаСобытийКонтекстноеМеню" id="333"/>
+											<AutoCommandBar name="ПравилаСобытийКоманднаяПанель" id="334">
+												<ChildItems>
+													<Button name="ПравилаСобытийПравилаСобытийЗаполнитьПредопределенными" id="672">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.ПравилаСобытийЗаполнитьПредопределенными</CommandName>
+														<ExtendedTooltip name="ПравилаСобытийПравилаСобытийЗаполнитьПредопределеннымиРасширеннаяПодсказка" id="673"/>
+													</Button>
+												</ChildItems>
+											</AutoCommandBar>
+											<ExtendedTooltip name="ПравилаСобытийРасширеннаяПодсказка" id="413"/>
+											<SearchStringAddition name="ПравилаСобытийСтрокаПоиска" id="414">
+												<AdditionSource>
+													<Item>ПравилаСобытий</Item>
+													<Type>SearchStringRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ПравилаСобытийСтрокаПоискаКонтекстноеМеню" id="415"/>
+												<ExtendedTooltip name="ПравилаСобытийСтрокаПоискаРасширеннаяПодсказка" id="416"/>
+											</SearchStringAddition>
+											<ViewStatusAddition name="ПравилаСобытийСостояниеПросмотра" id="417">
+												<AdditionSource>
+													<Item>ПравилаСобытий</Item>
+													<Type>ViewStatusRepresentation</Type>
+												</AdditionSource>
+												<HorizontalLocation>Left</HorizontalLocation>
+												<ContextMenu name="ПравилаСобытийСостояниеПросмотраКонтекстноеМеню" id="418"/>
+												<ExtendedTooltip name="ПравилаСобытийСостояниеПросмотраРасширеннаяПодсказка" id="419"/>
+											</ViewStatusAddition>
+											<SearchControlAddition name="ПравилаСобытийУправлениеПоиском" id="420">
+												<AdditionSource>
+													<Item>ПравилаСобытий</Item>
+													<Type>SearchControl</Type>
+												</AdditionSource>
+												<ContextMenu name="ПравилаСобытийУправлениеПоискомКонтекстноеМеню" id="421"/>
+												<ExtendedTooltip name="ПравилаСобытийУправлениеПоискомРасширеннаяПодсказка" id="422"/>
+											</SearchControlAddition>
+											<ChildItems>
+												<CheckBoxField name="ШаблоныОповещенийИспользовать" id="339">
+													<DataPath>ПравилаСобытий.Использовать</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ШаблоныОповещенийИспользоватьКонтекстноеМеню" id="340"/>
+													<ExtendedTooltip name="ШаблоныОповещенийИспользоватьРасширеннаяПодсказка" id="424"/>
+												</CheckBoxField>
+												<LabelField name="ШаблоныОповещенийНаименование" id="335">
+													<DataPath>ПравилаСобытий.Description</DataPath>
+													<ContextMenu name="ШаблоныОповещенийНаименованиеКонтекстноеМеню" id="336"/>
+													<ExtendedTooltip name="ШаблоныОповещенийНаименованиеРасширеннаяПодсказка" id="423"/>
+												</LabelField>
+												<LabelField name="ПравилаСобытийСсылка" id="905">
+													<DataPath>ПравилаСобытий.Ref</DataPath>
+													<UserVisible>
+														<xr:Common>false</xr:Common>
+													</UserVisible>
+													<ContextMenu name="ПравилаСобытийСсылкаКонтекстноеМеню" id="906"/>
+													<ExtendedTooltip name="ПравилаСобытийСсылкаРасширеннаяПодсказка" id="907"/>
+												</LabelField>
+											</ChildItems>
+										</Table>
+										<Button name="ОткрытьЖурналВыполненияПравилСобытий" id="815">
+											<Type>Hyperlink</Type>
+											<CommandName>Form.Command.ОткрытьЖурналВыполненияПравилСобытий</CommandName>
+											<ExtendedTooltip name="ОткрытьЖурналВыполненияПравилСобытийРасширеннаяПодсказка" id="816"/>
+										</Button>
+									</ChildItems>
+								</Page>
+								<Page name="СтраницаServiceDesk" id="170">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Service Desk</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="СтраницаServiceDeskРасширеннаяПодсказка" id="393"/>
+									<ChildItems>
+										<LabelDecoration name="Декорация21" id="171">
+											<Width>40</Width>
+											<Height>1</Height>
+											<Font ref="sys:DefaultGUIFont" faceName="Verdana" height="14" kind="WindowsFont"/>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Service Desk</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="Декорация21КонтекстноеМеню" id="172"/>
+											<ExtendedTooltip name="Декорация21РасширеннаяПодсказка" id="394"/>
+										</LabelDecoration>
+										<InputField name="ОсновнойТреккер" id="160">
+											<DataPath>НаборКонстант.ОсновнойПроцесс</DataPath>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<ContextMenu name="ОсновнойТреккерКонтекстноеМеню" id="161"/>
+											<ExtendedTooltip name="ОсновнойТреккерРасширеннаяПодсказка" id="395"/>
+										</InputField>
+										<InputField name="ОсновнаяОценкаПриРешенииЗадания" id="174">
+											<DataPath>НаборКонстант.ОсновнаяОценкаПриРешенииЗадания</DataPath>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<ContextMenu name="ОсновнаяОценкаПриРешенииЗаданияКонтекстноеМеню" id="175"/>
+											<ExtendedTooltip name="ОсновнаяОценкаПриРешенииЗаданияРасширеннаяПодсказка" id="396"/>
+										</InputField>
+										<InputField name="АдресПубликацииИнформационнойБазыВЛокальнойСети" id="961">
+											<DataPath>НаборКонстант.АдресПубликацииИнформационнойБазыВЛокальнойСети</DataPath>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<ContextMenu name="АдресПубликацииИнформационнойБазыВЛокальнойСетиКонтекстноеМеню" id="962"/>
+											<ExtendedTooltip name="АдресПубликацииИнформационнойБазыВЛокальнойСетиРасширеннаяПодсказка" id="963"/>
+										</InputField>
+										<CheckBoxField name="ИспользоватьКанбан" id="676">
+											<DataPath>НаборКонстант.ИспользоватьКанбан</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Использовать канбан (скрам)</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ИспользоватьКанбанКонтекстноеМеню" id="677"/>
+											<ExtendedTooltip name="ИспользоватьКанбанРасширеннаяПодсказка" id="678"/>
+										</CheckBoxField>
+										<CheckBoxField name="ПроверятьЗаполнениеEmailУчастниковЗадания" id="572">
+											<DataPath>НаборКонстант.ПроверятьЗаполнениеКИУчастниковЗадания</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Сообщать, если требуемый вид КИ у оповещаемого в задании не заполнен</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>Right</TitleLocation>
+											<TitleHeight>1</TitleHeight>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ПроверятьЗаполнениеEmailУчастниковЗаданияКонтекстноеМеню" id="573"/>
+											<ExtendedTooltip name="ПроверятьЗаполнениеEmailУчастниковЗаданияРасширеннаяПодсказка" id="574"/>
+										</CheckBoxField>
+										<CheckBoxField name="ИспользоватьИзображенияПользователейВКомментариях" id="833">
+											<DataPath>НаборКонстант.ИспользоватьИзображенияПользователейВКомментариях</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ИспользоватьИзображенияПользователейВКомментарияхКонтекстноеМеню" id="834"/>
+											<ExtendedTooltip name="ИспользоватьИзображенияПользователейВКомментарияхРасширеннаяПодсказка" id="835"/>
+										</CheckBoxField>
+										<CheckBoxField name="ИспользоватьОчередьВыполненияЗаданий" id="940">
+											<DataPath>НаборКонстант.ИспользоватьОчередьВыполненияЗаданий</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ИспользоватьОчередьВыполненияЗаданийКонтекстноеМеню" id="941"/>
+											<ExtendedTooltip name="ИспользоватьОчередьВыполненияЗаданийРасширеннаяПодсказка" id="942"/>
+											<Events>
+												<Event name="OnChange">ИспользоватьОчередьВыполненияЗаданийПриИзменении</Event>
+											</Events>
+										</CheckBoxField>
+										<UsualGroup name="Действия" id="790">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Действия</v8:content>
+												</v8:item>
+											</Title>
+											<Representation>StrongSeparation</Representation>
+											<ExtendedTooltip name="ДействияРасширеннаяПодсказка" id="791"/>
+											<ChildItems>
+												<Button name="АвтоматическоеВыполнениеЗаданий" id="342">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.АвтоматическоеВыполнениеЗаданий</CommandName>
+													<ExtendedTooltip name="АвтоматическоеВыполнениеЗаданийРасширеннаяПодсказка" id="462"/>
+												</Button>
+												<Button name="АвтоматическоеЗавершениеЗаданий" id="788">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.АвтоматическоеЗавершениеЗаданий</CommandName>
+													<ExtendedTooltip name="АвтоматическоеЗавершениеЗаданийРасширеннаяПодсказка" id="789"/>
+												</Button>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ЦветПросроченныхЗаданий" id="331">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Цвет просроченных заданий</v8:content>
+												</v8:item>
+											</Title>
+											<Group>Vertical</Group>
+											<Representation>StrongSeparation</Representation>
+											<ExtendedTooltip name="ЦветПросроченныхЗаданийРасширеннаяПодсказка" id="446"/>
+											<ChildItems>
+												<UsualGroup name="ГруппаЦвета" id="325">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа цвета</v8:content>
+														</v8:item>
+													</Title>
+													<Group>Horizontal</Group>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаЦветаРасширеннаяПодсказка" id="447"/>
+													<ChildItems>
+														<InputField name="РедактируемыйЦветФонаПросроченногоЗадания" id="326">
+															<DataPath>РедактируемыйЦветФонаПросроченногоЗадания</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Цвет фона</v8:content>
+																</v8:item>
+															</Title>
+															<AutoMaxWidth>false</AutoMaxWidth>
+															<ChoiceButton>true</ChoiceButton>
+															<ContextMenu name="РедактируемыйЦветФонаПросроченногоЗаданияКонтекстноеМеню" id="327"/>
+															<ExtendedTooltip name="РедактируемыйЦветФонаПросроченногоЗаданияРасширеннаяПодсказка" id="448"/>
+															<Events>
+																<Event name="StartChoice">РедактируемыйЦветНачалоВыбора</Event>
+																<Event name="ChoiceProcessing">РедактируемыйЦветОбработкаВыбора</Event>
+															</Events>
+														</InputField>
+														<InputField name="РедактируемыйЦветТекстаПросроченногоЗадания" id="328">
+															<DataPath>РедактируемыйЦветТекстаПросроченногоЗадания</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Цвет текста</v8:content>
+																</v8:item>
+															</Title>
+															<AutoMaxWidth>false</AutoMaxWidth>
+															<ChoiceButton>true</ChoiceButton>
+															<ContextMenu name="РедактируемыйЦветТекстаПросроченногоЗаданияКонтекстноеМеню" id="329"/>
+															<ExtendedTooltip name="РедактируемыйЦветТекстаПросроченногоЗаданияРасширеннаяПодсказка" id="449"/>
+															<Events>
+																<Event name="StartChoice">РедактируемыйЦветТекстаНачалоВыбора</Event>
+																<Event name="ChoiceProcessing">РедактируемыйЦветТекстаОбработкаВыбора</Event>
+															</Events>
+														</InputField>
+														<Button name="СброситьНастройкиЦвета" id="330">
+															<Type>UsualButton</Type>
+															<CommandName>Form.Command.СброситьНастройкиЦветаПросроченногоЗадания</CommandName>
+															<ExtendedTooltip name="СброситьНастройкиЦветаРасширеннаяПодсказка" id="450"/>
+														</Button>
+													</ChildItems>
+												</UsualGroup>
+												<Table name="ПримерТекстаПросроченногоЗадания" id="320">
+													<Representation>List</Representation>
+													<CommandBarLocation>None</CommandBarLocation>
+													<SkipOnInput>true</SkipOnInput>
+													<ChangeRowSet>false</ChangeRowSet>
+													<ChangeRowOrder>false</ChangeRowOrder>
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<Height>3</Height>
+													<AutoMaxHeight>false</AutoMaxHeight>
+													<SelectionMode>SingleRow</SelectionMode>
+													<Header>false</Header>
+													<SearchOnInput>DontUse</SearchOnInput>
+													<Output>Disable</Output>
+													<VerticalStretch>false</VerticalStretch>
+													<FileDragMode>AsFile</FileDragMode>
+													<DataPath>ПримерТекстаПросроченногоЗадания</DataPath>
+													<SearchStringLocation>None</SearchStringLocation>
+													<ViewStatusLocation>None</ViewStatusLocation>
+													<SearchControlLocation>None</SearchControlLocation>
+													<RowFilter xsi:nil="true"/>
+													<ContextMenu name="ПримерТекстаПросроченногоЗаданияКонтекстноеМеню" id="321"/>
+													<AutoCommandBar name="ПримерТекстаПросроченногоЗаданияКоманднаяПанель" id="322"/>
+													<ExtendedTooltip name="ПримерТекстаПросроченногоЗаданияРасширеннаяПодсказка" id="451"/>
+													<SearchStringAddition name="ПримерТекстаПросроченногоЗаданияСтрокаПоиска" id="452">
+														<AdditionSource>
+															<Item>ПримерТекстаПросроченногоЗадания</Item>
+															<Type>SearchStringRepresentation</Type>
+														</AdditionSource>
+														<ContextMenu name="ПримерТекстаПросроченногоЗаданияСтрокаПоискаКонтекстноеМеню" id="453"/>
+														<ExtendedTooltip name="ПримерТекстаПросроченногоЗаданияСтрокаПоискаРасширеннаяПодсказка" id="454"/>
+													</SearchStringAddition>
+													<ViewStatusAddition name="ПримерТекстаПросроченногоЗаданияСостояниеПросмотра" id="455">
+														<AdditionSource>
+															<Item>ПримерТекстаПросроченногоЗадания</Item>
+															<Type>ViewStatusRepresentation</Type>
+														</AdditionSource>
+														<HorizontalLocation>Left</HorizontalLocation>
+														<ContextMenu name="ПримерТекстаПросроченногоЗаданияСостояниеПросмотраКонтекстноеМеню" id="456"/>
+														<ExtendedTooltip name="ПримерТекстаПросроченногоЗаданияСостояниеПросмотраРасширеннаяПодсказка" id="457"/>
+													</ViewStatusAddition>
+													<SearchControlAddition name="ПримерТекстаПросроченногоЗаданияУправлениеПоиском" id="458">
+														<AdditionSource>
+															<Item>ПримерТекстаПросроченногоЗадания</Item>
+															<Type>SearchControl</Type>
+														</AdditionSource>
+														<ContextMenu name="ПримерТекстаПросроченногоЗаданияУправлениеПоискомКонтекстноеМеню" id="459"/>
+														<ExtendedTooltip name="ПримерТекстаПросроченногоЗаданияУправлениеПоискомРасширеннаяПодсказка" id="460"/>
+													</SearchControlAddition>
+													<ChildItems>
+														<InputField name="ПримерТекстаПросроченногоЗаданияПример" id="323">
+															<DataPath>ПримерТекстаПросроченногоЗадания.Пример</DataPath>
+															<EditMode>EnterOnInput</EditMode>
+															<ContextMenu name="ПримерТекстаПросроченногоЗаданияПримерКонтекстноеМеню" id="324"/>
+															<ExtendedTooltip name="ПримерТекстаПросроченногоЗаданияПримерРасширеннаяПодсказка" id="461"/>
+														</InputField>
+													</ChildItems>
+												</Table>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ЦветПомеченныхЗаданий" id="617">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Цвет помеченных заданий</v8:content>
+												</v8:item>
+											</Title>
+											<Group>Vertical</Group>
+											<Representation>StrongSeparation</Representation>
+											<ExtendedTooltip name="ЦветПомеченныхЗаданийРасширеннаяПодсказка" id="618"/>
+											<ChildItems>
+												<UsualGroup name="ГруппаЦветаПомеченных" id="627">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа цвета помеченных</v8:content>
+														</v8:item>
+													</Title>
+													<Group>Horizontal</Group>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаЦветаПомеченныхРасширеннаяПодсказка" id="628"/>
+													<ChildItems>
+														<InputField name="РедактируемыйЦветФонаПомеченногоЗадания" id="622">
+															<DataPath>РедактируемыйЦветФонаПомеченногоЗадания</DataPath>
+															<AutoMaxWidth>false</AutoMaxWidth>
+															<ContextMenu name="РедактируемыйЦветФонаПомеченногоЗаданияКонтекстноеМеню" id="623"/>
+															<ExtendedTooltip name="РедактируемыйЦветФонаПомеченногоЗаданияРасширеннаяПодсказка" id="624"/>
+															<Events>
+																<Event name="StartChoice">РедактируемыйЦветФонаПомеченногоЗаданияНачалоВыбора</Event>
+																<Event name="ChoiceProcessing">РедактируемыйЦветФонаПомеченногоЗаданияОбработкаВыбора</Event>
+															</Events>
+														</InputField>
+														<InputField name="РедактируемыйЦветТекстаПомеченногоЗадания" id="619">
+															<DataPath>РедактируемыйЦветТекстаПомеченногоЗадания</DataPath>
+															<AutoMaxWidth>false</AutoMaxWidth>
+															<ContextMenu name="РедактируемыйЦветТекстаПомеченногоЗаданияКонтекстноеМеню" id="620"/>
+															<ExtendedTooltip name="РедактируемыйЦветТекстаПомеченногоЗаданияРасширеннаяПодсказка" id="621"/>
+															<Events>
+																<Event name="StartChoice">РедактируемыйЦветТекстаПомеченногоЗаданияНачалоВыбора</Event>
+																<Event name="ChoiceProcessing">РедактируемыйЦветТекстаПомеченногоЗаданияОбработкаВыбора</Event>
+															</Events>
+														</InputField>
+														<Button name="СброситьНастройкиЦветаПомеченногоЗадания" id="625">
+															<Type>UsualButton</Type>
+															<CommandName>Form.Command.СброситьНастройкиЦветаПомеченногоЗадания</CommandName>
+															<ExtendedTooltip name="СброситьНастройкиЦветаПомеченногоЗаданияРасширеннаяПодсказка" id="626"/>
+														</Button>
+													</ChildItems>
+												</UsualGroup>
+												<Table name="ПримерТекстаПомеченногоЗадания" id="629">
+													<Representation>List</Representation>
+													<CommandBarLocation>None</CommandBarLocation>
+													<SkipOnInput>true</SkipOnInput>
+													<ChangeRowSet>false</ChangeRowSet>
+													<ChangeRowOrder>false</ChangeRowOrder>
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<Height>3</Height>
+													<AutoMaxHeight>false</AutoMaxHeight>
+													<SelectionMode>SingleRow</SelectionMode>
+													<Header>false</Header>
+													<AutoInsertNewRow>true</AutoInsertNewRow>
+													<SearchOnInput>DontUse</SearchOnInput>
+													<Output>Disable</Output>
+													<VerticalStretch>false</VerticalStretch>
+													<EnableStartDrag>true</EnableStartDrag>
+													<EnableDrag>true</EnableDrag>
+													<FileDragMode>AsFile</FileDragMode>
+													<DataPath>ПримерТекстаПомеченногоЗадания</DataPath>
+													<SearchStringLocation>None</SearchStringLocation>
+													<ViewStatusLocation>None</ViewStatusLocation>
+													<SearchControlLocation>None</SearchControlLocation>
+													<RowFilter xsi:nil="true"/>
+													<ContextMenu name="ПримерТекстаПомеченногоЗаданияКонтекстноеМеню" id="630"/>
+													<AutoCommandBar name="ПримерТекстаПомеченногоЗаданияКоманднаяПанель" id="631"/>
+													<ExtendedTooltip name="ПримерТекстаПомеченногоЗаданияРасширеннаяПодсказка" id="632"/>
+													<SearchStringAddition name="ПримерТекстаПомеченногоЗаданияСтрокаПоиска" id="633">
+														<AdditionSource>
+															<Item>ПримерТекстаПомеченногоЗадания</Item>
+															<Type>SearchStringRepresentation</Type>
+														</AdditionSource>
+														<ContextMenu name="ПримерТекстаПомеченногоЗаданияСтрокаПоискаКонтекстноеМеню" id="634"/>
+														<ExtendedTooltip name="ПримерТекстаПомеченногоЗаданияСтрокаПоискаРасширеннаяПодсказка" id="635"/>
+													</SearchStringAddition>
+													<ViewStatusAddition name="ПримерТекстаПомеченногоЗаданияСостояниеПросмотра" id="636">
+														<AdditionSource>
+															<Item>ПримерТекстаПомеченногоЗадания</Item>
+															<Type>ViewStatusRepresentation</Type>
+														</AdditionSource>
+														<HorizontalLocation>Left</HorizontalLocation>
+														<ContextMenu name="ПримерТекстаПомеченногоЗаданияСостояниеПросмотраКонтекстноеМеню" id="637"/>
+														<ExtendedTooltip name="ПримерТекстаПомеченногоЗаданияСостояниеПросмотраРасширеннаяПодсказка" id="638"/>
+													</ViewStatusAddition>
+													<SearchControlAddition name="ПримерТекстаПомеченногоЗаданияУправлениеПоиском" id="639">
+														<AdditionSource>
+															<Item>ПримерТекстаПомеченногоЗадания</Item>
+															<Type>SearchControl</Type>
+														</AdditionSource>
+														<ContextMenu name="ПримерТекстаПомеченногоЗаданияУправлениеПоискомКонтекстноеМеню" id="640"/>
+														<ExtendedTooltip name="ПримерТекстаПомеченногоЗаданияУправлениеПоискомРасширеннаяПодсказка" id="641"/>
+													</SearchControlAddition>
+													<ChildItems>
+														<InputField name="ПримерТекстаПомеченногоЗаданияПример" id="642">
+															<DataPath>ПримерТекстаПомеченногоЗадания.Пример</DataPath>
+															<EditMode>EnterOnInput</EditMode>
+															<ContextMenu name="ПримерТекстаПомеченногоЗаданияПримерКонтекстноеМеню" id="643"/>
+															<ExtendedTooltip name="ПримерТекстаПомеченногоЗаданияПримерРасширеннаяПодсказка" id="644"/>
+														</InputField>
+													</ChildItems>
+												</Table>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="Прочее" id="319">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Прочее</v8:content>
+												</v8:item>
+											</Title>
+											<HorizontalStretch>true</HorizontalStretch>
+											<Group>Vertical</Group>
+											<Representation>StrongSeparation</Representation>
+											<ExtendedTooltip name="ПрочееРасширеннаяПодсказка" id="445"/>
+											<ChildItems>
+												<UsualGroup name="ГруппаПрочееИнтервал" id="667">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа прочее интервал</v8:content>
+														</v8:item>
+													</Title>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаПрочееИнтервалРасширеннаяПодсказка" id="668"/>
+													<ChildItems>
+														<InputField name="ИнтервалАвтоматическогоЗавершенияВыполненыхЗаданий" id="664">
+															<DataPath>НаборКонстант.ИнтервалАвтоматическогоЗавершенияВыполненыхЗаданий</DataPath>
+															<ToolTipRepresentation>Button</ToolTipRepresentation>
+															<ContextMenu name="ИнтервалАвтоматическогоЗавершенияВыполненыхЗаданийКонтекстноеМеню" id="665"/>
+															<ExtendedTooltip name="ИнтервалАвтоматическогоЗавершенияВыполненыхЗаданийРасширеннаяПодсказка" id="666"/>
+														</InputField>
+														<LabelDecoration name="Декорация26" id="669">
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>часов</v8:content>
+																</v8:item>
+															</Title>
+															<ContextMenu name="Декорация26КонтекстноеМеню" id="670"/>
+															<ExtendedTooltip name="Декорация26РасширеннаяПодсказка" id="671"/>
+														</LabelDecoration>
+													</ChildItems>
+												</UsualGroup>
+												<UsualGroup name="ГруппаДлительностьСпринта" id="949">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа длительность спринта</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа длительность спринта</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаДлительностьСпринтаРасширеннаяПодсказка" id="950"/>
+													<ChildItems>
+														<InputField name="ДлительностьСпринтаПоУмолчанию" id="946">
+															<DataPath>НаборКонстант.ДлительностьСпринтаПоУмолчанию</DataPath>
+															<ContextMenu name="ДлительностьСпринтаПоУмолчаниюКонтекстноеМеню" id="947"/>
+															<ExtendedTooltip name="ДлительностьСпринтаПоУмолчаниюРасширеннаяПодсказка" id="948"/>
+														</InputField>
+														<LabelDecoration name="Декорация14" id="951">
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>дней</v8:content>
+																</v8:item>
+															</Title>
+															<ContextMenu name="Декорация14КонтекстноеМеню" id="952"/>
+															<ExtendedTooltip name="Декорация14РасширеннаяПодсказка" id="953"/>
+														</LabelDecoration>
+													</ChildItems>
+												</UsualGroup>
+												<CheckBoxField name="ИзменятьЗавершенныеЗадания" id="710">
+													<DataPath>НаборКонстант.ИзменятьЗавершенныеЗадания</DataPath>
+													<ToolTipRepresentation>Button</ToolTipRepresentation>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ИзменятьЗавершенныеЗаданияКонтекстноеМеню" id="711"/>
+													<ExtendedTooltip name="ИзменятьЗавершенныеЗаданияРасширеннаяПодсказка" id="712"/>
+												</CheckBoxField>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</Page>
+								<Page name="СтраницаServiceDeskSMS" id="782">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>SMS</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="СтраницаServiceDeskSMSРасширеннаяПодсказка" id="783"/>
+									<ChildItems>
+										<LabelDecoration name="Декорация27" id="804">
+											<Width>40</Width>
+											<Height>1</Height>
+											<Font ref="sys:DefaultGUIFont" faceName="Verdana" height="14" kind="WindowsFont"/>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>SMS</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="Декорация27КонтекстноеМеню" id="805"/>
+											<ExtendedTooltip name="Декорация27РасширеннаяПодсказка" id="806"/>
+										</LabelDecoration>
+										<UsualGroup name="SMS" id="177">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Оповещения</v8:content>
+												</v8:item>
+											</Title>
+											<Group>Vertical</Group>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="SMSРасширеннаяПодсказка" id="403"/>
+											<ChildItems>
+												<UsualGroup name="ГруппаСМСОтправитель" id="200">
+													<EnableContentChange>true</EnableContentChange>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа СМС отправитель</v8:content>
+														</v8:item>
+													</Title>
+													<Group>Horizontal</Group>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаСМСОтправительРасширеннаяПодсказка" id="404"/>
+													<ChildItems>
+														<CheckBoxField name="ИспользоватьИмяSMSотправителя" id="198">
+															<DataPath>НаборКонстант.ИспользоватьИмяSMSотправителя</DataPath>
+															<TitleLocation>None</TitleLocation>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="ИспользоватьИмяSMSотправителяКонтекстноеМеню" id="199"/>
+															<ExtendedTooltip name="ИспользоватьИмяSMSотправителяРасширеннаяПодсказка" id="405"/>
+															<Events>
+																<Event name="OnChange">ИспользоватьИмяSMSотправителяПриИзменении</Event>
+															</Events>
+														</CheckBoxField>
+														<InputField name="ИмяSMSОтправителя" id="196">
+															<DataPath>НаборКонстант.ИмяSMSОтправителя</DataPath>
+															<ContextMenu name="ИмяSMSОтправителяКонтекстноеМеню" id="197"/>
+															<ExtendedTooltip name="ИмяSMSОтправителяРасширеннаяПодсказка" id="406"/>
+														</InputField>
+													</ChildItems>
+												</UsualGroup>
+												<UsualGroup name="ГруппаКнопокНастройкиСМС" id="194">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа кнопок настройки СМС</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа кнопок настройки СМС</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Group>Horizontal</Group>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаКнопокНастройкиСМСРасширеннаяПодсказка" id="407"/>
+													<ChildItems>
+														<Button name="НастройкаПровайдераСМС" id="191">
+															<Type>UsualButton</Type>
+															<CommandName>Form.Command.НастройкаПровайдераСМС</CommandName>
+															<ExtendedTooltip name="НастройкаПровайдераСМСРасширеннаяПодсказка" id="408"/>
+														</Button>
+														<CheckBoxField name="ТранслитерацияSMSПриПревышенииДлиныТекста" id="192">
+															<DataPath>НаборКонстант.ТранслитSMSПриПревышенииДлиныТекста</DataPath>
+															<TitleLocation>Right</TitleLocation>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="ТранслитерацияSMSПриПревышенииДлиныТекстаКонтекстноеМеню" id="193"/>
+															<ExtendedTooltip name="ТранслитерацияSMSПриПревышенииДлиныТекстаРасширеннаяПодсказка" id="409"/>
+														</CheckBoxField>
+													</ChildItems>
+												</UsualGroup>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</Page>
+								<Page name="СтраницаServiceDeskЭлектроннаяПочта" id="780">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Электронная почта</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="СтраницаServiceDeskЭлектроннаяПочтаРасширеннаяПодсказка" id="781"/>
+									<ChildItems>
+										<LabelDecoration name="Декорация28" id="807">
+											<Width>40</Width>
+											<Height>1</Height>
+											<Font ref="sys:DefaultGUIFont" faceName="Verdana" height="14" kind="WindowsFont"/>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Электронные письма</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="Декорация28КонтекстноеМеню" id="808"/>
+											<ExtendedTooltip name="Декорация28РасширеннаяПодсказка" id="809"/>
+										</LabelDecoration>
+										<Pages name="ГруппаSD" id="786">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа SD</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ГруппаSDРасширеннаяПодсказка" id="787"/>
+											<ChildItems>
+												<Page name="СозданиеЗаданийПоEMail" id="205">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Создание заданий по e-mail</v8:content>
+														</v8:item>
+													</Title>
+													<ExtendedTooltip name="СозданиеЗаданийПоEMailРасширеннаяПодсказка" id="425"/>
+													<ChildItems>
+														<CheckBoxField name="ПриСозданииЗаданийИзПисемДобавлятьНаблюдателейИзПолучателейКопий" id="701">
+															<DataPath>НаборКонстант.ПриСозданииЗаданийИзПисемДобавлятьНаблюдателейИзПолучателейКопий</DataPath>
+															<TitleLocation>Right</TitleLocation>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>При создании задания из письма в письме проверяются получатели копий письма и если они найдены, то будет произведена попытка поиска этих сотрудников в информационной базе и если они будут найдены, то они будут добавлены в наблюдатели по заданию</v8:content>
+																</v8:item>
+															</ToolTip>
+															<ToolTipRepresentation>Button</ToolTipRepresentation>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="ПриСозданииЗаданийИзПисемДобавлятьНаблюдателейИзПолучателейКопийКонтекстноеМеню" id="702"/>
+															<ExtendedTooltip name="ПриСозданииЗаданийИзПисемДобавлятьНаблюдателейИзПолучателейКопийРасширеннаяПодсказка" id="703"/>
+														</CheckBoxField>
+														<InputField name="УчетнаяЗаписьЭлектроннойПочтыПоУмолчанию" id="943">
+															<DataPath>НаборКонстант.УчетнаяЗаписьЭлектроннойПочтыПоУмолчанию</DataPath>
+															<ToolTipRepresentation>Button</ToolTipRepresentation>
+															<InputHint>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>mail@yandex.ru</v8:content>
+																</v8:item>
+															</InputHint>
+															<ContextMenu name="УчетнаяЗаписьЭлектроннойПочтыПоУмолчаниюКонтекстноеМеню" id="944"/>
+															<ExtendedTooltip name="УчетнаяЗаписьЭлектроннойПочтыПоУмолчаниюРасширеннаяПодсказка" id="945"/>
+														</InputField>
+													</ChildItems>
+												</Page>
+												<Page name="EMail" id="180">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Оповещения</v8:content>
+														</v8:item>
+													</Title>
+													<ExtendedTooltip name="EMailРасширеннаяПодсказка" id="400"/>
+													<ChildItems>
+														<InputField name="АдресПубликацииИнформационнойБазыВИнтернете" id="244">
+															<DataPath>НаборКонстант.АдресПубликацииИнформационнойБазыВИнтернете</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Адрес публикации ИБ</v8:content>
+																</v8:item>
+															</Title>
+															<TitleLocation>Top</TitleLocation>
+															<ChoiceButton>true</ChoiceButton>
+															<ChoiceButtonPicture>
+																<xr:Ref>StdPicture.MoveLeft</xr:Ref>
+																<xr:LoadTransparent>true</xr:LoadTransparent>
+															</ChoiceButtonPicture>
+															<InputHint>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Например: http://myserver.com/it</v8:content>
+																</v8:item>
+															</InputHint>
+															<ContextMenu name="АдресПубликацииИнформационнойБазыВИнтернетеКонтекстноеМеню" id="245"/>
+															<ExtendedTooltip name="АдресПубликацииИнформационнойБазыВИнтернетеРасширеннаяПодсказка" id="401"/>
+															<Events>
+																<Event name="OnChange">АдресПубликацииИнформационнойБазыВИнтернетеПриИзменении</Event>
+																<Event name="StartChoice">АдресПубликацииИнформационнойБазыВИнтернетеНачалоВыбора</Event>
+															</Events>
+														</InputField>
+														<LabelDecoration name="ПояснениеАдресПубликацииИнформационнойБазыВИнтернете" id="557">
+															<Width>56</Width>
+															<AutoMaxWidth>false</AutoMaxWidth>
+															<HorizontalStretch>false</HorizontalStretch>
+															<TextColor>style:ПоясняющийТекст</TextColor>
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Используется для формирования ссылок на объекты ИБ при отправке электронных писем пользователям, имеющим доступ через веб клиент.</v8:content>
+																</v8:item>
+															</Title>
+															<VerticalAlign>Top</VerticalAlign>
+															<ContextMenu name="ПояснениеАдресПубликацииИнформационнойБазыВИнтернетеКонтекстноеМеню" id="558"/>
+															<ExtendedTooltip name="ПояснениеАдресПубликацииИнформационнойБазыВИнтернетеРасширеннаяПодсказка" id="559"/>
+														</LabelDecoration>
+														<Button name="ОткрытьОформлениеОповещений" id="794">
+															<Type>Hyperlink</Type>
+															<CommandName>Form.Command.ОткрытьОформлениеОповещений</CommandName>
+															<ExtendedTooltip name="ОткрытьОформлениеОповещенийРасширеннаяПодсказка" id="795"/>
+														</Button>
+														<Button name="НастройкаПараметровСистемнойУчетнойЗаписи" id="195">
+															<Type>Hyperlink</Type>
+															<AutoMaxWidth>false</AutoMaxWidth>
+															<CommandName>Form.Command.НастройкаПараметровСистемнойУчетнойЗаписиДляРаботыСПочтой</CommandName>
+															<ExtendedTooltip name="НастройкаПараметровСистемнойУчетнойЗаписиРасширеннаяПодсказка" id="402"/>
+														</Button>
+													</ChildItems>
+												</Page>
+												<Page name="Маркеры" id="651">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Маркеры</v8:content>
+														</v8:item>
+													</Title>
+													<ExtendedTooltip name="МаркерыРасширеннаяПодсказка" id="652"/>
+													<ChildItems>
+														<InputField name="МаркерыНомераВТемеЭлектронныхПисемЗадания" id="704">
+															<DataPath>НаборКонстант.МаркерыНомераЗаданияВТемеЭлектронныхПисемПриОтвете</DataPath>
+															<ToolTipRepresentation>Button</ToolTipRepresentation>
+															<AutoMaxWidth>false</AutoMaxWidth>
+															<ContextMenu name="МаркерыНомераВТемеЭлектронныхПисемЗаданияКонтекстноеМеню" id="705"/>
+															<ExtendedTooltip name="МаркерыНомераВТемеЭлектронныхПисемЗаданияРасширеннаяПодсказка" id="706"/>
+														</InputField>
+														<InputField name="МаркерыНомераПриватногоКомментарияВТемеЭлектронныхПисем" id="723">
+															<DataPath>НаборКонстант.МаркерыНомераКомментарияВТемеЭлектронныхПисем</DataPath>
+															<ToolTipRepresentation>Button</ToolTipRepresentation>
+															<AutoMaxWidth>false</AutoMaxWidth>
+															<ContextMenu name="МаркерыНомераПриватногоКомментарияВТемеЭлектронныхПисемКонтекстноеМеню" id="724"/>
+															<ExtendedTooltip name="МаркерыНомераПриватногоКомментарияВТемеЭлектронныхПисемРасширеннаяПодсказка" id="725"/>
+														</InputField>
+														<InputField name="МаркерыОкончанияЭлектронныхПисемЗадания" id="656">
+															<DataPath>НаборКонстант.МаркерыОкончанияЭлектронныхПисемЗадания</DataPath>
+															<ToolTipRepresentation>Button</ToolTipRepresentation>
+															<AutoMaxWidth>false</AutoMaxWidth>
+															<ContextMenu name="МаркерыОкончанияЭлектронныхПисемЗаданияКонтекстноеМеню" id="657"/>
+															<ExtendedTooltip name="МаркерыОкончанияЭлектронныхПисемЗаданияРасширеннаяПодсказка" id="658"/>
+														</InputField>
+														<InputField name="МаркерыУстановкиСрокаЗадания" id="659">
+															<DataPath>НаборКонстант.МаркерыУстановкиСрокаЗадания</DataPath>
+															<ToolTipRepresentation>Button</ToolTipRepresentation>
+															<AutoMaxWidth>false</AutoMaxWidth>
+															<ContextMenu name="МаркерыУстановкиСрокаЗаданияКонтекстноеМеню" id="660"/>
+															<ExtendedTooltip name="МаркерыУстановкиСрокаЗаданияРасширеннаяПодсказка" id="661"/>
+														</InputField>
+														<CheckBoxField name="ИспользованиеЗакрытиеЗаданияПоТекстовымФразамВСообщениях" id="569">
+															<DataPath>НаборКонстант.ИспользованиеВыполнениеЗаданияПоТекстовымФразамВСообщениях</DataPath>
+															<TitleLocation>Right</TitleLocation>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Фразы "Закрыть задание.", "Закрыть задачу.", "Задачу выполнил.", "Задачу выполнила.", "Задачу решил.", "Задачу решила.", "Задача решена.", "Задание закрыто.", "Close task." (без кавычек в тексте сообщения в задании, выполняют задание).</v8:content>
+																</v8:item>
+															</ToolTip>
+															<ToolTipRepresentation>Button</ToolTipRepresentation>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="ИспользованиеЗакрытиеЗаданияПоТекстовымФразамВСообщенияхКонтекстноеМеню" id="570"/>
+															<ExtendedTooltip name="ИспользованиеЗакрытиеЗаданияПоТекстовымФразамВСообщенияхРасширеннаяПодсказка" id="571"/>
+															<Events>
+																<Event name="OnChange">ИспользованиеЗакрытиеЗаданияПоТекстовымФразамВСообщенияхПриИзменении</Event>
+															</Events>
+														</CheckBoxField>
+														<InputField name="МаркерыВыполненияЗадания" id="653">
+															<DataPath>НаборКонстант.МаркерыВыполненияЗадания</DataPath>
+															<ToolTipRepresentation>Button</ToolTipRepresentation>
+															<AutoMaxWidth>false</AutoMaxWidth>
+															<ContextMenu name="МаркерыВыполненияЗаданияКонтекстноеМеню" id="654"/>
+															<ExtendedTooltip name="МаркерыВыполненияЗаданияРасширеннаяПодсказка" id="655"/>
+														</InputField>
+														<Button name="УстановитьМаркерыПоУмолчанию" id="662">
+															<Type>UsualButton</Type>
+															<CommandName>Form.Command.УстановитьМаркерыПоУмолчанию</CommandName>
+															<ExtendedTooltip name="УстановитьМаркерыПоУмолчаниюРасширеннаяПодсказка" id="663"/>
+														</Button>
+													</ChildItems>
+												</Page>
+												<Page name="ОценкаЗаданий" id="954">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Оценка заданий</v8:content>
+														</v8:item>
+													</Title>
+													<ExtendedTooltip name="ОценкаЗаданийРасширеннаяПодсказка" id="955"/>
+													<ChildItems>
+														<InputField name="АдресПубликацииИнформационнойБазыВИнтернетеДляОценкиЗаданий" id="563">
+															<DataPath>НаборКонстант.АдресПубликацииИнформационнойБазыВИнтернетеДляОценкиЗаданий</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Адрес публикации ИБ для оценки задания</v8:content>
+																</v8:item>
+															</Title>
+															<TitleLocation>Top</TitleLocation>
+															<ChoiceButton>true</ChoiceButton>
+															<ChoiceButtonPicture>
+																<xr:Ref>StdPicture.MoveLeft</xr:Ref>
+																<xr:LoadTransparent>true</xr:LoadTransparent>
+															</ChoiceButtonPicture>
+															<InputHint>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Например: http://myserver.com/itscore</v8:content>
+																</v8:item>
+															</InputHint>
+															<ContextMenu name="АдресПубликацииИнформационнойБазыВИнтернетеДляОценкиЗаданийКонтекстноеМеню" id="564"/>
+															<ExtendedTooltip name="АдресПубликацииИнформационнойБазыВИнтернетеДляОценкиЗаданийРасширеннаяПодсказка" id="565"/>
+															<Events>
+																<Event name="StartChoice">АдресПубликацииИнформационнойБазыВИнтернетеДляОценкиЗаданийНачалоВыбора</Event>
+															</Events>
+														</InputField>
+														<LabelDecoration name="ПояснениеАдресПубликацииИнформационнойБазыВИнтернете1" id="566">
+															<Width>56</Width>
+															<AutoMaxWidth>false</AutoMaxWidth>
+															<HorizontalStretch>false</HorizontalStretch>
+															<TextColor>style:ПоясняющийТекст</TextColor>
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Используется для формирования ссылок на сервис для выставления оценок по заданию.</v8:content>
+																</v8:item>
+															</Title>
+															<VerticalAlign>Top</VerticalAlign>
+															<ContextMenu name="ПояснениеАдресПубликацииИнформационнойБазыВИнтернете1КонтекстноеМеню" id="567"/>
+															<ExtendedTooltip name="ПояснениеАдресПубликацииИнформационнойБазыВИнтернете1РасширеннаяПодсказка" id="568"/>
+														</LabelDecoration>
+														<InputField name="СпособУстановкиОценкиЗаданияВПисьме" id="956">
+															<DataPath>НаборКонстант.СпособУстановкиОценкиЗаданияВПисьме</DataPath>
+															<ContextMenu name="СпособУстановкиОценкиЗаданияВПисьмеКонтекстноеМеню" id="957"/>
+															<ExtendedTooltip name="СпособУстановкиОценкиЗаданияВПисьмеРасширеннаяПодсказка" id="958"/>
+														</InputField>
+														<Button name="ОткрытьОценкиЗаданий" id="959">
+															<Type>Hyperlink</Type>
+															<CommandName>Form.Command.ОткрытьОценкиЗаданий</CommandName>
+															<ExtendedTooltip name="ОткрытьОценкиЗаданийРасширеннаяПодсказка" id="960"/>
+														</Button>
+													</ChildItems>
+												</Page>
+											</ChildItems>
+										</Pages>
+									</ChildItems>
+								</Page>
+								<Page name="ГруппаЗапретИзмененияДанных" id="30">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Запрет изменения данных</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ГруппаЗапретИзмененияДанныхРасширеннаяПодсказка" id="463"/>
+									<ChildItems>
+										<LabelDecoration name="Декорация5" id="31">
+											<Width>40</Width>
+											<Height>1</Height>
+											<Font ref="sys:DefaultGUIFont" faceName="Verdana" height="14" kind="WindowsFont"/>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Запрет изменения данных</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="Декорация5КонтекстноеМеню" id="32"/>
+											<ExtendedTooltip name="Декорация5РасширеннаяПодсказка" id="464"/>
+										</LabelDecoration>
+										<InputField name="ДатаЗапретаРедактирования" id="33">
+											<ContextMenu name="ДатаЗапретаРедактированияКонтекстноеМеню" id="34"/>
+											<ExtendedTooltip name="ДатаЗапретаРедактированияРасширеннаяПодсказка" id="465"/>
+										</InputField>
+										<LabelDecoration name="Декорация6" id="35">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<TextColor>#3366FF</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Используйте дату запрета изменения данных, если требуется ограничить возможность редактирования и ввода новых данных за прошлые периоды.</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="Декорация6КонтекстноеМеню" id="36"/>
+											<ExtendedTooltip name="Декорация6РасширеннаяПодсказка" id="466"/>
+										</LabelDecoration>
+									</ChildItems>
+								</Page>
+								<Page name="СтраницаОбменДанными" id="39">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Обмен данными</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="СтраницаОбменДаннымиРасширеннаяПодсказка" id="467"/>
+									<ChildItems>
+										<LabelDecoration name="Декорация8" id="57">
+											<Width>40</Width>
+											<Height>1</Height>
+											<Font ref="sys:DefaultGUIFont" faceName="Verdana" height="14" kind="WindowsFont"/>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Обмен данными</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="Декорация8КонтекстноеМеню" id="58"/>
+											<ExtendedTooltip name="Декорация8РасширеннаяПодсказка" id="468"/>
+										</LabelDecoration>
+										<CheckBoxField name="ИспользоватьОбменДанными" id="146">
+											<DataPath>НаборКонстант.ИспользоватьСинхронизациюДанных</DataPath>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ИспользоватьОбменДаннымиКонтекстноеМеню" id="147"/>
+											<ExtendedTooltip name="ИспользоватьОбменДаннымиРасширеннаяПодсказка" id="469"/>
+										</CheckBoxField>
+										<InputField name="ПрефиксУзлаРаспределеннойИнформационнойБазы" id="89">
+											<DataPath>НаборКонстант.ПрефиксУзлаРаспределеннойИнформационнойБазы</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Префикс узла распределенной базы</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ПрефиксУзлаРаспределеннойИнформационнойБазыКонтекстноеМеню" id="90"/>
+											<ExtendedTooltip name="ПрефиксУзлаРаспределеннойИнформационнойБазыРасширеннаяПодсказка" id="470"/>
+										</InputField>
+									</ChildItems>
+								</Page>
+								<Page name="СтраницаЗагрузкаИзЗУП" id="42">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Загрузка из ЗУП</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="СтраницаЗагрузкаИзЗУПРасширеннаяПодсказка" id="471"/>
+									<ChildItems>
+										<LabelDecoration name="Декорация9" id="59">
+											<Width>48</Width>
+											<Height>1</Height>
+											<Font ref="sys:DefaultGUIFont" faceName="Verdana" height="14" kind="WindowsFont"/>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Загрузка сотрудников из программ</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="Декорация9КонтекстноеМеню" id="60"/>
+											<ExtendedTooltip name="Декорация9РасширеннаяПодсказка" id="472"/>
+										</LabelDecoration>
+										<CheckBoxField name="ИспользоватьЗагрузкуСотрудниковИзЗУП" id="104">
+											<DataPath>НаборКонстант.ИспользоватьЗагрузкуСотрудников</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ИспользоватьЗагрузкуСотрудниковИзЗУПКонтекстноеМеню" id="105"/>
+											<ExtendedTooltip name="ИспользоватьЗагрузкуСотрудниковИзЗУПРасширеннаяПодсказка" id="473"/>
+											<Events>
+												<Event name="OnChange">ИспользоватьЗагрузкуСотрудниковИзЗУППриИзменении</Event>
+											</Events>
+										</CheckBoxField>
+										<LabelDecoration name="Декорация18" id="106">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<TextColor>#3366FF</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Возможность загрузки сотрудников, должностей, подразделений и организаций из различных программ.</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="Декорация18КонтекстноеМеню" id="107"/>
+											<ExtendedTooltip name="Декорация18РасширеннаяПодсказка" id="474"/>
+										</LabelDecoration>
+										<UsualGroup name="ГруппаПрограммаЗагрузки" id="224">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа программа загрузки</v8:content>
+												</v8:item>
+											</Title>
+											<Group>Horizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаПрограммаЗагрузкиРасширеннаяПодсказка" id="475"/>
+											<ChildItems>
+												<InputField name="ПрограммаДляЗагрузкиСотрудников" id="218">
+													<DataPath>НаборКонстант.ПрограммаДляЗагрузкиСотрудников</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Программа загрузки</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="ПрограммаДляЗагрузкиСотрудниковКонтекстноеМеню" id="219"/>
+													<ExtendedTooltip name="ПрограммаДляЗагрузкиСотрудниковРасширеннаяПодсказка" id="476"/>
+												</InputField>
+												<Button name="СохранитьПравилаОбмена" id="721">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.СохранитьПравилаОбмена</CommandName>
+													<ExtendedTooltip name="СохранитьПравилаОбменаРасширеннаяПодсказка" id="722"/>
+												</Button>
+											</ChildItems>
+										</UsualGroup>
+										<CheckBoxField name="ЗУПНаходитсяНаСервере" id="108">
+											<DataPath>НаборКонстант.ЗагрузкаСотрудниковНаходитсяНаСервере</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Загружать с сервера</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ЗУПНаходитсяНаСервереКонтекстноеМеню" id="109"/>
+											<ExtendedTooltip name="ЗУПНаходитсяНаСервереРасширеннаяПодсказка" id="478"/>
+											<Events>
+												<Event name="OnChange">ЗУПНаходитсяНаСервереПриИзменении</Event>
+											</Events>
+										</CheckBoxField>
+										<Pages name="ПанельБаза" id="110">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Панель база</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ПанельБазаРасширеннаяПодсказка" id="479"/>
+											<ChildItems>
+												<Page name="СтраницаСервер" id="111">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Сервер</v8:content>
+														</v8:item>
+													</Title>
+													<ExtendedTooltip name="СтраницаСерверРасширеннаяПодсказка" id="480"/>
+													<ChildItems>
+														<UsualGroup name="ГруппаСервер" id="220">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа сервер</v8:content>
+																</v8:item>
+															</Title>
+															<Group>Horizontal</Group>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаСерверРасширеннаяПодсказка" id="481"/>
+															<ChildItems>
+																<InputField name="ЗУПСервер" id="113">
+																	<DataPath>НаборКонстант.ЗагрузкаСотрудниковСервер</DataPath>
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Сервер</v8:content>
+																		</v8:item>
+																	</Title>
+																	<AutoMarkIncomplete>true</AutoMarkIncomplete>
+																	<ContextMenu name="ЗУПСерверКонтекстноеМеню" id="114"/>
+																	<ExtendedTooltip name="ЗУПСерверРасширеннаяПодсказка" id="482"/>
+																</InputField>
+																<InputField name="ЗУПИмяИБ" id="117">
+																	<DataPath>НаборКонстант.ЗагрузкаСотрудниковИмяИБ</DataPath>
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>ИБ</v8:content>
+																		</v8:item>
+																	</Title>
+																	<AutoMarkIncomplete>true</AutoMarkIncomplete>
+																	<ContextMenu name="ЗУПИмяИБКонтекстноеМеню" id="118"/>
+																	<ExtendedTooltip name="ЗУПИмяИБРасширеннаяПодсказка" id="483"/>
+																</InputField>
+															</ChildItems>
+														</UsualGroup>
+														<UsualGroup name="ГруппаПользовательПароль" id="130">
+															<EnableContentChange>true</EnableContentChange>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа пользователь пароль</v8:content>
+																</v8:item>
+															</Title>
+															<Group>Horizontal</Group>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаПользовательПарольРасширеннаяПодсказка" id="486"/>
+															<ChildItems>
+																<InputField name="ЗУППользователь" id="126">
+																	<DataPath>НаборКонстант.ЗагрузкаСотрудниковПользователь</DataPath>
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Пользователь</v8:content>
+																		</v8:item>
+																	</Title>
+																	<ContextMenu name="ЗУППользовательКонтекстноеМеню" id="127"/>
+																	<ExtendedTooltip name="ЗУППользовательРасширеннаяПодсказка" id="487"/>
+																</InputField>
+																<InputField name="ЗУППароль" id="128">
+																	<DataPath>НаборКонстант.ЗагрузкаСотрудниковПароль</DataPath>
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Пароль</v8:content>
+																		</v8:item>
+																	</Title>
+																	<PasswordMode>true</PasswordMode>
+																	<ContextMenu name="ЗУППарольКонтекстноеМеню" id="129"/>
+																	<ExtendedTooltip name="ЗУППарольРасширеннаяПодсказка" id="488"/>
+																</InputField>
+															</ChildItems>
+														</UsualGroup>
+													</ChildItems>
+												</Page>
+												<Page name="СтраницаКаталог" id="112">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Каталог</v8:content>
+														</v8:item>
+													</Title>
+													<ExtendedTooltip name="СтраницаКаталогРасширеннаяПодсказка" id="484"/>
+													<ChildItems>
+														<InputField name="ЗУПКаталог" id="115">
+															<DataPath>НаборКонстант.ЗагрузкаСотрудниковКаталог</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Каталог</v8:content>
+																</v8:item>
+															</Title>
+															<AutoMaxWidth>false</AutoMaxWidth>
+															<HorizontalStretch>true</HorizontalStretch>
+															<ChoiceButton>true</ChoiceButton>
+															<AutoMarkIncomplete>true</AutoMarkIncomplete>
+															<ContextMenu name="ЗУПКаталогКонтекстноеМеню" id="116"/>
+															<ExtendedTooltip name="ЗУПКаталогРасширеннаяПодсказка" id="485"/>
+															<Events>
+																<Event name="StartChoice">ЗУПКаталогНачалоВыбора</Event>
+															</Events>
+														</InputField>
+														<UsualGroup name="ГруппаПользовательПароль1" id="713">
+															<EnableContentChange>true</EnableContentChange>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа пользователь пароль</v8:content>
+																</v8:item>
+															</Title>
+															<Group>Horizontal</Group>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаПользовательПароль1РасширеннаяПодсказка" id="714"/>
+															<ChildItems>
+																<InputField name="ЗУППользователь1" id="715">
+																	<DataPath>НаборКонстант.ЗагрузкаСотрудниковПользователь</DataPath>
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Пользователь</v8:content>
+																		</v8:item>
+																	</Title>
+																	<ContextMenu name="ЗУППользователь1КонтекстноеМеню" id="716"/>
+																	<ExtendedTooltip name="ЗУППользователь1РасширеннаяПодсказка" id="717"/>
+																</InputField>
+																<InputField name="ЗУППароль1" id="718">
+																	<DataPath>НаборКонстант.ЗагрузкаСотрудниковПароль</DataPath>
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Пароль</v8:content>
+																		</v8:item>
+																	</Title>
+																	<PasswordMode>true</PasswordMode>
+																	<ContextMenu name="ЗУППароль1КонтекстноеМеню" id="719"/>
+																	<ExtendedTooltip name="ЗУППароль1РасширеннаяПодсказка" id="720"/>
+																</InputField>
+															</ChildItems>
+														</UsualGroup>
+													</ChildItems>
+												</Page>
+											</ChildItems>
+										</Pages>
+										<LabelDecoration name="Л" id="222">
+											<Width>81</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<TextColor>#3366FF</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Внимание! Информационная база источник должна находиться на том же компьютере, что и конфигурация "Управление IT-отделом 8</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ЛКонтекстноеМеню" id="223"/>
+											<ExtendedTooltip name="ЛРасширеннаяПодсказка" id="489"/>
+										</LabelDecoration>
+										<UsualGroup name="ГруппаЗагрузки" id="131">
+											<EnableContentChange>true</EnableContentChange>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа загрузки</v8:content>
+												</v8:item>
+											</Title>
+											<Group>Horizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаЗагрузкиРасширеннаяПодсказка" id="490"/>
+											<ChildItems>
+												<Button name="ЗагрузитьСотрудниковИзЗУП" id="132">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.ЗагрузитьСотрудниковИзЗУП</CommandName>
+													<ExtendedTooltip name="ЗагрузитьСотрудниковИзЗУПРасширеннаяПодсказка" id="491"/>
+												</Button>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</Page>
+								<Page name="СтраницаИнтернет" id="44">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Интернет</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="СтраницаИнтернетРасширеннаяПодсказка" id="498"/>
+									<ChildItems>
+										<LabelDecoration name="Декорация10" id="61">
+											<Width>40</Width>
+											<Height>1</Height>
+											<Font ref="sys:DefaultGUIFont" faceName="Verdana" height="14" kind="WindowsFont"/>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Интернет</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="Декорация10КонтекстноеМеню" id="62"/>
+											<ExtendedTooltip name="Декорация10РасширеннаяПодсказка" id="499"/>
+										</LabelDecoration>
+										<Button name="НастройкиПроксиСервера" id="93">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.НастройкиПроксиСервера</CommandName>
+											<ExtendedTooltip name="НастройкиПроксиСервераРасширеннаяПодсказка" id="500"/>
+										</Button>
+										<LabelDecoration name="Декорация15" id="94">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<TextColor>#3366FF</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Позволяет настроить доступ к интернету через прокси-сервер. Доступ в интернет необходим для работы некоторых функций, например, для поиска изображений номенклатуры.</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="Декорация15КонтекстноеМеню" id="95"/>
+											<ExtendedTooltip name="Декорация15РасширеннаяПодсказка" id="501"/>
+										</LabelDecoration>
+										<UsualGroup name="Группа8" id="318">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Учетные записи электронной почты</v8:content>
+												</v8:item>
+											</Title>
+											<Group>Vertical</Group>
+											<ExtendedTooltip name="Группа8РасширеннаяПодсказка" id="502"/>
+											<ChildItems>
+												<Table name="УчетныеЗаписиЭлектроннойПочты" id="273">
+													<UseAlternationRowColor>true</UseAlternationRowColor>
+													<EnableStartDrag>true</EnableStartDrag>
+													<FileDragMode>AsFile</FileDragMode>
+													<DataPath>УчетныеЗаписиЭлектроннойПочты</DataPath>
+													<RowPictureDataPath>УчетныеЗаписиЭлектроннойПочты.DefaultPicture</RowPictureDataPath>
+													<SearchStringLocation>None</SearchStringLocation>
+													<ViewStatusLocation>None</ViewStatusLocation>
+													<SearchControlLocation>None</SearchControlLocation>
+													<AutoRefresh>false</AutoRefresh>
+													<AutoRefreshPeriod>60</AutoRefreshPeriod>
+													<Period>
+														<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+														<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+														<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+													</Period>
+													<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+													<RestoreCurrentRow>false</RestoreCurrentRow>
+													<TopLevelParent xsi:nil="true"/>
+													<ShowRoot>true</ShowRoot>
+													<AllowRootChoice>false</AllowRootChoice>
+													<UpdateOnDataChange>Auto</UpdateOnDataChange>
+													<ContextMenu name="УчетныеЗаписиЭлектроннойПочтыКонтекстноеМеню" id="274"/>
+													<AutoCommandBar name="УчетныеЗаписиЭлектроннойПочтыКоманднаяПанель" id="275"/>
+													<ExtendedTooltip name="УчетныеЗаписиЭлектроннойПочтыРасширеннаяПодсказка" id="503"/>
+													<SearchStringAddition name="УчетныеЗаписиЭлектроннойПочтыСтрокаПоиска" id="504">
+														<AdditionSource>
+															<Item>УчетныеЗаписиЭлектроннойПочты</Item>
+															<Type>SearchStringRepresentation</Type>
+														</AdditionSource>
+														<ContextMenu name="УчетныеЗаписиЭлектроннойПочтыСтрокаПоискаКонтекстноеМеню" id="505"/>
+														<ExtendedTooltip name="УчетныеЗаписиЭлектроннойПочтыСтрокаПоискаРасширеннаяПодсказка" id="506"/>
+													</SearchStringAddition>
+													<ViewStatusAddition name="УчетныеЗаписиЭлектроннойПочтыСостояниеПросмотра" id="507">
+														<AdditionSource>
+															<Item>УчетныеЗаписиЭлектроннойПочты</Item>
+															<Type>ViewStatusRepresentation</Type>
+														</AdditionSource>
+														<HorizontalLocation>Left</HorizontalLocation>
+														<ContextMenu name="УчетныеЗаписиЭлектроннойПочтыСостояниеПросмотраКонтекстноеМеню" id="508"/>
+														<ExtendedTooltip name="УчетныеЗаписиЭлектроннойПочтыСостояниеПросмотраРасширеннаяПодсказка" id="509"/>
+													</ViewStatusAddition>
+													<SearchControlAddition name="УчетныеЗаписиЭлектроннойПочтыУправлениеПоиском" id="510">
+														<AdditionSource>
+															<Item>УчетныеЗаписиЭлектроннойПочты</Item>
+															<Type>SearchControl</Type>
+														</AdditionSource>
+														<ContextMenu name="УчетныеЗаписиЭлектроннойПочтыУправлениеПоискомКонтекстноеМеню" id="511"/>
+														<ExtendedTooltip name="УчетныеЗаписиЭлектроннойПочтыУправлениеПоискомРасширеннаяПодсказка" id="512"/>
+													</SearchControlAddition>
+													<ChildItems>
+														<LabelField name="УчетныеЗаписиЭлектроннойПочтыНаименование" id="276">
+															<DataPath>УчетныеЗаписиЭлектроннойПочты.Description</DataPath>
+															<ContextMenu name="УчетныеЗаписиЭлектроннойПочтыНаименованиеКонтекстноеМеню" id="277"/>
+															<ExtendedTooltip name="УчетныеЗаписиЭлектроннойПочтыНаименованиеРасширеннаяПодсказка" id="513"/>
+														</LabelField>
+														<LabelField name="УчетныеЗаписиЭлектроннойПочтыСсылка" id="908">
+															<DataPath>УчетныеЗаписиЭлектроннойПочты.Ref</DataPath>
+															<UserVisible>
+																<xr:Common>false</xr:Common>
+															</UserVisible>
+															<ContextMenu name="УчетныеЗаписиЭлектроннойПочтыСсылкаКонтекстноеМеню" id="909"/>
+															<ExtendedTooltip name="УчетныеЗаписиЭлектроннойПочтыСсылкаРасширеннаяПодсказка" id="910"/>
+														</LabelField>
+													</ChildItems>
+												</Table>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</Page>
+								<Page name="СтраницаТелефония" id="796">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Телефония</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="СтраницаТелефонияРасширеннаяПодсказка" id="797"/>
+									<ChildItems>
+										<LabelDecoration name="Декорация11" id="812">
+											<Width>40</Width>
+											<Height>1</Height>
+											<Font ref="sys:DefaultGUIFont" faceName="Verdana" height="14" kind="WindowsFont"/>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Телефония</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="Декорация11КонтекстноеМеню" id="813"/>
+											<ExtendedTooltip name="Декорация11РасширеннаяПодсказка" id="814"/>
+										</LabelDecoration>
+										<Button name="ОткрытьНастройкиТелефонии" id="810">
+											<Type>Hyperlink</Type>
+											<CommandName>Form.Command.ОткрытьНастройкиТелефонии</CommandName>
+											<ExtendedTooltip name="ОткрытьНастройкиТелефонииРасширеннаяПодсказка" id="811"/>
+										</Button>
+									</ChildItems>
+								</Page>
+								<Page name="СтраницаДела" id="817">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дела</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="СтраницаДелаРасширеннаяПодсказка" id="818"/>
+									<ChildItems>
+										<LabelDecoration name="Декорация12" id="819">
+											<Width>40</Width>
+											<Height>1</Height>
+											<Font ref="sys:DefaultGUIFont" faceName="Verdana" height="14" kind="WindowsFont"/>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Дела</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="Декорация12КонтекстноеМеню" id="820"/>
+											<ExtendedTooltip name="Декорация12РасширеннаяПодсказка" id="821"/>
+										</LabelDecoration>
+										<UsualGroup name="ГруппаДнейХранения" id="828">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа дней хранения</v8:content>
+												</v8:item>
+											</Title>
+											<Group>Vertical</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаДнейХраненияРасширеннаяПодсказка" id="829"/>
+											<ChildItems>
+												<InputField name="ДнейХраненияВыполненныхДел" id="822">
+													<DataPath>НаборКонстант.ДнейХраненияВыполненныхДел</DataPath>
+													<SpinButton>true</SpinButton>
+													<ContextMenu name="ДнейХраненияВыполненныхДелКонтекстноеМеню" id="823"/>
+													<ExtendedTooltip name="ДнейХраненияВыполненныхДелРасширеннаяПодсказка" id="824"/>
+												</InputField>
+												<LabelDecoration name="Декорация19" id="825">
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<TextColor>#3366FF</TextColor>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Когда задание выполнено информация о нем может понадобавить в течении нескольких дней после его выполнения. И их можно посмотреть специальными фильтрами выполненных задач. После истечении срока они не нужны и помечаются на удалении регламентным заданием.</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="Декорация19КонтекстноеМеню" id="826"/>
+													<ExtendedTooltip name="Декорация19РасширеннаяПодсказка" id="827"/>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</Page>
+								<Page name="СтраницаTelegram" id="836">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Telegram</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalStretch>true</HorizontalStretch>
+									<ExtendedTooltip name="СтраницаTelegramРасширеннаяПодсказка" id="837"/>
+									<ChildItems>
+										<LabelDecoration name="Декорация13" id="841">
+											<Width>40</Width>
+											<Height>1</Height>
+											<Font ref="sys:DefaultGUIFont" faceName="Verdana" height="14" kind="WindowsFont"/>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Telegram</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="Декорация13КонтекстноеМеню" id="842"/>
+											<ExtendedTooltip name="Декорация13РасширеннаяПодсказка" id="843"/>
+										</LabelDecoration>
+									</ChildItems>
+								</Page>
+								<Page name="СтраницаДинамическиеПриоритеты" id="917">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Динамические приоритеты</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="СтраницаДинамическиеПриоритетыРасширеннаяПодсказка" id="918"/>
+									<ChildItems>
+										<LabelDecoration name="Декорация17" id="937">
+											<Width>40</Width>
+											<Height>1</Height>
+											<Font ref="sys:DefaultGUIFont" faceName="Verdana" height="14" kind="WindowsFont"/>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Динамические приоритеты</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="Декорация17КонтекстноеМеню" id="938"/>
+											<ExtendedTooltip name="Декорация17РасширеннаяПодсказка" id="939"/>
+										</LabelDecoration>
+										<CheckBoxField name="ИспользоватьПланированиеВыполненияЗаданий" id="914">
+											<DataPath>НаборКонстант.ИспользоватьДинамическиеПриоритеты</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ИспользоватьПланированиеВыполненияЗаданийКонтекстноеМеню" id="915"/>
+											<ExtendedTooltip name="ИспользоватьПланированиеВыполненияЗаданийРасширеннаяПодсказка" id="916"/>
+											<Events>
+												<Event name="OnChange">ИспользоватьПланированиеВыполненияЗаданийПриИзменении</Event>
+											</Events>
+										</CheckBoxField>
+										<InputField name="ШагКорректировкиВеса" id="919">
+											<DataPath>НаборКонстант.ШагКорректировкиВеса</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Шаг корректировки</v8:content>
+												</v8:item>
+											</Title>
+											<SpinButton>true</SpinButton>
+											<ContextMenu name="ШагКорректировкиВесаКонтекстноеМеню" id="920"/>
+											<ExtendedTooltip name="ШагКорректировкиВесаРасширеннаяПодсказка" id="921"/>
+										</InputField>
+										<InputField name="ВесКритическогоПриоритетаЗадания" id="922">
+											<DataPath>НаборКонстант.ВесКритическогоПриоритетаЗадания</DataPath>
+											<SpinButton>true</SpinButton>
+											<ContextMenu name="ВесКритическогоПриоритетаЗаданияКонтекстноеМеню" id="923"/>
+											<ExtendedTooltip name="ВесКритическогоПриоритетаЗаданияРасширеннаяПодсказка" id="924"/>
+										</InputField>
+										<InputField name="ВесВысокогоПриоритетаЗадания" id="925">
+											<DataPath>НаборКонстант.ВесВысокогоПриоритетаЗадания</DataPath>
+											<SpinButton>true</SpinButton>
+											<ContextMenu name="ВесВысокогоПриоритетаЗаданияКонтекстноеМеню" id="926"/>
+											<ExtendedTooltip name="ВесВысокогоПриоритетаЗаданияРасширеннаяПодсказка" id="927"/>
+										</InputField>
+										<InputField name="ВесСреднегоПриоритетаЗадания" id="928">
+											<DataPath>НаборКонстант.ВесСреднегоПриоритетаЗадания</DataPath>
+											<SpinButton>true</SpinButton>
+											<ContextMenu name="ВесСреднегоПриоритетаЗаданияКонтекстноеМеню" id="929"/>
+											<ExtendedTooltip name="ВесСреднегоПриоритетаЗаданияРасширеннаяПодсказка" id="930"/>
+										</InputField>
+										<InputField name="ВесНизкогоПриоритетаЗадания" id="931">
+											<DataPath>НаборКонстант.ВесНизкогоПриоритетаЗадания</DataPath>
+											<SpinButton>true</SpinButton>
+											<ContextMenu name="ВесНизкогоПриоритетаЗаданияКонтекстноеМеню" id="932"/>
+											<ExtendedTooltip name="ВесНизкогоПриоритетаЗаданияРасширеннаяПодсказка" id="933"/>
+										</InputField>
+										<InputField name="ВесОченьНизкогоПриоритетаЗадания" id="934">
+											<DataPath>НаборКонстант.ВесОченьНизкогоПриоритетаЗадания</DataPath>
+											<SpinButton>true</SpinButton>
+											<ContextMenu name="ВесОченьНизкогоПриоритетаЗаданияКонтекстноеМеню" id="935"/>
+											<ExtendedTooltip name="ВесОченьНизкогоПриоритетаЗаданияРасширеннаяПодсказка" id="936"/>
+										</InputField>
+									</ChildItems>
+								</Page>
+							</ChildItems>
+						</Pages>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаКнопки" id="19">
+					<EnableContentChange>true</EnableContentChange>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа кнопки</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа кнопки</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаКнопкиРасширеннаяПодсказка" id="528"/>
+					<ChildItems>
+						<CommandBar name="ГруппаКнопокВнизу" id="20">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа кнопок внизу</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalLocation>Right</HorizontalLocation>
+							<ExtendedTooltip name="ГруппаКнопокВнизуРасширеннаяПодсказка" id="529"/>
+							<ChildItems>
+								<Button name="OK" id="21">
+									<Type>CommandBarButton</Type>
+									<DefaultButton>true</DefaultButton>
+									<CommandName>Form.Command.OK</CommandName>
+									<ExtendedTooltip name="OKРасширеннаяПодсказка" id="530"/>
+								</Button>
+								<Button name="Применить" id="22">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.Применить</CommandName>
+									<ExtendedTooltip name="ПрименитьРасширеннаяПодсказка" id="531"/>
+								</Button>
+								<Button name="ЗакрытьФорму" id="24">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.ЗакрытьФорму</CommandName>
+									<ExtendedTooltip name="ЗакрытьФормуРасширеннаяПодсказка" id="532"/>
+								</Button>
+							</ChildItems>
+						</CommandBar>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="НаборКонстант" id="1">
+			<Type>
+				<v8:Type>cfg:ConstantsSet</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>НаборКонстант.ДнейХраненияВыполненныхДел</Field>
+				<Field>НаборКонстант.ИспользоватьCRM</Field>
+				<Field>НаборКонстант.ИспользоватьДела</Field>
+				<Field>НаборКонстант.УчетнаяЗаписьЭлектроннойПочтыПоУмолчанию</Field>
+				<Field>НаборКонстант.ЦветТекстаПомеченнойЗадачи</Field>
+				<Field>НаборКонстант.ЦветТекстаПросроченнойЗадачи</Field>
+				<Field>НаборКонстант.ЦветФонаПомеченнойЗадачи</Field>
+				<Field>НаборКонстант.ЦветФонаПросроченнойЗадачи</Field>
+			</UseAlways>
+		</Attribute>
+		<Attribute name="РасписаниеЗагрузкаСотрудников" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расписание загрузка сотрудников</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="НомерВерсииКонфигурации" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер версии конфигурации</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ОписаниеФормул" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Описание формул</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:fd="http://v8.1c.ru/8.2/data/formatted-document">fd:FormattedDocument</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИнформацияОФайлеRadmin" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Информация о файле radmin</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="УчетныеЗаписиЭлектроннойПочты" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Учетные записи электронной почты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>УчетныеЗаписиЭлектроннойПочты.Ref</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>Catalog.УчетныеЗаписиЭлектроннойПочты</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="БазовыеЦвета" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Базовые цвета</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription"/>
+		</Attribute>
+		<Attribute name="ПримерТекстаПросроченногоЗадания" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пример текста просроченного задания</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Пример" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пример</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="РедактируемыйЦветТекстаПросроченногоЗадания" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Цвет текста</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8ui:Color</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="РедактируемыйЦветФонаПросроченногоЗадания" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Цвет фона</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8ui:Color</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ПравилаСобытий" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Правила событий</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>ПравилаСобытий.Ref</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>Catalog.ПравилаСобытий</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="РедактируемыйЦветТекстаПомеченногоЗадания" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Цвет текста</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8ui:Color</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="РедактируемыйЦветФонаПомеченногоЗадания" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Цвет фона</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8ui:Color</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ПримерТекстаПомеченногоЗадания" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пример текста помеченного задания</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Пример" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пример</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ПриоритетОпределения" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Приоритет определения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Settings>
+		</Attribute>
+		<Attribute name="ДеревоДействий" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дерево действий</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Картинка" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Картинка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>v8ui:Picture</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Заголовок" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Заголовок</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>150</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Идентификатор" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Идентификатор</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>100</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ИспользоватьДинамическиеПриоритеты" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать динамические приоритеты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДлительнаяОперация" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Длительная операция</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="OK" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>OK</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>OK</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>OK</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Применить" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Применить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Применить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Применить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЗакрытьФорму" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Закрыть</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Закрыть форму</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗакрытьФорму</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="НастройкиПроксиСервера" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки прокси сервера</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки прокси сервера</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НастройкиПроксиСервера</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЗагрузитьСотрудниковИзЗУП" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить сотрудников</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить сотрудников из ЗУП</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗагрузитьСотрудниковИзЗУП</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="НастройкаПровайдераСМС" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка провайдера SMS</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка провайдера СМС для отправки сообщений из конфигурации о состоянии заданий</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НастройкаПровайдераСМС</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="НастройкаПараметровСистемнойУчетнойЗаписиДляРаботыСПочтой" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка параметров системной учетной записи для работы с почтой</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка параметров системной учетной записи для работы с почтой</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НастройкаПараметровСистемнойУчетнойЗаписи</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СохранитьПравилаОбмена" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить правила обмена</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.SaveFile</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СохранитьПравилаОбмена</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="УстановитьВыражениеПредставленияКарточкиПоУмолчанию" id="25">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выражение по умолчанию</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить выражение представления карточки по умолчанию</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УстановитьВыражениеПредставленияКарточкиПоУмолчанию</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СброситьНастройкиЦветаПросроченногоЗадания" id="26">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сбросить настройки цвета просроченного задания</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сбросить настройки цвета просроченного задания</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.InputFieldClear</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СброситьНастройкиЦветаПросроченногоЗадания</Action>
+			<Representation>Picture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="АвтоматическоеВыполнениеЗаданий" id="27">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запустить автоматическое выполнение заданий</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Автоматическое выполнение заданий</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>АвтоматическоеВыполнениеЗаданий</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="УстановитьВыражениеПредставленияМестаХраненияПоУмолчанию" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выражение по умолчанию</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить выражение представления места хранения по умолчанию</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УстановитьВыражениеПредставленияМестаХраненияПоУмолчанию</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СброситьНастройкиЦветаПомеченногоЗадания" id="30">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сбросить настройки цвета помеченного задания</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сбросить настройки цвета помеченного задания</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.InputFieldClear</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СброситьНастройкиЦветаПомеченногоЗадания</Action>
+			<Representation>Picture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="УстановитьМаркерыПоУмолчанию" id="31">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить маркеры по умолчанию</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить маркеры по умолчанию</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УстановитьМаркерыПоУмолчанию</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПравилаСобытийЗаполнитьПредопределенными" id="32">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить предопределенными</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Правила событий заполнить предопределенными</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПравилаСобытийЗаполнитьПредопределенными</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="АвтоматическоеЗавершениеЗаданий" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запустить автоматическое завершение заданий</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Автоматическое завершение заданий</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>АвтоматическоеЗавершениеЗаданий</Action>
+		</Command>
+		<Command name="ОткрытьОформлениеОповещений" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Оформление оповещений</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть оформление оповещений</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьОформлениеОповещений</Action>
+		</Command>
+		<Command name="ОткрытьНастройкиТелефонии" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть настройки телефонии</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть настройки телефонии</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьНастройкиТелефонии</Action>
+		</Command>
+		<Command name="ОткрытьЖурналВыполненияПравилСобытий" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть журнал выполнения правил событий</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть журнал выполнения правил событий</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьЖурналВыполненияПравилСобытий</Action>
+		</Command>
+		<Command name="ОткрытьОценкиЗаданий" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Оценки заданий</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть оценки заданий</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьОценкиЗаданий</Action>
+		</Command>
+	</Commands>
+</Form>

@@ -1,0 +1,1663 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Добавление комментария</v8:content>
+		</v8:item>
+	</Title>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<CommandSet>
+		<ExcludedCommand>Write</ExcludedCommand>
+	</CommandSet>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаЗаписатьИЗакрыть" id="200">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.StandardCommand.WriteAndClose</CommandName>
+				<ExtendedTooltip name="ФормаЗаписатьИЗакрытьРасширеннаяПодсказка" id="201"/>
+			</Button>
+			<Button name="ФормаДобавитьКомментарийИЗакрыть" id="155">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.Command.ДобавитьКомментарийИЗакрыть</CommandName>
+				<ExtendedTooltip name="ФормаДобавитьКомментарийИЗакрытьРасширеннаяПодсказка" id="156"/>
+			</Button>
+			<Button name="ФормаЗакрыть" id="55">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.StandardCommand.Close</CommandName>
+				<Picture>
+					<xr:Ref>StdPicture.Close</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<ExtendedTooltip name="ФормаЗакрытьРасширеннаяПодсказка" id="56"/>
+			</Button>
+			<Button name="ФормаФайлы" id="153">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.Файлы</CommandName>
+				<ExtendedTooltip name="ФормаФайлыРасширеннаяПодсказка" id="154"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Наименование" id="4">
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<UsualGroup name="ГруппаВладелец" id="36">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа владелец</v8:content>
+				</v8:item>
+			</Title>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<BackColor>web:AntiqueWhite</BackColor>
+			<ExtendedTooltip name="ГруппаВладелецРасширеннаяПодсказка" id="37"/>
+			<ChildItems>
+				<LabelField name="Владелец" id="7">
+					<DataPath>Объект.ВладелецКомментария</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Документ</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<ContextMenu name="ВладелецКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="ВладелецРасширеннаяПодсказка" id="9"/>
+				</LabelField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаВОтветНаСообщение" id="23">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>В ответ на комментарий:</v8:content>
+				</v8:item>
+			</Title>
+			<TitleFont ref="sys:DefaultGUIFont" kind="WindowsFont"/>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Group>Vertical</Group>
+			<Behavior>Collapsible</Behavior>
+			<CollapsedRepresentationTitle>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>В ответ на комментарий:</v8:content>
+				</v8:item>
+			</CollapsedRepresentationTitle>
+			<ControlRepresentation>Picture</ControlRepresentation>
+			<Representation>StrongSeparation</Representation>
+			<BackColor>style:FieldAlternativeBackColor</BackColor>
+			<ExtendedTooltip name="ГруппаВОтветНаСообщениеExtendedTooltip" id="24"/>
+			<ChildItems>
+				<HTMLDocumentField name="ВОтветТекстHTML" id="213">
+					<DataPath>ВОтветТекстHTML</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<Height>5</Height>
+					<ContextMenu name="ВОтветТекстHTMLКонтекстноеМеню" id="214"/>
+					<ExtendedTooltip name="ВОтветТекстHTMLРасширеннаяПодсказка" id="215"/>
+					<Events>
+						<Event name="OnClick">ВОтветТекстHTMLПриНажатии</Event>
+					</Events>
+				</HTMLDocumentField>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="ГруппаСтраницы" id="57">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedTooltip name="ГруппаСтраницыРасширеннаяПодсказка" id="58"/>
+			<ChildItems>
+				<Page name="Комментарий" id="59">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Комментарий</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="60"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаФД" id="145">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа ФД</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаФДРасширеннаяПодсказка" id="146"/>
+							<ChildItems>
+								<CommandBar name="ОбщаяКомманднаяПанель" id="38">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Общая коммандная панель</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ОбщаяКомманднаяПанельРасширеннаяПодсказка" id="39"/>
+									<ChildItems>
+										<ButtonGroup name="ГруппаШаблоны" id="206">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа шаблоны</v8:content>
+												</v8:item>
+											</Title>
+											<Representation>Compact</Representation>
+											<ExtendedTooltip name="ГруппаШаблоныРасширеннаяПодсказка" id="207"/>
+											<ChildItems>
+												<Button name="ВставитьШаблонОтвета" id="42">
+													<Type>CommandBarButton</Type>
+													<CommandName>Form.Command.ВставитьШаблонОтвета</CommandName>
+													<ExtendedTooltip name="ВставитьШаблонОтветаРасширеннаяПодсказка" id="43"/>
+												</Button>
+												<Popup name="ГруппаБазаЗнаний" id="44">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>База знаний</v8:content>
+														</v8:item>
+													</Title>
+													<Picture>
+														<xr:Ref>CommonPicture.БыстрыйДоступСФлажком</xr:Ref>
+														<xr:LoadTransparent>false</xr:LoadTransparent>
+													</Picture>
+													<Representation>Picture</Representation>
+													<ExtendedTooltip name="ГруппаБазаЗнанийРасширеннаяПодсказка" id="45"/>
+													<ChildItems>
+														<Button name="ВставитьОтветИзБазыЗнаний" id="46">
+															<Type>CommandBarButton</Type>
+															<CommandName>Form.Command.ВставитьОтветИзБазыЗнаний</CommandName>
+															<ExtendedTooltip name="ВставитьОтветИзБазыЗнанийРасширеннаяПодсказка" id="47"/>
+														</Button>
+														<Button name="ВставитьСсылкуНаСтатьюБазыЗнаний" id="48">
+															<Type>CommandBarButton</Type>
+															<CommandName>Form.Command.ВставитьСсылкуНаСтатьюБазыЗнаний</CommandName>
+															<ExtendedTooltip name="ВставитьСсылкуНаСтатьюБазыЗнанийРасширеннаяПодсказка" id="49"/>
+														</Button>
+													</ChildItems>
+												</Popup>
+											</ChildItems>
+										</ButtonGroup>
+										<ButtonGroup name="ГруппаВставкиИзображения" id="204">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа вставки изображения</v8:content>
+												</v8:item>
+											</Title>
+											<Representation>Compact</Representation>
+											<ExtendedTooltip name="ГруппаВставкиИзображенияРасширеннаяПодсказка" id="205"/>
+											<ChildItems>
+												<Button name="ВставитьКартинкуИзБуфераОбмена" id="50">
+													<Type>CommandBarButton</Type>
+													<CommandName>Form.Command.ВставитьКартинкуИзБуфераОбмена</CommandName>
+													<ExtendedTooltip name="ВставитьКартинкуИзБуфераОбменаРасширеннаяПодсказка" id="51"/>
+												</Button>
+												<Button name="ВставитьИзображениеИзФайла" id="202">
+													<Type>CommandBarButton</Type>
+													<CommandName>Form.Command.ВставитьИзображениеИзФайла</CommandName>
+													<ExtendedTooltip name="ВставитьИзображениеИзФайлаРасширеннаяПодсказка" id="203"/>
+												</Button>
+											</ChildItems>
+										</ButtonGroup>
+										<ButtonGroup name="ГруппаКодИСмайлики" id="208">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа код и смайлики</v8:content>
+												</v8:item>
+											</Title>
+											<Representation>Compact</Representation>
+											<ExtendedTooltip name="ГруппаКодИСмайликиРасширеннаяПодсказка" id="209"/>
+											<ChildItems>
+												<Button name="ДобавитьЦитирование" id="216">
+													<Type>CommandBarButton</Type>
+													<CommandName>Form.Command.ДобавитьЦитирование</CommandName>
+													<ExtendedTooltip name="ДобавитьЦитированиеРасширеннаяПодсказка" id="217"/>
+												</Button>
+												<Button name="ОформитьФрагментКода" id="40">
+													<Type>CommandBarButton</Type>
+													<CommandName>Form.Command.ОформитьФрагментКода</CommandName>
+													<ExtendedTooltip name="ОформитьФрагментКодаРасширеннаяПодсказка" id="41"/>
+												</Button>
+												<Popup name="ВставитьСмайлик" id="157">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Вставить смайлик</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Вставить смайлик</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Picture>
+														<xr:Ref>CommonPicture.СмайликУлыбка</xr:Ref>
+														<xr:LoadTransparent>false</xr:LoadTransparent>
+													</Picture>
+													<Representation>Picture</Representation>
+													<ExtendedTooltip name="ВставитьСмайликРасширеннаяПодсказка" id="158"/>
+													<ChildItems>
+														<Button name="СмайликУлыбка" id="159">
+															<Type>CommandBarButton</Type>
+															<CommandName>Form.Command.ВставитьСмайликУлыбка</CommandName>
+															<Picture>
+																<xr:Ref>CommonPicture.СмайликУлыбка</xr:Ref>
+																<xr:LoadTransparent>false</xr:LoadTransparent>
+															</Picture>
+															<ExtendedTooltip name="СмайликУлыбкаРасширеннаяПодсказка" id="160"/>
+														</Button>
+														<Button name="ВставитьСмайликШирокаяУлыбка" id="161">
+															<Type>CommandBarButton</Type>
+															<CommandName>Form.Command.ВставитьСмайликШирокаяУлыбка</CommandName>
+															<ExtendedTooltip name="ВставитьСмайликШирокаяУлыбкаРасширеннаяПодсказка" id="162"/>
+														</Button>
+														<Button name="ВставитьСмайликПечально" id="163">
+															<Type>CommandBarButton</Type>
+															<CommandName>Form.Command.ВставитьСмайликПечально</CommandName>
+															<ExtendedTooltip name="ВставитьСмайликПечальноРасширеннаяПодсказка" id="164"/>
+														</Button>
+														<Button name="ВставитьСмайликШутливо" id="165">
+															<Type>CommandBarButton</Type>
+															<CommandName>Form.Command.ВставитьСмайликШутливо</CommandName>
+															<ExtendedTooltip name="ВставитьСмайликШутливоРасширеннаяПодсказка" id="166"/>
+														</Button>
+														<Button name="ВставитьСмайликЗдорово" id="167">
+															<Type>CommandBarButton</Type>
+															<CommandName>Form.Command.ВставитьСмайликЗдорово</CommandName>
+															<ExtendedTooltip name="ВставитьСмайликЗдоровоРасширеннаяПодсказка" id="168"/>
+														</Button>
+														<Button name="ВставитьСмайликШок" id="169">
+															<Type>CommandBarButton</Type>
+															<CommandName>Form.Command.ВставитьСмайликШок</CommandName>
+															<ExtendedTooltip name="ВставитьСмайликШокРасширеннаяПодсказка" id="170"/>
+														</Button>
+														<Button name="ВставитьСмайликСкептически" id="171">
+															<Type>CommandBarButton</Type>
+															<CommandName>Form.Command.ВставитьСмайликСкептически</CommandName>
+															<ExtendedTooltip name="ВставитьСмайликСкептическиРасширеннаяПодсказка" id="172"/>
+														</Button>
+														<Button name="ВставитьСмайликВосклицание" id="173">
+															<Type>CommandBarButton</Type>
+															<CommandName>Form.Command.ВставитьСмайликВосклицание</CommandName>
+															<ExtendedTooltip name="ВставитьСмайликВосклицаниеРасширеннаяПодсказка" id="174"/>
+														</Button>
+													</ChildItems>
+												</Popup>
+											</ChildItems>
+										</ButtonGroup>
+										<ButtonGroup name="КоманднаяПанельФорматированныйДокумент" id="21">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Командная панель форматированный документ</v8:content>
+												</v8:item>
+											</Title>
+											<CommandSource>Item.ФорматированныйДокумент</CommandSource>
+											<ExtendedTooltip name="КоманднаяПанельФорматированныйДокументРасширеннаяПодсказка" id="22"/>
+										</ButtonGroup>
+									</ChildItems>
+								</CommandBar>
+								<FormattedDocumentField name="ФорматированныйДокумент" id="18">
+									<DataPath>ФорматированныйДокумент</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<CommandSet>
+										<ExcludedCommand>Picture</ExcludedCommand>
+									</CommandSet>
+									<AutoMaxHeight>false</AutoMaxHeight>
+									<ContextMenu name="ФорматированныйДокументКонтекстноеМеню" id="19"/>
+									<ExtendedTooltip name="ФорматированныйДокументРасширеннаяПодсказка" id="20"/>
+									<Events>
+										<Event name="OnChange">ФорматированныйДокументПриИзменении</Event>
+									</Events>
+								</FormattedDocumentField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаФайлы" id="74">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Файлы</v8:content>
+								</v8:item>
+							</Title>
+							<Width>25</Width>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаФайлыРасширеннаяПодсказка" id="75"/>
+							<ChildItems>
+								<Table name="Вложения" id="76">
+									<Representation>List</Representation>
+									<Height>5</Height>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<FileDragMode>AsFile</FileDragMode>
+									<DataPath>Вложения</DataPath>
+									<RowPictureDataPath>Вложения.ИндексКартинки</RowPictureDataPath>
+									<RowsPicture>
+										<xr:Ref>CommonPicture.КоллекцияПиктограммФайлов</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</RowsPicture>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="ВложенияКонтекстноеМеню" id="77">
+										<Autofill>false</Autofill>
+										<ChildItems>
+											<Button name="ДобавитьВложение" id="100">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ДобавитьВложение</CommandName>
+												<ExtendedTooltip name="ДобавитьВложениеРасширеннаяПодсказка" id="101"/>
+											</Button>
+											<Button name="ОткрытьВложение" id="102">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ОткрытьВложение</CommandName>
+												<ExtendedTooltip name="ОткрытьВложениеРасширеннаяПодсказка" id="103"/>
+											</Button>
+											<Button name="УдалитьВложение" id="106">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Item.Вложения.StandardCommand.Delete</CommandName>
+												<ExtendedTooltip name="УдалитьВложениеРасширеннаяПодсказка" id="107"/>
+											</Button>
+										</ChildItems>
+									</ContextMenu>
+									<AutoCommandBar name="ВложенияКоманднаяПанель" id="78">
+										<Autofill>false</Autofill>
+										<ChildItems>
+											<Button name="ВложенияДобавитьВложение" id="147">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ДобавитьВложение</CommandName>
+												<ExtendedTooltip name="ВложенияДобавитьВложениеРасширеннаяПодсказка" id="148"/>
+											</Button>
+											<Button name="ВложенияОткрытьВложение" id="149">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ОткрытьВложение</CommandName>
+												<ExtendedTooltip name="ВложенияОткрытьВложениеРасширеннаяПодсказка" id="150"/>
+											</Button>
+											<Button name="ВложенияУдалить" id="151">
+												<Type>CommandBarButton</Type>
+												<Representation>Picture</Representation>
+												<CommandName>Form.Item.Вложения.StandardCommand.Delete</CommandName>
+												<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+												<ExtendedTooltip name="ВложенияУдалитьРасширеннаяПодсказка" id="152"/>
+											</Button>
+										</ChildItems>
+									</AutoCommandBar>
+									<ExtendedTooltip name="ВложенияРасширеннаяПодсказка" id="79"/>
+									<SearchStringAddition name="ВложенияСтрокаПоиска" id="80">
+										<AdditionSource>
+											<Item>Вложения</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ВложенияСтрокаПоискаКонтекстноеМеню" id="81"/>
+										<ExtendedTooltip name="ВложенияСтрокаПоискаРасширеннаяПодсказка" id="82"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ВложенияСостояниеПросмотра" id="83">
+										<AdditionSource>
+											<Item>Вложения</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<HorizontalLocation>Left</HorizontalLocation>
+										<ContextMenu name="ВложенияСостояниеПросмотраКонтекстноеМеню" id="84"/>
+										<ExtendedTooltip name="ВложенияСостояниеПросмотраРасширеннаяПодсказка" id="85"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ВложенияУправлениеПоиском" id="86">
+										<AdditionSource>
+											<Item>Вложения</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ВложенияУправлениеПоискомКонтекстноеМеню" id="87"/>
+										<ExtendedTooltip name="ВложенияУправлениеПоискомРасширеннаяПодсказка" id="88"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="DragCheck">ВложенияПроверкаПеретаскивания</Event>
+										<Event name="Selection">ВложенияВыбор</Event>
+										<Event name="BeforeAddRow">ВложенияПередНачаломДобавления</Event>
+										<Event name="Drag">ВложенияПеретаскивание</Event>
+										<Event name="AfterDeleteRow">ВложенияПослеУдаления</Event>
+									</Events>
+									<ChildItems>
+										<ColumnGroup name="ВложенияГруппаКолонок" id="89">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Вложения</v8:content>
+												</v8:item>
+											</Title>
+											<Width>25</Width>
+											<Group>InCell</Group>
+											<ShowInHeader>true</ShowInHeader>
+											<ExtendedTooltip name="ВложенияГруппаКолонокРасширеннаяПодсказка" id="90"/>
+											<ChildItems>
+												<PictureField name="ВложенияИндексКартинки" id="91">
+													<DataPath>Вложения.ИндексКартинки</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<EditMode>EnterOnInput</EditMode>
+													<ShowInHeader>false</ShowInHeader>
+													<ValuesPicture>
+														<xr:Ref>CommonPicture.КоллекцияПиктограммФайлов</xr:Ref>
+														<xr:LoadTransparent>false</xr:LoadTransparent>
+													</ValuesPicture>
+													<FileDragMode>AsFile</FileDragMode>
+													<ContextMenu name="ВложенияИндексКартинкиКонтекстноеМеню" id="92"/>
+													<ExtendedTooltip name="ВложенияИндексКартинкиРасширеннаяПодсказка" id="93"/>
+												</PictureField>
+												<InputField name="ВложенияИмяФайла" id="94">
+													<DataPath>Вложения.ИмяФайла</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<EditMode>EnterOnInput</EditMode>
+													<ShowInHeader>false</ShowInHeader>
+													<ContextMenu name="ВложенияИмяФайлаКонтекстноеМеню" id="95"/>
+													<ExtendedTooltip name="ВложенияИмяФайлаРасширеннаяПодсказка" id="96"/>
+												</InputField>
+												<InputField name="ВложенияРазмерПредставление" id="97">
+													<DataPath>Вложения.РазмерПредставление</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<EditMode>EnterOnInput</EditMode>
+													<ShowInHeader>false</ShowInHeader>
+													<ContextMenu name="ВложенияРазмерПредставлениеКонтекстноеМеню" id="98"/>
+													<ExtendedTooltip name="ВложенияРазмерПредставлениеРасширеннаяПодсказка" id="99"/>
+												</InputField>
+											</ChildItems>
+										</ColumnGroup>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="СтатьяБазыЗнаний" id="61">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статья базы знаний</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СтатьяБазыЗнанийРасширеннаяПодсказка" id="62"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаКнопокСтатьяБазыЗнаний" id="68">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа кнопок статья базы знаний</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКнопокСтатьяБазыЗнанийРасширеннаяПодсказка" id="69"/>
+							<ChildItems>
+								<Button name="ВыбратьСтатьюБазыЗнаний" id="70">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ВыбратьСтатьюБазыЗнаний</CommandName>
+									<ExtendedTooltip name="ВыбратьСтатьюБазыЗнанийРасширеннаяПодсказка" id="71"/>
+								</Button>
+								<Button name="Очистить" id="66">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ОчиститьСтатьюБазыЗнаний</CommandName>
+									<ExtendedTooltip name="ОчиститьРасширеннаяПодсказка" id="67"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<HTMLDocumentField name="СтатьяБазыЗнанийHTML" id="63">
+							<DataPath>СтатьяБазыЗнанийHTML</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<ContextMenu name="СтатьяБазыЗнанийHTMLКонтекстноеМеню" id="64"/>
+							<ExtendedTooltip name="СтатьяБазыЗнанийHTMLРасширеннаяПодсказка" id="65"/>
+						</HTMLDocumentField>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<UsualGroup name="ГруппаПриватное" id="196">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа приватное</v8:content>
+				</v8:item>
+			</Title>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПриватноеРасширеннаяПодсказка" id="197"/>
+			<ChildItems>
+				<CheckBoxField name="Приватный" id="52">
+					<DataPath>Объект.Приватный</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Приватный</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>Right</TitleLocation>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Приватный комментарий виден только указанным участникам задания</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ToolTipRepresentation>Button</ToolTipRepresentation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПриватныйКонтекстноеМеню" id="53"/>
+					<ExtendedTooltip name="ПриватныйРасширеннаяПодсказка" id="54"/>
+					<Events>
+						<Event name="OnChange">ПриватныйПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<UsualGroup name="ГруппаАдресаты" id="175">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа адресаты</v8:content>
+						</v8:item>
+					</Title>
+					<Group>AlwaysHorizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаАдресатыРасширеннаяПодсказка" id="176"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаДобавитьАдресата" id="185">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа добавить адресата</v8:content>
+								</v8:item>
+							</Title>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаДобавитьАдресатаРасширеннаяПодсказка" id="186"/>
+							<ChildItems>
+								<Button name="ДобавитьАдресатов" id="198">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.ДобавитьАдресатов</CommandName>
+									<ExtendedTooltip name="ДобавитьАдресатовРасширеннаяПодсказка" id="199"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ВыбранныеАдресаты" id="183">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Выбранные адресаты</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ВыбранныеАдресатыРасширеннаяПодсказка" id="184"/>
+						</UsualGroup>
+						<PictureDecoration name="ДекорацияПустышка" id="193">
+							<Width>1</Width>
+							<Height>1</Height>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Декорация пустышка</v8:content>
+								</v8:item>
+							</Title>
+							<FileDragMode>AsFile</FileDragMode>
+							<ContextMenu name="ДекорацияПустышкаКонтекстноеМеню" id="194"/>
+							<ExtendedTooltip name="ДекорацияПустышкаРасширеннаяПодсказка" id="195"/>
+						</PictureDecoration>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаАвторПериод" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа автор период</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаАвторПериодРасширеннаяПодсказка" id="17"/>
+			<ChildItems>
+				<InputField name="Автор" id="10">
+					<DataPath>Объект.Автор</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<HorizontalStretch>true</HorizontalStretch>
+					<ContextMenu name="АвторКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="АвторРасширеннаяПодсказка" id="12"/>
+				</InputField>
+				<LabelField name="Период" id="13">
+					<DataPath>Объект.Период</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>от</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>25</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Format>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ДЛФ=DDT</v8:content>
+						</v8:item>
+					</Format>
+					<ContextMenu name="ПериодКонтекстноеМеню" id="14"/>
+					<ExtendedTooltip name="ПериодРасширеннаяПодсказка" id="15"/>
+				</LabelField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.Комментарии</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ФорматированныйДокумент" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Форматированный документ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:fd="http://v8.1c.ru/8.2/data/formatted-document">fd:FormattedDocument</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Родитель" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Родитель</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Комментарии</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="АвторСообщения" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Автор сообщения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ФизическиеЛица</v8:Type>
+				<v8:Type>cfg:CatalogRef.КонтактныеЛица</v8:Type>
+				<v8:Type>cfg:CatalogRef.Подразделения</v8:Type>
+				<v8:Type>cfg:CatalogRef.Сотрудники</v8:Type>
+				<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+				<v8:Type>cfg:CatalogRef.ПотенциальныеКлиенты</v8:Type>
+				<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПериодСообщения" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период сообщения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекстСообщения" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текст сообщения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СтатьяБазыЗнанийHTML" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Статья базы знаний HTML</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СтатьяБазыЗнаний" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Статья базы знаний</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.СтатьиБазыЗнаний</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТаблицаСоответствийИменВложенийИдентификаторам" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица соответствий имен вложений идентификаторам</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ИмяФайла" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя файла</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИдентификаторФайлаДляHTML" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Идентификатор файла для HTML</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Картинка" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Картинка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>v8ui:Picture</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="Вложения" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вложения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+			<Columns>
+				<Column name="Ссылка" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ссылка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.КомментарииПрисоединенныеФайлы</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ИмяФайла" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя файла</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИндексКартинки" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Индекс картинки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Размер" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Размер</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Удалять" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Удалять</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Расположение" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Расположение</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>1</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИмяФайлаНаКомпьютере" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя файла на компьютере</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="РазмерПредставление" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Размер представление</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>20</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПодписанЭП" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подписан ЭП</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="СтатьиБазыЗнаний" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Статьи базы знаний</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="СтатьяБазыЗнаний" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статья базы знаний</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.СтатьиБазыЗнаний</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ИндексКартинки" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Индекс картинки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="КомментарийПриПереходеНаЭтап" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Комментарий при переходе на этап</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="РазрешенПустойКомментарий" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Разрешен пустой комментарий</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДополнительныйТекст" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дополнительный текст</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗаписыватьДокументОснование" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записывать документ основание</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПеревестиНаЭтапПослеДобавленияКомментария" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перевести на этап после добавления комментария</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Источник" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Источник</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:UUID</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СтруктураПриПереходе" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Структура при переходе</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ПустойКомментарий" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пустой комментарий</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЭтоОтвет" id="21">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Это ответ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЭтоВебКлиент" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Это веб клиент</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Кому" id="23">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кому</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:TypeSet>cfg:DefinedType.НаблюдателиЗадания</v8:TypeSet>
+			</Type>
+		</Attribute>
+		<Attribute name="АвторПериод" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Автор период</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ВОтветТекстHTML" id="24">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>В ответ текст HTML</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ОформитьФрагментКода" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Оформить фрагмент кода</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Оформить фрагмент кода</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.Код</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ОформитьФрагментКода</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ВставитьШаблонОтвета" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вставить шаблон</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вставить шаблон ответа</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.БыстрыйДоступДобавить</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ВставитьШаблонОтвета</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ВставитьСсылкуНаСтатьюБазыЗнаний" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вставить ссылку на статью базы знаний</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вставить ссылку на статью базы знаний</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВставитьСсылкуНаСтатьюБазыЗнаний</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ВставитьОтветИзБазыЗнаний" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вставить ответ из базы знаний</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вставить ответ из базы знаний</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВставитьОтветИзБазыЗнаний</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ВставитьКартинкуИзБуфераОбмена" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вставить картинку из буфера обмена</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вставить картинку из буфера обмена</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ВставитьКартинкуИзБуфера</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ВставитьКартинкуИзБуфера</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОчиститьСтатьюБазыЗнаний" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить статью базы знаний</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОчиститьСтатьюБазыЗнаний</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ВыбратьСтатьюБазыЗнаний" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать...</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать статью базы знаний</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыбратьСтатьюБазыЗнаний</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ДобавитьВложение" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить вложение</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить вложение</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.Скрепка</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ДобавитьВложение</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьВложение" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть вложение</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть вложение</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.InputFieldOpen</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОткрытьВложение</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ДобавитьСтатьюБазыЗнаний" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить статью</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить статью базы знаний</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CreateListItem</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ДобавитьСтатьюБазыЗнанийВыполнить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьСтатьюБазыЗнаний" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть статью</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть статью базы знаний</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.БазаЗнаний</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ОткрытьСтатьюБазыЗнаний</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Файлы" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Файлы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Файлы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.Скрепка</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>Файлы</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ДобавитьКомментарийИЗакрыть" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить комментарий и закрыть</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить комментарий и закрыть</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДобавитьКомментарийИЗакрыть</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ВставитьСмайликУлыбка" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Улыбка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вставить смайлик улыбка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.СмайликУлыбка</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ВставитьСмайликУлыбка</Action>
+			<Representation>Picture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ВставитьСмайликШирокаяУлыбка" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Широкая улыбка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вставить смайлик широкая улыбка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.СмайликШирокаяУлыбка</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ВставитьСмайликШирокаяУлыбка</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ВставитьСмайликПечально" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Печально</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вставить смайлик печально</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.СмайликПечально</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ВставитьСмайликПечально</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ВставитьСмайликШутливо" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шутливо</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вставить смайлик шутливо</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.СмайликШутливо</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ВставитьСмайликШутливо</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ВставитьСмайликЗдорово" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Здорово</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вставить смайлик здорово</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.СмайликЗдорово</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ВставитьСмайликЗдорово</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ВставитьСмайликШок" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шок</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вставить смайлик шок</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.СмайликШок</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ВставитьСмайликШок</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ВставитьСмайликСкептически" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Скептически</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вставить смайлик скептически</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.СмайликСкептически</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ВставитьСмайликСкептически</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ВставитьСмайликВосклицание" id="21">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Восклицание</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вставить смайлик восклицание</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.СмайликВосклицание</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ВставитьСмайликВосклицание</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ДобавитьАдресатов" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адресаты:</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить адресатов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ДобавитьЗадачу16х16</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ДекорацияДобавитьАдресатаНажатие</Action>
+		</Command>
+		<Command name="ВставитьИзображениеИзФайла" id="23">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вставить изображение из файла</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вставить изображение из файла</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ВставитьКартинку</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ВставитьИзображениеИзФайла</Action>
+		</Command>
+		<Command name="ДобавитьЦитирование" id="24">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить цитирование</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить цитирование</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.Цитировать</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ДобавитьЦитирование</Action>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="Родитель">
+			<Type>
+				<v8:Type>cfg:CatalogRef.Комментарии</v8:Type>
+			</Type>
+		</Parameter>
+	</Parameters>
+	<CommandInterface>
+		<NavigationPanel>
+			<Item>
+				<Command>3:516a140b-cc41-4b15-a21a-64aecf845c56</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelGoTo</CommandGroup>
+				<Index>1</Index>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>4:516a140b-cc41-4b15-a21a-64aecf845c56</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelGoTo</CommandGroup>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>CommonCommand.ПрисоединенныеФайлы</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelGoTo</CommandGroup>
+				<Index>2</Index>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</NavigationPanel>
+	</CommandInterface>
+</Form>

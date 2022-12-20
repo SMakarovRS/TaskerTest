@@ -1,0 +1,1048 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Защита конфигурации</v8:content>
+		</v8:item>
+	</Title>
+	<Width>85</Width>
+	<Height>32</Height>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<CommandSet>
+		<ExcludedCommand>Abort</ExcludedCommand>
+		<ExcludedCommand>Cancel</ExcludedCommand>
+		<ExcludedCommand>Close</ExcludedCommand>
+		<ExcludedCommand>CustomizeForm</ExcludedCommand>
+		<ExcludedCommand>Help</ExcludedCommand>
+		<ExcludedCommand>Ignore</ExcludedCommand>
+		<ExcludedCommand>No</ExcludedCommand>
+		<ExcludedCommand>OK</ExcludedCommand>
+		<ExcludedCommand>RestoreValues</ExcludedCommand>
+		<ExcludedCommand>Retry</ExcludedCommand>
+		<ExcludedCommand>SaveValues</ExcludedCommand>
+		<ExcludedCommand>Yes</ExcludedCommand>
+	</CommandSet>
+	<ShowCloseButton>false</ShowCloseButton>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="Страницы" id="39">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="40"/>
+			<ChildItems>
+				<Page name="СвязьССервером" id="43">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Связь с сервером</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СвязьССерверомРасширеннаяПодсказка" id="44"/>
+					<ChildItems>
+						<LabelDecoration name="ДекорацияИнфо2" id="91">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<HorizontalStretch>true</HorizontalStretch>
+							<VerticalStretch>false</VerticalStretch>
+							<TextColor>#FF0000</TextColor>
+							<Font ref="style:NormalTextFont" height="11" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Нет связи с сервером лицензирования</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalAlign>Center</HorizontalAlign>
+							<VerticalAlign>Center</VerticalAlign>
+							<ContextMenu name="ДекорацияИнфо2КонтекстноеМеню" id="92"/>
+							<ExtendedTooltip name="ДекорацияИнфо2РасширеннаяПодсказка" id="93"/>
+						</LabelDecoration>
+						<UsualGroup name="ГруппаНадпись" id="45">
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаНадписьРасширеннаяПодсказка" id="46"/>
+							<ChildItems>
+								<PictureDecoration name="Картинка" id="47">
+									<Width>5</Width>
+									<Height>3</Height>
+									<VerticalStretch>false</VerticalStretch>
+									<Picture>
+										<xr:Ref>CommonPicture.Ключ</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="КартинкаКонтекстноеМеню" id="48"/>
+									<ExtendedTooltip name="КартинкаРасширеннаяПодсказка" id="49"/>
+								</PictureDecoration>
+								<UsualGroup name="ГруппаПодсказкаСвязьССервером" id="173">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа подсказка связь с сервером</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаПодсказкаСвязьССерверомРасширеннаяПодсказка" id="174"/>
+									<ChildItems>
+										<LabelDecoration name="ТекстСвязьССервером" id="50">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<Title formatted="true">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Не удалось соединиться с сервером лицензирования.
+
+&lt;b&gt;1.&lt;/&gt; Проверьте запущен ли сервер лицензирования и установлены ли настройки подключения.
+
+&lt;b&gt;2.&lt;/&gt; Установите пожалуйста по инструкции сервер лицензирования Софтонит на компьютер, который будет доступен по сети для всех пользователей конфигурации и нажмите на кнопку "Перейти к активации".</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ТекстСвязьССерверомКонтекстноеМеню" id="51"/>
+											<ExtendedTooltip name="ТекстСвязьССерверомРасширеннаяПодсказка" id="52"/>
+										</LabelDecoration>
+										<LabelDecoration name="Декорация15" id="168">
+											<Title formatted="true">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>&lt;link https://softonit.ru/sls/&gt;Скачать и установить сервер лицензирования Софтонит&lt;/&gt;</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="Декорация15КонтекстноеМеню" id="169"/>
+											<ExtendedTooltip name="Декорация15РасширеннаяПодсказка" id="170"/>
+											<Events>
+												<Event name="Click">Декорация15Нажатие</Event>
+											</Events>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаРасположениеСервера" id="53">
+							<HorizontalStretch>true</HorizontalStretch>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ThroughAlign>Use</ThroughAlign>
+							<ExtendedTooltip name="ГруппаРасположениеСервераРасширеннаяПодсказка" id="54"/>
+							<ChildItems>
+								<RadioButtonField name="РасположениеСервера" id="55">
+									<DataPath>РасположениеСервера</DataPath>
+									<TitleLocation>Left</TitleLocation>
+									<RadioButtonType>Auto</RadioButtonType>
+									<ColumnsCount>1</ColumnsCount>
+									<ContextMenu name="РасположениеСервераКонтекстноеМеню" id="56"/>
+									<ExtendedTooltip name="РасположениеСервераРасширеннаяПодсказка" id="57"/>
+									<Events>
+										<Event name="OnChange">РасположениеСервераПриИзменении</Event>
+									</Events>
+								</RadioButtonField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаСервер" id="58">
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ThroughAlign>Use</ThroughAlign>
+							<ExtendedTooltip name="ГруппаСерверРасширеннаяПодсказка" id="59"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаАдресПорт" id="60">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа адрес порт</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalStretch>true</HorizontalStretch>
+									<Group>Vertical</Group>
+									<ShowTitle>false</ShowTitle>
+									<ThroughAlign>Use</ThroughAlign>
+									<ExtendedTooltip name="ГруппаАдресПортРасширеннаяПодсказка" id="61"/>
+									<ChildItems>
+										<InputField name="АдресСервера" id="62">
+											<DataPath>АдресСервера</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Адрес или имя компьютера</v8:content>
+												</v8:item>
+											</Title>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<HorizontalStretch>true</HorizontalStretch>
+											<ContextMenu name="АдресСервераКонтекстноеМеню" id="63"/>
+											<ExtendedTooltip name="АдресСервераРасширеннаяПодсказка" id="64"/>
+										</InputField>
+										<InputField name="ПортСервера" id="65">
+											<DataPath>ПортСервера</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Порт</v8:content>
+												</v8:item>
+											</Title>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<ContextMenu name="ПортСервераКонтекстноеМеню" id="66"/>
+											<ExtendedTooltip name="ПортСервераРасширеннаяПодсказка" id="67"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+								<LabelDecoration name="Декорация1" id="80">
+									<AutoMaxHeight>false</AutoMaxHeight>
+									<VerticalStretch>true</VerticalStretch>
+									<ContextMenu name="Декорация1КонтекстноеМеню" id="81"/>
+									<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="82"/>
+								</LabelDecoration>
+								<UsualGroup name="ГруппаКнопки" id="68">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа кнопки</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalStretch>true</HorizontalStretch>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаКнопкиРасширеннаяПодсказка" id="69"/>
+									<ChildItems>
+										<LabelDecoration name="Декорация3" id="70">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<HorizontalStretch>true</HorizontalStretch>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>https://softonit.ru</v8:content>
+												</v8:item>
+											</Title>
+											<Hyperlink>true</Hyperlink>
+											<ContextMenu name="Декорация3КонтекстноеМеню" id="71"/>
+											<ExtendedTooltip name="Декорация3РасширеннаяПодсказка" id="72"/>
+											<Events>
+												<Event name="Click">СофтонитНажатие</Event>
+											</Events>
+										</LabelDecoration>
+										<Button name="ЗавершитьРаботу3" id="213">
+											<Type>UsualButton</Type>
+											<Height>2</Height>
+											<CommandName>Form.Command.ЗавершитьРаботу</CommandName>
+											<ExtendedTooltip name="ЗавершитьРаботу3РасширеннаяПодсказка" id="214"/>
+										</Button>
+										<Button name="ЗапроситьАктивационныеДанные" id="186">
+											<Type>UsualButton</Type>
+											<Height>2</Height>
+											<CommandName>Form.Command.ЗапроситьАктивационныеДанные</CommandName>
+											<ExtendedTooltip name="ЗапроситьАктивационныеДанныеРасширеннаяПодсказка" id="187"/>
+										</Button>
+										<Button name="ПерейтиКАктивации" id="75">
+											<Type>UsualButton</Type>
+											<DefaultButton>true</DefaultButton>
+											<Height>2</Height>
+											<CommandName>Form.Command.ПродолжитьВыполнение</CommandName>
+											<PictureLocation>Right</PictureLocation>
+											<ExtendedTooltip name="ПерейтиКАктивацииРасширеннаяПодсказка" id="76"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="Активация" id="41">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Активация</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="АктивацияРасширеннаяПодсказка" id="42"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаКонфигурацияНеАктивирована" id="1">
+							<EnableContentChange>true</EnableContentChange>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа конфигурация не активирована</v8:content>
+								</v8:item>
+							</Title>
+							<Height>4</Height>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКонфигурацияНеАктивированаРасширеннаяПодсказка" id="21"/>
+							<ChildItems>
+								<LabelDecoration name="ДекорацияИнфо" id="4">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<HorizontalStretch>true</HorizontalStretch>
+									<VerticalStretch>false</VerticalStretch>
+									<TextColor>#FF0000</TextColor>
+									<Font ref="style:NormalTextFont" height="11" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Конфигурация не активирована!</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<VerticalAlign>Center</VerticalAlign>
+									<ContextMenu name="ДекорацияИнфоКонтекстноеМеню" id="5"/>
+									<ExtendedTooltip name="ДекорацияИнфоРасширеннаяПодсказка" id="24"/>
+								</LabelDecoration>
+								<UsualGroup name="ГруппаТекстКонфигурацияНеАктивирована" id="166">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа текст конфигурация не активирована</v8:content>
+										</v8:item>
+									</Title>
+									<Group>AlwaysHorizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаТекстКонфигурацияНеАктивированаРасширеннаяПодсказка" id="167"/>
+									<ChildItems>
+										<LabelDecoration name="ДекорацияТекст" id="8">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<Height>2</Height>
+											<AutoMaxHeight>false</AutoMaxHeight>
+											<HorizontalStretch>true</HorizontalStretch>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Приготовьте ключ активации (его Вы получили по электронной почте после покупки) и ИНН/КПП Вашей организации.
+Введите эти данные и активируйте конфигурацию.</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияТекстКонтекстноеМеню" id="9"/>
+											<ExtendedTooltip name="ДекорацияТекстРасширеннаяПодсказка" id="25"/>
+										</LabelDecoration>
+										<Button name="ПараметрыСервера2" id="164">
+											<Type>UsualButton</Type>
+											<Height>1</Height>
+											<CommandName>Form.Command.ПараметрыСервера</CommandName>
+											<ExtendedTooltip name="ПараметрыСервера2РасширеннаяПодсказка" id="165"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<HTMLDocumentField name="ПолеАктивации" id="77">
+							<DataPath>ПолеАктивации</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<ContextMenu name="ПолеАктивацииКонтекстноеМеню" id="78"/>
+							<ExtendedTooltip name="ПолеАктивацииРасширеннаяПодсказка" id="79"/>
+							<Events>
+								<Event name="OnClick">ПолеАктивацииПриНажатии</Event>
+							</Events>
+						</HTMLDocumentField>
+					</ChildItems>
+				</Page>
+				<Page name="НедостаточноЛицензий" id="83">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Недостаточно лицензий</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="НедостаточноЛицензийРасширеннаяПодсказка" id="84"/>
+					<ChildItems>
+						<LabelDecoration name="ДекорацияИнфо1" id="88">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<HorizontalStretch>true</HorizontalStretch>
+							<VerticalStretch>false</VerticalStretch>
+							<TextColor>#3366FF</TextColor>
+							<Font ref="style:NormalTextFont" height="11" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Недостаточно лицензий</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalAlign>Center</HorizontalAlign>
+							<VerticalAlign>Center</VerticalAlign>
+							<ContextMenu name="ДекорацияИнфо1КонтекстноеМеню" id="89"/>
+							<ExtendedTooltip name="ДекорацияИнфо1РасширеннаяПодсказка" id="90"/>
+						</LabelDecoration>
+						<LabelDecoration name="ДекорацияНедостаточноЛицензий" id="85">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>В данный момент, превышено число пользователей, которые могут одновременно работать в конфигурации.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияНедостаточноЛицензийКонтекстноеМеню" id="86"/>
+							<ExtendedTooltip name="ДекорацияНедостаточноЛицензийРасширеннаяПодсказка" id="87"/>
+						</LabelDecoration>
+						<LabelDecoration name="Декорация2" id="94">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Чтобы вы могли продолжить работу, решить проблему можно несколькими способами:
+
+&lt;b&gt;1.&lt;/&gt; Работу должен завершить один или несколько активных пользователей. Обратите внимание суммируются все пользователи во всех информационных базах, которые защищены.
+
+&lt;b&gt;2.&lt;/&gt; Если вы сталкиваетесь с подобной проблемой достаточно часто, возможно необходимо рассмотреть возможность докупить необходимое количество лицензий и работать комфортно всем пользователям конфигурации.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Декорация2КонтекстноеМеню" id="95"/>
+							<ExtendedTooltip name="Декорация2РасширеннаяПодсказка" id="96"/>
+						</LabelDecoration>
+						<UsualGroup name="ГруппаРасширитьВозможности" id="97">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа расширить возможности</v8:content>
+								</v8:item>
+							</Title>
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаРасширитьВозможностиРасширеннаяПодсказка" id="98"/>
+							<ChildItems>
+								<PictureDecoration name="КартинкаКупить" id="99">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Картинка купить</v8:content>
+										</v8:item>
+									</Title>
+									<Hyperlink>true</Hyperlink>
+									<Picture>
+										<xr:Ref>CommonPicture.КупитьДополнительныеЛицензии</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="КартинкаКупитьКонтекстноеМеню" id="100"/>
+									<ExtendedTooltip name="КартинкаКупитьРасширеннаяПодсказка" id="101"/>
+									<Events>
+										<Event name="Click">КупитьЛицензииНажатие</Event>
+									</Events>
+								</PictureDecoration>
+								<UsualGroup name="ГруппаНадписиРасширитьВозможности" id="102">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа надписи расширить возможности</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаНадписиРасширитьВозможностиРасширеннаяПодсказка" id="103"/>
+									<ChildItems>
+										<LabelDecoration name="Декорация6" id="180">
+											<ContextMenu name="Декорация6КонтекстноеМеню" id="181"/>
+											<ExtendedTooltip name="Декорация6РасширеннаяПодсказка" id="182"/>
+										</LabelDecoration>
+										<LabelDecoration name="Декорация5" id="104">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Расширить возможности и приобрести лицензии на дополнительные соединения.</v8:content>
+												</v8:item>
+											</Title>
+											<Hyperlink>true</Hyperlink>
+											<ContextMenu name="Декорация5КонтекстноеМеню" id="105"/>
+											<ExtendedTooltip name="Декорация5РасширеннаяПодсказка" id="106"/>
+											<Events>
+												<Event name="Click">КупитьЛицензииНажатие</Event>
+											</Events>
+										</LabelDecoration>
+										<LabelDecoration name="Декорация7" id="110">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Это позволит Вам запускать конфигурацию для большего количества пользователей.</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="Декорация7КонтекстноеМеню" id="111"/>
+											<ExtendedTooltip name="Декорация7РасширеннаяПодсказка" id="112"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<LabelDecoration name="Декорация4" id="139">
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<VerticalStretch>true</VerticalStretch>
+							<ContextMenu name="Декорация4КонтекстноеМеню" id="140"/>
+							<ExtendedTooltip name="Декорация4РасширеннаяПодсказка" id="141"/>
+						</LabelDecoration>
+						<UsualGroup name="ГруппаКнопкиНедостаточноЛицензий" id="142">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа кнопки недостаточно лицензий</v8:content>
+								</v8:item>
+							</Title>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКнопкиНедостаточноЛицензийРасширеннаяПодсказка" id="143"/>
+							<ChildItems>
+								<LabelDecoration name="Декорация11" id="144">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<HorizontalStretch>true</HorizontalStretch>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>https://softonit.ru</v8:content>
+										</v8:item>
+									</Title>
+									<Hyperlink>true</Hyperlink>
+									<ContextMenu name="Декорация11КонтекстноеМеню" id="145"/>
+									<ExtendedTooltip name="Декорация11РасширеннаяПодсказка" id="146"/>
+									<Events>
+										<Event name="Click">СофтонитНажатие</Event>
+									</Events>
+								</LabelDecoration>
+								<Button name="ЗавершитьРаботу2" id="211">
+									<Type>UsualButton</Type>
+									<Height>2</Height>
+									<CommandName>Form.Command.ЗавершитьРаботу</CommandName>
+									<ExtendedTooltip name="ЗавершитьРаботу2РасширеннаяПодсказка" id="212"/>
+								</Button>
+								<Button name="ПараметрыСервера" id="160">
+									<Type>UsualButton</Type>
+									<Height>2</Height>
+									<CommandName>Form.Command.ПараметрыСервера</CommandName>
+									<ExtendedTooltip name="ПараметрыСервераРасширеннаяПодсказка" id="161"/>
+								</Button>
+								<Button name="ПовторитьПроверкуСоединений" id="137">
+									<Type>UsualButton</Type>
+									<Height>2</Height>
+									<CommandName>Form.Command.ПродолжитьВыполнение</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Повторить</v8:content>
+										</v8:item>
+									</Title>
+									<PictureLocation>Right</PictureLocation>
+									<ExtendedTooltip name="ПовторитьПроверкуСоединенийРасширеннаяПодсказка" id="138"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="НетОбновлений" id="113">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Нет обновлений</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="НетОбновленийРасширеннаяПодсказка" id="114"/>
+					<ChildItems>
+						<LabelDecoration name="ДекорацияИнфо3" id="115">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<HorizontalStretch>true</HorizontalStretch>
+							<VerticalStretch>false</VerticalStretch>
+							<TextColor>#3366FF</TextColor>
+							<Font ref="style:NormalTextFont" height="11" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Проблемы с установкой обновления</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalAlign>Center</HorizontalAlign>
+							<VerticalAlign>Center</VerticalAlign>
+							<ContextMenu name="ДекорацияИнфо3КонтекстноеМеню" id="116"/>
+							<ExtendedTooltip name="ДекорацияИнфо3РасширеннаяПодсказка" id="117"/>
+						</LabelDecoration>
+						<LabelDecoration name="ДекорацияНетОбновлений" id="118">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Вы установили версию конфигурации %Версия%, которая была выпущена %ВерсияДата%, уже после срока окончания техподдержки %ДатаОкончанияТехподдержки%.
+Обновления к программам, также, как и сами программы, являются объектами исключительного права и распространяются по правилам, установленным правообладателем в соответствии со ст. 1225 Гражданского кодекса. Несанкционированное распространение и использование обновлений и информационных ресурсов рассматриваются как нарушение авторского права и преследуются по ст. 1301 Гражданского кодекса РФ, ст. 7.12 Кодекса Российской Федерации об административных правонарушениях, ст. 146 Уголовного кодекса РФ.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияНетОбновленийКонтекстноеМеню" id="119"/>
+							<ExtendedTooltip name="ДекорацияНетОбновленийРасширеннаяПодсказка" id="120"/>
+						</LabelDecoration>
+						<LabelDecoration name="Декорация14" id="157">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Вы не можете использовать данную версию конфигурации. Перейдите на предыдущую версию программы, или приобретите обновления.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Декорация14КонтекстноеМеню" id="158"/>
+							<ExtendedTooltip name="Декорация14РасширеннаяПодсказка" id="159"/>
+						</LabelDecoration>
+						<UsualGroup name="ГруппаНетОбновлений" id="121">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа нет обновлений</v8:content>
+								</v8:item>
+							</Title>
+							<Group>AlwaysHorizontal</Group>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаНетОбновленийРасширеннаяПодсказка" id="122"/>
+							<ChildItems>
+								<PictureDecoration name="КартинкаКупить1" id="123">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Картинка купить</v8:content>
+										</v8:item>
+									</Title>
+									<Hyperlink>true</Hyperlink>
+									<Picture>
+										<xr:Ref>CommonPicture.КупитьДополнительныеЛицензии</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="КартинкаКупить1КонтекстноеМеню" id="124"/>
+									<ExtendedTooltip name="КартинкаКупить1РасширеннаяПодсказка" id="125"/>
+									<Events>
+										<Event name="Click">КупитьОбновленияНажатие</Event>
+									</Events>
+								</PictureDecoration>
+								<UsualGroup name="ГруппаНадписиНетОбновлений" id="126">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа надписи нет обновлений</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаНадписиНетОбновленийРасширеннаяПодсказка" id="127"/>
+									<ChildItems>
+										<LabelDecoration name="Декорация9" id="131">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Приобрести обновления на сайте</v8:content>
+												</v8:item>
+											</Title>
+											<Hyperlink>true</Hyperlink>
+											<ContextMenu name="Декорация9КонтекстноеМеню" id="132"/>
+											<ExtendedTooltip name="Декорация9РасширеннаяПодсказка" id="133"/>
+											<Events>
+												<Event name="Click">КупитьОбновленияНажатие</Event>
+											</Events>
+										</LabelDecoration>
+										<LabelDecoration name="Декорация10" id="134">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Это позволит Вам обновить конфигурацию на последнюю версию.</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="Декорация10КонтекстноеМеню" id="135"/>
+											<ExtendedTooltip name="Декорация10РасширеннаяПодсказка" id="136"/>
+										</LabelDecoration>
+										<LabelDecoration name="ДекорацияПерейтиКАктивации" id="177">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Перейти к активации поддержки и получения обновлений.</v8:content>
+												</v8:item>
+											</Title>
+											<Hyperlink>true</Hyperlink>
+											<ContextMenu name="ДекорацияПерейтиКАктивацииКонтекстноеМеню" id="178"/>
+											<ExtendedTooltip name="ДекорацияПерейтиКАктивацииРасширеннаяПодсказка" id="179"/>
+											<Events>
+												<Event name="Click">ДекорацияПерейтиКАктивацииНажатие</Event>
+											</Events>
+										</LabelDecoration>
+										<LabelDecoration name="Декорация16" id="183">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Введите ключ для активации новых обновлений, без этой процедуры обновления не будут до конца установлены.</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="Декорация16КонтекстноеМеню" id="184"/>
+											<ExtendedTooltip name="Декорация16РасширеннаяПодсказка" id="185"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<LabelDecoration name="Декорация13" id="154">
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<VerticalStretch>true</VerticalStretch>
+							<ContextMenu name="Декорация13КонтекстноеМеню" id="155"/>
+							<ExtendedTooltip name="Декорация13РасширеннаяПодсказка" id="156"/>
+						</LabelDecoration>
+						<UsualGroup name="ГруппаВажноНетОбновлений" id="218">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа важно нет обновлений</v8:content>
+								</v8:item>
+							</Title>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<BackColor>style:ЦветФонаАнтикБелый</BackColor>
+							<ExtendedTooltip name="ГруппаВажноНетОбновленийРасширеннаяПодсказка" id="219"/>
+							<ChildItems>
+								<LabelDecoration name="Декорация19" id="215">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Title formatted="true">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>&lt;b&gt;&lt;color #FF0000&gt;Внимание!&lt;/&gt;&lt;/&gt; Если вы продлили обновления и видите это сообщение, то вы не активировали ключ, который шел в электронном письме вместе с продлением обновления. Найдите в письмах этот ключ, активируйте его, и конфигурация заработает.</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="Декорация19КонтекстноеМеню" id="216"/>
+									<ExtendedTooltip name="Декорация19РасширеннаяПодсказка" id="217"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаКнопкиНетОбновлений" id="147">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа кнопки нет обновлений</v8:content>
+								</v8:item>
+							</Title>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКнопкиНетОбновленийРасширеннаяПодсказка" id="148"/>
+							<ChildItems>
+								<LabelDecoration name="Декорация12" id="149">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<HorizontalStretch>true</HorizontalStretch>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>https://softonit.ru</v8:content>
+										</v8:item>
+									</Title>
+									<Hyperlink>true</Hyperlink>
+									<ContextMenu name="Декорация12КонтекстноеМеню" id="150"/>
+									<ExtendedTooltip name="Декорация12РасширеннаяПодсказка" id="151"/>
+									<Events>
+										<Event name="Click">СофтонитНажатие</Event>
+									</Events>
+								</LabelDecoration>
+								<Button name="ЗавершитьРаботу" id="152">
+									<Type>UsualButton</Type>
+									<Height>2</Height>
+									<CommandName>Form.Command.ЗавершитьРаботу</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Завершить работу</v8:content>
+										</v8:item>
+									</Title>
+									<PictureLocation>Right</PictureLocation>
+									<ExtendedTooltip name="ЗавершитьРаботуРасширеннаяПодсказка" id="153"/>
+								</Button>
+								<Button name="ПараметрыСервера1" id="162">
+									<Type>UsualButton</Type>
+									<Height>2</Height>
+									<CommandName>Form.Command.ПараметрыСервера</CommandName>
+									<ExtendedTooltip name="ПараметрыСервера1РасширеннаяПодсказка" id="163"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="НесоответствиеВерсииСервера" id="188">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Несоответствие версии сервера</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="НесоответствиеВерсииСервераРасширеннаяПодсказка" id="189"/>
+					<ChildItems>
+						<LabelDecoration name="ДекорацияИнфо4" id="190">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<HorizontalStretch>true</HorizontalStretch>
+							<VerticalStretch>false</VerticalStretch>
+							<TextColor>#3366FF</TextColor>
+							<Font ref="style:NormalTextFont" height="11" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Несоответствие версии сервера</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalAlign>Center</HorizontalAlign>
+							<VerticalAlign>Center</VerticalAlign>
+							<ContextMenu name="ДекорацияИнфо4КонтекстноеМеню" id="191"/>
+							<ExtendedTooltip name="ДекорацияИнфо4РасширеннаяПодсказка" id="192"/>
+						</LabelDecoration>
+						<LabelDecoration name="ДекорацияНесоответствиеВерсий" id="193">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;Текст&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияНесоответствиеВерсийКонтекстноеМеню" id="194"/>
+							<ExtendedTooltip name="ДекорацияНесоответствиеВерсийРасширеннаяПодсказка" id="195"/>
+						</LabelDecoration>
+						<LabelDecoration name="Декорация8" id="208">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Скачать все версии системы защиты можно на странице &lt;link https://softonit.ru/sls/&gt;https://softonit.ru/sls/
+&lt;/&gt;Обратите внимание, что для некоторых версий конфигурации необходимы конкретные версии системы защиты.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Декорация8КонтекстноеМеню" id="209"/>
+							<ExtendedTooltip name="Декорация8РасширеннаяПодсказка" id="210"/>
+							<Events>
+								<Event name="Click">Декорация8Нажатие</Event>
+							</Events>
+						</LabelDecoration>
+						<LabelDecoration name="Декорация18" id="205">
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<VerticalStretch>true</VerticalStretch>
+							<ContextMenu name="Декорация18КонтекстноеМеню" id="206"/>
+							<ExtendedTooltip name="Декорация18РасширеннаяПодсказка" id="207"/>
+						</LabelDecoration>
+						<UsualGroup name="ГруппаКнопкиНесоответствиеВерсий" id="196">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа кнопки несоответствие версий</v8:content>
+								</v8:item>
+							</Title>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКнопкиНесоответствиеВерсийРасширеннаяПодсказка" id="197"/>
+							<ChildItems>
+								<LabelDecoration name="Декорация17" id="198">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<HorizontalStretch>true</HorizontalStretch>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>https://softonit.ru</v8:content>
+										</v8:item>
+									</Title>
+									<Hyperlink>true</Hyperlink>
+									<ContextMenu name="Декорация17КонтекстноеМеню" id="199"/>
+									<ExtendedTooltip name="Декорация17РасширеннаяПодсказка" id="200"/>
+									<Events>
+										<Event name="Click">СофтонитНажатие</Event>
+									</Events>
+								</LabelDecoration>
+								<Button name="ЗавершитьРаботу1" id="203">
+									<Type>UsualButton</Type>
+									<Height>2</Height>
+									<CommandName>Form.Command.ЗавершитьРаботу</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Завершить работу</v8:content>
+										</v8:item>
+									</Title>
+									<PictureLocation>Right</PictureLocation>
+									<ExtendedTooltip name="ЗавершитьРаботу1РасширеннаяПодсказка" id="204"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ТекстСообщения" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текст сообщения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="РезультатИнициализации" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Результат инициализации</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="АдресСервера" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес сервера</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="РасположениеСервера" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расположение сервера</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПортСервера" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Порт сервера</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>0</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПолеАктивации" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поле активации</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ОбщееКоличествоПользователей" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Общее количество пользователей</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПродолжитьВыполнение" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Продолжить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Продолжить выполнение</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.MoveRight</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПродолжитьВыполнение</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЗавершитьРаботу" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Завершить работу</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Завершить работу</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗавершитьРаботу</Action>
+		</Command>
+		<Command name="ПараметрыСервера" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры сервера</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры сервера</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПараметрыСервера</Action>
+		</Command>
+		<Command name="ЗапроситьАктивационныеДанные" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запросить активационные данные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запросить активационные данные</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗапроситьАктивационныеДанные</Action>
+		</Command>
+	</Commands>
+</Form>

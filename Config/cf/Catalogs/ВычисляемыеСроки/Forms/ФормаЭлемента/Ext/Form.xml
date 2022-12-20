@@ -1,0 +1,331 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа1" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа1</v8:content>
+				</v8:item>
+			</Title>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="17"/>
+			<ChildItems>
+				<InputField name="Родитель" id="7">
+					<DataPath>Объект.Parent</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РодительКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="РодительРасширеннаяПодсказка" id="9"/>
+				</InputField>
+				<InputField name="Код" id="1">
+					<DataPath>Объект.Code</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Наименование" id="4">
+			<DataPath>Объект.Description</DataPath>
+			<DefaultItem>true</DefaultItem>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<UsualGroup name="ГруппаДобавить" id="18" DisplayImportance="VeryHigh">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить</v8:content>
+				</v8:item>
+			</Title>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>StrongSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаДобавитьРасширеннаяПодсказка" id="19"/>
+			<ChildItems>
+				<InputField name="Операция" id="48">
+					<DataPath>Объект.Операция</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<InputHint>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Добавить</v8:content>
+						</v8:item>
+					</InputHint>
+					<ContextMenu name="ОперацияКонтекстноеМеню" id="49"/>
+					<ExtendedTooltip name="ОперацияРасширеннаяПодсказка" id="50"/>
+					<Events>
+						<Event name="OnChange">ОперацияПриИзменении</Event>
+					</Events>
+				</InputField>
+				<UsualGroup name="Группа3" id="51">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа3</v8:content>
+						</v8:item>
+					</Title>
+					<Group>AlwaysHorizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<BackColor>web:AntiqueWhite</BackColor>
+					<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="52"/>
+					<ChildItems>
+						<InputField name="Месяцев" id="23">
+							<DataPath>Объект.Месяцев</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>мес.</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<ContextMenu name="МесяцевКонтекстноеМеню" id="24"/>
+							<ExtendedTooltip name="МесяцевРасширеннаяПодсказка" id="25"/>
+							<Events>
+								<Event name="OnChange">ПриИзмененииЧислаДобавить</Event>
+							</Events>
+						</InputField>
+						<InputField name="Лет" id="20">
+							<DataPath>Объект.Недель</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>недель</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<ContextMenu name="ЛетКонтекстноеМеню" id="21"/>
+							<ExtendedTooltip name="ЛетРасширеннаяПодсказка" id="22"/>
+							<Events>
+								<Event name="OnChange">ПриИзмененииЧислаДобавить</Event>
+							</Events>
+						</InputField>
+						<InputField name="Дней" id="26">
+							<DataPath>Объект.Дней</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>дн.</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<ContextMenu name="ДнейКонтекстноеМеню" id="27"/>
+							<ExtendedTooltip name="ДнейРасширеннаяПодсказка" id="28"/>
+							<Events>
+								<Event name="OnChange">ПриИзмененииЧислаДобавить</Event>
+							</Events>
+						</InputField>
+						<InputField name="Часов" id="29">
+							<DataPath>Объект.Часов</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ч.</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<ContextMenu name="ЧасовКонтекстноеМеню" id="30"/>
+							<ExtendedTooltip name="ЧасовРасширеннаяПодсказка" id="31"/>
+							<Events>
+								<Event name="OnChange">ПриИзмененииЧислаДобавить</Event>
+							</Events>
+						</InputField>
+						<InputField name="Минут" id="32">
+							<DataPath>Объект.Минут</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>мин.</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<ContextMenu name="МинутКонтекстноеМеню" id="33"/>
+							<ExtendedTooltip name="МинутРасширеннаяПодсказка" id="34"/>
+							<Events>
+								<Event name="OnChange">ПриИзмененииЧислаДобавить</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа2" id="35">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа2</v8:content>
+				</v8:item>
+			</Title>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="36"/>
+			<ChildItems>
+				<InputField name="ВариантВычисляемойСтроки" id="13">
+					<DataPath>Объект.ВариантВычисляемойСтроки</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<InputHint>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Конец периода</v8:content>
+						</v8:item>
+					</InputHint>
+					<ContextMenu name="ВариантВычисляемойСтрокиКонтекстноеМеню" id="14"/>
+					<ExtendedTooltip name="ВариантВычисляемойСтрокиРасширеннаяПодсказка" id="15"/>
+					<Events>
+						<Event name="OnChange">ВариантВычисляемойСтрокиПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="Периодичность" id="10">
+					<DataPath>Объект.Периодичность</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<InputHint>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>День</v8:content>
+						</v8:item>
+					</InputHint>
+					<ContextMenu name="ПериодичностьКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="ПериодичностьРасширеннаяПодсказка" id="12"/>
+					<Events>
+						<Event name="OnChange">ПериодичностьПриИзменении</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Пример" id="37" DisplayImportance="High">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пример</v8:content>
+				</v8:item>
+			</Title>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Group>Vertical</Group>
+			<Representation>StrongSeparation</Representation>
+			<BackColor>web:WhiteSmoke</BackColor>
+			<ExtendedTooltip name="ПримерРасширеннаяПодсказка" id="38"/>
+			<ChildItems>
+				<UsualGroup name="Группа4" id="59">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа4</v8:content>
+						</v8:item>
+					</Title>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="60"/>
+					<ChildItems>
+						<LabelDecoration name="Декорация1" id="53">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<TextColor>#3366FF</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Это тест расчета вычисляемой даты. Выберите  график предоставления услуги и выберите тестовую дату создания задания.
+В результате будет вычислена дата результат. По этому алгоритмы вычисляется дата реакции и дата выполнения.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Декорация1КонтекстноеМеню" id="54"/>
+							<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="55"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<InputField name="ГрафикПредоставленияУслуги" id="61">
+					<DataPath>ГрафикПредоставленияУслуги</DataPath>
+					<ContextMenu name="ГрафикПредоставленияУслугиКонтекстноеМеню" id="62"/>
+					<ExtendedTooltip name="ГрафикПредоставленияУслугиРасширеннаяПодсказка" id="63"/>
+					<Events>
+						<Event name="OnChange">ТекДатаПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="ТекДата" id="39">
+					<DataPath>ДатаПример</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата задания</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ТекДатаКонтекстноеМеню" id="40"/>
+					<ExtendedTooltip name="ТекДатаРасширеннаяПодсказка" id="41"/>
+					<Events>
+						<Event name="OnChange">ТекДатаПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="Результат" id="45">
+					<DataPath>Результат</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вычисляемый результат</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="РезультатКонтекстноеМеню" id="46"/>
+					<ExtendedTooltip name="РезультатРасширеннаяПодсказка" id="47"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ВычисляемыеСроки</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ДатаПример" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата пример</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Результат" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Результат</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ГрафикПредоставленияУслуги" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>График предоставления услуги</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Календари</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+</Form>

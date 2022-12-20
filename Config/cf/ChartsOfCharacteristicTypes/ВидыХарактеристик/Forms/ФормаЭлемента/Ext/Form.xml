@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Наименование" id="3">
+			<DataPath>Объект.Description</DataPath>
+			<DefaultItem>true</DefaultItem>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="4"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="27"/>
+		</InputField>
+		<InputField name="ТипЗначения" id="7">
+			<DataPath>Объект.ValueType</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ContextMenu name="ТипЗначенияКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ТипЗначенияРасширеннаяПодсказка" id="28"/>
+		</InputField>
+		<UsualGroup name="Группа1" id="9">
+			<EnableContentChange>true</EnableContentChange>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа1</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="29"/>
+			<ChildItems>
+				<InputField name="Родитель" id="5">
+					<DataPath>Объект.Parent</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<ContextMenu name="РодительКонтекстноеМеню" id="6"/>
+					<ExtendedTooltip name="РодительРасширеннаяПодсказка" id="30"/>
+				</InputField>
+				<InputField name="Код" id="1">
+					<DataPath>Объект.Code</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="31"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="ГруппаИмпорт" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа импорт</v8:content>
+				</v8:item>
+			</Title>
+			<VerticalStretch>true</VerticalStretch>
+			<ExtendedTooltip name="ГруппаИмпортРасширеннаяПодсказка" id="32"/>
+			<ChildItems>
+				<Page name="WMI" id="11">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>WMI</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="WMIРасширеннаяПодсказка" id="33"/>
+					<ChildItems>
+						<InputField name="СвойствоWMI" id="12">
+							<DataPath>Объект.СвойствоWMI</DataPath>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<ContextMenu name="СвойствоWMIКонтекстноеМеню" id="13"/>
+							<ExtendedTooltip name="СвойствоWMIРасширеннаяПодсказка" id="34"/>
+						</InputField>
+						<InputField name="ДелитьНаЧислоWMI" id="14">
+							<DataPath>Объект.ДелитьНаЧислоWMI</DataPath>
+							<ContextMenu name="ДелитьНаЧислоWMIКонтекстноеМеню" id="15"/>
+							<ExtendedTooltip name="ДелитьНаЧислоWMIРасширеннаяПодсказка" id="35"/>
+						</InputField>
+						<InputField name="ИсключенияWMI" id="55">
+							<DataPath>Объект.ИсключенияWMI</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Исключения в значениях WMI (подстроки по одной на каждую строку)</v8:content>
+								</v8:item>
+							</Title>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MultiLine>true</MultiLine>
+							<ContextMenu name="ИсключенияWMIКонтекстноеМеню" id="56"/>
+							<ExtendedTooltip name="ИсключенияWMIРасширеннаяПодсказка" id="57"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+				<Page name="AIDA" id="16">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>AIDA</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="AIDAРасширеннаяПодсказка" id="36"/>
+					<ChildItems>
+						<InputField name="СвойствоAIDA" id="17">
+							<DataPath>Объект.СвойствоAIDA</DataPath>
+							<ContextMenu name="СвойствоAIDAКонтекстноеМеню" id="18"/>
+							<ExtendedTooltip name="СвойствоAIDAРасширеннаяПодсказка" id="37"/>
+						</InputField>
+						<InputField name="ДелитьНаЧислоAIDA" id="19">
+							<DataPath>Объект.ДелитьНаЧислоAIDA</DataPath>
+							<ContextMenu name="ДелитьНаЧислоAIDAКонтекстноеМеню" id="20"/>
+							<ExtendedTooltip name="ДелитьНаЧислоAIDAРасширеннаяПодсказка" id="38"/>
+						</InputField>
+						<CheckBoxField name="ОпределениеБезРодительскойСекцииAIDA" id="21">
+							<DataPath>Объект.ОпределениеБезРодительскойСекцииAIDA</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ОпределениеБезРодительскойСекцииAIDAКонтекстноеМеню" id="22"/>
+							<ExtendedTooltip name="ОпределениеБезРодительскойСекцииAIDAРасширеннаяПодсказка" id="39"/>
+						</CheckBoxField>
+						<CheckBoxField name="ПриПоискеВключатьЗначениеХарактеристикиСекцииAIDA" id="23">
+							<DataPath>Объект.ПриПоискеВключатьЗначениеПеременнойСекцииAIDA</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ПриПоискеВключатьЗначениеХарактеристикиСекцииAIDAКонтекстноеМеню" id="24"/>
+							<ExtendedTooltip name="ПриПоискеВключатьЗначениеХарактеристикиСекцииAIDAРасширеннаяПодсказка" id="40"/>
+						</CheckBoxField>
+						<InputField name="ИсключенияAIDA" id="25">
+							<DataPath>Объект.ИсключенияAIDA</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Исключения в значениях AIDA (подстроки по одной на каждую строку)</v8:content>
+								</v8:item>
+							</Title>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MultiLine>true</MultiLine>
+							<ContextMenu name="ИсключенияAIDAКонтекстноеМеню" id="26"/>
+							<ExtendedTooltip name="ИсключенияAIDAРасширеннаяПодсказка" id="41"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+				<Page name="Прочее" id="42">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Прочее</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ПрочееРасширеннаяПодсказка" id="43"/>
+					<ChildItems>
+						<CheckBoxField name="ИспользоватьВАвтоНаименовании" id="52">
+							<DataPath>Объект.ИспользоватьВАвтоНаименовании</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ИспользоватьВАвтоНаименованииКонтекстноеМеню" id="53"/>
+							<ExtendedTooltip name="ИспользоватьВАвтоНаименованииРасширеннаяПодсказка" id="54"/>
+						</CheckBoxField>
+						<UsualGroup name="Группа2" id="50">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа2</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="51"/>
+							<ChildItems>
+								<CheckBoxField name="ИспользоватьПредставлениеВАвтоНаименовании" id="44">
+									<DataPath>Объект.ИспользоватьПредставлениеВАвтоНаименовании</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Использовать</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>None</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ИспользоватьПредставлениеВАвтоНаименованииКонтекстноеМеню" id="45"/>
+									<ExtendedTooltip name="ИспользоватьПредставлениеВАвтоНаименованииРасширеннаяПодсказка" id="46"/>
+									<Events>
+										<Event name="OnChange">ИспользоватьПредставлениеВАвтоНаименованииПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<InputField name="ПредставлениеВАвтоНаименовании" id="47">
+									<DataPath>Объект.ПредставлениеВАвтоНаименовании</DataPath>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<ContextMenu name="ПредставлениеВАвтоНаименованииКонтекстноеМеню" id="48"/>
+									<ExtendedTooltip name="ПредставлениеВАвтоНаименованииРасширеннаяПодсказка" id="49"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:ChartOfCharacteristicTypesObject.ВидыХарактеристик</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

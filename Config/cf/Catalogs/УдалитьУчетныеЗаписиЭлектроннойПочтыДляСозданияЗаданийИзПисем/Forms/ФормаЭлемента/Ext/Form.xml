@@ -1,0 +1,535 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаОсновныеДанные" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа основные данные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа основные данные</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОсновныеДанныеРасширеннаяПодсказка" id="29"/>
+			<ChildItems>
+				<InputField name="УчетнаяЗапись" id="3">
+					<DataPath>Объект.УчетнаяЗапись</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<ContextMenu name="УчетнаяЗаписьКонтекстноеМеню" id="4"/>
+					<ExtendedTooltip name="УчетнаяЗаписьРасширеннаяПодсказка" id="30"/>
+				</InputField>
+				<CheckBoxField name="Использовать" id="25">
+					<DataPath>Объект.Использовать</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ИспользоватьКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="ИспользоватьРасширеннаяПодсказка" id="31"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="Страницы" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="32"/>
+			<ChildItems>
+				<Page name="ЗначенияПодставляемыеПоУмолчанию" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Значения подставляемые по умолчанию</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Значения подставляемые по умолчанию</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ЗначенияПодставляемыеПоУмолчаниюРасширеннаяПодсказка" id="33"/>
+					<ChildItems>
+						<InputField name="ТипПроцесса" id="91">
+							<DataPath>Объект.ТипПроцесса</DataPath>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<ContextMenu name="ТипПроцессаКонтекстноеМеню" id="92"/>
+							<ExtendedTooltip name="ТипПроцессаРасширеннаяПодсказка" id="93"/>
+						</InputField>
+						<InputField name="ОрганизацияПоУмолчанию" id="19">
+							<DataPath>Объект.ОрганизацияПоУмолчанию</DataPath>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<ContextMenu name="ОрганизацияПоУмолчаниюКонтекстноеМеню" id="20"/>
+							<ExtendedTooltip name="ОрганизацияПоУмолчаниюРасширеннаяПодсказка" id="34"/>
+						</InputField>
+						<InputField name="ПроцессПоУмолчанию" id="5">
+							<DataPath>Объект.ПроцессПоУмолчанию</DataPath>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<ContextMenu name="ПроцессПоУмолчаниюКонтекстноеМеню" id="6"/>
+							<ExtendedTooltip name="ПроцессПоУмолчаниюРасширеннаяПодсказка" id="35"/>
+						</InputField>
+						<UsualGroup name="Группа1" id="102">
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="103"/>
+							<ChildItems>
+								<InputField name="СервисПоУмолчанию" id="23">
+									<DataPath>Объект.СервисПоУмолчанию</DataPath>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<ContextMenu name="СервисПоУмолчаниюКонтекстноеМеню" id="24"/>
+									<ExtendedTooltip name="СервисПоУмолчаниюРасширеннаяПодсказка" id="36"/>
+								</InputField>
+								<InputField name="УслугаПоУмолчанию" id="104">
+									<DataPath>Объект.УслугаПоУмолчанию</DataPath>
+									<ContextMenu name="УслугаПоУмолчаниюКонтекстноеМеню" id="105"/>
+									<ExtendedTooltip name="УслугаПоУмолчаниюРасширеннаяПодсказка" id="106"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<InputField name="ИсполнительПоУмолчанию" id="7">
+							<DataPath>Объект.ИсполнительПоУмолчанию</DataPath>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<ContextMenu name="ИсполнительПоУмолчаниюКонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="ИсполнительПоУмолчаниюРасширеннаяПодсказка" id="37"/>
+						</InputField>
+						<UsualGroup name="ГруппаСрочностьВлияние" id="100">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа срочность влияние</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа срочность влияние</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаСрочностьВлияниеРасширеннаяПодсказка" id="101"/>
+							<ChildItems>
+								<InputField name="СрочностьПоУмолчанию" id="97">
+									<DataPath>Объект.СрочностьПоУмолчанию</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Срочность</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="СрочностьПоУмолчаниюКонтекстноеМеню" id="98"/>
+									<ExtendedTooltip name="СрочностьПоУмолчаниюРасширеннаяПодсказка" id="99"/>
+									<Events>
+										<Event name="OnChange">СрочностьПоУмолчаниюПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ВлияниеПоУмолчанию" id="94">
+									<DataPath>Объект.ВлияниеПоУмолчанию</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Влияние</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ВлияниеПоУмолчаниюКонтекстноеМеню" id="95"/>
+									<ExtendedTooltip name="ВлияниеПоУмолчаниюРасширеннаяПодсказка" id="96"/>
+									<Events>
+										<Event name="OnChange">ВлияниеПоУмолчаниюПриИзменении</Event>
+									</Events>
+								</InputField>
+								<LabelField name="ПриоритетПоУмолчанию" id="21">
+									<DataPath>Объект.ПриоритетПоУмолчанию</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Приоритет</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ПриоритетПоУмолчаниюКонтекстноеМеню" id="22"/>
+									<ExtendedTooltip name="ПриоритетПоУмолчаниюРасширеннаяПодсказка" id="38"/>
+								</LabelField>
+							</ChildItems>
+						</UsualGroup>
+						<LabelDecoration name="Декорация2" id="27">
+							<TextColor>#3366FF</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>* Значения по умолчанию могут быть пустыми.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Декорация2КонтекстноеМеню" id="28"/>
+							<ExtendedTooltip name="Декорация2РасширеннаяПодсказка" id="39"/>
+						</LabelDecoration>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаПапкиЭлектронныхПисем" id="67">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Фильтр электронных писем</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа папки электронных писем</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаПапкиЭлектронныхПисемРасширеннаяПодсказка" id="68"/>
+					<ChildItems>
+						<Table name="ПапкиЭлектронныхПисем" id="69">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Объект.ПапкиЭлектронныхПисем</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ПапкиЭлектронныхПисемКонтекстноеМеню" id="70"/>
+							<AutoCommandBar name="ПапкиЭлектронныхПисемКоманднаяПанель" id="71"/>
+							<ExtendedTooltip name="ПапкиЭлектронныхПисемРасширеннаяПодсказка" id="72"/>
+							<SearchStringAddition name="ПапкиЭлектронныхПисемСтрокаПоиска" id="73">
+								<AdditionSource>
+									<Item>ПапкиЭлектронныхПисем</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПапкиЭлектронныхПисемСтрокаПоискаКонтекстноеМеню" id="74"/>
+								<ExtendedTooltip name="ПапкиЭлектронныхПисемСтрокаПоискаРасширеннаяПодсказка" id="75"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ПапкиЭлектронныхПисемСостояниеПросмотра" id="76">
+								<AdditionSource>
+									<Item>ПапкиЭлектронныхПисем</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<HorizontalLocation>Left</HorizontalLocation>
+								<ContextMenu name="ПапкиЭлектронныхПисемСостояниеПросмотраКонтекстноеМеню" id="77"/>
+								<ExtendedTooltip name="ПапкиЭлектронныхПисемСостояниеПросмотраРасширеннаяПодсказка" id="78"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ПапкиЭлектронныхПисемУправлениеПоиском" id="79">
+								<AdditionSource>
+									<Item>ПапкиЭлектронныхПисем</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ПапкиЭлектронныхПисемУправлениеПоискомКонтекстноеМеню" id="80"/>
+								<ExtendedTooltip name="ПапкиЭлектронныхПисемУправлениеПоискомРасширеннаяПодсказка" id="81"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="OnEditEnd">ПапкиЭлектронныхПисемПриОкончанииРедактирования</Event>
+								<Event name="AfterDeleteRow">ПапкиЭлектронныхПисемПослеУдаления</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="ПапкиЭлектронныхПисемНомерСтроки" id="82">
+									<DataPath>Объект.ПапкиЭлектронныхПисем.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПапкиЭлектронныхПисемНомерСтрокиКонтекстноеМеню" id="83"/>
+									<ExtendedTooltip name="ПапкиЭлектронныхПисемНомерСтрокиРасширеннаяПодсказка" id="84"/>
+								</LabelField>
+								<InputField name="ПапкиЭлектронныхПисемПапкаЭлектронныхПисем" id="85">
+									<DataPath>Объект.ПапкиЭлектронныхПисем.ПапкаЭлектронныхПисем</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПапкиЭлектронныхПисемПапкаЭлектронныхПисемКонтекстноеМеню" id="86"/>
+									<ExtendedTooltip name="ПапкиЭлектронныхПисемПапкаЭлектронныхПисемРасширеннаяПодсказка" id="87"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+						<LabelDecoration name="Декорация3" id="88">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<HorizontalStretch>true</HorizontalStretch>
+							<TextColor>#3366FF</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Если эта таблица пуста, то создание заданий будет производиться по всем входящим письмам. Если же в списке будут папки, то только по тем письмам, которые находятся в них.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Декорация3КонтекстноеМеню" id="89"/>
+							<ExtendedTooltip name="Декорация3РасширеннаяПодсказка" id="90"/>
+						</LabelDecoration>
+					</ChildItems>
+				</Page>
+				<Page name="Инициаторы" id="107">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Инициаторы</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Инициаторы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ИнициаторыРасширеннаяПодсказка" id="108"/>
+					<ChildItems>
+						<UsualGroup name="Группа17" id="109">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Приоритет поиска клиентов и инициаторов клиентов при загрузке писем</v8:content>
+								</v8:item>
+							</Title>
+							<Representation>StrongSeparation</Representation>
+							<ExtendedTooltip name="Группа17РасширеннаяПодсказка" id="110"/>
+							<ChildItems>
+								<Table name="ПриоритетЗагрузки" id="111">
+									<Representation>List</Representation>
+									<Height>8</Height>
+									<RowSelectionMode>Row</RowSelectionMode>
+									<Header>false</Header>
+									<HorizontalLines>false</HorizontalLines>
+									<VerticalLines>false</VerticalLines>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<DataPath>ПриоритетОпределения</DataPath>
+									<RowPictureDataPath>ПриоритетОпределения.Picture</RowPictureDataPath>
+									<CommandSet>
+										<ExcludedCommand>Add</ExcludedCommand>
+										<ExcludedCommand>Change</ExcludedCommand>
+										<ExcludedCommand>CheckAll</ExcludedCommand>
+										<ExcludedCommand>Copy</ExcludedCommand>
+										<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+										<ExcludedCommand>Delete</ExcludedCommand>
+										<ExcludedCommand>EndEdit</ExcludedCommand>
+										<ExcludedCommand>Pickup</ExcludedCommand>
+										<ExcludedCommand>SelectAll</ExcludedCommand>
+										<ExcludedCommand>ShowMultipleSelection</ExcludedCommand>
+										<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+										<ExcludedCommand>SortListAsc</ExcludedCommand>
+										<ExcludedCommand>SortListDesc</ExcludedCommand>
+										<ExcludedCommand>UncheckAll</ExcludedCommand>
+									</CommandSet>
+									<ContextMenu name="ПриоритетЗагрузкиКонтекстноеМеню" id="112"/>
+									<AutoCommandBar name="ПриоритетЗагрузкиКоманднаяПанель" id="113">
+										<Autofill>false</Autofill>
+										<ChildItems>
+											<Button name="ПриоритетЗагрузкиПереместитьВниз" id="127">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Item.ПриоритетЗагрузки.StandardCommand.MoveUp</CommandName>
+												<ExtendedTooltip name="ПриоритетЗагрузкиПереместитьВнизРасширеннаяПодсказка" id="128"/>
+											</Button>
+											<Button name="ПриоритетЗагрузкиПереместитьВверх" id="129">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Item.ПриоритетЗагрузки.StandardCommand.MoveDown</CommandName>
+												<ExtendedTooltip name="ПриоритетЗагрузкиПереместитьВверхРасширеннаяПодсказка" id="130"/>
+											</Button>
+										</ChildItems>
+									</AutoCommandBar>
+									<ExtendedTooltip name="ПриоритетЗагрузкиРасширеннаяПодсказка" id="114"/>
+									<SearchStringAddition name="ПриоритетЗагрузкиСтрокаПоиска" id="115">
+										<AdditionSource>
+											<Item>ПриоритетЗагрузки</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ПриоритетЗагрузкиСтрокаПоискаКонтекстноеМеню" id="116"/>
+										<ExtendedTooltip name="ПриоритетЗагрузкиСтрокаПоискаРасширеннаяПодсказка" id="117"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ПриоритетЗагрузкиСостояниеПросмотра" id="118">
+										<AdditionSource>
+											<Item>ПриоритетЗагрузки</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<HorizontalLocation>Left</HorizontalLocation>
+										<ContextMenu name="ПриоритетЗагрузкиСостояниеПросмотраКонтекстноеМеню" id="119"/>
+										<ExtendedTooltip name="ПриоритетЗагрузкиСостояниеПросмотраРасширеннаяПодсказка" id="120"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ПриоритетЗагрузкиУправлениеПоиском" id="121">
+										<AdditionSource>
+											<Item>ПриоритетЗагрузки</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ПриоритетЗагрузкиУправлениеПоискомКонтекстноеМеню" id="122"/>
+										<ExtendedTooltip name="ПриоритетЗагрузкиУправлениеПоискомРасширеннаяПодсказка" id="123"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="BeforeAddRow">ПриоритетЗагрузкиПередНачаломДобавления</Event>
+										<Event name="BeforeDeleteRow">ПриоритетЗагрузкиПередУдалением</Event>
+										<Event name="BeforeRowChange">ПриоритетЗагрузкиПередНачаломИзменения</Event>
+									</Events>
+									<ChildItems>
+										<InputField name="ПриоритетЗагрузкиЗначение" id="131">
+											<DataPath>ПриоритетОпределения.Value</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ПриоритетЗагрузкиЗначениеКонтекстноеМеню" id="132"/>
+											<ExtendedTooltip name="ПриоритетЗагрузкиЗначениеРасширеннаяПодсказка" id="133"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="ИгнорируемыеИнициаторы" id="46">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Игнорируемые инициаторы</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Игнорируемые инициаторы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ИгнорируемыеИнициаторыРасширеннаяПодсказка" id="47"/>
+					<ChildItems>
+						<Table name="ИгнорируемыеИнициаторы1" id="48">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Объект.ИгнорируемыеИнициаторы</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ИгнорируемыеИнициаторы1КонтекстноеМеню" id="49"/>
+							<AutoCommandBar name="ИгнорируемыеИнициаторы1КоманднаяПанель" id="50"/>
+							<ExtendedTooltip name="ИгнорируемыеИнициаторы1РасширеннаяПодсказка" id="51"/>
+							<SearchStringAddition name="ИгнорируемыеИнициаторы1СтрокаПоиска" id="52">
+								<AdditionSource>
+									<Item>ИгнорируемыеИнициаторы1</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ИгнорируемыеИнициаторы1СтрокаПоискаКонтекстноеМеню" id="53"/>
+								<ExtendedTooltip name="ИгнорируемыеИнициаторы1СтрокаПоискаРасширеннаяПодсказка" id="54"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ИгнорируемыеИнициаторы1СостояниеПросмотра" id="55">
+								<AdditionSource>
+									<Item>ИгнорируемыеИнициаторы1</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<HorizontalLocation>Left</HorizontalLocation>
+								<ContextMenu name="ИгнорируемыеИнициаторы1СостояниеПросмотраКонтекстноеМеню" id="56"/>
+								<ExtendedTooltip name="ИгнорируемыеИнициаторы1СостояниеПросмотраРасширеннаяПодсказка" id="57"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ИгнорируемыеИнициаторы1УправлениеПоиском" id="58">
+								<AdditionSource>
+									<Item>ИгнорируемыеИнициаторы1</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ИгнорируемыеИнициаторы1УправлениеПоискомКонтекстноеМеню" id="59"/>
+								<ExtendedTooltip name="ИгнорируемыеИнициаторы1УправлениеПоискомРасширеннаяПодсказка" id="60"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="OnEditEnd">ИгнорируемыеИнициаторы1ПриОкончанииРедактирования</Event>
+								<Event name="AfterDeleteRow">ИгнорируемыеИнициаторы1ПослеУдаления</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="ИгнорируемыеИнициаторы1НомерСтроки" id="61">
+									<DataPath>Объект.ИгнорируемыеИнициаторы.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИгнорируемыеИнициаторы1НомерСтрокиКонтекстноеМеню" id="62"/>
+									<ExtendedTooltip name="ИгнорируемыеИнициаторы1НомерСтрокиРасширеннаяПодсказка" id="63"/>
+								</LabelField>
+								<InputField name="ИгнорируемыеИнициаторы1Инициатор" id="64">
+									<DataPath>Объект.ИгнорируемыеИнициаторы.Инициатор</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИгнорируемыеИнициаторы1ИнициаторКонтекстноеМеню" id="65"/>
+									<ExtendedTooltip name="ИгнорируемыеИнициаторы1ИнициаторРасширеннаяПодсказка" id="66"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ОбработкаСозданногоЗадания" id="12">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Обработчик</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Обработка созданного задания</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ОбработкаСозданногоЗаданияРасширеннаяПодсказка" id="40"/>
+					<ChildItems>
+						<TextDocumentField name="КодОбработкиСозданногоЗадания" id="15">
+							<DataPath>Объект.КодОбработкиСозданногоЗадания</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Код на встроенном языке 1С</v8:content>
+								</v8:item>
+							</Title>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<ContextMenu name="КодОбработкиСозданногоЗаданияКонтекстноеМеню" id="16"/>
+							<ExtendedTooltip name="КодОбработкиСозданногоЗаданияРасширеннаяПодсказка" id="41"/>
+						</TextDocumentField>
+						<LabelDecoration name="Декорация1" id="17">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<HorizontalStretch>true</HorizontalStretch>
+							<TextColor>#3366FF</TextColor>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Используйте переменную "НовоеЗадание" для изменения реквизитов. В этой переменной находится загруженное из почты задание, которое еще не записано в ИБ. Записывать его не нужно, только измените реквизиты объекта.
+Если при каких-то условиях требуется отказаться от записи объекта, следует использовать конструкцию:
+&lt;b&gt;&lt;color #FF0000&gt;НовоеЗадание.ДополнительныеСвойства.Вставить("Отказ", Истина);&lt;/&gt;&lt;/&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<TitleHeight>2</TitleHeight>
+							<ContextMenu name="Декорация1КонтекстноеМеню" id="18"/>
+							<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="42"/>
+						</LabelDecoration>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.УдалитьУчетныеЗаписиЭлектроннойПочтыДляСозданияЗаданийИзПисем</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ПриоритетОпределения" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Приоритет определения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Settings>
+		</Attribute>
+	</Attributes>
+</Form>

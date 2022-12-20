@@ -1,0 +1,813 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Popup name="ПодменюОтчеты" id="70">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Подменю отчеты</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Подменю отчеты</v8:content>
+					</v8:item>
+				</ToolTip>
+				<ToolTipRepresentation>None</ToolTipRepresentation>
+				<Picture>
+					<xr:Ref>StdPicture.Report</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<Representation>Picture</Representation>
+				<ExtendedTooltip name="ПодменюОтчетыРасширеннаяПодсказка" id="71"/>
+			</Popup>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<LabelField name="ПредупреждениеОЗапрете" id="112">
+			<DataPath>ПредупреждениеОЗапрете</DataPath>
+			<Visible>false</Visible>
+			<TitleLocation>None</TitleLocation>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<TextColor>style:SpecialTextColor</TextColor>
+			<ContextMenu name="ПредупреждениеОЗапретеКонтекстноеМеню" id="113"/>
+			<ExtendedTooltip name="ПредупреждениеОЗапретеРасширеннаяПодсказка" id="114"/>
+		</LabelField>
+		<UsualGroup name="Шапка" id="1">
+			<Visible>false</Visible>
+			<ReadOnly>true</ReadOnly>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шапка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шапка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ШапкаРасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<InputField name="Дата" id="6">
+					<DataPath>Объект.Date</DataPath>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="7"/>
+					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="8"/>
+				</InputField>
+				<InputField name="Номер" id="3">
+					<DataPath>Объект.Number</DataPath>
+					<ContextMenu name="НомерКонтекстноеМеню" id="4"/>
+					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="5"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Основная" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Основная</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Основная</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<ShowTitle>false</ShowTitle>
+			<BackColor>web:AntiqueWhite</BackColor>
+			<ExtendedTooltip name="ОсновнаяРасширеннаяПодсказка" id="10"/>
+			<ChildItems>
+				<UsualGroup name="ВремяГруппа" id="25">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Время группа</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Время группа</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>AlwaysHorizontal</Group>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ВремяГруппаРасширеннаяПодсказка" id="26"/>
+					<ChildItems>
+						<UsualGroup name="ДатаНачалаГруппа" id="50">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Дата начала группа</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Дата начала группа</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ДатаНачалаГруппаРасширеннаяПодсказка" id="51"/>
+							<ChildItems>
+								<UsualGroup name="ДатаНачалаКнопкаГруппа" id="85">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дата начала кнопка группа</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дата начала кнопка группа</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ДатаНачалаКнопкаГруппаРасширеннаяПодсказка" id="86"/>
+									<ChildItems>
+										<InputField name="ДатаНачала" id="47">
+											<DataPath>Объект.ДатаНачала</DataPath>
+											<EditFormat>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ДЛФ=D</v8:content>
+												</v8:item>
+											</EditFormat>
+											<ContextMenu name="ДатаНачалаКонтекстноеМеню" id="48"/>
+											<ExtendedTooltip name="ДатаНачалаРасширеннаяПодсказка" id="49"/>
+											<Events>
+												<Event name="OnChange">ДатаНачалаПриИзменении</Event>
+											</Events>
+										</InputField>
+										<Button name="ЗаполнитьВремяНачала" id="60">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.ЗаполнитьВремяНачала</CommandName>
+											<ExtendedTooltip name="ЗаполнитьВремяНачалаРасширеннаяПодсказка" id="61"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ВремяНачалаКнопкаГруппа" id="83">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Время начала кнопка группа</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Время начала кнопка группа</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ВремяНачалаКнопкаГруппаРасширеннаяПодсказка" id="84"/>
+									<ChildItems>
+										<InputField name="ВремяНачала" id="27">
+											<DataPath>Объект.ДатаНачала</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Время начала</v8:content>
+												</v8:item>
+											</Title>
+											<DropListButton>false</DropListButton>
+											<ChoiceButton>true</ChoiceButton>
+											<EditFormat>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ДФ=HH:mm</v8:content>
+												</v8:item>
+											</EditFormat>
+											<ContextMenu name="ВремяНачалаКонтекстноеМеню" id="28"/>
+											<ExtendedTooltip name="ВремяНачалаРасширеннаяПодсказка" id="29"/>
+											<Events>
+												<Event name="OnChange">ВремяНачалаПриИзменении</Event>
+											</Events>
+										</InputField>
+										<Button name="ПрибавитьМинутыКНачалу" id="91">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.ПрибавитьМинутыКНачалу</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>+15 минут</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ПрибавитьМинутыКНачалуРасширеннаяПодсказка" id="92"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ДатаОкончанияГруппа" id="52">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Дата окончания группа</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Дата окончания группа</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ДатаОкончанияГруппаРасширеннаяПодсказка" id="53"/>
+							<ChildItems>
+								<UsualGroup name="ДатаОкончанияКнопкаГруппа" id="87">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дата окончания кнопка группа</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дата окончания кнопка группа</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ДатаОкончанияКнопкаГруппаРасширеннаяПодсказка" id="88"/>
+									<ChildItems>
+										<InputField name="ДатаОкончания" id="54">
+											<DataPath>Объект.ДатаОкончания</DataPath>
+											<EditFormat>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ДЛФ=D</v8:content>
+												</v8:item>
+											</EditFormat>
+											<ContextMenu name="ДатаОкончанияКонтекстноеМеню" id="55"/>
+											<ExtendedTooltip name="ДатаОкончанияРасширеннаяПодсказка" id="56"/>
+											<Events>
+												<Event name="OnChange">ДатаОкончанияПриИзменении</Event>
+											</Events>
+										</InputField>
+										<Button name="ЗаполнитьВремяОкончания" id="62">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.ЗаполнитьВремяОкончания</CommandName>
+											<ExtendedTooltip name="ЗаполнитьВремяОкончанияРасширеннаяПодсказка" id="63"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ВремяОкончанияКнопкаГруппа" id="89">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Время окончания кнопка группа</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Время окончания кнопка группа</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ВремяОкончанияКнопкаГруппаРасширеннаяПодсказка" id="90"/>
+									<ChildItems>
+										<InputField name="ВремяОкончания" id="30">
+											<DataPath>Объект.ДатаОкончания</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Время окончания</v8:content>
+												</v8:item>
+											</Title>
+											<DropListButton>true</DropListButton>
+											<ChoiceButton>false</ChoiceButton>
+											<EditFormat>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ДФ=HH:mm</v8:content>
+												</v8:item>
+											</EditFormat>
+											<ContextMenu name="ВремяОкончанияКонтекстноеМеню" id="31"/>
+											<ExtendedTooltip name="ВремяОкончанияРасширеннаяПодсказка" id="32"/>
+											<Events>
+												<Event name="OnChange">РасчетВремени</Event>
+											</Events>
+										</InputField>
+										<Button name="ПрибавитьМинутыКОкончанию" id="93">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.ПрибавитьМинутыКОкончанию</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>+15 минут</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ПрибавитьМинутыКОкончаниюРасширеннаяПодсказка" id="94"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="СтатистикаГруппа" id="33">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статистика группа</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статистика группа</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="СтатистикаГруппаРасширеннаяПодсказка" id="34"/>
+					<ChildItems>
+						<InputField name="ФактическаяТрудоемкость" id="35">
+							<DataPath>Объект.ФактическаяТрудоемкость</DataPath>
+							<EditFormat>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧДЦ=2</v8:content>
+								</v8:item>
+							</EditFormat>
+							<ContextMenu name="ФактическаяТрудоемкостьКонтекстноеМеню" id="36"/>
+							<ExtendedTooltip name="ФактическаяТрудоемкостьРасширеннаяПодсказка" id="37"/>
+							<Events>
+								<Event name="OnChange">ФактическаяТрудоемкостьПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="ВремяКлиента" id="38">
+							<DataPath>Объект.ВремяКлиента</DataPath>
+							<EditFormat>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧДЦ=2</v8:content>
+								</v8:item>
+							</EditFormat>
+							<ContextMenu name="ВремяКлиентаКонтекстноеМеню" id="39"/>
+							<ExtendedTooltip name="ВремяКлиентаРасширеннаяПодсказка" id="40"/>
+						</InputField>
+						<RadioButtonField name="СпособРасчетаВремениКлиента" id="57">
+							<DataPath>Объект.СпособРасчетаВремениКлиента</DataPath>
+							<RadioButtonType>Auto</RadioButtonType>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Авто</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">1</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Вручную</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">2</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Бесплатно</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">3</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Распределять</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">4</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="СпособРасчетаВремениКлиентаКонтекстноеМеню" id="58"/>
+							<ExtendedTooltip name="СпособРасчетаВремениКлиентаРасширеннаяПодсказка" id="59"/>
+							<Events>
+								<Event name="OnChange">ЗаполнениеВремениКлиента</Event>
+							</Events>
+						</RadioButtonField>
+					</ChildItems>
+				</UsualGroup>
+				<InputField name="Клиент" id="75">
+					<DataPath>Клиент</DataPath>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<ContextMenu name="КлиентКонтекстноеМеню" id="76"/>
+					<ExtendedTooltip name="КлиентРасширеннаяПодсказка" id="77"/>
+					<Events>
+						<Event name="OnChange">КлиентПриИзменении</Event>
+					</Events>
+				</InputField>
+				<UsualGroup name="ГруппаИнициатор" id="78">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа инициатор</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа инициатор</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаИнициаторРасширеннаяПодсказка" id="79"/>
+					<ChildItems>
+						<InputField name="Инициатор" id="72">
+							<DataPath>Инициатор</DataPath>
+							<ContextMenu name="ИнициаторКонтекстноеМеню" id="73"/>
+							<ExtendedTooltip name="ИнициаторРасширеннаяПодсказка" id="74"/>
+							<Events>
+								<Event name="OnChange">ИнициаторПриИзменении</Event>
+								<Event name="AutoComplete">ИнициаторАвтоПодбор</Event>
+								<Event name="StartChoice">ИнициаторНачалоВыбора</Event>
+							</Events>
+						</InputField>
+						<InputField name="Проект" id="80">
+							<DataPath>Проект</DataPath>
+							<ChoiceParameterLinks>
+								<xr:Link>
+									<xr:Name>Отбор.Клиент</xr:Name>
+									<xr:DataPath xsi:type="xs:string">Клиент</xr:DataPath>
+									<xr:ValueChange>Clear</xr:ValueChange>
+								</xr:Link>
+							</ChoiceParameterLinks>
+							<ContextMenu name="ПроектКонтекстноеМеню" id="81"/>
+							<ExtendedTooltip name="ПроектРасширеннаяПодсказка" id="82"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<RadioButtonField name="ВидРаботы" id="22">
+					<DataPath>Объект.ВидРаботы</DataPath>
+					<TitleLocation>Left</TitleLocation>
+					<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+					<RadioButtonType>Tumbler</RadioButtonType>
+					<ColumnsCount>3</ColumnsCount>
+					<ContextMenu name="ВидРаботыКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="ВидРаботыРасширеннаяПодсказка" id="24"/>
+				</RadioButtonField>
+			</ChildItems>
+		</UsualGroup>
+		<LabelDecoration name="Декорация1" id="95" DisplayImportance="VeryHigh">
+			<Width>150</Width>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<Title formatted="true">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Необходимо указать &lt;b&gt;ЧТО&lt;/&gt; было сделано и какой &lt;b&gt;РЕЗУЛЬТАТ&lt;/&gt; достигнут! 
+Например:  "Доработка формы документа, добавлены поля дата, номер". 
+Одинаковые описания занятостей в рамках одного задания недопустимы!  
+&lt;b&gt;Вся&lt;/&gt; информация уходит клиенту, будьте грамотны и уважительны</v8:content>
+				</v8:item>
+			</Title>
+			<BackColor>web:Salmon</BackColor>
+			<Border width="1">
+				<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
+			</Border>
+			<ContextMenu name="Декорация1КонтекстноеМеню" id="96"/>
+			<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="97"/>
+		</LabelDecoration>
+		<CommandBar name="КоманднаяПанельФорматированногоДокумента" id="107">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Командная панель форматированного документа</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Командная панель форматированного документа</v8:content>
+				</v8:item>
+			</ToolTip>
+			<CommandSource>Item.ОписаниеФорматированныйДокумент</CommandSource>
+			<ExtendedTooltip name="КоманднаяПанельФорматированногоДокументаРасширеннаяПодсказка" id="108"/>
+		</CommandBar>
+		<FormattedDocumentField name="ОписаниеФорматированныйДокумент" id="104">
+			<DataPath>ОписаниеФорматированныйДокумент</DataPath>
+			<TitleLocation>None</TitleLocation>
+			<ContextMenu name="ОписаниеФорматированныйДокументКонтекстноеМеню" id="105"/>
+			<ExtendedTooltip name="ОписаниеФорматированныйДокументРасширеннаяПодсказка" id="106"/>
+		</FormattedDocumentField>
+		<Pages name="Страницы" id="98">
+			<Visible>false</Visible>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="99"/>
+			<ChildItems>
+				<Page name="СтраницаОписание" id="100">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Описание</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СтраницаОписаниеРасширеннаяПодсказка" id="101"/>
+					<ChildItems>
+						<InputField name="Описание" id="41">
+							<DataPath>Объект.Описание</DataPath>
+							<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+							<TitleLocation>None</TitleLocation>
+							<ToolTipRepresentation>ShowTop</ToolTipRepresentation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Height>8</Height>
+							<MaxHeight>20</MaxHeight>
+							<MultiLine>true</MultiLine>
+							<SpellCheckingOnTextInput>Use</SpellCheckingOnTextInput>
+							<InputHint>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Необходимо указать что было сделано и какой результат достигнут! Например -  "Доработка формы документа, добавлены поля дата, номер"</v8:content>
+								</v8:item>
+							</InputHint>
+							<ContextMenu name="ОписаниеКонтекстноеМеню" id="42"/>
+							<ExtendedTooltip name="ОписаниеРасширеннаяПодсказка" id="43"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаФорматированноеОписание" id="102">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Форматированное описание</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СтраницаФорматированноеОписаниеРасширеннаяПодсказка" id="103"/>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<InputField name="Результат" id="115">
+			<DataPath>Объект.Результат</DataPath>
+			<Visible>false</Visible>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ContextMenu name="РезультатКонтекстноеМеню" id="116"/>
+			<ExtendedTooltip name="РезультатРасширеннаяПодсказка" id="117"/>
+		</InputField>
+		<InputField name="Задание" id="44">
+			<DataPath>Объект.Задание</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<InputHint>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Задание №1</v8:content>
+				</v8:item>
+			</InputHint>
+			<ContextMenu name="ЗаданиеКонтекстноеМеню" id="45"/>
+			<ExtendedTooltip name="ЗаданиеРасширеннаяПодсказка" id="46"/>
+			<Events>
+				<Event name="OnChange">ЗаданиеПриИзменении</Event>
+				<Event name="StartChoice">ЗаданиеНачалоВыбора</Event>
+				<Event name="ChoiceProcessing">ЗаданиеОбработкаВыбора</Event>
+			</Events>
+		</InputField>
+		<InputField name="Исполнитель" id="67">
+			<DataPath>Объект.Исполнитель</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ContextMenu name="ИсполнительКонтекстноеМеню" id="68"/>
+			<ExtendedTooltip name="ИсполнительРасширеннаяПодсказка" id="69"/>
+		</InputField>
+		<InputField name="Комментарий" id="64">
+			<DataPath>Объект.Комментарий</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ContextMenu name="КомментарийКонтекстноеМеню" id="65"/>
+			<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="66"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.РС_Занятость</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+		<Attribute name="Инициатор" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Инициатор</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.КонтактныеЛица</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="Клиент" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Клиент</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="Проект" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проект</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Проекты</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="ЭтоКопирование" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Это копирование</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ОписаниеФорматированныйДокумент" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Описание форматированный документ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:fd="http://v8.1c.ru/8.2/data/formatted-document">fd:FormattedDocument</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ТекстHTML" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текст HTML</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПредупреждениеОЗапрете" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Предупреждение о запрете</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗаполнитьВремяНачала" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить время начала</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить текущей датой время начала</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.MoveLeft</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ЗаполнитьВремяНачала</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="ЗаполнитьВремяОкончания" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить время окончания</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить текущей датой время окончания</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.MoveLeft</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ЗаполнитьВремяОкончания</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="ПрибавитьМинутыКНачалу" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>+10 минут</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прибавить минуты к началу</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПрибавитьМинутыКНачалу</Action>
+		</Command>
+		<Command name="ПрибавитьМинутыКОкончанию" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>+10 минут</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прибавить минуты к окончанию</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПрибавитьМинутыКОкончанию</Action>
+		</Command>
+	</Commands>
+</Form>

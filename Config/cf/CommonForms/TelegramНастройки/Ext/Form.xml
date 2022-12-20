@@ -1,0 +1,882 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Настройки Telegram</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа3" id="84">
+			<HorizontalStretch>true</HorizontalStretch>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="85"/>
+			<ChildItems>
+				<PictureDecoration name="Декорация3" id="81">
+					<GroupVerticalAlign>Center</GroupVerticalAlign>
+					<Picture>
+						<xr:Ref>CommonPicture.Telegram</xr:Ref>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</Picture>
+					<ContextMenu name="Декорация3КонтекстноеМеню" id="82"/>
+					<ExtendedTooltip name="Декорация3РасширеннаяПодсказка" id="83"/>
+				</PictureDecoration>
+				<LabelDecoration name="Декорация13" id="53">
+					<Width>40</Width>
+					<Height>1</Height>
+					<Font ref="sys:DefaultGUIFont" faceName="Verdana" height="14" kind="WindowsFont"/>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройки Telegram</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="Декорация13КонтекстноеМеню" id="54"/>
+					<ExtendedTooltip name="Декорация13РасширеннаяПодсказка" id="55"/>
+				</LabelDecoration>
+				<UsualGroup name="Группа2" id="92">
+					<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="93"/>
+					<ChildItems>
+						<Button name="СтатьиКакНастроить" id="88">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.КакНастроить</CommandName>
+							<ExtendedTooltip name="СтатьиКакНастроитьРасширеннаяПодсказка" id="89"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<CheckBoxField name="ИспользоватьTelegram" id="56">
+			<DataPath>ИспользоватьTelegram</DataPath>
+			<TitleLocation>Right</TitleLocation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ИспользоватьTelegramКонтекстноеМеню" id="57"/>
+			<ExtendedTooltip name="ИспользоватьTelegramРасширеннаяПодсказка" id="58"/>
+			<Events>
+				<Event name="OnChange">ИспользоватьTelegramПриИзменении</Event>
+			</Events>
+		</CheckBoxField>
+		<CheckBoxField name="TelegramИспользоватьСписокПроксиСерверов" id="59">
+			<DataPath>TelegramИспользоватьСписокПроксиСерверов</DataPath>
+			<TitleLocation>Right</TitleLocation>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать ли для связи с серверами Telegram список прокси-серверов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ToolTipRepresentation>Button</ToolTipRepresentation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="TelegramИспользоватьСписокПроксиСерверовКонтекстноеМеню" id="60"/>
+			<ExtendedTooltip name="TelegramИспользоватьСписокПроксиСерверовРасширеннаяПодсказка" id="61"/>
+			<Events>
+				<Event name="OnChange">TelegramИспользоватьСписокПроксиСерверовПриИзменении</Event>
+			</Events>
+		</CheckBoxField>
+		<UsualGroup name="ГруппаСрокХранения" id="68">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа срок хранения</v8:content>
+				</v8:item>
+			</Title>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаСрокХраненияРасширеннаяПодсказка" id="69"/>
+			<ChildItems>
+				<InputField name="TelegramСрокХраненияСообщений" id="62">
+					<DataPath>TelegramСрокХраненияСообщений</DataPath>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Число дней хранений сообщений Telegram</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ToolTipRepresentation>Button</ToolTipRepresentation>
+					<SpinButton>true</SpinButton>
+					<ContextMenu name="TelegramСрокХраненияСообщенийКонтекстноеМеню" id="63"/>
+					<ExtendedTooltip name="TelegramСрокХраненияСообщенийРасширеннаяПодсказка" id="64"/>
+					<Events>
+						<Event name="OnChange">TelegramСрокХраненияСообщенийПриИзменении</Event>
+					</Events>
+				</InputField>
+				<LabelDecoration name="Декорация1" id="70">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>дней</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="Декорация1КонтекстноеМеню" id="71"/>
+					<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="72"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаТаймаут" id="76">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа таймаут</v8:content>
+				</v8:item>
+			</Title>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаТаймаутРасширеннаяПодсказка" id="77"/>
+			<ChildItems>
+				<InputField name="TelegramТаймаутПодключений" id="73">
+					<DataPath>TelegramТаймаутПодключений</DataPath>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Таймаут в секундах для подключений к серверу Telegram</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ToolTipRepresentation>Button</ToolTipRepresentation>
+					<SpinButton>true</SpinButton>
+					<ContextMenu name="TelegramТаймаутПодключенийКонтекстноеМеню" id="74"/>
+					<ExtendedTooltip name="TelegramТаймаутПодключенийРасширеннаяПодсказка" id="75"/>
+					<Events>
+						<Event name="OnChange">TelegramТаймаутПодключенийПриИзменении</Event>
+					</Events>
+				</InputField>
+				<LabelDecoration name="Декорация2" id="78">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>секунд</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="Декорация2КонтекстноеМеню" id="79"/>
+					<ExtendedTooltip name="Декорация2РасширеннаяПодсказка" id="80"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="TelegramДействиеКомандаНеНайдена" id="65">
+			<DataPath>TelegramДействиеКомандаНеНайдена</DataPath>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Действие, которое выполнится, если команда будет не найдена</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ToolTipRepresentation>Button</ToolTipRepresentation>
+			<ContextMenu name="TelegramДействиеКомандаНеНайденаКонтекстноеМеню" id="66"/>
+			<ExtendedTooltip name="TelegramДействиеКомандаНеНайденаРасширеннаяПодсказка" id="67"/>
+			<Events>
+				<Event name="OnChange">TelegramДействиеКомандаНеНайденаПриИзменении</Event>
+			</Events>
+		</InputField>
+		<UsualGroup name="ГруппаОбщаяПанельTelegram" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа общая панель telegram</v8:content>
+				</v8:item>
+			</Title>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОбщаяПанельTelegramРасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаЧатБоты" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа чат-боты</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalStretch>true</HorizontalStretch>
+					<Group>AlwaysHorizontal</Group>
+					<Representation>StrongSeparation</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаЧатБотыРасширеннаяПодсказка" id="4"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаПользователи" id="5">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Пользователи</v8:content>
+								</v8:item>
+							</Title>
+							<Width>17</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ExtendedTooltip name="ГруппаПользователиРасширеннаяПодсказка" id="6"/>
+							<ChildItems>
+								<Button name="TelegramБоты" id="7">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.TelegramБоты</CommandName>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<ExtendedTooltip name="TelegramБотыРасширеннаяПодсказка" id="8"/>
+								</Button>
+								<Button name="TelegramПользователи" id="9">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.TelegramПользователи</CommandName>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<ExtendedTooltip name="TelegramПользователиРасширеннаяПодсказка" id="10"/>
+								</Button>
+								<Button name="TelegramПроксиСерверы" id="11">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.TelegramПроксиСерверы</CommandName>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<ExtendedTooltip name="TelegramПроксиСерверыРасширеннаяПодсказка" id="12"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаНастройкиTelegram" id="13">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настройки</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа настройки telegram</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Width>17</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ExtendedTooltip name="ГруппаНастройкиTelegramРасширеннаяПодсказка" id="14"/>
+							<ChildItems>
+								<Button name="TelegramКоманды" id="15">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.TelegramКоманды</CommandName>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<ExtendedTooltip name="TelegramКомандыРасширеннаяПодсказка" id="16"/>
+								</Button>
+								<Button name="TelegramДействия" id="17">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.TelegramДействия</CommandName>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<ExtendedTooltip name="TelegramДействияРасширеннаяПодсказка" id="18"/>
+								</Button>
+								<Button name="TelegramУсловия" id="19">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.TelegramУсловияПараметров</CommandName>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<ExtendedTooltip name="TelegramУсловияРасширеннаяПодсказка" id="20"/>
+								</Button>
+								<Button name="TelegramПараметрыДействий" id="21">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.TelegramПараметрыДействий</CommandName>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<ExtendedTooltip name="TelegramПараметрыДействийРасширеннаяПодсказка" id="22"/>
+								</Button>
+								<Button name="TelegramEmoji" id="23">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.TelegramEmoji</CommandName>
+									<ExtendedTooltip name="TelegramEmojiРасширеннаяПодсказка" id="24"/>
+								</Button>
+								<Button name="TelegramКлавиатуры" id="25">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.TelegramКлавиатуры</CommandName>
+									<ExtendedTooltip name="TelegramКлавиатурыРасширеннаяПодсказка" id="26"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаОтправкаДанных" id="27">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Отправка данных</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalStretch>true</HorizontalStretch>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ExtendedTooltip name="ГруппаОтправкаДанныхРасширеннаяПодсказка" id="28"/>
+							<ChildItems>
+								<Button name="TelegramСообщениеВходящее" id="29">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.TelegramВходящиеСообщения</CommandName>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<ExtendedTooltip name="TelegramСообщениеВходящееРасширеннаяПодсказка" id="30"/>
+								</Button>
+								<Button name="TelegramИсходящиеСообщения" id="86">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.TelegramИсходящиеСообщения</CommandName>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<ExtendedTooltip name="TelegramИсходящиеСообщенияРасширеннаяПодсказка" id="87"/>
+								</Button>
+								<Button name="TelegramСтатистикаОтправкиСообщенийПроксиСерверов" id="31">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.TelegramСтатистикаОтправкиСообщенийПрокси</CommandName>
+									<ExtendedTooltip name="TelegramСтатистикаОтправкиСообщенийПроксиСерверовРасширеннаяПодсказка" id="32"/>
+								</Button>
+								<Button name="TelegramПараметрыЧатов" id="33">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.TelegramПараметрыЧатов</CommandName>
+									<ExtendedTooltip name="TelegramПараметрыЧатовРасширеннаяПодсказка" id="34"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаПодвал" id="35">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа подвал</v8:content>
+						</v8:item>
+					</Title>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПодвалРасширеннаяПодсказка" id="36"/>
+					<ChildItems>
+						<CommandBar name="ГруппаКоманднаяПанельДанных" id="37">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа командная панель данных</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ГруппаКоманднаяПанельДанныхРасширеннаяПодсказка" id="38"/>
+							<ChildItems>
+								<Button name="ТелеграммЗапуститьОбработкуСообщений" id="39">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.TelegramЗапуститьОбработкуСообщений</CommandName>
+									<ExtendedTooltip name="ТелеграммЗапуститьОбработкуСообщенийРасширеннаяПодсказка" id="40"/>
+								</Button>
+								<ButtonGroup name="ГруппаРаботыСНастройкамиTelegram" id="41">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа работы с настройками telegram</v8:content>
+										</v8:item>
+									</Title>
+									<Representation>Compact</Representation>
+									<ExtendedTooltip name="ГруппаРаботыСНастройкамиTelegramРасширеннаяПодсказка" id="42"/>
+									<ChildItems>
+										<Button name="TelegramНастройкиЗаполнитьПредопределенные" id="43">
+											<Type>CommandBarButton</Type>
+											<Representation>PictureAndText</Representation>
+											<CommandName>Form.Command.TelegramНастройкиЗаполнитьПредопределенные</CommandName>
+											<ExtendedTooltip name="TelegramНастройкиЗаполнитьПредопределенныеРасширеннаяПодсказка" id="44"/>
+										</Button>
+										<Button name="TelegramДанныеСохранить" id="45">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Command.TelegramНастройкиСохранить</CommandName>
+											<ExtendedTooltip name="TelegramДанныеСохранитьРасширеннаяПодсказка" id="46"/>
+										</Button>
+										<Button name="TelegramДанныеЗагрузить" id="47">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Command.TelegramНастройкиЗагрузить</CommandName>
+											<ExtendedTooltip name="TelegramДанныеЗагрузитьРасширеннаяПодсказка" id="48"/>
+										</Button>
+										<Button name="TelegramОбновитьДанные" id="49">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Command.TelegramОбновитьДанные</CommandName>
+											<ExtendedTooltip name="TelegramОбновитьДанныеРасширеннаяПодсказка" id="50"/>
+										</Button>
+									</ChildItems>
+								</ButtonGroup>
+								<ButtonGroup name="Группа1" id="90">
+									<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="91"/>
+									<ChildItems>
+										<Button name="TelegramНастройкиОчистить" id="51">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Command.TelegramНастройкиОчистить</CommandName>
+											<ExtendedTooltip name="TelegramНастройкиОчиститьРасширеннаяПодсказка" id="52"/>
+										</Button>
+									</ChildItems>
+								</ButtonGroup>
+							</ChildItems>
+						</CommandBar>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ИспользоватьTelegram" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать Telegram</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="TelegramИспользоватьСписокПроксиСерверов" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать прокси-серверы для отправки и получения данных Telegram</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьTelegram</Item>
+			</FunctionalOptions>
+		</Attribute>
+		<Attribute name="TelegramСрокХраненияСообщений" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Срок хранения сообщений Telegram</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>5</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьTelegram</Item>
+			</FunctionalOptions>
+		</Attribute>
+		<Attribute name="TelegramДействиеКомандаНеНайдена" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполняемое действие если команда не найдена</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.TelegramДействия</v8:Type>
+			</Type>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьTelegram</Item>
+			</FunctionalOptions>
+		</Attribute>
+		<Attribute name="TelegramТаймаутПодключений" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таймаут подключений</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>5</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьTelegram</Item>
+			</FunctionalOptions>
+		</Attribute>
+		<Attribute name="ДлительнаяОперация" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Длительная операция</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="TelegramБоты" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Telegram-боты</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Telegram-боты</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>БотыТелеграмм</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьTelegram</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="TelegramДействия" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Действия</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Действия, которые будут выполнены в командах Telegram</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ТелеграммДействия</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьTelegram</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="TelegramЗапуститьОбработкуСообщений" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запустить обработку сообщений</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запустить обработку сообщений Telegram</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.WriteChanges</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ТелеграммЗапуститьОбработкуСообщений</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьTelegram</Item>
+			</FunctionalOptions>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="TelegramКлавиатуры" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Клавиатуры</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Telegram клавиатуры</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>TelegramКлавиатуры</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьTelegram</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="TelegramКоманды" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команды</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команды, которые обрабатывает конфигурация получая их от Telegram-бота</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ТелеграммКоманды</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьTelegram</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="TelegramНастройкиЗагрузить" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Telegram настройки загрузить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить все настройки Telegram</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.OpenFile</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>TelegramНастройкиЗагрузить</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьTelegram</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="TelegramНастройкиЗаполнитьПредопределенные" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить предопределенные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Восстановить предопределенные настройки Telegram</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.RestoreValues</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>TelegramНастройкиЗаполнитьПредопределенные</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьTelegram</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="TelegramНастройкиОчистить" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Telegram настройки очистить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить настройки Telegram</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.InputFieldClear</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>TelegramНастройкиОчистить</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьTelegram</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="TelegramНастройкиСохранить" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Telegram настройки сохранить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить все настройки Telegram</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.SaveFile</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>TelegramНастройкиСохранить</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьTelegram</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="TelegramОбновитьДанные" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Telegram обновить данные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Telegram обновить данные</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>TelegramОбновитьДанные</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьTelegram</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="TelegramПараметрыДействий" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры действий</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Telegram параметры действий</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>TelegramПараметрыДействий</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьTelegram</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="TelegramПараметрыЧатов" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры чатов</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Telegram параметры чатов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>TelegramПараметрыЧатов</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьTelegram</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="TelegramПользователи" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пользователи</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пользователи в мессенджере Telegram</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ТелеграммПользователи</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьTelegram</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="TelegramПроксиСерверы" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прокси-серверы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список прокси-серверов, которые используются для связи с серверами Telegram</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ТелеграммПроксиСерверы</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьTelegram</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="TelegramВходящиеСообщения" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Входящие сообщения</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Cообщения полученные от мессенджера Telegram</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ТелеграммСообщения</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьTelegram</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="TelegramСтатистикаОтправкиСообщенийПрокси" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Статистика отправки прокси</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Telegram статистика отправки сообщений прокси-серверов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ТелеграммСтатистикаОтправкиСообщенийПроксиСерверов</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьTelegram</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="TelegramУсловияПараметров" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Условия параметров</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Условия параметров действий по которым сработают команды</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>TelegramУсловия</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьTelegram</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="TelegramEmoji" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Emoji</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Telegram emoji</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>TelegramEmoji</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьTelegram</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="TelegramИсходящиеСообщения" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Исходящие сообщения</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сообщения отправленные боту Telegram</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>TelegramИсходящиеСообщения</Action>
+		</Command>
+		<Command name="КакНастроить" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Как настроить?</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Как настроить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ВставитьСуществующуюГиперссылку</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>СтатьиКакНастроить</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+	</Commands>
+</Form>

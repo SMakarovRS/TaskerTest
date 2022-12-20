@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Subsystem uuid="c1445402-b994-4862-ad23-fa97f6d9674c">
+		<Properties>
+			<Name>ЗакупкиИПродажи</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Закупки и продажи</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeInCommandInterface>true</IncludeInCommandInterface>
+			<Explanation/>
+			<Picture>
+				<xr:Ref>CommonPicture.ПодсистемаЗаказыПоставщикам48х48</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ВедомостьПоЗаказамПоставщикам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Контрагенты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ЗаказПоставщику</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Организации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ДоговорыКонтрагентов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ПодсистемаЗаказыПоставщикам48х48</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.ЗаказыПоставщикам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Номенклатура</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ВзаиморасчетыСКонтрагентами</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.СостоянияЗаказовПоставщикам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.ОплатаДокументов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.УправлениеITОтделом8УФ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.УправлениеITОтделом8УФКлиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.УправлениеITОтделом8УФКлиентСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.УправлениеITОтделом8УФПовтИсп</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.УправлениеITОтделом8УФДатыЗапретаИзменения</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.СостояниеЗаказа</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.МенеджерПодсказок</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ОстаткиНаСкладах</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommandGroup.Печать</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.Доверенность</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ДополнительныеОтчетыЗакупкиИПродажи</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ДополнительныеОбработкиЗакупкиИПродажи</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ПанельОтчетовЗакупкиИПродажи</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.СтатусыДоговоровКонтрагентов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommandGroup.ПервичныеДокументы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ПервичныеДокументы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ДоговорыКонтрагентов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.СписокПервичныхДокументов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.СостоянияЗаказовКлиентов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ЗаказКлиента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ВедомостьПоЗаказамКлиентов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.ЗаказыКлиентов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.Продажа</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ВидДокументаПродажа</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects>
+			<Subsystem>Потребности</Subsystem>
+		</ChildObjects>
+	</Subsystem>
+</MetaDataObject>

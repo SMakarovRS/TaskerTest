@@ -1,0 +1,1288 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Родитель" id="7">
+			<DataPath>Объект.Parent</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="РодительКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="РодительРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<UsualGroup name="ГруппаНаименованиеКод" id="31">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа наименование код</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаНаименованиеКодРасширеннаяПодсказка" id="32"/>
+			<ChildItems>
+				<InputField name="Наименование" id="4">
+					<DataPath>Объект.Description</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя профиля</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<InputHint>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Новый профиль</v8:content>
+						</v8:item>
+					</InputHint>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+				</InputField>
+				<InputField name="Код" id="1">
+					<DataPath>Объект.Code</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="ГруппаСтраницы" id="39">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedTooltip name="ГруппаСтраницыРасширеннаяПодсказка" id="40"/>
+			<ChildItems>
+				<Page name="СтраницаПодключение" id="65">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подключение</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СтраницаПодключениеРасширеннаяПодсказка" id="66"/>
+					<ChildItems>
+						<CheckBoxField name="ПодключениеИспользоватьУчетнуюЗапись" id="13">
+							<DataPath>Объект.ПодключениеИспользоватьУчетнуюЗапись</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Использовать учетную запись / использовать "глобальный каталог"</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Left</TitleLocation>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Tumbler</CheckBoxType>
+							<EditFormat>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>БЛ=GC://; БИ='Учетная запись'</v8:content>
+								</v8:item>
+							</EditFormat>
+							<ContextMenu name="ПодключениеИспользоватьУчетнуюЗаписьКонтекстноеМеню" id="14"/>
+							<ExtendedTooltip name="ПодключениеИспользоватьУчетнуюЗаписьРасширеннаяПодсказка" id="15"/>
+							<Events>
+								<Event name="OnChange">ПодключениеИспользоватьУчетнуюЗаписьПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<UsualGroup name="ГруппаНастройкиУчетнойЗаписи" id="37">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа настройки учетной записи</v8:content>
+								</v8:item>
+							</Title>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаНастройкиУчетнойЗаписиРасширеннаяПодсказка" id="38"/>
+							<ChildItems>
+								<InputField name="ПодключениеДомен" id="10">
+									<DataPath>Объект.ПодключениеДомен</DataPath>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Для исключения ошибок авторизации необходимо указывать NetBIOS имя сервера (т.к. при авторизации будет использована строка вида \\mydomen\ИмяПользователя)</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<EditMode>EnterOnInput</EditMode>
+									<InputHint>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>mydomen</v8:content>
+										</v8:item>
+									</InputHint>
+									<ContextMenu name="ПодключениеДоменКонтекстноеМеню" id="11"/>
+									<ExtendedTooltip name="ПодключениеДоменРасширеннаяПодсказка" id="12"/>
+								</InputField>
+								<UsualGroup name="ГруппаКонтроллерПорт" id="33">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа контроллер порт</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаКонтроллерПортРасширеннаяПодсказка" id="34"/>
+									<ChildItems>
+										<InputField name="ПодключениеКонтроллерДомена" id="16">
+											<DataPath>Объект.ПодключениеКонтроллерДомена</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<InputHint>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>192.168.1.1</v8:content>
+												</v8:item>
+											</InputHint>
+											<ContextMenu name="ПодключениеКонтроллерДоменаКонтекстноеМеню" id="17"/>
+											<ExtendedTooltip name="ПодключениеКонтроллерДоменаРасширеннаяПодсказка" id="18"/>
+										</InputField>
+										<InputField name="ПодключениеПорт" id="25">
+											<DataPath>Объект.ПодключениеПорт</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<InputHint>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>389</v8:content>
+												</v8:item>
+											</InputHint>
+											<ContextMenu name="ПодключениеПортКонтекстноеМеню" id="26"/>
+											<ExtendedTooltip name="ПодключениеПортРасширеннаяПодсказка" id="27"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+								<InputField name="ПодключениеУчетнаяЗапись" id="28">
+									<DataPath>Объект.ПодключениеУчетнаяЗапись</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<InputHint>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Администратор</v8:content>
+										</v8:item>
+									</InputHint>
+									<ContextMenu name="ПодключениеУчетнаяЗаписьКонтекстноеМеню" id="29"/>
+									<ExtendedTooltip name="ПодключениеУчетнаяЗаписьРасширеннаяПодсказка" id="30"/>
+								</InputField>
+								<InputField name="ПодключениеПароль" id="22">
+									<DataPath>Объект.ПодключениеПароль</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<InputHint>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>*****</v8:content>
+										</v8:item>
+									</InputHint>
+									<ContextMenu name="ПодключениеПарольКонтекстноеМеню" id="23"/>
+									<ExtendedTooltip name="ПодключениеПарольРасширеннаяПодсказка" id="24"/>
+								</InputField>
+								<InputField name="ПодключениеКореньДерева" id="19">
+									<DataPath>Объект.ПодключениеКореньДерева</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<InputHint>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>OU=&lt;Подразделение&gt;,DC=&lt;ИмяДомена&gt;,DC=&lt;ru&gt;</v8:content>
+										</v8:item>
+									</InputHint>
+									<ContextMenu name="ПодключениеКореньДереваКонтекстноеМеню" id="20"/>
+									<ExtendedTooltip name="ПодключениеКореньДереваРасширеннаяПодсказка" id="21"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<Button name="ПроверитьПодключение" id="35">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ПроверитьПодключение</CommandName>
+							<ExtendedTooltip name="ПроверитьПодключениеРасширеннаяПодсказка" id="36"/>
+						</Button>
+						<CheckBoxField name="ИспользоватьВРегламентномЗадании" id="154">
+							<DataPath>Объект.ИспользоватьВРегламентномЗадании</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ИспользоватьВРегламентномЗаданииКонтекстноеМеню" id="155"/>
+							<ExtendedTooltip name="ИспользоватьВРегламентномЗаданииРасширеннаяПодсказка" id="156"/>
+						</CheckBoxField>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаЗагрузкаПользователей" id="41">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Загрузка пользователей</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СтраницаЗагрузкаПользователейРасширеннаяПодсказка" id="42"/>
+					<ChildItems>
+						<CheckBoxField name="ПользователиСоздаватьПользователей" id="120">
+							<DataPath>Объект.ПользователиСоздаватьПользователей</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>При установленном флаге будут созданы либо изменены существующие пользователи программы.</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ToolTipRepresentation>Button</ToolTipRepresentation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ПользователиСоздаватьПользователейКонтекстноеМеню" id="121"/>
+							<ExtendedTooltip name="ПользователиСоздаватьПользователейРасширеннаяПодсказка" id="122"/>
+							<Events>
+								<Event name="OnChange">ПользователиСоздаватьПользователейПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<UsualGroup name="ГруппаПользователи" id="123">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа пользователи</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПользователиРасширеннаяПодсказка" id="124"/>
+							<ChildItems>
+								<InputField name="ПользователиГруппаПоУмолчанию" id="125">
+									<DataPath>Объект.ПользователиГруппаПоУмолчанию</DataPath>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа пользователей, куда будут добавлены новые пользователи.</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<Width>40</Width>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ClearButton>true</ClearButton>
+									<InputHint>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Пользователи из AD</v8:content>
+										</v8:item>
+									</InputHint>
+									<ContextMenu name="ПользователиГруппаПоУмолчаниюКонтекстноеМеню" id="126"/>
+									<ExtendedTooltip name="ПользователиГруппаПоУмолчаниюРасширеннаяПодсказка" id="127"/>
+								</InputField>
+								<CheckBoxField name="ПользователиВходВПрограммуРазрешен" id="215">
+									<DataPath>Объект.ПользователиВходВПрограммуРазрешен</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Вход в программу разрешен</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>При включенном переключателе всем новым пользователям будет разрешен вход в программу.</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<CheckBoxType>Tumbler</CheckBoxType>
+									<EditFormat>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>БЛ=Нет; БИ=Да</v8:content>
+										</v8:item>
+									</EditFormat>
+									<ContextMenu name="ПользователиВходВПрограммуРазрешенКонтекстноеМеню" id="216"/>
+									<ExtendedTooltip name="ПользователиВходВПрограммуРазрешенРасширеннаяПодсказка" id="217"/>
+								</CheckBoxField>
+								<CheckBoxField name="ПользователиПоказыватьВСпискеВыбора" id="226">
+									<DataPath>Объект.ПользователиПоказыватьВСпискеВыбора</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Показывать в списке выбора</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>При включенном переключателе все новые пользователи будут отображены в списке выбора пользователей при запуске программы.</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<CheckBoxType>Tumbler</CheckBoxType>
+									<EditFormat>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>БЛ=Нет; БИ=Да</v8:content>
+										</v8:item>
+									</EditFormat>
+									<ContextMenu name="ПользователиПоказыватьВСпискеВыбораКонтекстноеМеню" id="227"/>
+									<ExtendedTooltip name="ПользователиПоказыватьВСпискеВыбораРасширеннаяПодсказка" id="228"/>
+								</CheckBoxField>
+								<UsualGroup name="Группа7" id="218">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа7</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Группа7РасширеннаяПодсказка" id="219"/>
+									<ChildItems>
+										<CheckBoxField name="ПользователиАутентификация1С" id="73">
+											<DataPath>Объект.ПользователиАутентификация1С</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Механизм аутентификации: "1С:Предприятия" или операционной системы</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>Left</TitleLocation>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Способ входа в программу: с помощью имени и пароля, указанного для пользователя "1С:Предприятия" или пользователя операционной системы (только для новых пользователей).</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ToolTipRepresentation>Button</ToolTipRepresentation>
+											<CheckBoxType>Tumbler</CheckBoxType>
+											<EditFormat>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>БЛ=ОС; БИ='"1С"'</v8:content>
+												</v8:item>
+											</EditFormat>
+											<ContextMenu name="ПользователиАутентификация1СКонтекстноеМеню" id="74"/>
+											<ExtendedTooltip name="ПользователиАутентификация1СРасширеннаяПодсказка" id="75"/>
+											<Events>
+												<Event name="OnChange">ПользователиАутентификация1СПриИзменении</Event>
+											</Events>
+										</CheckBoxField>
+										<InputField name="ПользователиИмяДомена" id="220">
+											<DataPath>Объект.ПользователиИмяДомена</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Имя домена</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>При механизме аутентификации ОС имя домена будет использовано для подстановки в строку пути пользователя: \\mydomen\Логин пользователя (используется в случае, если загрузка выполняется регламентным заданием, только для новых пользователей).</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ToolTipRepresentation>Button</ToolTipRepresentation>
+											<InputHint>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>mydomen</v8:content>
+												</v8:item>
+											</InputHint>
+											<ContextMenu name="ПользователиИмяДоменаКонтекстноеМеню" id="221"/>
+											<ExtendedTooltip name="ПользователиИмяДоменаРасширеннаяПодсказка" id="222"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+								<InputField name="ПользователиЯзык" id="67">
+									<DataPath>Объект.ПользователиЯзык</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Язык интерфейса платформы</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Язык интерфейса платформы (только для новых пользователей).</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ListChoiceMode>true</ListChoiceMode>
+									<ChooseType>false</ChooseType>
+									<TextEdit>false</TextEdit>
+									<InputHint>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Русский</v8:content>
+										</v8:item>
+									</InputHint>
+									<ContextMenu name="ПользователиЯзыкКонтекстноеМеню" id="68"/>
+									<ExtendedTooltip name="ПользователиЯзыкРасширеннаяПодсказка" id="69"/>
+								</InputField>
+								<InputField name="ПользователиРежимЗапуска" id="70">
+									<DataPath>Объект.ПользователиРежимЗапуска</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Режим запуска</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Режим запуска (только для новых пользователей).</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ListChoiceMode>true</ListChoiceMode>
+									<TextEdit>false</TextEdit>
+									<InputHint>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Управляемое приложение</v8:content>
+										</v8:item>
+									</InputHint>
+									<ContextMenu name="ПользователиРежимЗапускаКонтекстноеМеню" id="71"/>
+									<ExtendedTooltip name="ПользователиРежимЗапускаРасширеннаяПодсказка" id="72"/>
+								</InputField>
+								<CheckBoxField name="ПользователиИзменятьРанееСозданных" id="223">
+									<DataPath>Объект.ПользователиИзменятьРанееСозданных</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Изменять ранее созданных пользователей</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Если переключатель в режиме "Да", то для ранее созданных пользователей программы будут применены остальные настройки загрузки (изменены права, блокировка, созданы дополнительные объекты).</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<CheckBoxType>Tumbler</CheckBoxType>
+									<EditFormat>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>БЛ=Нет; БИ=Да</v8:content>
+										</v8:item>
+									</EditFormat>
+									<ContextMenu name="ПользователиИзменятьРанееСозданныхКонтекстноеМеню" id="224"/>
+									<ExtendedTooltip name="ПользователиИзменятьРанееСозданныхРасширеннаяПодсказка" id="225"/>
+									<Events>
+										<Event name="OnChange">ПользователиИзменятьРанееСозданныхПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<CheckBoxField name="ПользователиПерезаписыватьПраваПользователей" id="134">
+									<DataPath>Объект.ПользователиПерезаписыватьПраваПользователей</DataPath>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>При Для ранее созданных пользователей будут изменены права на указанные.</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<CheckBoxType>Tumbler</CheckBoxType>
+									<EditFormat>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>БЛ=Нет; БИ=Да</v8:content>
+										</v8:item>
+									</EditFormat>
+									<ContextMenu name="ПользователиПерезаписыватьПраваПользователейКонтекстноеМеню" id="135"/>
+									<ExtendedTooltip name="ПользователиПерезаписыватьПраваПользователейРасширеннаяПодсказка" id="136"/>
+								</CheckBoxField>
+								<CheckBoxField name="ПользователиБлокироватьПользователя" id="137">
+									<DataPath>Объект.ПользователиБлокироватьПользователя</DataPath>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Если переключатель в режиме "Да", то ранее созданный пользователь будет отмечен как недействительный в случае, если он заблокирован в AD.</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<CheckBoxType>Tumbler</CheckBoxType>
+									<EditFormat>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>БЛ=Нет; БИ=Да</v8:content>
+										</v8:item>
+									</EditFormat>
+									<ContextMenu name="ПользователиБлокироватьПользователяКонтекстноеМеню" id="138"/>
+									<ExtendedTooltip name="ПользователиБлокироватьПользователяРасширеннаяПодсказка" id="139"/>
+								</CheckBoxField>
+								<UsualGroup name="ГруппаГруппыДоступа" id="76">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группы доступа</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<ExtendedTooltip name="ГруппаГруппыДоступаРасширеннаяПодсказка" id="77"/>
+									<ChildItems>
+										<Table name="ГруппыДоступа" id="229">
+											<AutoInsertNewRow>true</AutoInsertNewRow>
+											<EnableStartDrag>true</EnableStartDrag>
+											<EnableDrag>true</EnableDrag>
+											<FileDragMode>AsFile</FileDragMode>
+											<DataPath>Объект.ГруппыДоступа</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ГруппыДоступа</v8:content>
+												</v8:item>
+											</Title>
+											<RowFilter xsi:nil="true"/>
+											<ContextMenu name="ГруппыДоступаКонтекстноеМеню" id="230"/>
+											<AutoCommandBar name="ГруппыДоступаКоманднаяПанель" id="231"/>
+											<ExtendedTooltip name="ГруппыДоступаРасширеннаяПодсказка" id="232"/>
+											<SearchStringAddition name="ГруппыДоступаСтрокаПоиска" id="233">
+												<AdditionSource>
+													<Item>ГруппыДоступа</Item>
+													<Type>SearchStringRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ГруппыДоступаСтрокаПоискаКонтекстноеМеню" id="234"/>
+												<ExtendedTooltip name="ГруппыДоступаСтрокаПоискаРасширеннаяПодсказка" id="235"/>
+											</SearchStringAddition>
+											<ViewStatusAddition name="ГруппыДоступаСостояниеПросмотра" id="236">
+												<AdditionSource>
+													<Item>ГруппыДоступа</Item>
+													<Type>ViewStatusRepresentation</Type>
+												</AdditionSource>
+												<HorizontalLocation>Left</HorizontalLocation>
+												<ContextMenu name="ГруппыДоступаСостояниеПросмотраКонтекстноеМеню" id="237"/>
+												<ExtendedTooltip name="ГруппыДоступаСостояниеПросмотраРасширеннаяПодсказка" id="238"/>
+											</ViewStatusAddition>
+											<SearchControlAddition name="ГруппыДоступаУправлениеПоиском" id="239">
+												<AdditionSource>
+													<Item>ГруппыДоступа</Item>
+													<Type>SearchControl</Type>
+												</AdditionSource>
+												<ContextMenu name="ГруппыДоступаУправлениеПоискомКонтекстноеМеню" id="240"/>
+												<ExtendedTooltip name="ГруппыДоступаУправлениеПоискомРасширеннаяПодсказка" id="241"/>
+											</SearchControlAddition>
+											<ChildItems>
+												<LabelField name="ГруппыДоступаНомерСтроки" id="242">
+													<DataPath>Объект.ГруппыДоступа.LineNumber</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ГруппыДоступаНомерСтрокиКонтекстноеМеню" id="243"/>
+													<ExtendedTooltip name="ГруппыДоступаНомерСтрокиРасширеннаяПодсказка" id="244"/>
+												</LabelField>
+												<InputField name="ГруппыДоступаГруппаДоступа" id="245">
+													<DataPath>Объект.ГруппыДоступа.ГруппаДоступа</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ГруппыДоступаГруппаДоступаКонтекстноеМеню" id="246"/>
+													<ExtendedTooltip name="ГруппыДоступаГруппаДоступаРасширеннаяПодсказка" id="247"/>
+												</InputField>
+												<LabelField name="ГруппыДоступаГруппаДоступаПрофиль" id="248">
+													<DataPath>Объект.ГруппыДоступа.ГруппаДоступа.Профиль</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ГруппыДоступаГруппаДоступаПрофильКонтекстноеМеню" id="249"/>
+													<ExtendedTooltip name="ГруппыДоступаГруппаДоступаПрофильРасширеннаяПодсказка" id="250"/>
+												</LabelField>
+												<LabelField name="ГруппыДоступаГруппаДоступаОтветственный" id="251">
+													<DataPath>Объект.ГруппыДоступа.ГруппаДоступа.Ответственный</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ГруппыДоступаГруппаДоступаОтветственныйКонтекстноеМеню" id="252"/>
+													<ExtendedTooltip name="ГруппыДоступаГруппаДоступаОтветственныйРасширеннаяПодсказка" id="253"/>
+												</LabelField>
+											</ChildItems>
+										</Table>
+										<LabelDecoration name="ДекорацияПрофили" id="62">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<TextColor>#3366FF</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>В состав выбранных групп доступа пользователи будут включены при загрузке.</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияПрофилиКонтекстноеМеню" id="63"/>
+											<ExtendedTooltip name="ДекорацияПрофилиРасширеннаяПодсказка" id="64"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаСозданиеСотрудников" id="78">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Загрузка других объектов</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<ExtendedTooltip name="СтраницаСозданиеСотрудниковРасширеннаяПодсказка" id="79"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаЛево" id="197">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа лево</v8:content>
+								</v8:item>
+							</Title>
+							<Width>105</Width>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаЛевоРасширеннаяПодсказка" id="198"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаСозданиеОрганизации" id="88">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Загрузка организаций</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Representation>StrongSeparation</Representation>
+									<ExtendedTooltip name="ГруппаСозданиеОрганизацииРасширеннаяПодсказка" id="89"/>
+									<ChildItems>
+										<UsualGroup name="ГруппаНоваяОрганизация" id="149">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа новая организация</v8:content>
+												</v8:item>
+											</Title>
+											<Group>Horizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаНоваяОрганизацияРасширеннаяПодсказка" id="150"/>
+											<ChildItems>
+												<CheckBoxField name="ОрганизацииСоздаватьОрганизации" id="90">
+													<DataPath>Объект.ОрганизацииСоздаватьОрганизации</DataPath>
+													<TitleLocation>Right</TitleLocation>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>При установленном флаге, если у загружаемого объекта указана организация, то при загрузке будет выполнен поиск организации по наименованию и если в ИБ такой организации нет, она будет добавлена и установлена объекту в качестве основной.</v8:content>
+														</v8:item>
+													</ToolTip>
+													<ToolTipRepresentation>Button</ToolTipRepresentation>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ОрганизацииСоздаватьОрганизацииКонтекстноеМеню" id="91"/>
+													<ExtendedTooltip name="ОрганизацииСоздаватьОрганизацииРасширеннаяПодсказка" id="92"/>
+													<Events>
+														<Event name="OnChange">ОрганизацииСоздаватьОрганизацииПриИзменении</Event>
+													</Events>
+												</CheckBoxField>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаОрганизацияПоУмолчанию" id="157">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа организация по умолчанию</v8:content>
+												</v8:item>
+											</Title>
+											<Group>Vertical</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаОрганизацияПоУмолчаниюРасширеннаяПодсказка" id="158"/>
+											<ChildItems>
+												<LabelDecoration name="Декорация1" id="159">
+													<Visible>false</Visible>
+													<Width>28</Width>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Организация по умолчанию:</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="Декорация1КонтекстноеМеню" id="160"/>
+													<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="161"/>
+												</LabelDecoration>
+												<InputField name="ОрганизацииСтавкаНДС" id="93">
+													<DataPath>Объект.ОрганизацииСтавкаНДС</DataPath>
+													<TitleLocation>Left</TitleLocation>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Ставка НДС для создаваемой организации.</v8:content>
+														</v8:item>
+													</ToolTip>
+													<ToolTipRepresentation>Button</ToolTipRepresentation>
+													<HorizontalStretch>false</HorizontalStretch>
+													<InputHint>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>18%</v8:content>
+														</v8:item>
+													</InputHint>
+													<ContextMenu name="ОрганизацииСтавкаНДСКонтекстноеМеню" id="94"/>
+													<ExtendedTooltip name="ОрганизацииСтавкаНДСРасширеннаяПодсказка" id="95"/>
+												</InputField>
+												<InputField name="ОрганизацииОрганизацияПоУмолчанию" id="146">
+													<DataPath>Объект.ОрганизацииОрганизацияПоУмолчанию</DataPath>
+													<TitleLocation>Left</TitleLocation>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Указанная организация будет установлена загружаемому объекту в том случае, если при загрузке у объекта это поле не заполнено, или изменена у существующего в ИБ объекта, если он определен как загружаемый.</v8:content>
+														</v8:item>
+													</ToolTip>
+													<ToolTipRepresentation>Button</ToolTipRepresentation>
+													<Width>25</Width>
+													<HorizontalStretch>false</HorizontalStretch>
+													<ClearButton>true</ClearButton>
+													<InputHint>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Наша фирма</v8:content>
+														</v8:item>
+													</InputHint>
+													<ContextMenu name="ОрганизацииОрганизацияПоУмолчаниюКонтекстноеМеню" id="147"/>
+													<ExtendedTooltip name="ОрганизацииОрганизацияПоУмолчаниюРасширеннаяПодсказка" id="148"/>
+												</InputField>
+											</ChildItems>
+										</UsualGroup>
+										<LabelDecoration name="Декорация6" id="201">
+											<Enabled>false</Enabled>
+											<ContextMenu name="Декорация6КонтекстноеМеню" id="202"/>
+											<ExtendedTooltip name="Декорация6РасширеннаяПодсказка" id="203"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаСозданиеПодразделений" id="144">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Загрузка подразделений</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Representation>StrongSeparation</Representation>
+									<ExtendedTooltip name="ГруппаСозданиеПодразделенийРасширеннаяПодсказка" id="145"/>
+									<ChildItems>
+										<CheckBoxField name="ПодразделенияСоздаватьПодразделения" id="151">
+											<DataPath>Объект.ПодразделенияСоздаватьПодразделения</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>При установленном флаге, если у загружаемого объекта указано подразделение, то при загрузке будет выполнен поиск подразделения по наименованию и если в ИБ этого подразделения нет, оно будет добавлено и установлено объекту в качестве основного.</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ToolTipRepresentation>Button</ToolTipRepresentation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ПодразделенияСоздаватьПодразделенияКонтекстноеМеню" id="152"/>
+											<ExtendedTooltip name="ПодразделенияСоздаватьПодразделенияРасширеннаяПодсказка" id="153"/>
+											<Events>
+												<Event name="OnChange">ПодразделенияСоздаватьПодразделенияПриИзменении</Event>
+											</Events>
+										</CheckBoxField>
+										<UsualGroup name="Группа1" id="165">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа1</v8:content>
+												</v8:item>
+											</Title>
+											<Group>Horizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="166"/>
+											<ChildItems>
+												<LabelDecoration name="Декорация2" id="167">
+													<Visible>false</Visible>
+													<Width>28</Width>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Подразделение по умолчанию:</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="Декорация2КонтекстноеМеню" id="168"/>
+													<ExtendedTooltip name="Декорация2РасширеннаяПодсказка" id="169"/>
+												</LabelDecoration>
+												<InputField name="ПодразделенияПодразделениеПоУмолчанию" id="162">
+													<DataPath>Объект.ПодразделенияПодразделениеПоУмолчанию</DataPath>
+													<TitleLocation>Left</TitleLocation>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Указанное подразделение будет установлено загружаемому объекту в том случае, если при загрузке у объекта это поле не заполнено, или изменено у существующего в ИБ объекта, если он определен как загружаемый.</v8:content>
+														</v8:item>
+													</ToolTip>
+													<ToolTipRepresentation>Button</ToolTipRepresentation>
+													<Width>25</Width>
+													<HorizontalStretch>false</HorizontalStretch>
+													<ClearButton>true</ClearButton>
+													<InputHint>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>IT отдел</v8:content>
+														</v8:item>
+													</InputHint>
+													<ContextMenu name="ПодразделенияПодразделениеПоУмолчаниюКонтекстноеМеню" id="163"/>
+													<ExtendedTooltip name="ПодразделенияПодразделениеПоУмолчаниюРасширеннаяПодсказка" id="164"/>
+												</InputField>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаСозданиеФизЛиц" id="96">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Загрузка физ.лиц</v8:content>
+										</v8:item>
+									</Title>
+									<Representation>StrongSeparation</Representation>
+									<ExtendedTooltip name="ГруппаСозданиеФизЛицРасширеннаяПодсказка" id="97"/>
+									<ChildItems>
+										<CheckBoxField name="ФизЛицаСоздаватьФизЛицо" id="98">
+											<DataPath>Объект.ФизЛицаСоздаватьФизЛицо</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>При установленном флаге для загружаемого объекта будет выполнен поиск физ.лица по наименованию и если в ИБ такого физ.лица нет, оно будет добавлено и установлено объекту.</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ToolTipRepresentation>Button</ToolTipRepresentation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ФизЛицаСоздаватьФизЛицоКонтекстноеМеню" id="99"/>
+											<ExtendedTooltip name="ФизЛицаСоздаватьФизЛицоРасширеннаяПодсказка" id="100"/>
+											<Events>
+												<Event name="OnChange">ФизЛицаСоздаватьФизЛицоПриИзменении</Event>
+											</Events>
+										</CheckBoxField>
+										<UsualGroup name="Группа2" id="170">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа2</v8:content>
+												</v8:item>
+											</Title>
+											<Group>Horizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="171"/>
+											<ChildItems>
+												<LabelDecoration name="Декорация3" id="172">
+													<Visible>false</Visible>
+													<Width>28</Width>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа физ.лиц по умолчанию:</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="Декорация3КонтекстноеМеню" id="173"/>
+													<ExtendedTooltip name="Декорация3РасширеннаяПодсказка" id="174"/>
+												</LabelDecoration>
+												<InputField name="ФизЛицаГруппаПоУмолчанию" id="128">
+													<DataPath>Объект.ФизЛицаГруппаПоУмолчанию</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа физ.лиц по умолчанию</v8:content>
+														</v8:item>
+													</Title>
+													<TitleLocation>Left</TitleLocation>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа физ.лиц, в которую будет добавлено новое физ.лицо при создании.</v8:content>
+														</v8:item>
+													</ToolTip>
+													<ToolTipRepresentation>Button</ToolTipRepresentation>
+													<Width>25</Width>
+													<HorizontalStretch>false</HorizontalStretch>
+													<ClearButton>true</ClearButton>
+													<InputHint>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Физические лица</v8:content>
+														</v8:item>
+													</InputHint>
+													<ContextMenu name="ФизЛицаГруппаПоУмолчаниюКонтекстноеМеню" id="129"/>
+													<ExtendedTooltip name="ФизЛицаГруппаПоУмолчаниюРасширеннаяПодсказка" id="130"/>
+												</InputField>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаФото" id="104">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа фото</v8:content>
+												</v8:item>
+											</Title>
+											<Group>Horizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаФотоРасширеннаяПодсказка" id="105"/>
+											<ChildItems>
+												<CheckBoxField name="ФизЛицаЗагружатьФото" id="101">
+													<DataPath>Объект.ФизЛицаЗагружатьФото</DataPath>
+													<TitleLocation>Right</TitleLocation>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>При установленном флаге будет выполнена попытка получения из AD картинки, установленной пользователю AD в качестве фото и добавлена создаваемому физ.лицу (только для режима загрузки регламентным заданием).</v8:content>
+														</v8:item>
+													</ToolTip>
+													<ToolTipRepresentation>Button</ToolTipRepresentation>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ФизЛицаЗагружатьФотоКонтекстноеМеню" id="102"/>
+													<ExtendedTooltip name="ФизЛицаЗагружатьФотоРасширеннаяПодсказка" id="103"/>
+												</CheckBoxField>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаДатаРождения" id="109">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа дата рождения</v8:content>
+												</v8:item>
+											</Title>
+											<Group>Horizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаДатаРожденияРасширеннаяПодсказка" id="110"/>
+											<ChildItems>
+												<CheckBoxField name="ФизЛицаЗагружатьДатуРождения" id="111">
+													<DataPath>Объект.ФизЛицаЗагружатьДатуРождения</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Загружать дату рождения из:</v8:content>
+														</v8:item>
+													</Title>
+													<TitleLocation>None</TitleLocation>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ФизЛицаЗагружатьДатуРожденияКонтекстноеМеню" id="112"/>
+													<ExtendedTooltip name="ФизЛицаЗагружатьДатуРожденияРасширеннаяПодсказка" id="113"/>
+													<Events>
+														<Event name="OnChange">ФизЛицаЗагружатьДатуРожденияПриИзменении</Event>
+													</Events>
+												</CheckBoxField>
+												<LabelDecoration name="Декорация7" id="204">
+													<Width>24</Width>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Загружать дату рождения из атрибута:</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="Декорация7КонтекстноеМеню" id="205"/>
+													<ExtendedTooltip name="Декорация7РасширеннаяПодсказка" id="206"/>
+												</LabelDecoration>
+												<UsualGroup name="Группа3" id="175">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа3</v8:content>
+														</v8:item>
+													</Title>
+													<Group>Horizontal</Group>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="176"/>
+													<ChildItems>
+														<InputField name="ФизЛицаИмяАтрибутаДатаРождения" id="114">
+															<DataPath>Объект.ФизЛицаИмяАтрибутаДатаРождения</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Имя атрибута AD</v8:content>
+																</v8:item>
+															</Title>
+															<TitleLocation>None</TitleLocation>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>При установленном флаге из данного атрибута AD будет предпринята попытка получить дату и установить её создаваемому физ.лицу в качестве дня рождения.</v8:content>
+																</v8:item>
+															</ToolTip>
+															<ToolTipRepresentation>Button</ToolTipRepresentation>
+															<Width>25</Width>
+															<HorizontalStretch>false</HorizontalStretch>
+															<InputHint>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Имя атрибута AD</v8:content>
+																</v8:item>
+															</InputHint>
+															<ContextMenu name="ФизЛицаИмяАтрибутаДатаРожденияКонтекстноеМеню" id="115"/>
+															<ExtendedTooltip name="ФизЛицаИмяАтрибутаДатаРожденияРасширеннаяПодсказка" id="116"/>
+														</InputField>
+													</ChildItems>
+												</UsualGroup>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаПраво" id="199">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа право</v8:content>
+								</v8:item>
+							</Title>
+							<Width>100</Width>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПравоРасширеннаяПодсказка" id="200"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаСозданиеСотрудников" id="86">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Загрузка сотрудников</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Representation>StrongSeparation</Representation>
+									<ExtendedTooltip name="ГруппаСозданиеСотрудниковРасширеннаяПодсказка" id="87"/>
+									<ChildItems>
+										<CheckBoxField name="СотрудникиСоздаватьСотрудника" id="80">
+											<DataPath>Объект.СотрудникиСоздаватьСотрудников</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Создавать сотрудника</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>Right</TitleLocation>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>При установленном флаге для загружаемого объекта будет выполнен поиск сотрудника по наименованию и если в ИБ такого сотрудника нет, он будет добавлен и установлен объекту.</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ToolTipRepresentation>Button</ToolTipRepresentation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="СотрудникиСоздаватьСотрудникаКонтекстноеМеню" id="81"/>
+											<ExtendedTooltip name="СотрудникиСоздаватьСотрудникаРасширеннаяПодсказка" id="82"/>
+											<Events>
+												<Event name="OnChange">СотрудникиСоздаватьСотрудникаПриИзменении</Event>
+											</Events>
+										</CheckBoxField>
+										<UsualGroup name="Группа4" id="177">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа4</v8:content>
+												</v8:item>
+											</Title>
+											<Group>Horizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="178"/>
+											<ChildItems>
+												<LabelDecoration name="Декорация4" id="179">
+													<Width>28</Width>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа новых сотрудников:</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="Декорация4КонтекстноеМеню" id="180"/>
+													<ExtendedTooltip name="Декорация4РасширеннаяПодсказка" id="181"/>
+												</LabelDecoration>
+												<InputField name="СотрудникиГруппаНовых" id="131">
+													<DataPath>Объект.СотрудникиГруппаНовых</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа сотрудников, в которую будет добавлен новый сотрудник при создании.</v8:content>
+														</v8:item>
+													</ToolTip>
+													<ToolTipRepresentation>Button</ToolTipRepresentation>
+													<Width>25</Width>
+													<HorizontalStretch>false</HorizontalStretch>
+													<ClearButton>true</ClearButton>
+													<InputHint>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Сотрудники</v8:content>
+														</v8:item>
+													</InputHint>
+													<ContextMenu name="СотрудникиГруппаНовыхКонтекстноеМеню" id="132"/>
+													<ExtendedTooltip name="СотрудникиГруппаНовыхРасширеннаяПодсказка" id="133"/>
+												</InputField>
+											</ChildItems>
+										</UsualGroup>
+										<CheckBoxField name="СотрудникиСоздаватьДолжности" id="83">
+											<DataPath>Объект.СотрудникиСоздаватьДолжности</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>При установленном флаге, если у загружаемого объекта указана должность, то при загрузке будет выполнен поиск должности по наименованию и если в ИБ этой должности нет, она будет добавлена и установлена создаваемому сотруднику.</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ToolTipRepresentation>Button</ToolTipRepresentation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="СотрудникиСоздаватьДолжностиКонтекстноеМеню" id="84"/>
+											<ExtendedTooltip name="СотрудникиСоздаватьДолжностиРасширеннаяПодсказка" id="85"/>
+										</CheckBoxField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаСозданиеМестХранения" id="184">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Загрузка мест хранения</v8:content>
+										</v8:item>
+									</Title>
+									<Representation>StrongSeparation</Representation>
+									<ExtendedTooltip name="ГруппаСозданиеМестХраненияРасширеннаяПодсказка" id="185"/>
+									<ChildItems>
+										<CheckBoxField name="МестаХраненияСоздаватьМестаХранения" id="186">
+											<DataPath>Объект.МестаХраненияСоздаватьМестаХранения</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>При установленном флаге при загрузке объекта будет выполнен поиск места хранения по наименованию объекта и если в ИБ такого места хранения нет, оно будет создано.</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ToolTipRepresentation>Button</ToolTipRepresentation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="МестаХраненияСоздаватьМестаХраненияКонтекстноеМеню" id="187"/>
+											<ExtendedTooltip name="МестаХраненияСоздаватьМестаХраненияРасширеннаяПодсказка" id="188"/>
+											<Events>
+												<Event name="OnChange">МестаХраненияСоздаватьМестаХраненияПриИзменении</Event>
+											</Events>
+										</CheckBoxField>
+										<UsualGroup name="Группа6" id="207">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа6</v8:content>
+												</v8:item>
+											</Title>
+											<Group>Horizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="Группа6РасширеннаяПодсказка" id="208"/>
+											<ChildItems>
+												<LabelDecoration name="Декорация8" id="209">
+													<Width>28</Width>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Место хранения - родитель:</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="Декорация8КонтекстноеМеню" id="210"/>
+													<ExtendedTooltip name="Декорация8РасширеннаяПодсказка" id="211"/>
+												</LabelDecoration>
+												<InputField name="МестаХраненияВерхнееМестоХранения" id="212">
+													<DataPath>Объект.МестаХраненияВерхнееМестоХранения</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Место хранение, которому будет подчинено создаваемое место хранения.</v8:content>
+														</v8:item>
+													</ToolTip>
+													<ToolTipRepresentation>Button</ToolTipRepresentation>
+													<Width>25</Width>
+													<HorizontalStretch>false</HorizontalStretch>
+													<ClearButton>true</ClearButton>
+													<InputHint>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Офис</v8:content>
+														</v8:item>
+													</InputHint>
+													<ContextMenu name="МестаХраненияВерхнееМестоХраненияКонтекстноеМеню" id="213"/>
+													<ExtendedTooltip name="МестаХраненияВерхнееМестоХраненияРасширеннаяПодсказка" id="214"/>
+												</InputField>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="Группа5" id="189">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа5</v8:content>
+												</v8:item>
+											</Title>
+											<Group>Horizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="190"/>
+											<ChildItems>
+												<LabelDecoration name="Декорация5" id="194">
+													<Width>28</Width>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Местоположение по умолчанию:</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="Декорация5КонтекстноеМеню" id="195"/>
+													<ExtendedTooltip name="Декорация5РасширеннаяПодсказка" id="196"/>
+												</LabelDecoration>
+												<InputField name="МестаХраненияПомещениеПоУмолчанию" id="191">
+													<DataPath>Объект.МестаХраненияМестоположениеПоУмолчанию</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Помещение, которое будет указано создаваемому месту хранения.</v8:content>
+														</v8:item>
+													</ToolTip>
+													<ToolTipRepresentation>Button</ToolTipRepresentation>
+													<Width>25</Width>
+													<HorizontalStretch>false</HorizontalStretch>
+													<ClearButton>true</ClearButton>
+													<InputHint>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Помещение</v8:content>
+														</v8:item>
+													</InputHint>
+													<ContextMenu name="МестаХраненияПомещениеПоУмолчаниюКонтекстноеМеню" id="192"/>
+													<ExtendedTooltip name="МестаХраненияПомещениеПоУмолчаниюРасширеннаяПодсказка" id="193"/>
+												</InputField>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ПрофилиИмпортаИзActiveDirectory</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПроверитьПодключение" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить подключение</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить подключение</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПроверитьПодключение</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

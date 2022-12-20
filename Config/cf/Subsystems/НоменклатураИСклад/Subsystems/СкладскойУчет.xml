@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Subsystem uuid="379bb7a1-119c-4c2c-ac7e-cbf22cd50dd2">
+		<Properties>
+			<Name>СкладскойУчет</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Складской учет</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeInCommandInterface>true</IncludeInCommandInterface>
+			<Explanation/>
+			<Picture/>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.Поступление</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.Перемещение</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.СборкаКомплектация</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.РазбиениеКомплектации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.Инвентаризация</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.Списание</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ОтчетПоЛицензиям</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ОстаткиНаСкладах</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ВедомостьПоСписаниям</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DocumentJournal.СкладскиеДокументы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Организации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Номенклатура</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.КарточкиНоменклатуры</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ПричиныСписания</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.МестаХранения</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Производители</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.СостояниеКарточекНоменклатуры</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.СостояниеКарточекНоменклатуры</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.СписокIPАдресов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ВыражениеПредставленияКарточкиНоменклатурыПоУмолчанию</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Местоположения</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.Остатки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.Продажи</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.Характеристики</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.УправлениеITОтделом8УФ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.УправлениеITОтделом8УФКлиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.УправлениеITОтделом8УФКлиентСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.УправлениеITОтделом8УФПовтИсп</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.УправлениеITОтделом8УФДатыЗапретаИзменения</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ИспользоватьПодключаемоеОборудование</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ИспользоватьПодключаемоеОборудование</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.МенеджерПодсказок</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FilterCriterion.КарточкаНоменклатуры</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FilterCriterion.Номенклатура</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ПроверятьУникальностьСерийногоНомера</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ПроверятьУникальностьИнвентарногоНомера</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.СформироватьШтрихкод</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.КарточкиНоменклатуры</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.СостоянияКарточекНоменклатуры</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.Комплектация</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ПоказатьСкрытьИнвентарныеИСерийныеНомера</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ШаблоныЭтикеток</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ПечатьЭтикеток</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.Подбор</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ШтрихкодыНоменклатуры</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.ФормаПодбора</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.СобытиеОбслуживания</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ИмпортДанныхИзСтороннихПрограмм</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ChartOfCharacteristicTypes.ВидыХарактеристик</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.вмхСклад</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.вмхШкаф</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.вмхСкладРасходныхМатериалов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.вмхПолка</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.вмхСкладСписанногоОборудования</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.вмхКартинкаНеВыбранногоВидаСклада</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.вмхСкладРемонта</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.вмхСерверныйШкаф</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ОтветственныеСотрудникиИТОтдела</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ВидыНоменклатуры</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ЗакрепленныеСотрудники</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ПрефиксИнвентарныхНомеров</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ДлинаИнвентарногоНомера</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ДобавлятьЛидирующиеНулиВИнвентарномНомере</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ЧтениеСкладскихДокументов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.схмВыход</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.схмДиск</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.схмДом</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.схмЗакрытаяДверь</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.схмКамера</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.схмКомпьютер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.схмСвитч</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.схмМонитор</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.схмКорзина</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.схмНоутбук</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.схмПринтер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.схмСетевоеРазветвление</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.схмСеть</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.схмСканер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.схмТелефон</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.схмФакс</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.схмЮзерЖенщина</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.схмЮзерМужчина</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.схмWiFi</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.схмКругСиний</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.схмКругЗеленый</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.схмКругСерый</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.схмКругКрасный</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.схмКругЖелтый</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.Линия</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.Овал</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ВставитьТекст</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.схмОкно</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ТипыРазукомплектации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Контрагенты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ВставитьКартинкуИзФайла</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommandGroup.Печать</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ДобавлениеИзменениеСкладскихДокументов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ВедомостьПоЗакупкам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.Закупки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ВыгрузкаДанныхВТСД</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ВыражениеПредставленияМестаХранения</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonTemplate.ВыражениеНаименованияКарточкиПоУмолчанию</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.СрокПолезногоИспользованияКомплектующих</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ИзносОборудования</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.РабочееМестоКладовщика</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.Сборка</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.РазбиениеКомплектации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ИзменениеПоказателей</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ИсторияКарточкиНоменклатурыПоМестамХранения</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ИсторияКарточкиНоменклатурыПоОтветственным</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ВариантыНавигацииВФормахНоменклатуры</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ОбщероссийскийКлассификаторОсновныхФондов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.АмортизационныеГруппыОКОФ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.АмортизационныеГруппы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ГруппировкаКарточек</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.СозданиеИзменениеМестХраненияПриИзмененииСотрудников</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.СозданиеИзменениеМестХраненияПриИзмененииСотрудников</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Спецификация</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.МеханизмКонтроляУникальностиНоменклатуры</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.УправлениеITОтделом8УФОбновитьКарточкиНоменклатурыПриЗаписиДокумента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.ДополнительныеРасходы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ДополнительныеРасходы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ДополнительныеОтчетыНоменклатураИСклад</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ДополнительныеОбработкиНоменклатураИСклад</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.НоменклатураПрисоединенныеФайлы</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects/>
+	</Subsystem>
+</MetaDataObject>

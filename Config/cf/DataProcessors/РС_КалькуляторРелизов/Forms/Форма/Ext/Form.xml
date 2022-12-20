@@ -1,0 +1,290 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаРассчитать" id="52">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.Рассчитать</CommandName>
+				<ExtendedTooltip name="ФормаРассчитатьРасширеннаяПодсказка" id="53"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаКонфигурацияВерсии" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа конфигурация версии</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа конфигурация версии</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКонфигурацияВерсииРасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаКонфигурация" id="48">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа конфигурация</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа конфигурация</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаКонфигурацияРасширеннаяПодсказка" id="49"/>
+					<ChildItems>
+						<InputField name="Конфигурация" id="3">
+							<DataPath>Объект.Конфигурация</DataPath>
+							<ContextMenu name="КонфигурацияКонтекстноеМеню" id="4"/>
+							<ExtendedTooltip name="КонфигурацияРасширеннаяПодсказка" id="5"/>
+							<Events>
+								<Event name="OnChange">КонфигурацияПриИзменении</Event>
+							</Events>
+						</InputField>
+						<Button name="ОбновитьВерсииКонфигурации" id="50">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ОбновитьВерсииКонфигурации</CommandName>
+							<ExtendedTooltip name="ОбновитьВерсииКонфигурацииРасширеннаяПодсказка" id="51"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаЛогинПароль" id="19">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Логин/пароль ИТС</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа логин пароль</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Behavior>Collapsible</Behavior>
+					<CollapsedRepresentationTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Логин/пароль ИТС</v8:content>
+						</v8:item>
+					</CollapsedRepresentationTitle>
+					<Collapsed>true</Collapsed>
+					<ExtendedTooltip name="ГруппаЛогинПарольРасширеннаяПодсказка" id="20"/>
+					<ChildItems>
+						<InputField name="Логин" id="21">
+							<DataPath>Объект.Логин</DataPath>
+							<ContextMenu name="ЛогинКонтекстноеМеню" id="22"/>
+							<ExtendedTooltip name="ЛогинРасширеннаяПодсказка" id="23"/>
+						</InputField>
+						<InputField name="Пароль" id="24">
+							<DataPath>Объект.Пароль</DataPath>
+							<ContextMenu name="ПарольКонтекстноеМеню" id="25"/>
+							<ExtendedTooltip name="ПарольРасширеннаяПодсказка" id="26"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаВерсии_Комментарий" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа версии комментарий</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа версии комментарий</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаВерсии_КомментарийРасширеннаяПодсказка" id="7"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаВерсии" id="17">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа версии</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа версии</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаВерсииРасширеннаяПодсказка" id="18"/>
+							<ChildItems>
+								<InputField name="ТекущаяВерсия" id="8">
+									<DataPath>Объект.ТекущаяВерсия</DataPath>
+									<ContextMenu name="ТекущаяВерсияКонтекстноеМеню" id="9"/>
+									<ExtendedTooltip name="ТекущаяВерсияРасширеннаяПодсказка" id="10"/>
+									<Events>
+										<Event name="OnChange">ТекущаяВерсияПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ТребуемаяВерсия" id="11">
+									<DataPath>Объект.ТребуемаяВерсия</DataPath>
+									<ContextMenu name="ТребуемаяВерсияКонтекстноеМеню" id="12"/>
+									<ExtendedTooltip name="ТребуемаяВерсияРасширеннаяПодсказка" id="13"/>
+									<Events>
+										<Event name="OnChange">ТребуемаяВерсияПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<InputField name="Комментарий" id="14">
+							<DataPath>Объект.Комментарий</DataPath>
+							<Visible>false</Visible>
+							<ReadOnly>true</ReadOnly>
+							<TitleLocation>None</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<HorizontalStretch>true</HorizontalStretch>
+							<MultiLine>true</MultiLine>
+							<Font ref="style:ВажнаяНадписьШрифт" kind="StyleItem"/>
+							<ContextMenu name="КомментарийКонтекстноеМеню" id="15"/>
+							<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="16"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаРелизы" id="46">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа релизы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа релизы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаРелизыРасширеннаяПодсказка" id="47"/>
+			<ChildItems>
+				<Table name="СписокРелизов" id="27">
+					<CommandBarLocation>None</CommandBarLocation>
+					<ReadOnly>true</ReadOnly>
+					<ChangeRowSet>false</ChangeRowSet>
+					<ChangeRowOrder>false</ChangeRowOrder>
+					<Footer>true</Footer>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<DataPath>Объект.СписокРелизов</DataPath>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="СписокРелизовКонтекстноеМеню" id="28"/>
+					<AutoCommandBar name="СписокРелизовКоманднаяПанель" id="29"/>
+					<ExtendedTooltip name="СписокРелизовРасширеннаяПодсказка" id="30"/>
+					<SearchStringAddition name="СписокРелизовСтрокаПоиска" id="31">
+						<AdditionSource>
+							<Item>СписокРелизов</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="СписокРелизовСтрокаПоискаКонтекстноеМеню" id="32"/>
+						<ExtendedTooltip name="СписокРелизовСтрокаПоискаРасширеннаяПодсказка" id="33"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="СписокРелизовСостояниеПросмотра" id="34">
+						<AdditionSource>
+							<Item>СписокРелизов</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="СписокРелизовСостояниеПросмотраКонтекстноеМеню" id="35"/>
+						<ExtendedTooltip name="СписокРелизовСостояниеПросмотраРасширеннаяПодсказка" id="36"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="СписокРелизовУправлениеПоиском" id="37">
+						<AdditionSource>
+							<Item>СписокРелизов</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="СписокРелизовУправлениеПоискомКонтекстноеМеню" id="38"/>
+						<ExtendedTooltip name="СписокРелизовУправлениеПоискомРасширеннаяПодсказка" id="39"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<LabelField name="СписокРелизовНомерСтроки" id="40">
+							<DataPath>Объект.СписокРелизов.LineNumber</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="СписокРелизовНомерСтрокиКонтекстноеМеню" id="41"/>
+							<ExtendedTooltip name="СписокРелизовНомерСтрокиРасширеннаяПодсказка" id="42"/>
+						</LabelField>
+						<InputField name="СписокРелизовВерсия" id="43">
+							<DataPath>Объект.СписокРелизов.Версия</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="СписокРелизовВерсияКонтекстноеМеню" id="44"/>
+							<ExtendedTooltip name="СписокРелизовВерсияРасширеннаяПодсказка" id="45"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.РС_КалькуляторРелизов</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ОбновитьВерсииКонфигурации" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить версии конфигурации</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить версии конфигурации</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОбновитьВерсииКонфигурации</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="Рассчитать" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Рассчитать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Рассчитать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.Рассчитать</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Рассчитать</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+	</Commands>
+</Form>

@@ -1,0 +1,253 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Проблемы</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Table name="Проблемы" id="1">
+			<Representation>List</Representation>
+			<ReadOnly>true</ReadOnly>
+			<RowSelectionMode>Row</RowSelectionMode>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Проблемы</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проблемы</v8:content>
+				</v8:item>
+			</Title>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ПроблемыКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="ПроблемыКоманднаяПанель" id="3">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ПроблемыРасширеннаяПодсказка" id="4"/>
+			<SearchStringAddition name="ПроблемыСтрокаПоиска" id="5">
+				<AdditionSource>
+					<Item>Проблемы</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПроблемыСтрокаПоискаКонтекстноеМеню" id="6"/>
+				<ExtendedTooltip name="ПроблемыСтрокаПоискаРасширеннаяПодсказка" id="7"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ПроблемыСостояниеПросмотра" id="8">
+				<AdditionSource>
+					<Item>Проблемы</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<HorizontalLocation>Left</HorizontalLocation>
+				<ContextMenu name="ПроблемыСостояниеПросмотраКонтекстноеМеню" id="9"/>
+				<ExtendedTooltip name="ПроблемыСостояниеПросмотраРасширеннаяПодсказка" id="10"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ПроблемыУправлениеПоиском" id="11">
+				<AdditionSource>
+					<Item>Проблемы</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ПроблемыУправлениеПоискомКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="ПроблемыУправлениеПоискомРасширеннаяПодсказка" id="13"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="Selection">ПроблемыВыбор</Event>
+			</Events>
+			<ChildItems>
+				<InputField name="ПроблемыПроблема" id="14">
+					<DataPath>Проблемы.Проблема</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<DropListButton>false</DropListButton>
+					<ChoiceButton>true</ChoiceButton>
+					<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+					<ContextMenu name="ПроблемыПроблемаКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="ПроблемыПроблемаРасширеннаяПодсказка" id="16"/>
+				</InputField>
+				<InputField name="ПроблемыКраткоеОписание" id="35">
+					<DataPath>Проблемы.КраткоеОписание</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПроблемыКраткоеОписаниеКонтекстноеМеню" id="36"/>
+					<ExtendedTooltip name="ПроблемыКраткоеОписаниеРасширеннаяПодсказка" id="37"/>
+				</InputField>
+				<InputField name="ПроблемыСтатус" id="17">
+					<DataPath>Проблемы.Статус</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПроблемыСтатусКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="ПроблемыСтатусРасширеннаяПодсказка" id="19"/>
+				</InputField>
+				<InputField name="ПроблемыПриоритет" id="20">
+					<DataPath>Проблемы.Приоритет</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПроблемыПриоритетКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="ПроблемыПриоритетРасширеннаяПодсказка" id="22"/>
+				</InputField>
+				<InputField name="ПроблемыСервис" id="23">
+					<DataPath>Проблемы.Сервис</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПроблемыСервисКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="ПроблемыСервисРасширеннаяПодсказка" id="25"/>
+				</InputField>
+				<InputField name="ПроблемыКатегория" id="26">
+					<DataPath>Проблемы.Категория</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПроблемыКатегорияКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="ПроблемыКатегорияРасширеннаяПодсказка" id="28"/>
+				</InputField>
+				<InputField name="ПроблемыИсполнитель" id="29">
+					<DataPath>Проблемы.Исполнитель</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПроблемыИсполнительКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="ПроблемыИсполнительРасширеннаяПодсказка" id="31"/>
+				</InputField>
+				<InputField name="ПроблемыОрганизация" id="32">
+					<DataPath>Проблемы.Организация</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПроблемыОрганизацияКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="ПроблемыОрганизацияРасширеннаяПодсказка" id="34"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<LabelDecoration name="Декорация1" id="38">
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<HorizontalStretch>true</HorizontalStretch>
+			<TextColor>#3366FF</TextColor>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список документов "Проблема", в которых указан текущий документ.</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="Декорация1КонтекстноеМеню" id="39"/>
+			<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="40"/>
+		</LabelDecoration>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ОбъектСсылка" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Объект ссылка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DocumentRef.Задание</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Проблемы" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проблемы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Проблема" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Проблема</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:DocumentRef.Проблема</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Статус" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статус</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:EnumRef.СтатусыПроблемы</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Приоритет" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Приоритет</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:EnumRef.ПриоритетЗадания</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Сервис" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сервис</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Сервисы</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Категория" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Категория</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.КатегорииЗаданий</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Исполнитель" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Исполнитель</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:TypeSet>cfg:DefinedType.ИсполнительЗадания</v8:TypeSet>
+					</Type>
+				</Column>
+				<Column name="Организация" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Организация</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+					</Type>
+				</Column>
+				<Column name="КраткоеОписание" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Краткое описание</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+	</Attributes>
+</Form>

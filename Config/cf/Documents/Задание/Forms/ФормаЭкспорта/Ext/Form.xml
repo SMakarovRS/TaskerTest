@@ -1,0 +1,416 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Экспорт документа</v8:content>
+		</v8:item>
+	</Title>
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаЭкспортировать" id="37">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.Экспортировать</CommandName>
+				<ExtendedTooltip name="ФормаЭкспортироватьРасширеннаяПодсказка" id="38"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаОснование" id="53">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа основание</v8:content>
+				</v8:item>
+			</Title>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<BackColor>web:AntiqueWhite</BackColor>
+			<ExtendedTooltip name="ГруппаОснованиеРасширеннаяПодсказка" id="54"/>
+			<ChildItems>
+				<LabelField name="Основание" id="55">
+					<DataPath>Основание</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Документ</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<ContextMenu name="ОснованиеКонтекстноеМеню" id="56"/>
+					<ExtendedTooltip name="ОснованиеРасширеннаяПодсказка" id="57"/>
+				</LabelField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаКакСохранить" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>1. Как сохранить?</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedTooltip name="ГруппаКакСохранитьРасширеннаяПодсказка" id="7"/>
+			<ChildItems>
+				<RadioButtonField name="ВариантЭкспорта" id="1">
+					<DataPath>ВариантЭкспорта</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<RadioButtonType>Auto</RadioButtonType>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Исходящее электронное письмо</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">0</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Файлы</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">1</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<ContextMenu name="ВариантЭкспортаКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="ВариантЭкспортаРасширеннаяПодсказка" id="3"/>
+					<Events>
+						<Event name="OnChange">ВариантЭкспортаПриИзменении</Event>
+					</Events>
+				</RadioButtonField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаНастройки" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>2. Что сохранить?</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Representation>StrongSeparation</Representation>
+			<ExtendedTooltip name="ГруппаНастройкиРасширеннаяПодсказка" id="9"/>
+			<ChildItems>
+				<CheckBoxField name="РеквизитыЗадания" id="39">
+					<DataPath>РеквизитыЗадания</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="РеквизитыЗаданияКонтекстноеМеню" id="40"/>
+					<ExtendedTooltip name="РеквизитыЗаданияРасширеннаяПодсказка" id="41"/>
+				</CheckBoxField>
+				<CheckBoxField name="ОписаниеЗадания" id="10">
+					<DataPath>ОписаниеЗадания</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ОписаниеЗаданияКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="ОписаниеЗаданияРасширеннаяПодсказка" id="12"/>
+				</CheckBoxField>
+				<CheckBoxField name="ПерепискаПоЗаданию" id="13">
+					<DataPath>ПерепискаПоЗаданию</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПерепискаПоЗаданиюКонтекстноеМеню" id="14"/>
+					<ExtendedTooltip name="ПерепискаПоЗаданиюРасширеннаяПодсказка" id="15"/>
+				</CheckBoxField>
+				<CheckBoxField name="ВложенныеФайлы" id="16">
+					<DataPath>ВложенныеФайлы</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ВложенныеФайлыКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="ВложенныеФайлыРасширеннаяПодсказка" id="18"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="Страницы" id="42">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="43"/>
+			<ChildItems>
+				<Page name="Вариант0" id="44">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вариант0</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="Вариант0РасширеннаяПодсказка" id="45"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаДополнительноеСообщение" id="61">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>3. Дополнительный текст в письме</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>StrongSeparation</Representation>
+							<ExtendedTooltip name="ГруппаДополнительноеСообщениеРасширеннаяПодсказка" id="62"/>
+						</UsualGroup>
+						<UsualGroup name="ГруппаАдресаты" id="19">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>3. Кому отправить?</v8:content>
+								</v8:item>
+							</Title>
+							<Representation>StrongSeparation</Representation>
+							<ExtendedTooltip name="ГруппаАдресатыРасширеннаяПодсказка" id="20"/>
+							<ChildItems>
+								<Table name="Адресаты" id="21">
+									<Representation>List</Representation>
+									<HeightInTableRows>3</HeightInTableRows>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<FileDragMode>AsFile</FileDragMode>
+									<DataPath>Адресаты</DataPath>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="АдресатыКонтекстноеМеню" id="22"/>
+									<AutoCommandBar name="АдресатыКоманднаяПанель" id="23"/>
+									<ExtendedTooltip name="АдресатыРасширеннаяПодсказка" id="24"/>
+									<SearchStringAddition name="АдресатыСтрокаПоиска" id="25">
+										<AdditionSource>
+											<Item>Адресаты</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="АдресатыСтрокаПоискаКонтекстноеМеню" id="26"/>
+										<ExtendedTooltip name="АдресатыСтрокаПоискаРасширеннаяПодсказка" id="27"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="АдресатыСостояниеПросмотра" id="28">
+										<AdditionSource>
+											<Item>Адресаты</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<HorizontalLocation>Left</HorizontalLocation>
+										<ContextMenu name="АдресатыСостояниеПросмотраКонтекстноеМеню" id="29"/>
+										<ExtendedTooltip name="АдресатыСостояниеПросмотраРасширеннаяПодсказка" id="30"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="АдресатыУправлениеПоиском" id="31">
+										<AdditionSource>
+											<Item>Адресаты</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="АдресатыУправлениеПоискомКонтекстноеМеню" id="32"/>
+										<ExtendedTooltip name="АдресатыУправлениеПоискомРасширеннаяПодсказка" id="33"/>
+									</SearchControlAddition>
+									<ChildItems>
+										<InputField name="Адресаты1Адресат" id="34">
+											<DataPath>Адресаты.Адресат</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="Адресаты1АдресатКонтекстноеМеню" id="35"/>
+											<ExtendedTooltip name="Адресаты1АдресатРасширеннаяПодсказка" id="36"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="Вариант1" id="46">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вариант1</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="Вариант1РасширеннаяПодсказка" id="47"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаКудаСохранить" id="51">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>3. Куда сохранить?</v8:content>
+								</v8:item>
+							</Title>
+							<Representation>StrongSeparation</Representation>
+							<ExtendedTooltip name="ГруппаКудаСохранитьРасширеннаяПодсказка" id="52"/>
+							<ChildItems>
+								<InputField name="КаталогСохранения" id="48">
+									<DataPath>КаталогСохранения</DataPath>
+									<ChoiceButton>true</ChoiceButton>
+									<ClearButton>true</ClearButton>
+									<ContextMenu name="КаталогСохраненияКонтекстноеМеню" id="49"/>
+									<ExtendedTooltip name="КаталогСохраненияРасширеннаяПодсказка" id="50"/>
+									<Events>
+										<Event name="StartChoice">ПутьСохраненияНачалоВыбора</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ВариантЭкспорта" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вариант экспорта</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>3</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<Save>
+				<Field>ВариантЭкспорта</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ОписаниеЗадания" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Описание задания</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>ОписаниеЗадания</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ПерепискаПоЗаданию" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переписка по заданию</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>ПерепискаПоЗаданию</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ВложенныеФайлы" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вложенные файлы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>ВложенныеФайлы</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="Адресаты" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адресаты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Адресат" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Адресат</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:TypeSet>cfg:DefinedType.НаблюдателиЗадания</v8:TypeSet>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="РеквизитыЗадания" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Реквизиты задания</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>РеквизитыЗадания</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="Основание" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Основание</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DocumentRef.Задание</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="КаталогСохранения" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Каталог сохранения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<Save>
+				<Field>КаталогСохранения</Field>
+			</Save>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Экспортировать" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Экспортировать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Экспортировать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.СохранитьФайлКак</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>Экспортировать</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+	</Commands>
+</Form>

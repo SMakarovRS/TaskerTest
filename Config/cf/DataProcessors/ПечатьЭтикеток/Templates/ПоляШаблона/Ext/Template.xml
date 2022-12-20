@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номенклатура</dataPath>
+			<field>Номенклатура</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Штрихкод</dataPath>
+			<field>Штрихкод</field>
+			<valueType>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>200</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТекущееВремя</dataPath>
+			<field>ТекущееВремя</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Количество</dataPath>
+			<field>Количество</field>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>МестоХранения</dataPath>
+			<field>МестоХранения</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация</dataPath>
+			<field>Организация</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОтветственныйСотрудник</dataPath>
+			<field>ОтветственныйСотрудник</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Сумма</dataPath>
+			<field>Сумма</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОтветственныйСотрудникITОтдела</dataPath>
+			<field>ОтветственныйСотрудникITОтдела</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ответственный сотрудник IT-отдела</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КарточкаНоменклатуры</dataPath>
+			<field>КарточкаНоменклатуры</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоЭтикетокДляПечати</dataPath>
+			<field>КоличествоЭтикетокДляПечати</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ШаблонЭтикеткиДляПечати</dataPath>
+			<field>ШаблонЭтикеткиДляПечати</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ВложенныйЗапрос.Организация,
+	ВложенныйЗапрос.МестоХранения,
+	ВложенныйЗапрос.Номенклатура КАК Номенклатура,
+	ВложенныйЗапрос.КарточкаНоменклатуры КАК КарточкаНоменклатуры,
+	ВложенныйЗапрос.Количество,
+	ВложенныйЗапрос.Сумма,
+	ВложенныйЗапрос.Штрихкод,
+	ВложенныйЗапрос.ОтветственныйСотрудник,
+	ВложенныйЗапрос.ОтветственныйСотрудникITОтдела,
+	"КоличествоЭтикеток" КАК КоличествоЭтикетокДляПечати,
+	"ШаблонЭтикетки" КАК ШаблонЭтикеткиДляПечати
+ПОМЕСТИТЬ ИсходныеДанные
+ИЗ
+	(ВЫБРАТЬ
+		ЗНАЧЕНИЕ(Справочник.Организации.ПустаяСсылка) КАК Организация,
+		ЗНАЧЕНИЕ(Справочник.МестаХранения.ПустаяСсылка) КАК МестоХранения,
+		ЗНАЧЕНИЕ(Справочник.Номенклатура.ПустаяСсылка) КАК Номенклатура,
+		ЗНАЧЕНИЕ(Справочник.КарточкиНоменклатуры.ПустаяСсылка) КАК КарточкаНоменклатуры,
+		0 КАК Количество,
+		0 КАК Сумма,
+		"" КАК Штрихкод,
+		ЗНАЧЕНИЕ(Справочник.Сотрудники.ПустаяСсылка) КАК ОтветственныйСотрудник,
+		ЗНАЧЕНИЕ(Справочник.Сотрудники.ПустаяСсылка) КАК ОтветственныйСотрудникITОтдела) КАК ВложенныйЗапрос
+
+ИНДЕКСИРОВАТЬ ПО
+	Номенклатура,
+	КарточкаНоменклатуры
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	МАКСИМУМ(&amp;ТекущееВремя) КАК ТекущееВремя,
+	ИсходныеДанныеПоследнийЗапрос.Организация КАК Организация,
+	ИсходныеДанныеПоследнийЗапрос.МестоХранения КАК МестоХранения,
+	ИсходныеДанныеПоследнийЗапрос.Номенклатура КАК Номенклатура,
+	ИсходныеДанныеПоследнийЗапрос.КарточкаНоменклатуры КАК КарточкаНоменклатуры,
+	ИсходныеДанныеПоследнийЗапрос.Количество КАК Количество,
+	ИсходныеДанныеПоследнийЗапрос.Сумма КАК Сумма,
+	ИсходныеДанныеПоследнийЗапрос.Штрихкод КАК Штрихкод,
+	ИсходныеДанныеПоследнийЗапрос.ОтветственныйСотрудник КАК ОтветственныйСотрудник,
+	ИсходныеДанныеПоследнийЗапрос.ОтветственныйСотрудникITОтдела КАК ОтветственныйСотрудникITОтдела,
+	ИсходныеДанныеПоследнийЗапрос.КоличествоЭтикетокДляПечати,
+	ИсходныеДанныеПоследнийЗапрос.ШаблонЭтикеткиДляПечати
+{ВЫБРАТЬ
+	ТекущееВремя,
+	Организация.*,
+	МестоХранения.*,
+	Номенклатура.*,
+	КарточкаНоменклатуры.*,
+	Количество,
+	Сумма,
+	Штрихкод,
+	ОтветственныйСотрудник.*,
+	ОтветственныйСотрудникITОтдела.*}
+ИЗ
+	ИсходныеДанные КАК ИсходныеДанныеПоследнийЗапрос
+{ГДЕ
+	(&amp;ТекущееВремя),
+	ИсходныеДанныеПоследнийЗапрос.Организация.*,
+	ИсходныеДанныеПоследнийЗапрос.МестоХранения.*,
+	ИсходныеДанныеПоследнийЗапрос.Номенклатура.*,
+	ИсходныеДанныеПоследнийЗапрос.КарточкаНоменклатуры.*,
+	ИсходныеДанныеПоследнийЗапрос.Количество,
+	ИсходныеДанныеПоследнийЗапрос.Сумма,
+	ИсходныеДанныеПоследнийЗапрос.Штрихкод,
+	ИсходныеДанныеПоследнийЗапрос.ОтветственныйСотрудник.*,
+	ИсходныеДанныеПоследнийЗапрос.ОтветственныйСотрудникITОтдела.*}
+
+СГРУППИРОВАТЬ ПО
+	ИсходныеДанныеПоследнийЗапрос.МестоХранения,
+	ИсходныеДанныеПоследнийЗапрос.Организация,
+	ИсходныеДанныеПоследнийЗапрос.Номенклатура,
+	ИсходныеДанныеПоследнийЗапрос.Штрихкод,
+	ИсходныеДанныеПоследнийЗапрос.КоличествоЭтикетокДляПечати,
+	ИсходныеДанныеПоследнийЗапрос.ОтветственныйСотрудникITОтдела,
+	ИсходныеДанныеПоследнийЗапрос.ОтветственныйСотрудник,
+	ИсходныеДанныеПоследнийЗапрос.ШаблонЭтикеткиДляПечати,
+	ИсходныеДанныеПоследнийЗапрос.КарточкаНоменклатуры,
+	ИсходныеДанныеПоследнийЗапрос.Количество,
+	ИсходныеДанныеПоследнийЗапрос.Сумма</query>
+	</dataSet>
+	<parameter>
+		<name>Организация</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Организация</v8:content>
+			</v8:item>
+		</title>
+		<value xsi:type="xs:string">Справочник.Организации.ПустаяСсылка</value>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>ТекущееВремя</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Текущее время</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Основной</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Организация</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">МестоХранения</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Штрихкод</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="xs:string"/>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Номенклатура</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.Номенклатура.ПустаяСсылка</dcsset:right>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

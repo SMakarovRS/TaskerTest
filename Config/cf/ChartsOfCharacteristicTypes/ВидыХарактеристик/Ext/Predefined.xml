@@ -1,0 +1,791 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<PredefinedData xmlns="http://v8.1c.ru/8.3/xcf/predef" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="PlanOfCharacteristicKindPredefinedItems" version="2.11">
+	<Item id="72a7b861-0e5a-4349-aa6f-b64dd603687e">
+		<Name>БлокПитания</Name>
+		<Code>000000025</Code>
+		<Description>Блок питания</Description>
+		<Type/>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="ca6739a2-c15f-4d64-b0a5-3765b6221d44">
+				<Name>Мощность</Name>
+				<Code>000000026</Code>
+				<Description>Мощность</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ЗначенияХарактеристик</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="6f7d23fa-4f85-4893-b776-7bfc6cc104ab">
+		<Name>ВебКамера</Name>
+		<Code>000000027</Code>
+		<Description>Веб-камера</Description>
+		<Type/>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="1734c96b-04d4-42d0-a4cc-b81fa95f2e5c">
+				<Name>ВстроенныйМикрофон</Name>
+				<Code>000000031</Code>
+				<Description>Встроенный микрофон</Description>
+				<Type>
+					<v8:Type>xs:boolean</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="186b5bb4-20e3-459e-b6fb-a5fe264e31f1">
+				<Name>ИнтерфейсВебКамеры</Name>
+				<Code>000000030</Code>
+				<Description>Интерфейс веб-камеры</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ЗначенияХарактеристик</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="7fd50950-77a4-4459-94b3-fec5b8721c6d">
+				<Name>КреплениеВебКамеры</Name>
+				<Code>000000029</Code>
+				<Description>Крепление веб-камеры</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ЗначенияХарактеристик</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="871bc74f-cf74-4f33-b6fd-972b5dd46e01">
+				<Name>РазрешениеВебКамеры</Name>
+				<Code>000000028</Code>
+				<Description>Разрешение веб-камеры</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ЗначенияХарактеристик</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="4d6b320e-1bd2-40f1-bc8f-22071ad7ac44">
+		<Name>ВидеоКарта</Name>
+		<Code>000000032</Code>
+		<Description>Видеокарта</Description>
+		<Type/>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="48219f55-853d-479b-9b71-c7b848b3aebe">
+				<Name>Видеопамять</Name>
+				<Code>000000033</Code>
+				<Description>Видеопамять</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ЗначенияХарактеристик</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="6ad2e8aa-bdb0-4ead-819d-8a1750efa0a5">
+				<Name>ИнтерфейсВидеокарты</Name>
+				<Code>000000034</Code>
+				<Description>Интерфейс видеокарты</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ЗначенияХарактеристик</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="ca5c9ed2-ccc6-43af-a90c-89584bb1507d">
+				<Name>РежимыВидеоКарты</Name>
+				<Code>000000079</Code>
+				<Description>Режимы видеокарты</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ЗначенияХарактеристик</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="e19cc873-01de-4a33-b89d-f8102be779a5">
+		<Name>ЖесткийДиск</Name>
+		<Code>000000001</Code>
+		<Description>Жесткий диск</Description>
+		<Type/>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="84f1a594-3056-4bcc-9db3-576412280b5b">
+				<Name>ИнтерфейсЖесткогоДиска</Name>
+				<Code>000000081</Code>
+				<Description>Интерфейс жесткого диска</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ЗначенияХарактеристик</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="1be57ffe-b167-4c27-9875-56c132be0ee0">
+				<Name>РазмерЖесткогоДиска</Name>
+				<Code>000000010</Code>
+				<Description>Размер жесткого диска</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ЗначенияХарактеристик</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="bc46a9ed-2654-4a73-a895-e6cce5e51eaa">
+		<Name>ЗвуковаяКарта</Name>
+		<Code>000000074</Code>
+		<Description>Звуковая карта</Description>
+		<Type/>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="ca2c96e4-eb67-4723-93d5-9e2e0722c2d5">
+				<Name>ИнтерфейсЗвуковойКарты</Name>
+				<Code>000000076</Code>
+				<Description>Интерфейс звуковой карты</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ЗначенияХарактеристик</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="243298db-1475-4ecb-a7bc-eb24f5507542">
+				<Name>КоличествоКолонокЗвуковойКарты</Name>
+				<Code>000000075</Code>
+				<Description>Количество колонок звуковой карты</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ЗначенияХарактеристик</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="5c06f2f6-2574-4ab2-abcc-0a3510b27453">
+				<Name>ПоддержкаОСЗвуковойКарты</Name>
+				<Code>000000077</Code>
+				<Description>Поддержка ОС Звуковой карты</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ЗначенияХарактеристик</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="28b8c239-e68b-40b4-96ed-0409dfa434b4">
+		<Name>ИБП</Name>
+		<Code>000000067</Code>
+		<Description>ИБП</Description>
+		<Type/>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="d729d2ea-d2c2-454d-838b-84c2562c1e69">
+				<Name>ИнтерфейсИБП</Name>
+				<Code>000000069</Code>
+				<Description>Интерфейс ИБП</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ЗначенияХарактеристик</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="e196f3c7-a3e7-41df-961c-92b7117b1834">
+				<Name>МощностьИБП</Name>
+				<Code>000000070</Code>
+				<Description>Мощность ИБП (Вт)</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ЗначенияХарактеристик</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="9720021c-43b8-48a2-a8c0-10aa7cd59394">
+				<Name>УровеньШумаИБП</Name>
+				<Code>000000068</Code>
+				<Description>Уровень шума ИБП (Дб)</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ЗначенияХарактеристик</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="06119a04-5f91-4eef-a31c-7d11a5429577">
+		<Name>Картриджи</Name>
+		<Code>000000002</Code>
+		<Description>Картриджи</Description>
+		<Type/>
+		<IsFolder>true</IsFolder>
+	</Item>
+	<Item id="23597b18-74a8-49cc-b41a-690559db9e9b">
+		<Name>Клавиатура</Name>
+		<Code>000000035</Code>
+		<Description>Клавиатура</Description>
+		<Type/>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="440d0d63-e528-4d45-9b2e-4778fe239be8">
+				<Name>ИнтерфейсКлавиатуры</Name>
+				<Code>000000036</Code>
+				<Description>Интерфейс клавиатуры</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ЗначенияХарактеристик</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="107c9e5d-0d11-4158-9aec-65eeceec35d0">
+		<Name>Корпус</Name>
+		<Code>000000061</Code>
+		<Description>Корпус</Description>
+		<Type/>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="7e34952a-1df3-47cf-9b97-920db98989ca">
+				<Name>МощностьБлокаПитанияКорпуса</Name>
+				<Code>000000062</Code>
+				<Description>Мощность блока питания корпуса</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ЗначенияХарактеристик</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="86956fc5-61f8-4b3f-b377-bb72cbddb349">
+				<Name>ФорматКорпуса</Name>
+				<Code>000000063</Code>
+				<Description>Формат корпуса</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ЗначенияХарактеристик</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="82174908-2cda-4647-a026-2a4b14aa1a8e">
+		<Name>Лицензия</Name>
+		<Code>000000084</Code>
+		<Description>Лицензия</Description>
+		<Type/>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="cee5dbfd-e037-47fe-93e1-852e6175cf39">
+				<Name>КлючПродукта</Name>
+				<Code>000000085</Code>
+				<Description>Ключ продукта</Description>
+				<Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>150</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="ff16659f-4966-4a06-b73c-f8f7b1f70f8c">
+		<Name>МатеринскаяПлата</Name>
+		<Code>000000003</Code>
+		<Description>Материнская плата</Description>
+		<Type/>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="a1243587-4e3c-4213-8998-d39e21e0230a">
+				<Name>РазъемыОЗУМатеринскойПлаты</Name>
+				<Code>000000011</Code>
+				<Description>Разъемы ОЗУ</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ЗначенияХарактеристик</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="7d5ccf39-9938-4ab5-ba69-b69dde4382d5">
+				<Name>ФормФакторМатеринскойПлаты</Name>
+				<Code>000000012</Code>
+				<Description>Форм-фактор материнской платы</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ЗначенияХарактеристик</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="87b24b86-4c39-41be-ad79-dd7288c31f03">
+				<Name>ЧипсетМатеринскойПлаты</Name>
+				<Code>000000013</Code>
+				<Description>Чипсет материнской платы</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ЗначенияХарактеристик</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="be288ba6-775f-4b64-b214-0570e6515a01">
+		<Name>Микрофон</Name>
+		<Code>000000037</Code>
+		<Description>Микрофон</Description>
+		<Type/>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="9feafd70-b8e7-457d-9aa1-ff63e1d55be8">
+				<Name>РазъемыМикрофона</Name>
+				<Code>000000038</Code>
+				<Description>Разъемы микрофона</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ЗначенияХарактеристик</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="c71374e2-b2a7-4ef5-8114-a5bcb564cd19">
+		<Name>Монитор</Name>
+		<Code>000000004</Code>
+		<Description>Монитор</Description>
+		<Type/>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="974cb7d6-66a4-43f9-a2a1-afc729a9a0b6">
+				<Name>ДатаВыпускаМонитора</Name>
+				<Code>000000014</Code>
+				<Description>Дата выпуска монитора</Description>
+				<Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>150</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="a2263506-7025-4db8-8500-cce7ce324cb7">
+				<Name>СоотношениеСторонМонитора</Name>
+				<Code>000000015</Code>
+				<Description>Соотношение сторон монитора</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ЗначенияХарактеристик</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="60b47e0f-8351-4081-856c-206f60d8b5d4">
+				<Name>ТипМонитора</Name>
+				<Code>000000016</Code>
+				<Description>Тип монитора</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ЗначенияХарактеристик</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="bdacf18b-04ae-4d36-b833-0903d0b06843">
+		<Name>МФУ</Name>
+		<Code>000000039</Code>
+		<Description>МФУ</Description>
+		<Type/>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="025f7ad1-7a8e-4406-b3e5-bd63a60fd4df">
+				<Name>ИнтерфейсМФУ</Name>
+				<Code>000000042</Code>
+				<Description>Интерфейс МФУ</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ЗначенияХарактеристик</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="dbdfb45c-7f56-44be-9522-bf3534a374a3">
+				<Name>МаксимальнаяСкоростьЦветнойПечатиМФУ</Name>
+				<Code>000000060</Code>
+				<Description>Максимальная скорость цветной печати МФУ (стр/мин)</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ЗначенияХарактеристик</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="e77a104f-e2fc-444c-b2b7-0d7fe569ffb6">
+				<Name>РазрешениеПечатиМФУ</Name>
+				<Code>000000045</Code>
+				<Description>Разрешение печати МФУ</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ЗначенияХарактеристик</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="c61cb708-2638-4634-bfee-73ef34b875ed">
+				<Name>РесурсПечатиМФУ</Name>
+				<Code>000000044</Code>
+				<Description>Ресурс печати МФУ (листов)</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ЗначенияХарактеристик</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="9d973267-04ec-4d6f-9369-e6c67f30d3a3">
+				<Name>СканерМФУ</Name>
+				<Code>000000043</Code>
+				<Description>Сканер МФУ</Description>
+				<Type>
+					<v8:Type>xs:boolean</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="05f0bfb7-c389-4de1-8052-dc001264037b">
+				<Name>ТипОборудования</Name>
+				<Code>000000040</Code>
+				<Description>Тип оборудования</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ЗначенияХарактеристик</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="ff2966c9-5127-4afd-8aeb-a0cbef1280b8">
+				<Name>ФаксМФУ</Name>
+				<Code>000000041</Code>
+				<Description>Факс в МФУ</Description>
+				<Type>
+					<v8:Type>xs:boolean</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="55726989-9101-4079-91fa-e74d4eb03f53">
+		<Name>Мышь</Name>
+		<Code>000000046</Code>
+		<Description>Мышь</Description>
+		<Type/>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="5b7e4a77-abd4-404e-99b5-ce9526935574">
+				<Name>ИнтерфейсМыши</Name>
+				<Code>000000047</Code>
+				<Description>Интерфейс мыши</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ЗначенияХарактеристик</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="2ada30aa-101b-411d-a3fa-1b84c832be02">
+		<Name>Ноутбук</Name>
+		<Code>000000048</Code>
+		<Description>Ноутбук</Description>
+		<Type/>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="fd429414-82ac-4e1e-822c-82ec75560cd5">
+				<Name>ИнтерфейсНакопителяНоутбука</Name>
+				<Code>000000052</Code>
+				<Description>Интерфейс накопителя ноутбука</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ЗначенияХарактеристик</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="a983218b-8fa3-4965-84ea-3529dae2fb14">
+				<Name>КартридерНоутбука</Name>
+				<Code>000000050</Code>
+				<Description>Картридер ноутбука</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ЗначенияХарактеристик</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="56c703e8-cf46-42ff-b524-32e115624e11">
+				<Name>ОбъемНакопителяНоутбука</Name>
+				<Code>000000051</Code>
+				<Description>Объем накопителя ноутбука</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ЗначенияХарактеристик</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="6b284b9d-43f2-4d32-9987-01376c7b0a0d">
+				<Name>ОСНоутбука</Name>
+				<Code>000000049</Code>
+				<Description>ОС ноутбука</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ЗначенияХарактеристик</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="29fec519-5d04-447f-9765-2eb79314b6a1">
+				<Name>ЭкранНоутбука</Name>
+				<Code>000000053</Code>
+				<Description>Экран ноутбука</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ЗначенияХарактеристик</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="5afa1759-473a-43bf-8fb6-c0387ab32466">
+		<Name>ОперационнаяСистема</Name>
+		<Code>000000080</Code>
+		<Description>Операционная система</Description>
+		<Type/>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="7bd49128-1bae-4b5b-a37f-f3d78ff960ce">
+				<Name>АрхитектураОперационнойСистемы</Name>
+				<Code>000000082</Code>
+				<Description>Архитектура операционной системы</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ЗначенияХарактеристик</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="313cdd48-c944-4290-a4bd-6bfd6b903bac">
+		<Name>Память</Name>
+		<Code>000000005</Code>
+		<Description>Память</Description>
+		<Type/>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="7c2e7f48-1164-44ed-a109-1b5734e03788">
+				<Name>РазмерПамяти</Name>
+				<Code>000000017</Code>
+				<Description>Размер памяти</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ЗначенияХарактеристик</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="b0e3a638-6ddc-4c14-9f28-09cbed2b184f">
+				<Name>СкоростьПамяти</Name>
+				<Code>000000018</Code>
+				<Description>Скорость памяти</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ЗначенияХарактеристик</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="a91e3b45-71bf-4a78-9cf1-b51598a541f7">
+				<Name>ТипПамяти</Name>
+				<Code>000000019</Code>
+				<Description>Тип памяти</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ЗначенияХарактеристик</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="f51df437-b2da-4a57-b99b-774ef22fc41b">
+		<Name>Привод</Name>
+		<Code>000000054</Code>
+		<Description>Привод</Description>
+		<Type/>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="14567da1-8e1d-4e5d-aa74-dcfcf9aec47a">
+				<Name>ИнтерфейсПривода</Name>
+				<Code>000000055</Code>
+				<Description>Интерфейс привода</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ЗначенияХарактеристик</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="ac1a627c-b47b-4fb8-9a0d-76c63bc221b0">
+		<Name>Принтер</Name>
+		<Code>000000056</Code>
+		<Description>Принтер</Description>
+		<Type/>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="15241914-1195-4c4f-9ebe-415f732c3898">
+				<Name>МаксимальнаяСкоростьЦветнойПечатиПринтера</Name>
+				<Code>000000059</Code>
+				<Description>Максимальная скорость цветной печати принтера (стр/мин)</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ЗначенияХарактеристик</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="1ebdb61c-1927-4733-ab5e-f8de3a6d1843">
+				<Name>РесурсПринтера</Name>
+				<Code>000000057</Code>
+				<Description>Ресурс принтера (листов)</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ЗначенияХарактеристик</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="98c2f218-1c6a-4b1d-b3ff-8307f4de3837">
+				<Name>ТехнологияПечатиПринтера</Name>
+				<Code>000000058</Code>
+				<Description>Технология печати принтера</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ЗначенияХарактеристик</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="44ec26e4-5b7c-4922-8d91-6ce867bf37a1">
+		<Name>ПрограммноеОбеспечение</Name>
+		<Code>000000006</Code>
+		<Description>Программное обеспечение</Description>
+		<Type/>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="f8cceb23-dbb8-470e-b63a-f2c609b74359">
+				<Name>ВерсияПО</Name>
+				<Code>000000020</Code>
+				<Description>Версия ПО</Description>
+				<Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>150</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="b23684fd-7d22-49cc-9227-66e9264df3ad">
+				<Name>ДатаОкончанияЛицензии</Name>
+				<Code>000000021</Code>
+				<Description>Дата окончания лицензии</Description>
+				<Type>
+					<v8:Type>xs:dateTime</v8:Type>
+					<v8:DateQualifiers>
+						<v8:DateFractions>Date</v8:DateFractions>
+					</v8:DateQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="2ec39911-ec51-4452-af0c-8901aff5e420">
+				<Name>ДатаУстановкиПО</Name>
+				<Code>000000022</Code>
+				<Description>Дата установки ПО</Description>
+				<Type>
+					<v8:Type>xs:dateTime</v8:Type>
+					<v8:DateQualifiers>
+						<v8:DateFractions>Date</v8:DateFractions>
+					</v8:DateQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="c1794f70-8d1b-43db-b2a9-bee459e17f86">
+		<Name>Процессор</Name>
+		<Code>000000007</Code>
+		<Description>Процессор</Description>
+		<Type/>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="6253a82b-259c-4d58-acb8-c81e1028020e">
+				<Name>КоличествоЯдерПроцессора</Name>
+				<Code>000000078</Code>
+				<Description>Количество ядер процессора</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ЗначенияХарактеристик</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="de114c69-3a1a-4c6a-9e09-743e6428966a">
+				<Name>СокетПроцессора</Name>
+				<Code>000000083</Code>
+				<Description>Сокет процессора</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ЗначенияХарактеристик</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="f709b07b-2d01-46d9-90b4-f76733cedfca">
+				<Name>ЧастотаПроцессора</Name>
+				<Code>000000023</Code>
+				<Description>Частота процессора</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ЗначенияХарактеристик</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="979fafcc-3906-4bbd-8369-b3f597df1168">
+		<Name>СетеваяКарта</Name>
+		<Code>000000008</Code>
+		<Description>Сетевая карта</Description>
+		<Type/>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="3f75418d-f311-483f-8499-c7a8cfe598e2">
+				<Name>ТипСетевойКарты</Name>
+				<Code>000000024</Code>
+				<Description>Тип сетевой карты</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ЗначенияХарактеристик</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="8002d0a9-92f1-4271-86f5-73bc90663fab">
+		<Name>СистемнаяПлата</Name>
+		<Code>000000009</Code>
+		<Description>Системная плата</Description>
+		<Type/>
+		<IsFolder>true</IsFolder>
+	</Item>
+	<Item id="b91915b8-1789-4287-a51f-4a9958d081c1">
+		<Name>Сканер</Name>
+		<Code>000000071</Code>
+		<Description>Сканер</Description>
+		<Type/>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="142e48d0-1cdf-4178-9339-31ffa682a5d7">
+				<Name>ИнтерфейсСканера</Name>
+				<Code>000000072</Code>
+				<Description>Интерфейс сканера</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ЗначенияХарактеристик</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="1961be84-9cd2-4199-b955-2ea5907a61b1">
+				<Name>ПоддерживаемыеОССканера</Name>
+				<Code>000000073</Code>
+				<Description>Поддерживаемые ОС</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ЗначенияХарактеристик</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="65d0d076-1011-4108-92d7-07ecf2c32af3">
+		<Name>ФлешНакопитель</Name>
+		<Code>000000064</Code>
+		<Description>Флеш-накопитель</Description>
+		<Type/>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="f96d8ffe-5380-45b1-8409-33e7bfbc580f">
+				<Name>ИнтерфейсФлешНакопителя</Name>
+				<Code>000000065</Code>
+				<Description>Интерфейс флеш-накопителя</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ЗначенияХарактеристик</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="8bce7193-9a50-4834-aaf1-e5a2bd70b91b">
+				<Name>РазмерФлешНакопителя</Name>
+				<Code>000000086</Code>
+				<Description>Размер флеш накопителя</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ЗначенияХарактеристик</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="a00e396b-1ebc-47e4-824a-1c1545eb4ddf">
+				<Name>ЦветФлешНакопителя</Name>
+				<Code>000000066</Code>
+				<Description>Цвет флеш-накопителя</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ЗначенияХарактеристик</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+</PredefinedData>

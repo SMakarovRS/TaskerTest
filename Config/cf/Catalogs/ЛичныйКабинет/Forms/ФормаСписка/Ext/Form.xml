@@ -1,0 +1,563 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Popup name="Загрузить" id="28">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Загрузить</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ЗагрузитьРасширеннаяПодсказка" id="29"/>
+				<ChildItems>
+					<Button name="ФормаЗагрузитьФайл" id="30">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ЗагрузитьФайл</CommandName>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Файлы</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="ФормаЗагрузитьФайлРасширеннаяПодсказка" id="31"/>
+					</Button>
+					<Button name="ФормаЗагрузитьПапку" id="32">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ЗагрузитьПапку</CommandName>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Папку</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="ФормаЗагрузитьПапкуРасширеннаяПодсказка" id="33"/>
+					</Button>
+					<Button name="ФормаПредопределенныеДанные" id="71">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ПредопределенныеДанные</CommandName>
+						<ExtendedTooltip name="ФормаПредопределенныеДанныеРасширеннаяПодсказка" id="72"/>
+					</Button>
+				</ChildItems>
+			</Popup>
+			<Button name="ФормаИмпортЭкспорт" id="67">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ИмпортЭкспорт</CommandName>
+				<ExtendedTooltip name="ФормаИмпортЭкспортРасширеннаяПодсказка" id="68"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="СписокКомпоновщикНастроекПользовательскиеНастройки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа пользовательских настроек</v8:content>
+				</v8:item>
+			</Title>
+			<VerticalStretch>false</VerticalStretch>
+			<Group>Vertical</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="СписокКомпоновщикНастроекПользовательскиеНастройкиРасширеннаяПодсказка" id="2"/>
+		</UsualGroup>
+		<Pages name="Страницы" id="37">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="38"/>
+			<ChildItems>
+				<Page name="Файлы" id="39">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Файлы</v8:content>
+						</v8:item>
+					</Title>
+					<Picture>
+						<xr:Ref>CommonPicture.Код</xr:Ref>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="ФайлыРасширеннаяПодсказка" id="40"/>
+					<ChildItems>
+						<Table name="Список" id="3">
+							<CommandBarLocation>None</CommandBarLocation>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<InitialTreeView>ExpandTopLevel</InitialTreeView>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Список</DataPath>
+							<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Список</v8:content>
+								</v8:item>
+							</Title>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<UserSettingsGroup>СписокКомпоновщикНастроекПользовательскиеНастройки</UserSettingsGroup>
+							<ContextMenu name="СписокКонтекстноеМеню" id="4"/>
+							<AutoCommandBar name="СписокКоманднаяПанель" id="5">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="6"/>
+							<SearchStringAddition name="СписокСтрокаПоиска" id="7">
+								<AdditionSource>
+									<Item>Список</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="8"/>
+								<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="9"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СписокСостояниеПросмотра" id="10">
+								<AdditionSource>
+									<Item>Список</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<HorizontalLocation>Left</HorizontalLocation>
+								<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="11"/>
+								<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="12"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СписокУправлениеПоиском" id="13">
+								<AdditionSource>
+									<Item>Список</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="14"/>
+								<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="15"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="Наименование" id="16">
+									<DataPath>Список.Description</DataPath>
+									<DefaultItem>true</DefaultItem>
+									<ContextMenu name="НаименованиеКонтекстноеМеню" id="17"/>
+									<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="18"/>
+								</LabelField>
+								<CheckBoxField name="Активность" id="22">
+									<DataPath>~Список.Активность</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="АктивностьКонтекстноеМеню" id="23"/>
+									<ExtendedTooltip name="АктивностьРасширеннаяПодсказка" id="24"/>
+								</CheckBoxField>
+								<LabelField name="ТипФайла" id="25">
+									<DataPath>Список.ТипФайла</DataPath>
+									<ContextMenu name="ТипФайлаКонтекстноеМеню" id="26"/>
+									<ExtendedTooltip name="ТипФайлаРасширеннаяПодсказка" id="27"/>
+								</LabelField>
+								<LabelField name="Описание" id="79">
+									<DataPath>Список.Описание</DataPath>
+									<ContextMenu name="ОписаниеКонтекстноеМеню" id="80"/>
+									<ExtendedTooltip name="ОписаниеРасширеннаяПодсказка" id="81"/>
+								</LabelField>
+								<LabelField name="Ссылка" id="85">
+									<DataPath>Список.Ref</DataPath>
+									<Visible>false</Visible>
+									<ContextMenu name="СсылкаКонтекстноеМеню" id="86"/>
+									<ExtendedTooltip name="СсылкаРасширеннаяПодсказка" id="87"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="Настройки" id="41">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройки</v8:content>
+						</v8:item>
+					</Title>
+					<Picture>
+						<xr:Ref>CommonPicture.НастройкаДокумента</xr:Ref>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="НастройкиРасширеннаяПодсказка" id="42"/>
+					<ChildItems>
+						<Pages name="Опции" id="55">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Опции</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ОпцииРасширеннаяПодсказка" id="56"/>
+							<ChildItems>
+								<Page name="Локализация" id="57">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Локализация</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ЛокализацияРасширеннаяПодсказка" id="58"/>
+									<ChildItems>
+										<TextDocumentField name="СтраницаЛокализацииЛичногоКабинета" id="50">
+											<DataPath>ЛичныйКабинетЛокализация</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ContextMenu name="СтраницаЛокализацииЛичногоКабинетаКонтекстноеМеню" id="51"/>
+											<ExtendedTooltip name="СтраницаЛокализацииЛичногоКабинетаРасширеннаяПодсказка" id="52"/>
+										</TextDocumentField>
+									</ChildItems>
+								</Page>
+								<Page name="Дополнительно" id="59">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дополнительно</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ДополнительноРасширеннаяПодсказка" id="60"/>
+									<ChildItems>
+										<InputField name="ЛичныйКабинетСтраницаАвторизации" id="88">
+											<DataPath>ЛичныйКабинетСтраницаАвторизации</DataPath>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Страница для авторизации в личном кабинете</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ToolTipRepresentation>Button</ToolTipRepresentation>
+											<ContextMenu name="ЛичныйКабинетСтраницаАвторизацииКонтекстноеМеню" id="89"/>
+											<ExtendedTooltip name="ЛичныйКабинетСтраницаАвторизацииРасширеннаяПодсказка" id="90"/>
+										</InputField>
+										<InputField name="Страница404ЛичногоКабинета" id="61">
+											<DataPath>ЛичныйКабинетСтраница404</DataPath>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Страница для показа ошибки в HTTP-сервисе</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ToolTipRepresentation>Button</ToolTipRepresentation>
+											<ContextMenu name="Страница404ЛичногоКабинетаКонтекстноеМеню" id="62"/>
+											<ExtendedTooltip name="Страница404ЛичногоКабинетаРасширеннаяПодсказка" id="63"/>
+										</InputField>
+										<InputField name="СтраницаУстановкиОценокПоЗаданию" id="64">
+											<DataPath>ЛичныйКабинетСтраницаУстановкиОценокПоЗаданию</DataPath>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Страница установки оценок по заданию</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ToolTipRepresentation>Button</ToolTipRepresentation>
+											<ContextMenu name="СтраницаУстановкиОценокПоЗаданиюКонтекстноеМеню" id="65"/>
+											<ExtendedTooltip name="СтраницаУстановкиОценокПоЗаданиюРасширеннаяПодсказка" id="66"/>
+										</InputField>
+										<InputField name="ЛичныйКабинетСтраницаЗадания" id="73">
+											<DataPath>ЛичныйКабинетСтраницаЗадания</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Шаблон страницы задания</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Страница задания</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ToolTipRepresentation>Button</ToolTipRepresentation>
+											<ContextMenu name="ЛичныйКабинетСтраницаЗаданияКонтекстноеМеню" id="74"/>
+											<ExtendedTooltip name="ЛичныйКабинетСтраницаЗаданияРасширеннаяПодсказка" id="75"/>
+										</InputField>
+										<InputField name="ЛичныйКабинетДобавлениеКомментария" id="82">
+											<DataPath>ЛичныйКабинетДобавлениеКомментария</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Шаблон страницы добавления комментария</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Страница для добавление комментария в HTTP-сервисе</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ToolTipRepresentation>Button</ToolTipRepresentation>
+											<ContextMenu name="ЛичныйКабинетДобавлениеКомментарияКонтекстноеМеню" id="83"/>
+											<ExtendedTooltip name="ЛичныйКабинетДобавлениеКомментарияРасширеннаяПодсказка" id="84"/>
+										</InputField>
+										<CheckBoxField name="ЛичныйКабинетОтключитьСобственнуюАвторизацию" id="91">
+											<DataPath>ЛичныйКабинетИспользоватьСобственнуюАвторизацию</DataPath>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Отключает собственную авторизацию. Может понадобиться, например, если используется доменная авторизация.</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ToolTipRepresentation>Button</ToolTipRepresentation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ЛичныйКабинетОтключитьСобственнуюАвторизациюКонтекстноеМеню" id="92"/>
+											<ExtendedTooltip name="ЛичныйКабинетОтключитьСобственнуюАвторизациюРасширеннаяПодсказка" id="93"/>
+										</CheckBoxField>
+									</ChildItems>
+								</Page>
+							</ChildItems>
+						</Pages>
+						<CommandBar name="Группа2" id="53">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа2</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalLocation>Right</HorizontalLocation>
+							<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="54"/>
+							<ChildItems>
+								<Button name="ЗаписатьНастройки" id="48">
+									<Type>CommandBarButton</Type>
+									<DefaultButton>true</DefaultButton>
+									<CommandName>Form.Command.ЗаписатьНастройки</CommandName>
+									<ExtendedTooltip name="ЗаписатьНастройкиРасширеннаяПодсказка" id="49"/>
+								</Button>
+							</ChildItems>
+						</CommandBar>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>Список.Parent</Field>
+				<Field>Список.Ref</Field>
+				<Field>Список.ТипФайла</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>Catalog.ЛичныйКабинет</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ЛичныйКабинетЛокализация" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки локализации</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ЛичныйКабинетСтраница404" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шаблон страницы 404 (не найденой страницы)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ЛичныйКабинет</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ЛичныйКабинетСтраницаУстановкиОценокПоЗаданию" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шаблон страницы установки оценок по заданию</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ЛичныйКабинет</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ЛичныйКабинетСтраницаЗадания" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Личный кабинет страница задания</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ЛичныйКабинет</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ДлительнаяОперация" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Длительная операция</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ЛичныйКабинетДобавлениеКомментария" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Личный кабинет добавление комментария</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ЛичныйКабинет</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЛичныйКабинетСтраницаАвторизации" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шаблон страницы авторизации</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ЛичныйКабинет</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ЛичныйКабинетСтраницаВходаПослеАвторизации" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шаблон страницы входа после авторизации</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ЛичныйКабинет</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ЛичныйКабинетИспользоватьСобственнуюАвторизацию" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать собственную авторизацию</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗагрузитьПапку" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить папку</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить папку</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗагрузитьПапку</Action>
+		</Command>
+		<Command name="ЗагрузитьФайл" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить файл</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить файл</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗагрузитьФайл</Action>
+		</Command>
+		<Command name="ЗаписатьНастройки" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать настройки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать настройки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаписатьНастройкиКлиент</Action>
+		</Command>
+		<Command name="ИмпортЭкспорт" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Импорт/экспорт</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Импорт экспорт</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.DataProcessor</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ИмпортЭкспорт</Action>
+		</Command>
+		<Command name="ПредопределенныеДанные" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Предопределенные данные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Предопределенные данные</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьПредопределенные</Action>
+		</Command>
+	</Commands>
+</Form>

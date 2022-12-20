@@ -1,0 +1,89 @@
+﻿var externalForm = null;
+var this_webkit  = false;
+
+var scroller = {
+	goto: function(elementId){
+		var elementOffset = $(elementId).offset();
+		if (elementOffset==null) {return false;}
+		
+		var position = elementOffset.top;
+		window.scroll(0, position);
+		return false;
+	}
+};				
+
+function send_to_1C(name,data){ 
+	if(this_webkit){
+		document.getElementById('message_name').innerHTML  = name;
+		document.getElementById('message_data').innerHTML  = data;
+	} else {
+		var evt = document.createEventObject();
+		evt.propertyName 	= name;
+		evt.data    		= data;
+		evt.cancelBubble 	= true;
+		evt.returnValue  	= false;
+		document.fireEvent('onclick',evt);
+	};
+};
+
+function setProperty(name,action) {
+	switch (name) {
+		case 'webkit': this_webkit = action=='up' ? true : false; break;
+		default 	 : break;
+	}
+}
+
+var visibler = {
+	todo: function(elementId){
+		var elementClick = $(elementId).attr('href');
+		if ($(elementClick).is(':visible')==true){
+			$(elementClick).hide(200);
+			$(elementId).text('показать');}
+		else {
+			$(elementClick).show(200);
+			$(elementId).text('скрыть');}
+		return false;
+	}
+};
+
+function scrollBottom(value){
+	document.body.scrollTop = value;
+	document.getElementById('scrollpos').value = value;
+}
+
+function fonscroll(value){
+	var scrollingElement = document.scrollingElement || document.documentElement;
+	var elem = document.getElementById("scrollpos");
+	if (scrollingElement != null && elem != null){
+		elem.innerHTML = scrollingElement.scrollTop;
+	}
+}
+		
+function windowscroll(scrollspeed, yscroll){
+	window.scrollBy(0,-9000);//initial scroll to the top of the page
+	for (var iscroll=0;iscroll<yscroll;iscroll++){
+		setTimeout('window.scrollBy(0,' + iscroll + ')',scrollspeed*iscroll);
+	}	
+}
+
+$(document).ready(function(){
+	$('a').click(function(){
+		var elementId = $(this).attr('id');
+		var elementClick = $(this).attr('href');
+		
+		if (elementId!=null) {
+			var firstChar=elementId.substr(0,7);
+			if (firstChar=='visible') {
+				visibler.todo(this);
+				return false;
+			}
+		}
+		
+		var firstChar=elementClick.substr(0,1);
+		if (firstChar=='#'){
+			scroller.goto(elementClick);
+			return false;
+		}
+	});
+	
+})

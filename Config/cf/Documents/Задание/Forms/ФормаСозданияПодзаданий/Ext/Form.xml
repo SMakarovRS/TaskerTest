@@ -1,0 +1,549 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Создание подчиненных заданий</v8:content>
+		</v8:item>
+	</Title>
+	<Width>85</Width>
+	<Height>20</Height>
+	<WindowOpeningMode>LockWholeInterface</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Table name="ПользователиЗаданий" id="1">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>ПользователиЗаданий</DataPath>
+			<RowPictureDataPath>ПользователиЗаданий.НомерКартинки</RowPictureDataPath>
+			<RowsPicture>
+				<xr:Ref>CommonPicture.СостоянияПользователей</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</RowsPicture>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ПользователиЗаданийКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="ПользователиЗаданийКоманднаяПанель" id="3">
+				<Autofill>false</Autofill>
+				<ChildItems>
+					<Button name="ПользователиДобавить" id="18">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.ПользователиЗаданий.StandardCommand.Add</CommandName>
+						<ExtendedTooltip name="ПользователиДобавитьРасширеннаяПодсказка" id="34"/>
+					</Button>
+					<Button name="ПользователиДобавитьГруппуПользователей" id="23">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ДобавитьГруппуПользователей</CommandName>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Добавить</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="ПользователиДобавитьГруппуПользователейРасширеннаяПодсказка" id="35"/>
+					</Button>
+					<Button name="ПользователиСкопировать" id="19">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.ПользователиЗаданий.StandardCommand.Copy</CommandName>
+						<ExtendedTooltip name="ПользователиСкопироватьРасширеннаяПодсказка" id="36"/>
+					</Button>
+					<Button name="ПользователиИзменить" id="20">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.ПользователиЗаданий.StandardCommand.Change</CommandName>
+						<ExtendedTooltip name="ПользователиИзменитьРасширеннаяПодсказка" id="37"/>
+					</Button>
+					<Button name="ПользователиУдалить" id="21">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.ПользователиЗаданий.StandardCommand.Delete</CommandName>
+						<ExtendedTooltip name="ПользователиУдалитьРасширеннаяПодсказка" id="38"/>
+					</Button>
+					<Button name="ПользователиНайти" id="22">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.ПользователиЗаданий.StandardCommand.Find</CommandName>
+						<ExtendedTooltip name="ПользователиНайтиРасширеннаяПодсказка" id="39"/>
+					</Button>
+					<Button name="ПользователиОчистить" id="24">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.Очистить</CommandName>
+						<ExtendedTooltip name="ПользователиОчиститьРасширеннаяПодсказка" id="40"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ПользователиЗаданийРасширеннаяПодсказка" id="41"/>
+			<SearchStringAddition name="ПользователиЗаданийСтрокаПоиска" id="42">
+				<AdditionSource>
+					<Item>ПользователиЗаданий</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПользователиЗаданийСтрокаПоискаКонтекстноеМеню" id="43"/>
+				<ExtendedTooltip name="ПользователиЗаданийСтрокаПоискаРасширеннаяПодсказка" id="44"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ПользователиЗаданийСостояниеПросмотра" id="45">
+				<AdditionSource>
+					<Item>ПользователиЗаданий</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<HorizontalLocation>Left</HorizontalLocation>
+				<ContextMenu name="ПользователиЗаданийСостояниеПросмотраКонтекстноеМеню" id="46"/>
+				<ExtendedTooltip name="ПользователиЗаданийСостояниеПросмотраРасширеннаяПодсказка" id="47"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ПользователиЗаданийУправлениеПоиском" id="48">
+				<AdditionSource>
+					<Item>ПользователиЗаданий</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ПользователиЗаданийУправлениеПоискомКонтекстноеМеню" id="49"/>
+				<ExtendedTooltip name="ПользователиЗаданийУправлениеПоискомРасширеннаяПодсказка" id="50"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="OnStartEdit">ПользователиЗаданийПриНачалеРедактирования</Event>
+			</Events>
+			<ChildItems>
+				<ColumnGroup name="ПользователиГруппа" id="29">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пользователи группа</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ПользователиГруппаРасширеннаяПодсказка" id="51"/>
+					<ChildItems>
+						<InputField name="ПользователиПользователь" id="4">
+							<DataPath>ПользователиЗаданий.Пользователь</DataPath>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Пользователь, которому будет поставлена подчиненное задание</v8:content>
+								</v8:item>
+							</ToolTip>
+							<EditMode>EnterOnInput</EditMode>
+							<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+							<ContextMenu name="ПользователиПользовательКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="ПользователиПользовательРасширеннаяПодсказка" id="52"/>
+							<Events>
+								<Event name="OnChange">ПользователиПользовательПриИзменении</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
+				<InputField name="ПользователиТекст" id="8">
+					<DataPath>ПользователиЗаданий.Тема</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тема</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тема подчиненного задания</v8:content>
+						</v8:item>
+					</ToolTip>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПользователиТекстКонтекстноеМеню" id="9"/>
+					<ExtendedTooltip name="ПользователиТекстРасширеннаяПодсказка" id="53"/>
+				</InputField>
+				<InputField name="ПользователиЗаданийТипПроцесса" id="66">
+					<DataPath>ПользователиЗаданий.ТипПроцесса</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПользователиЗаданийТипПроцессаКонтекстноеМеню" id="67"/>
+					<ExtendedTooltip name="ПользователиЗаданийТипПроцессаРасширеннаяПодсказка" id="68"/>
+				</InputField>
+				<InputField name="ПользователиПроцесс" id="25">
+					<DataPath>ПользователиЗаданий.Процесс</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+					<ContextMenu name="ПользователиПроцессКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="ПользователиПроцессРасширеннаяПодсказка" id="54"/>
+				</InputField>
+				<InputField name="ПользователиЗаданийИнициатор" id="63">
+					<DataPath>ПользователиЗаданий.Инициатор</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПользователиЗаданийИнициаторКонтекстноеМеню" id="64"/>
+					<ExtendedTooltip name="ПользователиЗаданийИнициаторРасширеннаяПодсказка" id="65"/>
+				</InputField>
+				<CheckBoxField name="ПользователиЗаданийКопироватьТекст" id="32">
+					<DataPath>ПользователиЗаданий.КопироватьТекст</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Копировать описание из родительского задания</v8:content>
+						</v8:item>
+					</ToolTip>
+					<EditMode>EnterOnInput</EditMode>
+					<HeaderPicture>
+						<xr:Ref>StdPicture.InputFieldChooseType</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</HeaderPicture>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПользователиЗаданийКопироватьТекстКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="ПользователиЗаданийКопироватьТекстРасширеннаяПодсказка" id="57"/>
+				</CheckBoxField>
+				<CheckBoxField name="ПользователиЗаданийПереноситьНаблюдателейИзРодительскихЗаданий" id="30">
+					<DataPath>ПользователиЗаданий.ПереноситьВсехНаблюдателейИзРодительскихЗаданий</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Переносить всех наблюдателей из родительских заданий</v8:content>
+						</v8:item>
+					</ToolTip>
+					<EditMode>EnterOnInput</EditMode>
+					<HeaderPicture>
+						<xr:Ref>CommonPicture.Встреча</xr:Ref>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</HeaderPicture>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПользователиЗаданийПереноситьНаблюдателейИзРодительскихЗаданийКонтекстноеМеню" id="31"/>
+					<ExtendedTooltip name="ПользователиЗаданийПереноситьНаблюдателейИзРодительскихЗаданийРасширеннаяПодсказка" id="58"/>
+				</CheckBoxField>
+				<CheckBoxField name="ПользователиОткрытьПослеСоздания" id="16">
+					<DataPath>ПользователиЗаданий.ОткрытьПослеСоздания</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Открыть задание после создания</v8:content>
+						</v8:item>
+					</ToolTip>
+					<EditMode>EnterOnInput</EditMode>
+					<HeaderPicture>
+						<xr:Ref>StdPicture.ShowData</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</HeaderPicture>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПользователиОткрытьПослеСозданияКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="ПользователиОткрытьПослеСозданияРасширеннаяПодсказка" id="59"/>
+				</CheckBoxField>
+			</ChildItems>
+		</Table>
+		<CommandBar name="ГруппаКнопки" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа кнопки</v8:content>
+				</v8:item>
+			</Title>
+			<HorizontalLocation>Right</HorizontalLocation>
+			<ExtendedTooltip name="ГруппаКнопкиРасширеннаяПодсказка" id="60"/>
+			<ChildItems>
+				<Button name="Применить" id="14">
+					<Type>CommandBarButton</Type>
+					<DefaultButton>true</DefaultButton>
+					<DefaultItem>true</DefaultItem>
+					<CommandName>Form.Command.СоздатьПодзадания</CommandName>
+					<ExtendedTooltip name="ПрименитьРасширеннаяПодсказка" id="61"/>
+				</Button>
+				<Button name="Закрыть" id="15">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.StandardCommand.Cancel</CommandName>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Закрыть</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ЗакрытьРасширеннаяПодсказка" id="62"/>
+				</Button>
+			</ChildItems>
+		</CommandBar>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ПользователиЗаданий" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пользователи заданий</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Пользователь" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пользователь</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+					</Type>
+				</Column>
+				<Column name="СпособОповещения" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Способ оповещения</v8:content>
+						</v8:item>
+					</Title>
+					<Type/>
+				</Column>
+				<Column name="Тема" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тема</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ОткрытьПослеСоздания" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Открыть после создания</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Процесс" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Процесс</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Процессы</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ВыполнитьДо" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выполнить до</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЗаданиеСсылка" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Задание ссылка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:DocumentRef.Задание</v8:Type>
+					</Type>
+				</Column>
+				<Column name="НомерКартинки" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер картинки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПереноситьВсехНаблюдателейИзРодительскихЗаданий" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Переносить всех наблюдателей из родительских заданий</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="КопироватьТекст" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Копировать текст</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Инициатор" id="11">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Инициатор</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:TypeSet>cfg:DefinedType.ИнициаторЗадания</v8:TypeSet>
+					</Type>
+				</Column>
+				<Column name="ТипПроцесса" id="12">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип процесса</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ТипыПроцессов</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ЗаданиеРодитель" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Задание родитель</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DocumentRef.Задание</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТемаПоУмолчанию" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тема по умолчанию</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ВыполнитьДо" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить до</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Процесс" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Процесс</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Процессы</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Инициатор" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Инициатор</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:TypeSet>cfg:DefinedType.ИнициаторЗадания</v8:TypeSet>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="СоздатьПодзадания" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать подчиненные задания</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать подчиненные задания</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.MoveRight</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СоздатьПодзадания</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ДобавитьГруппуПользователей" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить группу пользователей</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить группу пользователей</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ИсполнительГруппаПользователей</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ДобавитьГруппуПользователей</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Очистить" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить таблицу пользователей</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.InputFieldClear</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Очистить</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

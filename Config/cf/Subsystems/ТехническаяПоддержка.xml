@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Subsystem uuid="5c314167-efb3-4db6-887f-1233ee95172f">
+		<Properties>
+			<Name>ТехническаяПоддержка</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Техническая поддержка</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeInCommandInterface>true</IncludeInCommandInterface>
+			<Explanation/>
+			<Picture>
+				<xr:Ref>CommonPicture.ПодсистемаТехническаяПоддержка48х48</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.УправлениеITОтделом8УФ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.УправлениеITОтделом8УФКлиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.УправлениеITОтделом8УФКлиентСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.УправлениеITОтделом8УФПовтИсп</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.УправлениеITОтделом8УФДатыЗапретаИзменения</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.МенеджерПодсказок</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ДополнительныеОтчетыТехническаяПоддержка</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ДополнительныеОбработкиТехническаяПоддержка</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">HTTPService.ЛичныйКабинет</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.АдреснаяКнига</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ПанельОтчетовТехническаяПоддержка</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ИспользоватьServiceDesk</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ИспользоватьServiceDesk</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.HTTPСервисы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ДоступностьМобильногоПриложения</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ИспользоватьМетрики</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ИспользоватьДела</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.АдреснаяКнига</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.РС_ТиповыеКонфигурации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.РС_ВерсииКонфигураций</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.РС_ПереходыВерсийКонфигураций</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects>
+			<Subsystem>ServiceDesk</Subsystem>
+			<Subsystem>Проблемы</Subsystem>
+			<Subsystem>БазаЗнаний</Subsystem>
+			<Subsystem>SLA</Subsystem>
+			<Subsystem>Метрики</Subsystem>
+			<Subsystem>Работы</Subsystem>
+			<Subsystem>Канбан</Subsystem>
+			<Subsystem>Проекты</Subsystem>
+			<Subsystem>Анкетирование</Subsystem>
+			<Subsystem>УдаленноеУправление</Subsystem>
+			<Subsystem>Интеграция1СБухфон</Subsystem>
+			<Subsystem>Комментарии</Subsystem>
+			<Subsystem>сфпСофтФон</Subsystem>
+			<Subsystem>МобильноеПриложение</Subsystem>
+			<Subsystem>CRM</Subsystem>
+			<Subsystem>ОтклоненияОтГрафика</Subsystem>
+		</ChildObjects>
+	</Subsystem>
+</MetaDataObject>

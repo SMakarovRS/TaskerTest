@@ -1,0 +1,737 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Telegram-бот</v8:content>
+		</v8:item>
+	</Title>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="Страницы" id="57">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="58"/>
+			<ChildItems>
+				<Page name="СтраницаОсновное" id="59">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Основное</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СтраницаОсновноеРасширеннаяПодсказка" id="60"/>
+					<ChildItems>
+						<UsualGroup name="СоздайтеБотаTelegram" id="43">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Создайте бота в Telegram</v8:content>
+								</v8:item>
+							</Title>
+							<Group>AlwaysHorizontal</Group>
+							<Behavior>Collapsible</Behavior>
+							<ControlRepresentation>Picture</ControlRepresentation>
+							<Representation>None</Representation>
+							<ExtendedTooltip name="СоздайтеБотаTelegramРасширеннаяПодсказка" id="44"/>
+							<ChildItems>
+								<PictureDecoration name="Декорация2" id="45">
+									<Width>15</Width>
+									<Height>6</Height>
+									<Picture>
+										<xr:Ref>CommonPicture.Telegram_BotFather</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<ContextMenu name="Декорация2КонтекстноеМеню" id="46"/>
+									<ExtendedTooltip name="Декорация2РасширеннаяПодсказка" id="47"/>
+								</PictureDecoration>
+								<LabelDecoration name="Декорация3" id="48">
+									<Width>70</Width>
+									<Title formatted="true">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>&lt;font Arial&gt;&lt;fontsize 10&gt;&lt;color #000000&gt;Создайте собственного бота в Telegram при помощи другого бота под названием &lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;link http://telegram.me/BotFather&gt;&lt;font Arial&gt;&lt;fontsize 10&gt;&lt;color #105990&gt;BotFather&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;font Arial&gt;&lt;fontsize 10&gt;&lt;color #000000&gt;.
+&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;font Arial&gt;&lt;fontsize 10&gt;&lt;color #000000&gt;Откройте &lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;font Arial&gt;&lt;fontsize 10&gt;&lt;color #000000&gt;Telegram, найдите в поиске бота &lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;font Arial&gt;&lt;fontsize 10&gt;&lt;color #000000&gt;BotFather&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;font Arial&gt;&lt;fontsize 10&gt;.&lt;/&gt;&lt;/&gt;&lt;font Arial&gt;&lt;fontsize 10&gt;&lt;color #000000&gt;Отправьте ему команду /newbot, выберите имя, которое будет отображаться в списке контактов. &lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;font Arial&gt;&lt;fontsize 10&gt;&lt;color #000000&gt;Если адрес не занят, а имя введено правильно, BotFather пришлет в ответ сообщение с токеном. Токен — это «ключ» для доступа к созданному боту. &lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;font Arial&gt;&lt;fontsize 10&gt;&lt;color #000000&gt;Не забудьте задать описание бота и картинку, как описано в &lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;font Arial&gt;&lt;fontsize 10&gt;&lt;color #000000&gt;документации&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;font Arial&gt;&lt;fontsize 10&gt;&lt;color #000000&gt;.&lt;/&gt;&lt;/&gt;&lt;/&gt;</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="Декорация3КонтекстноеМеню" id="49"/>
+									<ExtendedTooltip name="Декорация3РасширеннаяПодсказка" id="50"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Настройки" id="51">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настройки</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Behavior>Collapsible</Behavior>
+							<ControlRepresentation>Picture</ControlRepresentation>
+							<Representation>None</Representation>
+							<ExtendedTooltip name="НастройкиРасширеннаяПодсказка" id="52"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаНаименованиеАктивно" id="41">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Наименование, активно</v8:content>
+										</v8:item>
+									</Title>
+									<Group>AlwaysHorizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаНаименованиеАктивноРасширеннаяПодсказка" id="42"/>
+									<ChildItems>
+										<InputField name="Наименование" id="1">
+											<DataPath>Объект.Description</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<AutoMarkIncomplete>true</AutoMarkIncomplete>
+											<InputHint>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>uit_bot</v8:content>
+												</v8:item>
+											</InputHint>
+											<ContextMenu name="НаименованиеКонтекстноеМеню" id="2"/>
+											<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="3"/>
+										</InputField>
+										<CheckBoxField name="Активно" id="38">
+											<DataPath>Объект.Активность</DataPath>
+											<ToolTipRepresentation>Button</ToolTipRepresentation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="АктивноКонтекстноеМеню" id="39"/>
+											<ExtendedTooltip name="АктивноРасширеннаяПодсказка" id="40"/>
+										</CheckBoxField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаТокен" id="53">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа токен</v8:content>
+										</v8:item>
+									</Title>
+									<Group>AlwaysHorizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаТокенРасширеннаяПодсказка" id="54"/>
+									<ChildItems>
+										<InputField name="Токен" id="4">
+											<DataPath>Объект.Токен</DataPath>
+											<ToolTipRepresentation>Button</ToolTipRepresentation>
+											<EditMode>EnterOnInput</EditMode>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<AutoMarkIncomplete>true</AutoMarkIncomplete>
+											<InputHint>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>123456789:AbCdEfGhKlMnk2xHzd23kZm8JEVTSykd7xk</v8:content>
+												</v8:item>
+											</InputHint>
+											<ContextMenu name="ТокенКонтекстноеМеню" id="5"/>
+											<ExtendedTooltip name="ТокенРасширеннаяПодсказка" id="6"/>
+										</InputField>
+										<Button name="ПроксиСерверы" id="81">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.ПроксиСерверы</CommandName>
+											<ExtendedTooltip name="ПроксиСерверыРасширеннаяПодсказка" id="82"/>
+										</Button>
+										<Button name="ФормаПроверкаСвязи" id="25">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.ПроверкаСвязи</CommandName>
+											<ExtendedTooltip name="ФормаПроверкаСвязиРасширеннаяПодсказка" id="26"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+								<InputField name="СпособВзаимодействияСБотом" id="35">
+									<DataPath>Объект.СпособВзаимодействияСБотом</DataPath>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<ContextMenu name="СпособВзаимодействияСБотомКонтекстноеМеню" id="36"/>
+									<ExtendedTooltip name="СпособВзаимодействияСБотомРасширеннаяПодсказка" id="37"/>
+									<Events>
+										<Event name="OnChange">СпособВзаимодействияСБотомПриИзменении</Event>
+									</Events>
+								</InputField>
+								<LabelDecoration name="ДекорацияСпособВзаимодействия" id="83">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<TextColor>style:ЦветПодписи</TextColor>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Этот метод не будет работать, если у вас уже подключен webhook.</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДекорацияСпособВзаимодействияКонтекстноеМеню" id="84"/>
+									<ExtendedTooltip name="ДекорацияСпособВзаимодействияРасширеннаяПодсказка" id="85"/>
+								</LabelDecoration>
+								<UsualGroup name="ГруппаОграниченныйДоступ" id="30">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа ограниченный доступ</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаОграниченныйДоступРасширеннаяПодсказка" id="31"/>
+									<ChildItems>
+										<CheckBoxField name="ОграниченныйДоступ" id="27">
+											<DataPath>Объект.ОграниченныйДоступ</DataPath>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ОграниченныйДоступКонтекстноеМеню" id="28"/>
+											<ExtendedTooltip name="ОграниченныйДоступРасширеннаяПодсказка" id="29"/>
+											<Events>
+												<Event name="OnChange">ОграниченныйДоступПриИзменении</Event>
+											</Events>
+										</CheckBoxField>
+										<LabelDecoration name="ДекорацияОписаниеОграничения" id="32">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<TextColor>style:ЦветПодписи</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Доступ к боту будет ограничен. Новых пользователей необходимо будет администратору "активировать" в справочнике "Пользователи Telegram".</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияОписаниеОграниченияКонтекстноеМеню" id="33"/>
+											<ExtendedTooltip name="ДекорацияОписаниеОграниченияРасширеннаяПодсказка" id="34"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="СтатусВыполнения" id="123">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Статус выполнения</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalStretch>true</HorizontalStretch>
+							<Behavior>Collapsible</Behavior>
+							<ControlRepresentation>Picture</ControlRepresentation>
+							<Representation>None</Representation>
+							<ExtendedTooltip name="СтатусВыполненияРасширеннаяПодсказка" id="124"/>
+							<ChildItems>
+								<Pages name="СтраницыСтатусы" id="125">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Страницы статусы</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="СтраницыСтатусыРасширеннаяПодсказка" id="126"/>
+									<ChildItems>
+										<Page name="СтраницаСтатусаВебхук" id="127">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Статус вебхук</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="СтраницаСтатусаВебхукРасширеннаяПодсказка" id="128"/>
+											<ChildItems>
+												<Button name="ОбновитьСтатусВебхука" id="134">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.ОбновитьСтатус</CommandName>
+													<ExtendedTooltip name="ОбновитьСтатусВебхукаРасширеннаяПодсказка" id="135"/>
+												</Button>
+												<InputField name="СостояниеВебхука" id="131">
+													<DataPath>СостояниеWebhook</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<MultiLine>true</MultiLine>
+													<TextEdit>false</TextEdit>
+													<InputHint>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Нажмите на кнопку "Обновить статус" для получения информации</v8:content>
+														</v8:item>
+													</InputHint>
+													<ContextMenu name="СостояниеВебхукаКонтекстноеМеню" id="132"/>
+													<ExtendedTooltip name="СостояниеВебхукаРасширеннаяПодсказка" id="133"/>
+												</InputField>
+											</ChildItems>
+										</Page>
+										<Page name="СтраницаСтатусаПериодическийЗапрос" id="129">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Периодический запрос</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="СтраницаСтатусаПериодическийЗапросРасширеннаяПодсказка" id="130"/>
+											<ChildItems>
+												<Button name="ОбновитьСтатус" id="139">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.ОбновитьСтатус</CommandName>
+													<ExtendedTooltip name="ОбновитьСтатусРасширеннаяПодсказка" id="140"/>
+												</Button>
+												<InputField name="СостояниеПериодическогоЗапроса" id="136">
+													<DataPath>СостояниеПериодическогоЗапроса</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<MultiLine>true</MultiLine>
+													<TextEdit>false</TextEdit>
+													<InputHint>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Нажмите на кнопку "Обновить статус" для получения информации</v8:content>
+														</v8:item>
+													</InputHint>
+													<ContextMenu name="СостояниеПериодическогоЗапросаКонтекстноеМеню" id="137"/>
+													<ExtendedTooltip name="СостояниеПериодическогоЗапросаРасширеннаяПодсказка" id="138"/>
+												</InputField>
+											</ChildItems>
+										</Page>
+									</ChildItems>
+								</Pages>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаНастройкиПолученияОбновлений" id="88">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройки получения обновлений</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СтраницаНастройкиПолученияОбновленийРасширеннаяПодсказка" id="89"/>
+					<ChildItems>
+						<Button name="НастроитьРасписание" id="90">
+							<Type>Hyperlink</Type>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<CommandName>Form.Command.НастроитьРасписание</CommandName>
+							<ExtendedTooltip name="НастроитьРасписаниеРасширеннаяПодсказка" id="91"/>
+						</Button>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаНастройкиWebhook" id="86">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройки Webhook</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница настройки webhook</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаНастройкиWebhookРасширеннаяПодсказка" id="87"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаНастройкиВебХук" id="119">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настройки Webhook</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ExtendedTooltip name="ГруппаНастройкиВебХукРасширеннаяПодсказка" id="120"/>
+							<ChildItems>
+								<InputField name="АдресВебхук" id="96">
+									<DataPath>Объект.АдресВебхук</DataPath>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<InputHint>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>URL-адрес этой информационной базы</v8:content>
+										</v8:item>
+									</InputHint>
+									<ContextMenu name="АдресВебхукКонтекстноеМеню" id="97"/>
+									<ExtendedTooltip name="АдресВебхукРасширеннаяПодсказка" id="98"/>
+									<Events>
+										<Event name="OnChange">АдресВебхукПриИзменении</Event>
+									</Events>
+								</InputField>
+								<UsualGroup name="ГруппаКлюч" id="102">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа ключ</v8:content>
+										</v8:item>
+									</Title>
+									<Group>AlwaysHorizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаКлючРасширеннаяПодсказка" id="103"/>
+									<ChildItems>
+										<InputField name="КлючВебхук" id="99">
+											<DataPath>Объект.КлючВебхук</DataPath>
+											<ToolTipRepresentation>Button</ToolTipRepresentation>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<InputHint>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ab0e27fb-cd70-43f0-b932-61c9081aa141</v8:content>
+												</v8:item>
+											</InputHint>
+											<ContextMenu name="КлючВебхукКонтекстноеМеню" id="100"/>
+											<ExtendedTooltip name="КлючВебхукРасширеннаяПодсказка" id="101"/>
+											<Events>
+												<Event name="OnChange">КлючВебхукПриИзменении</Event>
+											</Events>
+										</InputField>
+										<Button name="СлучайныйАдресВебхук" id="104">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.СлучайныйАдресВебхук</CommandName>
+											<ExtendedTooltip name="СлучайныйАдресВебхукРасширеннаяПодсказка" id="105"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+								<InputField name="АдресВИнтернете" id="106">
+									<DataPath>АдресВИнтернете</DataPath>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Полный адрес для отправки обновлений сервером Telegram</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<ContextMenu name="АдресВИнтернетеКонтекстноеМеню" id="107"/>
+									<ExtendedTooltip name="АдресВИнтернетеРасширеннаяПодсказка" id="108"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаВыборСертификата" id="114">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сертификат</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ExtendedTooltip name="ГруппаВыборСертификатаРасширеннаяПодсказка" id="115"/>
+							<ChildItems>
+								<CheckBoxField name="ИспользоватьСамоподписанныйСертификат" id="109">
+									<DataPath>Объект.ИспользоватьСамоподписанныйСертификат</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Самоподписанный сертификат</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ИспользоватьСамоподписанныйСертификатКонтекстноеМеню" id="110"/>
+									<ExtendedTooltip name="ИспользоватьСамоподписанныйСертификатРасширеннаяПодсказка" id="111"/>
+									<Events>
+										<Event name="OnChange">ИспользоватьСамоподписанныйСертификатПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<UsualGroup name="ГруппаСертификат" id="141">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа сертификат</v8:content>
+										</v8:item>
+									</Title>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаСертификатРасширеннаяПодсказка" id="142"/>
+									<ChildItems>
+										<InputField name="ИмяСертификата" id="116">
+											<DataPath>Объект.ИмяСертификата</DataPath>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<InputHint>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Сертификат pem, crt, cer, key на выбор</v8:content>
+												</v8:item>
+											</InputHint>
+											<ContextMenu name="ИмяСертификатаКонтекстноеМеню" id="117"/>
+											<ExtendedTooltip name="ИмяСертификатаРасширеннаяПодсказка" id="118"/>
+										</InputField>
+										<Button name="ЗагрузитьСертификат" id="121">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.ЗагрузитьСертификат</CommandName>
+											<ExtendedTooltip name="ЗагрузитьСертификатРасширеннаяПодсказка" id="122"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаОтправкиНастроекВебхук" id="112">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Отправка настроек Webhook</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalStretch>true</HorizontalStretch>
+							<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ExtendedTooltip name="ГруппаОтправкиНастроекВебхукРасширеннаяПодсказка" id="113"/>
+							<ChildItems>
+								<Button name="ОтправитьНастройкиWebHook" id="92">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ОтправитьНастройкиWebHook</CommandName>
+									<ExtendedTooltip name="ОтправитьНастройкиWebHookРасширеннаяПодсказка" id="93"/>
+								</Button>
+								<Button name="УдалитьНастройкиWebhook" id="94">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.УдалитьНастройкиWebhook</CommandName>
+									<ExtendedTooltip name="УдалитьНастройкиWebhookРасширеннаяПодсказка" id="95"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.TelegramБоты</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="АдресВИнтернете" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес в интернете</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СостояниеWebhook" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Состояние webhook</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СостояниеПериодическогоЗапроса" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Состояние периодического запроса</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекстСертификата" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текст сертификата</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Расписание" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расписание</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПроверкаСвязи" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверка связи</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверка связи</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.сстПроверка</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ПроверкаСвязи</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ПроксиСерверы" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прокси-серверы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прокси-серверы для подключения через них</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПроксиСерверы</Action>
+		</Command>
+		<Command name="НастроитьРасписание" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настроить расписание</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настроить расписание</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НастроитьРасписание</Action>
+		</Command>
+		<Command name="ОтправитьНастройкиWebHook" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправить настройки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправить настройки webhook</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.SaveReportSettings</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОтправитьНастройкиWebHook</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="УдалитьНастройкиWebhook" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить настройки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить настройки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Delete</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>УдалитьНастройкиWebhook</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="СлучайныйАдресВебхук" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Случайный</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Случайный адрес вебхук</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.MoveLeft</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СлучайныйАдресВебхук</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ЗагрузитьСертификат" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить сертификат</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить сертификат</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.OpenFile</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ЗагрузитьСертификат</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ОбновитьСтатус" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить статус</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить статус</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОбновитьСтатус</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+	</Commands>
+</Form>

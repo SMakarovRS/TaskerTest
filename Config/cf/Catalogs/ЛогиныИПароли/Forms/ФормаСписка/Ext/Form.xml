@@ -1,0 +1,478 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Popup name="ПодменюГруппировка" id="36">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группировка</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ПодменюГруппировкаРасширеннаяПодсказка" id="37"/>
+				<ChildItems>
+					<Button name="ФормаБезГруппировки" id="38">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.БезГруппировки</CommandName>
+						<ExtendedTooltip name="ФормаБезГруппировкиРасширеннаяПодсказка" id="39"/>
+					</Button>
+					<Button name="ФормаГруппировкаПрограмма" id="42">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ГруппировкаПрограмма</CommandName>
+						<ExtendedTooltip name="ФормаГруппировкаПрограммаРасширеннаяПодсказка" id="43"/>
+					</Button>
+					<Button name="ФормаГруппировкаВладелец" id="40">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ГруппировкаВладелец</CommandName>
+						<ExtendedTooltip name="ФормаГруппировкаВладелецРасширеннаяПодсказка" id="41"/>
+					</Button>
+					<Button name="ФормаГруппировкаПоПрограммеИВладельцу" id="44">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ГруппировкаПоПрограммеИВладельцу</CommandName>
+						<ExtendedTooltip name="ФормаГруппировкаПоПрограммеИВладельцуРасширеннаяПодсказка" id="45"/>
+					</Button>
+					<Button name="ФормаГруппировкаПоВладельцуИПрограмме" id="46">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ГруппировкаПоВладельцуИПрограмме</CommandName>
+						<ExtendedTooltip name="ФормаГруппировкаПоВладельцуИПрограммеРасширеннаяПодсказка" id="47"/>
+					</Button>
+					<Button name="ФормаГруппировкаПоОрганизации" id="48">
+						<Type>CommandBarButton</Type>
+						<Visible>false</Visible>
+						<CommandName>Form.Command.ГруппировкаПоОрганизации</CommandName>
+						<ExtendedTooltip name="ФормаГруппировкаПоОрганизацииРасширеннаяПодсказка" id="49"/>
+					</Button>
+					<Button name="ФормаГруппировкаПоКатегорииИПрограмме" id="50">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ГруппировкаПоКатегорииИПрограмме</CommandName>
+						<ExtendedTooltip name="ФормаГруппировкаПоКатегорииИПрограммеРасширеннаяПодсказка" id="51"/>
+					</Button>
+					<Button name="ФормаГруппировкаПоКатегорииПрограммеВладельцу" id="52">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ГруппировкаПоКатегорииПрограммеВладельцу</CommandName>
+						<ExtendedTooltip name="ФормаГруппировкаПоКатегорииПрограммеВладельцуРасширеннаяПодсказка" id="53"/>
+					</Button>
+				</ChildItems>
+			</Popup>
+			<Button name="ФормаОтчетПоЛогинам" id="54">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ОтчетПоЛогинам</CommandName>
+				<ExtendedTooltip name="ФормаОтчетПоЛогинамРасширеннаяПодсказка" id="55"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="СписокКомпоновщикНастроекПользовательскиеНастройки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа пользовательских настроек</v8:content>
+				</v8:item>
+			</Title>
+			<VerticalStretch>false</VerticalStretch>
+			<Group>Vertical</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="СписокКомпоновщикНастроекПользовательскиеНастройкиРасширеннаяПодсказка" id="2"/>
+		</UsualGroup>
+		<Table name="Список" id="3">
+			<Representation>List</Representation>
+			<CommandBarLocation>None</CommandBarLocation>
+			<DefaultItem>true</DefaultItem>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<InitialTreeView>ExpandTopLevel</InitialTreeView>
+			<EnableStartDrag>true</EnableStartDrag>
+			<DataPath>Список</DataPath>
+			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<UserSettingsGroup>СписокКомпоновщикНастроекПользовательскиеНастройки</UserSettingsGroup>
+			<ContextMenu name="СписокКонтекстноеМеню" id="4"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="5">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="6"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="7">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<AutoMaxWidth>false</AutoMaxWidth>
+				<HorizontalStretch>true</HorizontalStretch>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="8"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="9"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="10">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<HorizontalLocation>Left</HorizontalLocation>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="11"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="12"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокУправлениеПоиском" id="13">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="14"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="15"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="BeforeAddRow">СписокПередНачаломДобавления</Event>
+			</Events>
+			<ChildItems>
+				<LabelField name="Объект" id="16">
+					<DataPath>Список.Объект</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="ОбъектКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="ОбъектРасширеннаяПодсказка" id="18"/>
+				</LabelField>
+				<LabelField name="Программа" id="22">
+					<DataPath>Список.Программа</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="ПрограммаКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="ПрограммаРасширеннаяПодсказка" id="24"/>
+				</LabelField>
+				<LabelField name="Логин" id="28">
+					<DataPath>Список.Логин</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="ЛогинКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="ЛогинРасширеннаяПодсказка" id="30"/>
+				</LabelField>
+				<LabelField name="ТипПароля" id="25">
+					<DataPath>Список.ТипПароля</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="ТипПароляКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="ТипПароляРасширеннаяПодсказка" id="27"/>
+				</LabelField>
+				<LabelField name="Категория" id="19">
+					<DataPath>Список.Категория</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="КатегорияКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="КатегорияРасширеннаяПодсказка" id="21"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+		<UsualGroup name="ГруппаКомментарий" id="31">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Комментарий</v8:content>
+				</v8:item>
+			</Title>
+			<Behavior>Collapsible</Behavior>
+			<CollapsedRepresentationTitle>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Комментарий</v8:content>
+				</v8:item>
+			</CollapsedRepresentationTitle>
+			<Collapsed>true</Collapsed>
+			<ControlRepresentation>Picture</ControlRepresentation>
+			<ExtendedTooltip name="ГруппаКомментарийРасширеннаяПодсказка" id="32"/>
+			<ChildItems>
+				<InputField name="Комментарий" id="33">
+					<DataPath>Items.Список.CurrentData.Комментарий</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<Width>50</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<Height>4</Height>
+					<VerticalStretch>false</VerticalStretch>
+					<MultiLine>true</MultiLine>
+					<ContextMenu name="КомментарийКонтекстноеМеню" id="34"/>
+					<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="35"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>Список.Автор</Field>
+				<Field>Список.Категория</Field>
+				<Field>Список.Логин</Field>
+				<Field>Список.Объект</Field>
+				<Field>Список.Программа</Field>
+				<Field>Список.Ссылка</Field>
+				<Field>Список.ТипПароля</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	СправочникЛогиныИПароли.ТипПароля КАК ТипПароля,
+	СправочникЛогиныИПароли.Объект КАК Объект,
+	СправочникЛогиныИПароли.Программа КАК Программа,
+	СправочникЛогиныИПароли.Категория КАК Категория,
+	СправочникЛогиныИПароли.Комментарий КАК Комментарий,
+	СправочникЛогиныИПароли.Автор КАК Автор,
+	0 КАК КартинкаСтроки,
+	СправочникЛогиныИПароли.Ссылка КАК Ссылка,
+	ЛогиныИПаролиСрезПоследних.Логин КАК Логин
+ИЗ
+	Справочник.ЛогиныИПароли КАК СправочникЛогиныИПароли
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ЛогиныИПаролиХранилище.СрезПоследних КАК ЛогиныИПаролиСрезПоследних
+		ПО СправочникЛогиныИПароли.Ссылка = ЛогиныИПаролиСрезПоследних.Владелец
+ГДЕ
+	ВЫБОР
+			КОГДА ТИПЗНАЧЕНИЯ(СправочникЛогиныИПароли.Объект) = ТИП(Справочник.Сотрудники)
+				ТОГДА СправочникЛогиныИПароли.Объект.Актуальность
+						ИЛИ &amp;ПоказыватьУволенных
+			ИНАЧЕ ИСТИНА
+		КОНЕЦ
+	И ВЫБОР
+			КОГДА СправочникЛогиныИПароли.ТипПароля = ЗНАЧЕНИЕ(Перечисление.ТипыПаролей.ПустаяСсылка)
+				ТОГДА ИСТИНА
+			КОГДА СправочникЛогиныИПароли.ТипПароля = ЗНАЧЕНИЕ(Перечисление.ТипыПаролей.Общий)
+				ТОГДА ИСТИНА
+			КОГДА СправочникЛогиныИПароли.ТипПароля = ЗНАЧЕНИЕ(Перечисление.ТипыПаролей.ГруппыПользователей)
+				ТОГДА СправочникЛогиныИПароли.ГруппаПользователей В (&amp;СписокГруппТекущегоПользователя)
+			КОГДА СправочникЛогиныИПароли.ТипПароля = ЗНАЧЕНИЕ(Перечисление.ТипыПаролей.Личный)
+					И СправочникЛогиныИПароли.Автор = &amp;ТекущийПользователь
+					И СправочникЛогиныИПароли.Автор &lt;&gt; ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка)
+					И &amp;ТекущийПользователь &lt;&gt; ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка)
+				ТОГДА ИСТИНА
+			ИНАЧЕ ЛОЖЬ
+		КОНЕЦ</QueryText>
+				<MainTable>Catalog.ЛогиныИПароли</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>Программа</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>Объект</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ВидимостьПаролей" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Видимость паролей</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ГруппировкаСписка" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группировка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>2</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПоказыватьПароли" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показывать пароли</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ОбъектЗаписи" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Объект записи</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:TypeSet>cfg:DefinedType.ЛогиныПаролиОбъект</v8:TypeSet>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="БезГруппировки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Без группировки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Без группировки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>БезГруппировки</Action>
+		</Command>
+		<Command name="ГруппировкаПрограмма" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>По программе</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группировка по программе</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ГруппировкаПрограмма</Action>
+		</Command>
+		<Command name="ГруппировкаВладелец" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>По владельцу</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группировка по владельцу</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ГруппировкаВладелец</Action>
+		</Command>
+		<Command name="ГруппировкаПоПрограммеИВладельцу" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>По программе и владельцу</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группировка по программе и владельцу</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ГруппировкаПоПрограммеИВладельцу</Action>
+		</Command>
+		<Command name="ГруппировкаПоВладельцуИПрограмме" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>По владельцу и программе</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группировка по владельцу и программе</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ГруппировкаПоВладельцуИПрограмме</Action>
+		</Command>
+		<Command name="ГруппировкаПоОрганизации" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>По организации</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группировка по организации</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ГруппировкаПоОрганизации</Action>
+		</Command>
+		<Command name="ГруппировкаПоКатегорииИПрограмме" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>По категории и программе</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группировка по категории и программе</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ГруппировкаПоКатегорииИПрограмме</Action>
+		</Command>
+		<Command name="ГруппировкаПоКатегорииПрограммеВладельцу" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>По категории, программе и владельцу</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группировка по категории, программе и владельцу</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ГруппировкаПоКатегорииПрограммеВладельцу</Action>
+		</Command>
+		<Command name="ОтчетПоЛогинам" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отчет по логинам</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отчет по логинам</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.Сформировать</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОтчетПоЛогинам</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+	</Commands>
+</Form>

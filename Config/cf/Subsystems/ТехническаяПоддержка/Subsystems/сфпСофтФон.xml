@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Subsystem uuid="8d4eec57-962f-40fe-ba36-f3d29f46f21c">
+		<Properties>
+			<Name>сфпСофтФон</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>СофтФон</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment>Подсистема СофтФон</Comment>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeInCommandInterface>false</IncludeInCommandInterface>
+			<Explanation>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Содержит в себе все объекты конфигурации необходимые для работы СофтФон</v8:content>
+				</v8:item>
+			</Explanation>
+			<Picture/>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.сфпКодСтраны</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.сфпКодГорода</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.сфпПрефиксВыходаВГород</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.сфпПрефиксВыходаВМежгород</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.сфпПрефиксВыходаНаМеждународную</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.сфпМаксимальнаяДлинаВнутреннихНомеров</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.сфпПоследниеЦифрыТелефонногоНомера</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.сфпИспользоватьСофтФон</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.сфпИспользоватьСофтФон</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.сфпУправлениеМаршрутизацией</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.сфпКоличествоВзаимодействийДляМаршрутизации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonTemplate.сфпУстановщикМастераНастройкиAgatUX</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.сфпИспользоватьЗаписьПереговоров</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.сфпИспользоватьСпрут7</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.сфпCLONServerIP</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.сфпCLONServerLogin</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.сфпCLONServerPassword</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.сфпCLONServerPort</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.сфпCLONType</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.сфпCLONType</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.сфпИспользоватьCLON</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.сфпИспользоватьЗаписьПереговоров</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonTemplate.сфпКомпонентаCLON</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonTemplate.сфпФайлНастроекМастераAgatUX</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.сфпСтрокаПодключенияИстории</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ExternalDataSource.сфпВнешнийИсточникДанныхИсторииЗвонков.Table.dbo_Calls</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ExternalDataSource.сфпВнешнийИсточникДанныхИсторииЗвонков.Table.dbo_View_Calls</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.сфпСофтФон48</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.сфпИмяСервера</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.сфпПорт</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.сфпИспользоватьРегламентноеЗаданиеТелефонныхКниг</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.сфпСофтФонПроКлиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.сфпСофтФонПроСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.сфпОткрытьСофтФон</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.сфпОбщиеНастройкиСофтФон</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.сфпВходящийИсходящий</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.сфпТелефонныйЗвонок</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.сфпКонтактыТелефоннойКниги</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.сфпCLON</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.сфпАватарПоУмолчанию</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.сфпНомераТелефоновДляПоиска</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.сфпТелефонныеКниги</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.сфпОбщиеНастройки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.сфпПриЗаписиОбъектаКонтактнойИнформации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.сфпСофтФонПроКлиентПереопределяемый</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.сфпСписокВнутреннихНомеров</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.сфпТелефоны</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.сфпОткрытьЕженедельныйОтчет</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.сфпОткрытьОтчетПоСовершеннымЗвонкам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.сфпОткрытьОтчетПоВсемЗвонкам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.сфпТелефоныеЗвонки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.сфпПереводЗвонков</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.сфпВнутренняяПанельУправления</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.сфпПозвонить</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.сфпПереключатель</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.сфпОтветить</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.сфпОтбой</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.сфпКлиентОтключен</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.сфпБезусловныйПеревод</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.сфпАдреснаяКнига</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.сфпHold</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.сфпАдреснаяКнига</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ScheduledJob.сфпОбновлениеТелефонныхКниг</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.сфпКлиентПодключен</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.сфпИспользоватьМаршрутизацию</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.сфпИспользоватьМаршрутизацию</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.сфпИдентификаторМаршрутизации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.сфпМинимальнаяДлинаВнутреннихНомеров</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.сфпИспользоватьSMS</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.сфпИерархияСправочника</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.сфпИсторияЗвонков</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.сфпДатаИсторииЗвонков</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ScheduledJob.сфпПолучитьИсториюЗвонков</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.сфпИсторияРазговора</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.сфпСостоянияЗвонков</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.сфпИспользоватьРегламентноеЗаданиеИсторииЗвонков</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.сфпИспользоватьCoMagic</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.сфпЛогинCoMagic</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.сфпПарольCoMagic</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.сфпCoMagic</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.сфпИспользоватьCoMagic</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.сфпПользователиДляПереключения</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.сфпКарточкаCoMagic</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommandGroup.сфпСофтФон</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.сфпПозвонить</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.сфпПользовательДляОповещений</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.сфпИспользоватьИсториюЗвонков</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.сфпНастройка</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.сфпОткрытьОтчетПоПропущеннымЗвонкам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.сфпОповещатьОПропущенныхЗвонках</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.сфпДоступныеДляПрослушиванияПользователи</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.сфпФормаВыбораАбонента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.сфпОтчетПоСовершеннымЗвонкам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.сфпОтчетПоПропущеннымЗвонкам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.сфпОтчетПоВсемЗвонкам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.сфпЕженедельныйОтчет</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.сфпИспользоватьВнутреннийНомерИзКИПользователя</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.сфпВариантИспользованияСофтфона</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">SessionParameter.сфпВариантИспользованияСофтфона</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.сфпСофтФонПроКлиентНативнаяКомпонента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.сфпСофтФонПроКлиентComОбъект</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.сфпСофтФонПроСерверПереопределяемый</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ОбщегоНазначенияКлиентПереопределяемый</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.сфпОбщегоНазначения</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.сфпОбщегоНазначенияКлиентСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.сфпОбщегоНазначенияПовтИсп</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.сфпИспользоватьИсториюЗвонков</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.сфпОграничениеНаПросмотрТелефонныхЗвонков</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.сфпИспользоватьАвтоопределениеБизнесРегиона</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.сфпПриЗаписиОбъектаОпределенияБизнесРегиона</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ScheduledJob.сфпЗагрузкаПланаНумерации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.сфпДействиеПриОшибкеЗагрузкиИсторииЗвонков</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.сфпДействияПриОшибкеЗагрузкиИсторииЗвонков</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ChartOfCharacteristicTypes.НастройкиПользователей</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ТелефонныйЗвонок</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ИспользоватьСофтФон</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ИспользоватьСофтФон</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects/>
+	</Subsystem>
+</MetaDataObject>

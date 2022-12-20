@@ -1,0 +1,327 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Table name="Список" id="34">
+			<Representation>List</Representation>
+			<DefaultItem>true</DefaultItem>
+			<ChoiceMode>true</ChoiceMode>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<InitialTreeView>ExpandTopLevel</InitialTreeView>
+			<EnableStartDrag>true</EnableStartDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Список</DataPath>
+			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список</v8:content>
+				</v8:item>
+			</Title>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<ContextMenu name="СписокКонтекстноеМеню" id="35"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="36">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="37"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="38">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="39"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="40"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="41">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<HorizontalLocation>Left</HorizontalLocation>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="42"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="43"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокУправлениеПоиском" id="44">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="45"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="46"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<CheckBoxField name="Закрыт" id="71">
+					<DataPath>Список.Закрыт</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<HeaderPicture>
+						<xr:Ref>CommonPicture.ЗанятьФайл</xr:Ref>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</HeaderPicture>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ЗакрытКонтекстноеМеню" id="72"/>
+					<ExtendedTooltip name="ЗакрытРасширеннаяПодсказка" id="73"/>
+				</CheckBoxField>
+				<PictureField name="НомерКартинкиОплачено" id="98">
+					<DataPath>Список.НомерКартинкиОплачено</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Оплачено</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>None</TitleLocation>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Состояние оплаты</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HeaderPicture>
+						<xr:Ref>CommonPicture.Деньги</xr:Ref>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</HeaderPicture>
+					<Width>2</Width>
+					<ValuesPicture>
+						<xr:Ref>CommonPicture.СостояниеЗаказа</xr:Ref>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</ValuesPicture>
+					<FileDragMode>AsFile</FileDragMode>
+					<ContextMenu name="НомерКартинкиОплаченоКонтекстноеМеню" id="99"/>
+					<ExtendedTooltip name="НомерКартинкиОплаченоРасширеннаяПодсказка" id="100"/>
+				</PictureField>
+				<PictureField name="НомерКартинкиОтгружено" id="101">
+					<DataPath>Список.НомерКартинкиОтгружено</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отгружено</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>None</TitleLocation>
+					<HeaderPicture>
+						<xr:Ref>CommonPicture.Коробка</xr:Ref>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</HeaderPicture>
+					<Width>2</Width>
+					<ValuesPicture>
+						<xr:Ref>CommonPicture.СостояниеЗаказа</xr:Ref>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</ValuesPicture>
+					<FileDragMode>AsFile</FileDragMode>
+					<ContextMenu name="НомерКартинкиОтгруженоКонтекстноеМеню" id="102"/>
+					<ExtendedTooltip name="НомерКартинкиОтгруженоРасширеннаяПодсказка" id="103"/>
+				</PictureField>
+				<LabelField name="Дата" id="59">
+					<DataPath>Список.Дата</DataPath>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="60"/>
+					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="61"/>
+				</LabelField>
+				<LabelField name="Номер" id="95">
+					<DataPath>Список.Номер</DataPath>
+					<ContextMenu name="НомерКонтекстноеМеню" id="96"/>
+					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="97"/>
+				</LabelField>
+				<LabelField name="Организация" id="104">
+					<DataPath>Список.Организация</DataPath>
+					<ContextMenu name="ОрганизацияКонтекстноеМеню" id="105"/>
+					<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="106"/>
+				</LabelField>
+				<LabelField name="СостояниеЗаказа" id="128">
+					<DataPath>Список.СостояниеЗаказа</DataPath>
+					<ContextMenu name="СостояниеЗаказаКонтекстноеМеню" id="129"/>
+					<ExtendedTooltip name="СостояниеЗаказаРасширеннаяПодсказка" id="130"/>
+				</LabelField>
+				<LabelField name="Контрагент" id="77">
+					<DataPath>Список.Контрагент</DataPath>
+					<ContextMenu name="КонтрагентКонтекстноеМеню" id="78"/>
+					<ExtendedTooltip name="КонтрагентРасширеннаяПодсказка" id="79"/>
+				</LabelField>
+				<LabelField name="Договор" id="65">
+					<DataPath>Список.Договор</DataPath>
+					<ContextMenu name="ДоговорКонтекстноеМеню" id="66"/>
+					<ExtendedTooltip name="ДоговорРасширеннаяПодсказка" id="67"/>
+				</LabelField>
+				<LabelField name="СуммаДокумента" id="140">
+					<DataPath>Список.СуммаДокумента</DataPath>
+					<ContextMenu name="СуммаДокументаКонтекстноеМеню" id="141"/>
+					<ExtendedTooltip name="СуммаДокументаРасширеннаяПодсказка" id="142"/>
+				</LabelField>
+				<LabelField name="Автор" id="47">
+					<DataPath>Список.Автор</DataPath>
+					<ContextMenu name="АвторКонтекстноеМеню" id="48"/>
+					<ExtendedTooltip name="АвторРасширеннаяПодсказка" id="49"/>
+				</LabelField>
+				<LabelField name="Комментарий" id="74">
+					<DataPath>Список.Комментарий</DataPath>
+					<ContextMenu name="КомментарийКонтекстноеМеню" id="75"/>
+					<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="76"/>
+				</LabelField>
+				<LabelField name="Ссылка" id="131">
+					<DataPath>Список.Ссылка</DataPath>
+					<Visible>false</Visible>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<ContextMenu name="СсылкаКонтекстноеМеню" id="132"/>
+					<ExtendedTooltip name="СсылкаРасширеннаяПодсказка" id="133"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>Список.Ссылка</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ВЫБОР
+		КОГДА НЕ ДокументЗаказКлиента.Проведен
+			ТОГДА 4
+		ИНАЧЕ ВЫБОР
+				КОГДА ЕСТЬNULL(ОплатаДокументовОстатки.СуммаОстаток, 0) &lt;= 0
+					ТОГДА 3
+				КОГДА ЕСТЬNULL(ОплатаДокументовОстатки.СуммаОстаток, 0) &gt;= ДокументЗаказКлиента.СуммаДокумента
+					ТОГДА 0
+				КОГДА ЕСТЬNULL(ОплатаДокументовОстатки.СуммаОстаток, 0) &gt; ДокументЗаказКлиента.СуммаДокумента / 2
+					ТОГДА 1
+				КОГДА ЕСТЬNULL(ОплатаДокументовОстатки.СуммаОстаток, 0) &lt;= ДокументЗаказКлиента.СуммаДокумента / 2
+					ТОГДА 2
+				ИНАЧЕ 0
+			КОНЕЦ
+	КОНЕЦ КАК НомерКартинкиОплачено,
+	ВЫБОР
+		КОГДА НЕ ДокументЗаказКлиента.Проведен
+			ТОГДА 4
+		ИНАЧЕ ВЫБОР
+				КОГДА ЕСТЬNULL(ЗаказыКлиентовОстатки.КоличествоОстаток, 0) &lt;= 0
+					ТОГДА 3
+				КОГДА ЕСТЬNULL(ЗаказыКлиентовОстатки.КоличествоОстаток, 0) &gt;= ДокументЗаказКлиента.КоличествоВДокументе
+					ТОГДА 0
+				КОГДА ЕСТЬNULL(ЗаказыКлиентовОстатки.КоличествоОстаток, 0) &gt; ДокументЗаказКлиента.КоличествоВДокументе / 2
+					ТОГДА 1
+				КОГДА ЕСТЬNULL(ЗаказыКлиентовОстатки.КоличествоОстаток, 0) &lt;= ДокументЗаказКлиента.КоличествоВДокументе / 2
+					ТОГДА 2
+				ИНАЧЕ 0
+			КОНЕЦ
+	КОНЕЦ КАК НомерКартинкиОтгружено,
+	ВЫБОР
+		КОГДА НаличиеФайлов.ЕстьФайлы ЕСТЬ NULL
+			ТОГДА 0
+		КОГДА НаличиеФайлов.ЕстьФайлы
+			ТОГДА 1
+		ИНАЧЕ 0
+	КОНЕЦ КАК ЕстьФайлы,
+	ДокументЗаказКлиента.Ссылка КАК Ссылка,
+	ДокументЗаказКлиента.ВерсияДанных КАК ВерсияДанных,
+	ДокументЗаказКлиента.ПометкаУдаления КАК ПометкаУдаления,
+	ДокументЗаказКлиента.Номер КАК Номер,
+	ДокументЗаказКлиента.Дата КАК Дата,
+	ДокументЗаказКлиента.Проведен КАК Проведен,
+	ДокументЗаказКлиента.Организация КАК Организация,
+	ДокументЗаказКлиента.Автор КАК Автор,
+	ДокументЗаказКлиента.Контрагент КАК Контрагент,
+	ДокументЗаказКлиента.Договор КАК Договор,
+	ДокументЗаказКлиента.ДатаПоступления КАК ДатаПоступления,
+	ДокументЗаказКлиента.ВалютаДокумента КАК ВалютаДокумента,
+	ДокументЗаказКлиента.НалогообложениеНДС КАК НалогообложениеНДС,
+	ДокументЗаказКлиента.СуммаВключаетНДС КАК СуммаВключаетНДС,
+	ДокументЗаказКлиента.НДСВключатьВСтоимость КАК НДСВключатьВСтоимость,
+	ДокументЗаказКлиента.Курс КАК Курс,
+	ДокументЗаказКлиента.Кратность КАК Кратность,
+	ДокументЗаказКлиента.СуммаДокумента КАК СуммаДокумента,
+	ДокументЗаказКлиента.Комментарий КАК Комментарий,
+	ДокументЗаказКлиента.СостояниеЗаказа КАК СостояниеЗаказа,
+	ДокументЗаказКлиента.ПоложениеДатыПоступления КАК ПоложениеДатыПоступления,
+	ДокументЗаказКлиента.Ответственный КАК Ответственный,
+	ДокументЗаказКлиента.Бюджет КАК Бюджет,
+	ДокументЗаказКлиента.ПериодБюджета КАК ПериодБюджета,
+	ДокументЗаказКлиента.СтатьяДоходовРасходов КАК СтатьяДоходовРасходов,
+	ДокументЗаказКлиента.ПоложениеСтатьиДоходовРасходов КАК ПоложениеСтатьиДоходовРасходов,
+	ДокументЗаказКлиента.МестоХранения КАК МестоХранения,
+	ДокументЗаказКлиента.МоментВремени КАК МоментВремени,
+	ДокументЗаказКлиента.Номенклатура.(
+		Ссылка КАК Ссылка,
+		НомерСтроки КАК НомерСтроки,
+		Всего КАК Всего,
+		ДатаПоступления КАК ДатаПоступления,
+		ЕдиницаИзмерения КАК ЕдиницаИзмерения,
+		Количество КАК Количество,
+		Номенклатура КАК Номенклатура,
+		Описание КАК Описание,
+		СтавкаНДС КАК СтавкаНДС,
+		СтатьяДоходовРасходов КАК СтатьяДоходовРасходов,
+		Сумма КАК Сумма,
+		СуммаНДС КАК СуммаНДС,
+		Цена КАК Цена
+	) КАК Номенклатура,
+	ВЫБОР
+		КОГДА ДокументЗаказКлиента.Закрыт
+			ТОГДА &amp;Закрыт
+		ИНАЧЕ &amp;КромеЗакрытых
+	КОНЕЦ КАК ОтборЗакрыт,
+	ДокументЗаказКлиента.Закрыт КАК Закрыт,
+	ДокументЗаказКлиента.ДатаВходящегоДокумента КАК ДатаВходящегоДокумента,
+	ДокументЗаказКлиента.НомерВходящегоДокумента КАК НомерВходящегоДокумента
+ИЗ
+	Документ.ЗаказКлиента КАК ДокументЗаказКлиента
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрНакопления.ОплатаДокументов.Остатки КАК ОплатаДокументовОстатки
+		ПО ДокументЗаказКлиента.Ссылка = ОплатаДокументовОстатки.Документ
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрНакопления.ЗаказыКлиентов.Остатки КАК ЗаказыКлиентовОстатки
+		ПО ДокументЗаказКлиента.Ссылка = ЗаказыКлиентовОстатки.ЗаказКлиента
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.НаличиеФайлов КАК НаличиеФайлов
+		ПО ДокументЗаказКлиента.Ссылка = НаличиеФайлов.ОбъектСФайлами</QueryText>
+				<MainTable>Document.ЗаказКлиента</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+</Form>

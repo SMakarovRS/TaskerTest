@@ -1,0 +1,2025 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа1" id="23">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа1</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1ExtendedTooltip" id="241"/>
+			<ChildItems>
+				<InputField name="Наименование" id="3">
+					<DataPath>Объект.Description</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="4"/>
+					<ExtendedTooltip name="НаименованиеExtendedTooltip" id="242"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="СхемаЖизниЗадания" id="521">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Схема жизни задания</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Behavior>Collapsible</Behavior>
+			<CollapsedRepresentationTitle>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Схема жизни задания</v8:content>
+				</v8:item>
+			</CollapsedRepresentationTitle>
+			<Collapsed>true</Collapsed>
+			<ControlRepresentation>Picture</ControlRepresentation>
+			<Representation>None</Representation>
+			<ExtendedTooltip name="СхемаЖизниЗаданияРасширеннаяПодсказка" id="522"/>
+			<ChildItems>
+				<LabelDecoration name="ДекорацияСхемаЗакрытия" id="523">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<HorizontalStretch>true</HorizontalStretch>
+					<Title formatted="true">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>&lt;b&gt;&lt;fontsize 12&gt;&lt;color #FF0000&gt;Новый&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;b&gt;&lt;fontsize 12&gt; &lt;/&gt;&lt;/&gt;&lt;b&gt;&lt;font sans-serif&gt;&lt;fontsize 13&gt;&lt;color #222222&gt;→&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;b&gt;&lt;font sans-serif&gt;&lt;fontsize 11&gt;&lt;color #222222&gt; ...&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;b&gt;&lt;font sans-serif&gt;&lt;fontsize 11&gt;&lt;color #222222&gt; &lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;b&gt;&lt;font sans-serif&gt;&lt;fontsize 13&gt;&lt;color #222222&gt;Выполнение&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;b&gt;&lt;font sans-serif&gt;&lt;fontsize 11&gt;&lt;color #222222&gt; ... &lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;b&gt;&lt;font sans-serif&gt;&lt;fontsize 13&gt;&lt;color #222222&gt;→ &lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;b&gt;&lt;fontsize 12&gt;&lt;color #008000&gt;Выполнено &lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;b&gt;&lt;font sans-serif&gt;&lt;fontsize 13&gt;&lt;color #222222&gt;→ &lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;b&gt;&lt;font sans-serif&gt;&lt;fontsize 12&gt;&lt;color #808080&gt;Завершен&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;b&gt;&lt;font sans-serif&gt;&lt;fontsize 12&gt;&lt;color #808080&gt;о&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
+
+&lt;b&gt;&lt;font sans-serif&gt;&lt;fontsize 10&gt;&lt;color #FF0000&gt;Новый&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;font sans-serif&gt;&lt;fontsize 10&gt;&lt;color #808080&gt; - &lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;font sans-serif&gt;&lt;fontsize 10&gt;&lt;color #000000&gt;все задачи имеют в качестве начального статуса этот этап.&lt;/&gt;&lt;/&gt;&lt;/&gt;
+&lt;b&gt;&lt;font sans-serif&gt;&lt;fontsize 10&gt;&lt;color #000000&gt;Выполнение&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;font sans-serif&gt;&lt;fontsize 10&gt;&lt;color #000000&gt; - это группа этапов или процессов, которые решают задачу.&lt;/&gt;&lt;/&gt;&lt;/&gt;
+&lt;b&gt;&lt;font sans-serif&gt;&lt;fontsize 10&gt;&lt;color #008000&gt;Выполнено&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;font sans-serif&gt;&lt;fontsize 10&gt;&lt;color #808080&gt; - &lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;font sans-serif&gt;&lt;fontsize 10&gt;&lt;color #000000&gt;это когд&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;font sans-serif&gt;&lt;fontsize 10&gt;&lt;color #000000&gt;а сотрудники поддержки довели задание до логического конца. Этот статус вовсе не означает, что задача Инициатора решена. Этот статус означает, что по задаче со стороны исполнителя выполнены все запланированные работы и исполнитель считает, что задача выполнена.&lt;/&gt;&lt;/&gt;&lt;/&gt;
+&lt;b&gt;&lt;font sans-serif&gt;&lt;fontsize 10&gt;&lt;color #808080&gt;Завершено&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;font sans-serif&gt;&lt;fontsize 10&gt;&lt;color #000000&gt; - это конечное состояние задания, когда инициатор провел приемку работ и убедился в том, что задание выполнено; либо проходит какое-то время после установки статуса "Выполнено" и за это время у инициатора не возникло вопросов или претензий.&lt;/&gt;&lt;/&gt;&lt;/&gt;</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДекорацияСхемаЗакрытияКонтекстноеМеню" id="524"/>
+					<ExtendedTooltip name="ДекорацияСхемаЗакрытияРасширеннаяПодсказка" id="525"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="Страницы" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedTooltip name="СтраницыExtendedTooltip" id="246"/>
+			<ChildItems>
+				<Page name="ГруппаЭтапы" id="85">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Этапы</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаЭтапыExtendedTooltip" id="247"/>
+					<ChildItems>
+						<UsualGroup name="Группа19" id="418">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа19</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ChildItemsWidth>LeftWide</ChildItemsWidth>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа19РасширеннаяПодсказка" id="419"/>
+							<ChildItems>
+								<Table name="Этапы1" id="86">
+									<SelectionMode>SingleRow</SelectionMode>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<FileDragMode>AsFile</FileDragMode>
+									<DataPath>Объект.Этапы</DataPath>
+									<RowPictureDataPath>Объект.Этапы.НавСсылка</RowPictureDataPath>
+									<RowsPicture>
+										<xr:Ref>CommonPicture.Подпроцесс</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</RowsPicture>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Этапы1</v8:content>
+										</v8:item>
+									</Title>
+									<SearchStringLocation>None</SearchStringLocation>
+									<ViewStatusLocation>None</ViewStatusLocation>
+									<SearchControlLocation>None</SearchControlLocation>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="Этапы1КонтекстноеМеню" id="87"/>
+									<AutoCommandBar name="Этапы1КоманднаяПанель" id="88"/>
+									<ExtendedTooltip name="Этапы1ExtendedTooltip" id="248"/>
+									<SearchStringAddition name="Этапы1SearchString" id="249">
+										<AdditionSource>
+											<Item>Этапы1</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="Этапы1SearchStringContextMenu" id="250"/>
+										<ExtendedTooltip name="Этапы1SearchStringExtendedTooltip" id="251"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="Этапы1ViewStatus" id="252">
+										<AdditionSource>
+											<Item>Этапы1</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<HorizontalLocation>Left</HorizontalLocation>
+										<ContextMenu name="Этапы1ViewStatusContextMenu" id="253"/>
+										<ExtendedTooltip name="Этапы1ViewStatusExtendedTooltip" id="254"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="Этапы1SearchControl" id="255">
+										<AdditionSource>
+											<Item>Этапы1</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="Этапы1SearchControlContextMenu" id="256"/>
+										<ExtendedTooltip name="Этапы1SearchControlExtendedTooltip" id="257"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="OnEditEnd">Этапы1ПриОкончанииРедактирования</Event>
+										<Event name="BeforeDeleteRow">Этапы1ПередУдалением</Event>
+										<Event name="BeforeEditEnd">Этапы1ПередОкончаниемРедактирования</Event>
+										<Event name="BeforeRowChange">Этапы1ПередНачаломИзменения</Event>
+										<Event name="AfterDeleteRow">Этапы1ПослеУдаления</Event>
+										<Event name="OnActivateCell">Этапы1ПриАктивизацииЯчейки</Event>
+									</Events>
+									<ChildItems>
+										<ColumnGroup name="Этапы1Группа1" id="109">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Этапы1Группа1</v8:content>
+												</v8:item>
+											</Title>
+											<Group>InCell</Group>
+											<ExtendedTooltip name="Этапы1Группа1ExtendedTooltip" id="258"/>
+											<ChildItems>
+												<PictureField name="Этапы1ЭтапНавСсылка" id="110">
+													<DataPath>Объект.Этапы.НавСсылка</DataPath>
+													<Visible>false</Visible>
+													<TitleLocation>None</TitleLocation>
+													<EditMode>EnterOnInput</EditMode>
+													<FileDragMode>AsFile</FileDragMode>
+													<ContextMenu name="Этапы1ЭтапНавСсылкаКонтекстноеМеню" id="111"/>
+													<ExtendedTooltip name="Этапы1ЭтапНавСсылкаExtendedTooltip" id="259"/>
+												</PictureField>
+												<InputField name="ЭтапыЭтапПодпроцесс" id="91">
+													<DataPath>Объект.Этапы.Этап</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ЭтапыЭтапПодпроцессКонтекстноеМеню" id="92"/>
+													<ExtendedTooltip name="ЭтапыЭтапПодпроцессExtendedTooltip" id="260"/>
+													<Events>
+														<Event name="OnChange">Этапы1ЭтапПриИзменении</Event>
+													</Events>
+												</InputField>
+											</ChildItems>
+										</ColumnGroup>
+										<InputField name="Этапы1ИсполнительПоУмолчанию" id="512">
+											<DataPath>Объект.Этапы.ИсполнительПоУмолчанию</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="Этапы1ИсполнительПоУмолчаниюКонтекстноеМеню" id="513"/>
+											<ExtendedTooltip name="Этапы1ИсполнительПоУмолчаниюРасширеннаяПодсказка" id="514"/>
+											<Events>
+												<Event name="OnChange">Этапы1ИсполнительПоУмолчаниюПриИзменении</Event>
+											</Events>
+										</InputField>
+										<CheckBoxField name="Этапы1ТребоватьПриПереводеНаСледующийЭтапИсполнителя" id="515">
+											<DataPath>Объект.Этапы.ТребоватьПриПереводеНаСледующийЭтапИсполнителя</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Проверять заполнение исполнителя при записи задания на этом этапе</v8:content>
+												</v8:item>
+											</ToolTip>
+											<EditMode>EnterOnInput</EditMode>
+											<HeaderPicture>
+												<xr:Ref>CommonPicture.ВосклицательныйЗнакСерый</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</HeaderPicture>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="Этапы1ТребоватьПриПереводеНаСледующийЭтапИсполнителяКонтекстноеМеню" id="516"/>
+											<ExtendedTooltip name="Этапы1ТребоватьПриПереводеНаСледующийЭтапИсполнителяРасширеннаяПодсказка" id="517"/>
+										</CheckBoxField>
+										<CheckBoxField name="Этапы1ПереноситьИсполнителяИзПредыдущегоЭтапа" id="518">
+											<DataPath>Объект.Этапы.УдалитьПереноситьИсполнителяИзПредыдущегоЭтапа</DataPath>
+											<Visible>false</Visible>
+											<TitleLocation>None</TitleLocation>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Переносить исполнителя из предыдущего этапа</v8:content>
+												</v8:item>
+											</ToolTip>
+											<EditMode>EnterOnInput</EditMode>
+											<HeaderPicture>
+												<xr:Ref>CommonPicture.ИсполнительТекущийПользователь</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</HeaderPicture>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="Этапы1ПереноситьИсполнителяИзПредыдущегоЭтапаКонтекстноеМеню" id="519"/>
+											<ExtendedTooltip name="Этапы1ПереноситьИсполнителяИзПредыдущегоЭтапаРасширеннаяПодсказка" id="520"/>
+										</CheckBoxField>
+									</ChildItems>
+								</Table>
+								<UsualGroup name="Группа5" id="97">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа5</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Группа5ExtendedTooltip" id="261"/>
+									<ChildItems>
+										<UsualGroup name="Группа2" id="137">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа2</v8:content>
+												</v8:item>
+											</Title>
+											<Group>Horizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="Группа2ExtendedTooltip" id="262"/>
+											<ChildItems>
+												<LabelDecoration name="Декорация1" id="139">
+													<TextColor>#3366FF</TextColor>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Возможен переход на этапы</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="Декорация1КонтекстноеМеню" id="140"/>
+													<ExtendedTooltip name="Декорация1ExtendedTooltip" id="263"/>
+												</LabelDecoration>
+												<CommandBar name="ГруппаКнопкиЭтапы" id="138">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа кнопки этапы</v8:content>
+														</v8:item>
+													</Title>
+													<HorizontalLocation>Right</HorizontalLocation>
+													<ExtendedTooltip name="ГруппаКнопкиЭтапыExtendedTooltip" id="264"/>
+													<ChildItems>
+														<Button name="ЭтапыДляПереходовВыбратьВсеЭтапы" id="135">
+															<Type>CommandBarButton</Type>
+															<CommandName>Form.Command.ВыбратьВсеЭтапы</CommandName>
+															<ExtendedTooltip name="ЭтапыДляПереходовВыбратьВсеЭтапыExtendedTooltip" id="265"/>
+														</Button>
+														<Button name="ЭтапыДляПереходовСнятьВсеЭтапы" id="136">
+															<Type>CommandBarButton</Type>
+															<CommandName>Form.Command.СнятьВсеЭтапы</CommandName>
+															<ExtendedTooltip name="ЭтапыДляПереходовСнятьВсеЭтапыExtendedTooltip" id="266"/>
+														</Button>
+													</ChildItems>
+												</CommandBar>
+											</ChildItems>
+										</UsualGroup>
+										<Table name="ЭтапыДляПереходов" id="98">
+											<Representation>List</Representation>
+											<ChangeRowSet>false</ChangeRowSet>
+											<ChangeRowOrder>false</ChangeRowOrder>
+											<AutoInsertNewRow>true</AutoInsertNewRow>
+											<EnableStartDrag>true</EnableStartDrag>
+											<EnableDrag>true</EnableDrag>
+											<FileDragMode>AsFile</FileDragMode>
+											<DataPath>ЭтапыДляПереходов</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ЭтапыДляПереходов</v8:content>
+												</v8:item>
+											</Title>
+											<CommandSet>
+												<ExcludedCommand>Add</ExcludedCommand>
+												<ExcludedCommand>Change</ExcludedCommand>
+												<ExcludedCommand>Copy</ExcludedCommand>
+												<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+												<ExcludedCommand>Delete</ExcludedCommand>
+												<ExcludedCommand>EndEdit</ExcludedCommand>
+												<ExcludedCommand>MoveDown</ExcludedCommand>
+												<ExcludedCommand>MoveUp</ExcludedCommand>
+												<ExcludedCommand>OutputList</ExcludedCommand>
+												<ExcludedCommand>SelectAll</ExcludedCommand>
+												<ExcludedCommand>SortListAsc</ExcludedCommand>
+												<ExcludedCommand>SortListDesc</ExcludedCommand>
+											</CommandSet>
+											<SearchStringLocation>None</SearchStringLocation>
+											<ViewStatusLocation>None</ViewStatusLocation>
+											<SearchControlLocation>None</SearchControlLocation>
+											<RowFilter xsi:nil="true"/>
+											<ContextMenu name="ЭтапыДляПереходовКонтекстноеМеню" id="99"/>
+											<AutoCommandBar name="ЭтапыДляПереходовКоманднаяПанель" id="100">
+												<HorizontalAlign>Right</HorizontalAlign>
+												<Autofill>false</Autofill>
+											</AutoCommandBar>
+											<ExtendedTooltip name="ЭтапыДляПереходовExtendedTooltip" id="267"/>
+											<SearchStringAddition name="ЭтапыДляПереходовSearchString" id="268">
+												<AdditionSource>
+													<Item>ЭтапыДляПереходов</Item>
+													<Type>SearchStringRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ЭтапыДляПереходовSearchStringContextMenu" id="269"/>
+												<ExtendedTooltip name="ЭтапыДляПереходовSearchStringExtendedTooltip" id="270"/>
+											</SearchStringAddition>
+											<ViewStatusAddition name="ЭтапыДляПереходовViewStatus" id="271">
+												<AdditionSource>
+													<Item>ЭтапыДляПереходов</Item>
+													<Type>ViewStatusRepresentation</Type>
+												</AdditionSource>
+												<HorizontalLocation>Left</HorizontalLocation>
+												<ContextMenu name="ЭтапыДляПереходовViewStatusContextMenu" id="272"/>
+												<ExtendedTooltip name="ЭтапыДляПереходовViewStatusExtendedTooltip" id="273"/>
+											</ViewStatusAddition>
+											<SearchControlAddition name="ЭтапыДляПереходовSearchControl" id="274">
+												<AdditionSource>
+													<Item>ЭтапыДляПереходов</Item>
+													<Type>SearchControl</Type>
+												</AdditionSource>
+												<ContextMenu name="ЭтапыДляПереходовSearchControlContextMenu" id="275"/>
+												<ExtendedTooltip name="ЭтапыДляПереходовSearchControlExtendedTooltip" id="276"/>
+											</SearchControlAddition>
+											<ChildItems>
+												<CheckBoxField name="ЭтапыДляПереходовФлаг" id="105">
+													<DataPath>ЭтапыДляПереходов.Флаг</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<EditMode>EnterOnInput</EditMode>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ЭтапыДляПереходовФлагКонтекстноеМеню" id="106"/>
+													<ExtendedTooltip name="ЭтапыДляПереходовФлагExtendedTooltip" id="277"/>
+													<Events>
+														<Event name="OnChange">ЭтапыДляПереходовФлагПриИзменении</Event>
+													</Events>
+												</CheckBoxField>
+												<InputField name="ЭтапыДляПереходовНачальныйЭтап" id="101">
+													<DataPath>ЭтапыДляПереходов.НачальныйЭтап</DataPath>
+													<Visible>false</Visible>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ЭтапыДляПереходовНачальныйЭтапКонтекстноеМеню" id="102"/>
+													<ExtendedTooltip name="ЭтапыДляПереходовНачальныйЭтапExtendedTooltip" id="278"/>
+												</InputField>
+												<ColumnGroup name="ЭтапыДляПереходовГруппа1" id="112">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>ЭтапыДляПереходовГруппа1</v8:content>
+														</v8:item>
+													</Title>
+													<Group>InCell</Group>
+													<ExtendedTooltip name="ЭтапыДляПереходовГруппа1ExtendedTooltip" id="279"/>
+													<ChildItems>
+														<PictureField name="ЭтапыДляПереходовКонечныйЭтапНавСсылка" id="113">
+															<DataPath>ЭтапыДляПереходов.НавСсылка</DataPath>
+															<TitleLocation>None</TitleLocation>
+															<EditMode>EnterOnInput</EditMode>
+															<FileDragMode>AsFile</FileDragMode>
+															<ContextMenu name="ЭтапыДляПереходовКонечныйЭтапНавСсылкаКонтекстноеМеню" id="114"/>
+															<ExtendedTooltip name="ЭтапыДляПереходовКонечныйЭтапНавСсылкаExtendedTooltip" id="280"/>
+														</PictureField>
+														<InputField name="ЭтапыДляПереходовКонечныйЭтап" id="103">
+															<DataPath>ЭтапыДляПереходов.КонечныйЭтап</DataPath>
+															<ReadOnly>true</ReadOnly>
+															<EditMode>EnterOnInput</EditMode>
+															<ContextMenu name="ЭтапыДляПереходовКонечныйЭтапКонтекстноеМеню" id="104"/>
+															<ExtendedTooltip name="ЭтапыДляПереходовКонечныйЭтапExtendedTooltip" id="281"/>
+														</InputField>
+													</ChildItems>
+												</ColumnGroup>
+											</ChildItems>
+										</Table>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаИсполнители" id="117">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Возможные исполнители на этапах</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<ExtendedTooltip name="ГруппаИсполнителиExtendedTooltip" id="288"/>
+					<ChildItems>
+						<UsualGroup name="Группа26" id="507">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа26</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ChildItemsWidth>LeftNarrow</ChildItemsWidth>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа26РасширеннаяПодсказка" id="508"/>
+							<ChildItems>
+								<Table name="ИсполнителиЭтапов" id="118">
+									<SelectionMode>SingleRow</SelectionMode>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<FileDragMode>AsFile</FileDragMode>
+									<DataPath>Объект.Исполнители</DataPath>
+									<RowsPicture>
+										<xr:Ref>CommonPicture.ИсполнительПользователь</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</RowsPicture>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ИсполнителиЭтапов</v8:content>
+										</v8:item>
+									</Title>
+									<SearchStringLocation>None</SearchStringLocation>
+									<ViewStatusLocation>None</ViewStatusLocation>
+									<SearchControlLocation>None</SearchControlLocation>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="ИсполнителиЭтаповКонтекстноеМеню" id="119"/>
+									<AutoCommandBar name="ИсполнителиЭтаповКоманднаяПанель" id="120"/>
+									<ExtendedTooltip name="ИсполнителиЭтаповExtendedTooltip" id="289"/>
+									<SearchStringAddition name="ИсполнителиЭтаповSearchString" id="290">
+										<AdditionSource>
+											<Item>ИсполнителиЭтапов</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ИсполнителиЭтаповSearchStringContextMenu" id="291"/>
+										<ExtendedTooltip name="ИсполнителиЭтаповSearchStringExtendedTooltip" id="292"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ИсполнителиЭтаповViewStatus" id="293">
+										<AdditionSource>
+											<Item>ИсполнителиЭтапов</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<HorizontalLocation>Left</HorizontalLocation>
+										<ContextMenu name="ИсполнителиЭтаповViewStatusContextMenu" id="294"/>
+										<ExtendedTooltip name="ИсполнителиЭтаповViewStatusExtendedTooltip" id="295"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ИсполнителиЭтаповSearchControl" id="296">
+										<AdditionSource>
+											<Item>ИсполнителиЭтапов</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ИсполнителиЭтаповSearchControlContextMenu" id="297"/>
+										<ExtendedTooltip name="ИсполнителиЭтаповSearchControlExtendedTooltip" id="298"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="OnEditEnd">ИсполнителиЭтаповПриОкончанииРедактирования</Event>
+										<Event name="AfterDeleteRow">ИсполнителиЭтаповПослеУдаления</Event>
+										<Event name="OnActivateCell">ИсполнителиЭтаповПриАктивизацииЯчейки</Event>
+									</Events>
+									<ChildItems>
+										<InputField name="ИсполнителиЭтаповИсполнитель" id="123">
+											<DataPath>Объект.Исполнители.Исполнитель</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ИсполнителиЭтаповИсполнительКонтекстноеМеню" id="124"/>
+											<ExtendedTooltip name="ИсполнителиЭтаповИсполнительExtendedTooltip" id="299"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+								<UsualGroup name="Группа6" id="125">
+									<EnableContentChange>true</EnableContentChange>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа6</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Группа6ExtendedTooltip" id="300"/>
+									<ChildItems>
+										<UsualGroup name="Группа4" id="141">
+											<EnableContentChange>true</EnableContentChange>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа4</v8:content>
+												</v8:item>
+											</Title>
+											<Group>Horizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="Группа4ExtendedTooltip" id="301"/>
+											<ChildItems>
+												<LabelDecoration name="Декорация2" id="142">
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<TextColor>#3366FF</TextColor>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Исполнитель участвует в этапе/подпроцессе</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="Декорация2КонтекстноеМеню" id="143"/>
+													<ExtendedTooltip name="Декорация2ExtendedTooltip" id="302"/>
+												</LabelDecoration>
+												<CommandBar name="ГруппаКнопкиИсполнители" id="144">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа кнопки исполнители</v8:content>
+														</v8:item>
+													</Title>
+													<HorizontalLocation>Right</HorizontalLocation>
+													<ExtendedTooltip name="ГруппаКнопкиИсполнителиExtendedTooltip" id="303"/>
+													<ChildItems>
+														<Button name="ВыбратьВсеЭтапыИсполнители" id="145">
+															<Type>CommandBarButton</Type>
+															<CommandName>Form.Command.ВыбратьВсеЭтапыИсполнители</CommandName>
+															<ExtendedTooltip name="ВыбратьВсеЭтапыИсполнителиExtendedTooltip" id="304"/>
+														</Button>
+														<Button name="СнятьВсеЭтапыИсполнителя" id="146">
+															<Type>CommandBarButton</Type>
+															<CommandName>Form.Command.СнятьВсеЭтапыИсполнителя</CommandName>
+															<ExtendedTooltip name="СнятьВсеЭтапыИсполнителяExtendedTooltip" id="305"/>
+														</Button>
+													</ChildItems>
+												</CommandBar>
+											</ChildItems>
+										</UsualGroup>
+										<Table name="ИсполнителиТЗ" id="126">
+											<Representation>List</Representation>
+											<ChangeRowSet>false</ChangeRowSet>
+											<ChangeRowOrder>false</ChangeRowOrder>
+											<AutoInsertNewRow>true</AutoInsertNewRow>
+											<EnableStartDrag>true</EnableStartDrag>
+											<EnableDrag>true</EnableDrag>
+											<FileDragMode>AsFile</FileDragMode>
+											<DataPath>ИсполнителиТЗ</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ИсполнителиТЗ</v8:content>
+												</v8:item>
+											</Title>
+											<CommandSet>
+												<ExcludedCommand>Add</ExcludedCommand>
+												<ExcludedCommand>Change</ExcludedCommand>
+												<ExcludedCommand>Copy</ExcludedCommand>
+												<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+												<ExcludedCommand>Delete</ExcludedCommand>
+												<ExcludedCommand>EndEdit</ExcludedCommand>
+												<ExcludedCommand>MoveDown</ExcludedCommand>
+												<ExcludedCommand>MoveUp</ExcludedCommand>
+												<ExcludedCommand>SelectAll</ExcludedCommand>
+												<ExcludedCommand>SortListAsc</ExcludedCommand>
+												<ExcludedCommand>SortListDesc</ExcludedCommand>
+											</CommandSet>
+											<SearchStringLocation>None</SearchStringLocation>
+											<ViewStatusLocation>None</ViewStatusLocation>
+											<SearchControlLocation>None</SearchControlLocation>
+											<RowFilter xsi:nil="true"/>
+											<ContextMenu name="ИсполнителиТЗКонтекстноеМеню" id="127"/>
+											<AutoCommandBar name="ИсполнителиТЗКоманднаяПанель" id="128">
+												<Autofill>false</Autofill>
+											</AutoCommandBar>
+											<ExtendedTooltip name="ИсполнителиТЗExtendedTooltip" id="306"/>
+											<SearchStringAddition name="ИсполнителиТЗSearchString" id="307">
+												<AdditionSource>
+													<Item>ИсполнителиТЗ</Item>
+													<Type>SearchStringRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ИсполнителиТЗSearchStringContextMenu" id="308"/>
+												<ExtendedTooltip name="ИсполнителиТЗSearchStringExtendedTooltip" id="309"/>
+											</SearchStringAddition>
+											<ViewStatusAddition name="ИсполнителиТЗViewStatus" id="310">
+												<AdditionSource>
+													<Item>ИсполнителиТЗ</Item>
+													<Type>ViewStatusRepresentation</Type>
+												</AdditionSource>
+												<HorizontalLocation>Left</HorizontalLocation>
+												<ContextMenu name="ИсполнителиТЗViewStatusContextMenu" id="311"/>
+												<ExtendedTooltip name="ИсполнителиТЗViewStatusExtendedTooltip" id="312"/>
+											</ViewStatusAddition>
+											<SearchControlAddition name="ИсполнителиТЗSearchControl" id="313">
+												<AdditionSource>
+													<Item>ИсполнителиТЗ</Item>
+													<Type>SearchControl</Type>
+												</AdditionSource>
+												<ContextMenu name="ИсполнителиТЗSearchControlContextMenu" id="314"/>
+												<ExtendedTooltip name="ИсполнителиТЗSearchControlExtendedTooltip" id="315"/>
+											</SearchControlAddition>
+											<ChildItems>
+												<InputField name="ИсполнителиТЗИсполнитель" id="129">
+													<DataPath>ИсполнителиТЗ.Исполнитель</DataPath>
+													<Visible>false</Visible>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ИсполнителиТЗИсполнительКонтекстноеМеню" id="130"/>
+													<ExtendedTooltip name="ИсполнителиТЗИсполнительExtendedTooltip" id="316"/>
+												</InputField>
+												<CheckBoxField name="ИсполнителиТЗФлаг" id="133">
+													<DataPath>ИсполнителиТЗ.Флаг</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<EditMode>EnterOnInput</EditMode>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ИсполнителиТЗФлагКонтекстноеМеню" id="134"/>
+													<ExtendedTooltip name="ИсполнителиТЗФлагExtendedTooltip" id="317"/>
+													<Events>
+														<Event name="OnChange">ИсполнителиТЗФлагПриИзменении</Event>
+													</Events>
+												</CheckBoxField>
+												<ColumnGroup name="ИсполнителиТЗГруппа1" id="147">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>ИсполнителиТЗГруппа1</v8:content>
+														</v8:item>
+													</Title>
+													<Group>InCell</Group>
+													<ExtendedTooltip name="ИсполнителиТЗГруппа1ExtendedTooltip" id="318"/>
+													<ChildItems>
+														<PictureField name="ИсполнителиТЗНавСсылка" id="148">
+															<DataPath>ИсполнителиТЗ.НавСсылка</DataPath>
+															<TitleLocation>None</TitleLocation>
+															<EditMode>EnterOnInput</EditMode>
+															<FileDragMode>AsFile</FileDragMode>
+															<ContextMenu name="ИсполнителиТЗНавСсылкаКонтекстноеМеню" id="149"/>
+															<ExtendedTooltip name="ИсполнителиТЗНавСсылкаExtendedTooltip" id="319"/>
+														</PictureField>
+														<InputField name="ИсполнителиТЗЭтап" id="131">
+															<DataPath>ИсполнителиТЗ.Этап</DataPath>
+															<ReadOnly>true</ReadOnly>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Этап/подпроцесс</v8:content>
+																</v8:item>
+															</Title>
+															<EditMode>EnterOnInput</EditMode>
+															<ContextMenu name="ИсполнителиТЗЭтапКонтекстноеМеню" id="132"/>
+															<ExtendedTooltip name="ИсполнителиТЗЭтапExtendedTooltip" id="320"/>
+														</InputField>
+													</ChildItems>
+												</ColumnGroup>
+											</ChildItems>
+										</Table>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаНастройки" id="183">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройки</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаНастройкиExtendedTooltip" id="345"/>
+					<ChildItems>
+						<UsualGroup name="Группа7" id="179">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа7</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalStretch>true</HorizontalStretch>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа7ExtendedTooltip" id="346"/>
+							<ChildItems>
+								<InputField name="ТипПроцесса" id="533">
+									<DataPath>Объект.ТипПроцесса</DataPath>
+									<InputHint>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Инцидент</v8:content>
+										</v8:item>
+									</InputHint>
+									<ContextMenu name="ТипПроцессаКонтекстноеМеню" id="534"/>
+									<ExtendedTooltip name="ТипПроцессаРасширеннаяПодсказка" id="535"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Группа8" id="180">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа8</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalStretch>true</HorizontalStretch>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа8ExtendedTooltip" id="349"/>
+							<ChildItems>
+								<CheckBoxField name="ВыводПрошлыхИсполнителейВСпискеВыбораИсполнителя" id="172">
+									<DataPath>Объект.ВыводПрошлыхИсполнителейВСпискеВыбора</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Вывод прошлых исполнителей в списке выбора исполнителей</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ВыводПрошлыхИсполнителейВСпискеВыбораИсполнителяКонтекстноеМеню" id="173"/>
+									<ExtendedTooltip name="ВыводПрошлыхИсполнителейВСпискеВыбораИсполнителяExtendedTooltip" id="350"/>
+								</CheckBoxField>
+								<LabelDecoration name="Декорация4" id="181">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<TextColor>#3366FF</TextColor>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Если исполнители участвовали в задании на предыдущих этапах, они будут отображаться в списке выбора исполнителей до закрытия Задания.</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="Декорация4КонтекстноеМеню" id="182"/>
+									<ExtendedTooltip name="Декорация4ExtendedTooltip" id="351"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Группа20" id="428">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа20</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа20РасширеннаяПодсказка" id="429"/>
+							<ChildItems>
+								<CheckBoxField name="НеИспользовать" id="380">
+									<DataPath>Объект.НеИспользовать</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Не использовать этот процесс в заданиях</v8:content>
+										</v8:item>
+									</ToolTip>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="НеИспользоватьКонтекстноеМеню" id="381"/>
+									<ExtendedTooltip name="НеИспользоватьРасширеннаяПодсказка" id="382"/>
+								</CheckBoxField>
+								<LabelDecoration name="Декорация11" id="432">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<TextColor>#3366FF</TextColor>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Запретить использование этого процесса в заданиях.</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="Декорация11КонтекстноеМеню" id="433"/>
+									<ExtendedTooltip name="Декорация11РасширеннаяПодсказка" id="434"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Группа21" id="430">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа21</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа21РасширеннаяПодсказка" id="431"/>
+							<ChildItems>
+								<CheckBoxField name="НеИзменять" id="415">
+									<DataPath>Объект.НеИзменять</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Не изменять этот процесс в заданиях</v8:content>
+										</v8:item>
+									</ToolTip>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="НеИзменятьКонтекстноеМеню" id="416"/>
+									<ExtendedTooltip name="НеИзменятьРасширеннаяПодсказка" id="417"/>
+								</CheckBoxField>
+								<LabelDecoration name="Декорация12" id="435">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<TextColor>#3366FF</TextColor>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>В заданиях, запущенных по этому процессу, не возможно будет заменить процесс на другой.</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="Декорация12КонтекстноеМеню" id="436"/>
+									<ExtendedTooltip name="Декорация12РасширеннаяПодсказка" id="437"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Группа14" id="386">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа14</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа14РасширеннаяПодсказка" id="387"/>
+							<ChildItems>
+								<CheckBoxField name="НеИспользоватьКомментарии" id="383">
+									<DataPath>Объект.НеИспользоватьКомментарии</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>При переходах на этапы никогда не вводить комментарии</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="НеИспользоватьКомментарииКонтекстноеМеню" id="384"/>
+									<ExtendedTooltip name="НеИспользоватьКомментарииРасширеннаяПодсказка" id="385"/>
+								</CheckBoxField>
+								<LabelDecoration name="Декорация13" id="438">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<TextColor>#3366FF</TextColor>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>В заданиях при переходе на этапы будет отключена возможность ввода комментария.</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="Декорация13КонтекстноеМеню" id="439"/>
+									<ExtendedTooltip name="Декорация13РасширеннаяПодсказка" id="440"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Группа22" id="441">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа22</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа22РасширеннаяПодсказка" id="442"/>
+							<ChildItems>
+								<CheckBoxField name="ДобавлятьНовогоИнициатораВНаблюдатели" id="443">
+									<DataPath>Объект.ДобавлятьНовогоИнициатораВНаблюдатели</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ДобавлятьНовогоИнициатораВНаблюдателиКонтекстноеМеню" id="444"/>
+									<ExtendedTooltip name="ДобавлятьНовогоИнициатораВНаблюдателиРасширеннаяПодсказка" id="445"/>
+								</CheckBoxField>
+								<LabelDecoration name="Декорация14" id="446">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<TextColor>#3366FF</TextColor>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>При изменении инициатора в заданиях, запущенных по этому процессу, предлагать добавить его в наблюдатели (в случае его отсутствия).</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="Декорация14КонтекстноеМеню" id="447"/>
+									<ExtendedTooltip name="Декорация14РасширеннаяПодсказка" id="448"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Группа9" id="542">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа9</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа9РасширеннаяПодсказка" id="543"/>
+							<ChildItems>
+								<CheckBoxField name="НеПереходитьНаЭтапыВыполненияБезУказанияРешений" id="536">
+									<DataPath>Объект.НеПереходитьНаЭтапыВыполненияБезУказанияРешений</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="НеПереходитьНаЭтапыВыполненияБезУказанияРешенийКонтекстноеМеню" id="537"/>
+									<ExtendedTooltip name="НеПереходитьНаЭтапыВыполненияБезУказанияРешенийРасширеннаяПодсказка" id="538"/>
+								</CheckBoxField>
+								<LabelDecoration name="Декорация15" id="539">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<TextColor>#3366FF</TextColor>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Нельзя записать задание, если в нем не добавлено хотя бы одна статья базы знаний (т.е. не указаны решения)</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="Декорация15КонтекстноеМеню" id="540"/>
+									<ExtendedTooltip name="Декорация15РасширеннаяПодсказка" id="541"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="АвтоматическоеВыполнение1" id="240">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Автоматическое выполнение</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="АвтоматическоеВыполнение1РасширеннаяПодсказка" id="355"/>
+					<ChildItems>
+						<UsualGroup name="Группа3" id="529">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа3</v8:content>
+								</v8:item>
+							</Title>
+							<Representation>StrongSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="530"/>
+							<ChildItems>
+								<LabelDecoration name="Декорация9" id="526">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Title formatted="true">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Для понимания как закрывается задание см. выше подсказку &lt;color #008000&gt;Схема жизни задания&lt;/&gt;</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="Декорация9КонтекстноеМеню" id="527"/>
+									<ExtendedTooltip name="Декорация9РасширеннаяПодсказка" id="528"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Группа15" id="228">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа15</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа15ExtendedTooltip" id="356"/>
+							<ChildItems>
+								<CheckBoxField name="ЗакрыватьЗаданиеПриНеАктивности" id="222">
+									<DataPath>Объект.АвтоматическоеВыполнениеЗадания</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Автоматический перевод на этап</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ЗакрыватьЗаданиеПриНеАктивностиКонтекстноеМеню" id="223"/>
+									<ExtendedTooltip name="ЗакрыватьЗаданиеПриНеАктивностиExtendedTooltip" id="357"/>
+									<Events>
+										<Event name="OnChange">ЗакрыватьЗаданиеПриНеАктивностиПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<InputField name="АвтоматическоеЗакрытиеЗаданияЭтап" id="231">
+									<DataPath>Объект.АвтоматическоеВыполнениеЗаданияЭтап</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Автоматический перевод в статус</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>None</TitleLocation>
+									<Width>5</Width>
+									<CreateButton>false</CreateButton>
+									<QuickChoice>true</QuickChoice>
+									<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+									<TextEdit>false</TextEdit>
+									<DropListWidth>1</DropListWidth>
+									<InputHint>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Выполнено</v8:content>
+										</v8:item>
+									</InputHint>
+									<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+									<ContextMenu name="АвтоматическоеЗакрытиеЗаданияЭтапКонтекстноеМеню" id="232"/>
+									<ExtendedTooltip name="АвтоматическоеЗакрытиеЗаданияЭтапExtendedTooltip" id="360"/>
+									<Events>
+										<Event name="StartChoice">АвтоматическоеЗакрытиеЗаданияЭтапНачалоВыбора</Event>
+										<Event name="ChoiceProcessing">АвтоматическоеЗакрытиеЗаданияЭтапОбработкаВыбора</Event>
+									</Events>
+								</InputField>
+								<InputField name="АвтоматическоеЗакрытиеЗаданияЧасов" id="226">
+									<DataPath>Объект.АвтоматическоеВыполнениеЗаданияЧасов</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>через</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="АвтоматическоеЗакрытиеЗаданияЧасовКонтекстноеМеню" id="227"/>
+									<ExtendedTooltip name="АвтоматическоеЗакрытиеЗаданияЧасовExtendedTooltip" id="358"/>
+									<Events>
+										<Event name="OnChange">АвтоматическоеЗакрытиеЗаданияЧасовПриИзменении</Event>
+									</Events>
+								</InputField>
+								<LabelDecoration name="АвтоматическоеЗакрытиеЗаданияВремя" id="229">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ч. на любом из текущих этапов (указаны ниже) при бездействии:</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="АвтоматическоеЗакрытиеЗаданияВремяКонтекстноеМеню" id="230"/>
+									<ExtendedTooltip name="АвтоматическоеЗакрытиеЗаданияВремяExtendedTooltip" id="359"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<Table name="АвтоматическоеВыполнение" id="233">
+							<Representation>List</Representation>
+							<ChangeRowSet>false</ChangeRowSet>
+							<ChangeRowOrder>false</ChangeRowOrder>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>АвтоматическоеВыполнение</DataPath>
+							<RowPictureDataPath>АвтоматическоеВыполнение.НавСсылка</RowPictureDataPath>
+							<RowsPicture>
+								<xr:Ref>CommonPicture.Подпроцесс</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</RowsPicture>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>АвтоматическоеВыполнение</v8:content>
+								</v8:item>
+							</Title>
+							<CommandSet>
+								<ExcludedCommand>Add</ExcludedCommand>
+								<ExcludedCommand>CancelSearch</ExcludedCommand>
+								<ExcludedCommand>Change</ExcludedCommand>
+								<ExcludedCommand>Copy</ExcludedCommand>
+								<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+								<ExcludedCommand>Delete</ExcludedCommand>
+								<ExcludedCommand>EndEdit</ExcludedCommand>
+								<ExcludedCommand>Find</ExcludedCommand>
+								<ExcludedCommand>MoveDown</ExcludedCommand>
+								<ExcludedCommand>MoveUp</ExcludedCommand>
+								<ExcludedCommand>OutputList</ExcludedCommand>
+								<ExcludedCommand>SelectAll</ExcludedCommand>
+								<ExcludedCommand>SortListAsc</ExcludedCommand>
+								<ExcludedCommand>SortListDesc</ExcludedCommand>
+							</CommandSet>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="АвтоматическоеВыполнениеКонтекстноеМеню" id="234"/>
+							<AutoCommandBar name="АвтоматическоеВыполнениеКоманднаяПанель" id="235">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="АвтоматическоеВыполнениеРасширеннаяПодсказка" id="361"/>
+							<SearchStringAddition name="АвтоматическоеВыполнениеСтрокаПоиска" id="362">
+								<AdditionSource>
+									<Item>АвтоматическоеВыполнение</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="АвтоматическоеВыполнениеСтрокаПоискаКонтекстноеМеню" id="363"/>
+								<ExtendedTooltip name="АвтоматическоеВыполнениеСтрокаПоискаРасширеннаяПодсказка" id="364"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="АвтоматическоеВыполнениеСостояниеПросмотра" id="365">
+								<AdditionSource>
+									<Item>АвтоматическоеВыполнение</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<HorizontalLocation>Left</HorizontalLocation>
+								<ContextMenu name="АвтоматическоеВыполнениеСостояниеПросмотраКонтекстноеМеню" id="366"/>
+								<ExtendedTooltip name="АвтоматическоеВыполнениеСостояниеПросмотраРасширеннаяПодсказка" id="367"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="АвтоматическоеВыполнениеУправлениеПоиском" id="368">
+								<AdditionSource>
+									<Item>АвтоматическоеВыполнение</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="АвтоматическоеВыполнениеУправлениеПоискомКонтекстноеМеню" id="369"/>
+								<ExtendedTooltip name="АвтоматическоеВыполнениеУправлениеПоискомРасширеннаяПодсказка" id="370"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="BeforeDeleteRow">АвтоматическоеВыполнениеПередУдалением</Event>
+							</Events>
+							<ChildItems>
+								<CheckBoxField name="АвтоматическоеЗакрытиеФлаг" id="238">
+									<DataPath>АвтоматическоеВыполнение.Флаг</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="АвтоматическоеЗакрытиеФлагКонтекстноеМеню" id="239"/>
+									<ExtendedTooltip name="АвтоматическоеЗакрытиеФлагExtendedTooltip" id="371"/>
+									<Events>
+										<Event name="OnChange">АвтоматическоеВыполнениеПометкаПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<InputField name="АвтоматическоеЗакрытиеЭтап" id="236">
+									<DataPath>АвтоматическоеВыполнение.Этап</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<TextEdit>false</TextEdit>
+									<ContextMenu name="АвтоматическоеЗакрытиеЭтапКонтекстноеМеню" id="237"/>
+									<ExtendedTooltip name="АвтоматическоеЗакрытиеЭтапExtendedTooltip" id="372"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+						<UsualGroup name="ГруппаАвтоматическоеЗакрытие" id="221">
+							<HorizontalStretch>true</HorizontalStretch>
+							<Group>Vertical</Group>
+							<Representation>StrongSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаАвтоматическоеЗакрытиеExtendedTooltip" id="373"/>
+							<ChildItems>
+								<LabelDecoration name="Декорация7" id="224">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<TextColor>#3366FF</TextColor>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Задание будет автоматически переведено и установлен соответствующий этап, в течение указанного срока, если последнее изменение по заданию было ранее N-часов и на каких этапах применять правило автоматического закрытия, указав в табличной части галочками этапы, на которых может происходить автоматическое выполнение.</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="Декорация7КонтекстноеМеню" id="225"/>
+									<ExtendedTooltip name="Декорация7ExtendedTooltip" id="374"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаНаблюдатели" id="449">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Наблюдатели</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаНаблюдателиРасширеннаяПодсказка" id="450"/>
+					<ChildItems>
+						<Table name="Наблюдатели" id="197">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Объект.Наблюдатели</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Наблюдатели</v8:content>
+								</v8:item>
+							</Title>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="НаблюдателиКонтекстноеМеню" id="198"/>
+							<AutoCommandBar name="НаблюдателиКоманднаяПанель" id="199"/>
+							<ExtendedTooltip name="НаблюдателиExtendedTooltip" id="330"/>
+							<SearchStringAddition name="НаблюдателиSearchString" id="331">
+								<AdditionSource>
+									<Item>Наблюдатели</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="НаблюдателиSearchStringContextMenu" id="332"/>
+								<ExtendedTooltip name="НаблюдателиSearchStringExtendedTooltip" id="333"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="НаблюдателиViewStatus" id="334">
+								<AdditionSource>
+									<Item>Наблюдатели</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<HorizontalLocation>Left</HorizontalLocation>
+								<ContextMenu name="НаблюдателиViewStatusContextMenu" id="335"/>
+								<ExtendedTooltip name="НаблюдателиViewStatusExtendedTooltip" id="336"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="НаблюдателиSearchControl" id="337">
+								<AdditionSource>
+									<Item>Наблюдатели</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="НаблюдателиSearchControlContextMenu" id="338"/>
+								<ExtendedTooltip name="НаблюдателиSearchControlExtendedTooltip" id="339"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="Оповещения1НомерСтроки" id="200">
+									<DataPath>Объект.Наблюдатели.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="Оповещения1НомерСтрокиКонтекстноеМеню" id="201"/>
+									<ExtendedTooltip name="Оповещения1НомерСтрокиExtendedTooltip" id="340"/>
+								</LabelField>
+								<InputField name="Оповещения1Пользователь" id="202">
+									<DataPath>Объект.Наблюдатели.Наблюдатель</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="Оповещения1ПользовательКонтекстноеМеню" id="203"/>
+									<ExtendedTooltip name="Оповещения1ПользовательExtendedTooltip" id="341"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+						<LabelDecoration name="Декорация6" id="207">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<TextColor>#3366FF</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Поместите сюда пользователей, которых необходимо оповестить о новых заданиях. Данные пользователи будут помещены в список наблюдателей при создании задания.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Декорация6КонтекстноеМеню" id="208"/>
+							<ExtendedTooltip name="Декорация6ExtendedTooltip" id="344"/>
+						</LabelDecoration>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаСхема" id="388">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Схема</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаСхемаРасширеннаяПодсказка" id="389"/>
+					<ChildItems>
+						<LabelDecoration name="Декорация8" id="390">
+							<HorizontalStretch>true</HorizontalStretch>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Данная схема не влияет на сам процесс, и приводится только в качестве справочной информации</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Декорация8КонтекстноеМеню" id="391"/>
+							<ExtendedTooltip name="Декорация8РасширеннаяПодсказка" id="392"/>
+						</LabelDecoration>
+						<CommandBar name="Группа17" id="407">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа17</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="Группа17РасширеннаяПодсказка" id="408"/>
+							<ChildItems>
+								<Button name="ГрСхемаПрочитатьСхемуИзФайла" id="401">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.ПрочитатьСхемуИзФайла</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Открыть...</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ГрСхемаПрочитатьСхемуИзФайлаРасширеннаяПодсказка" id="402"/>
+								</Button>
+								<Button name="ГрСхемаСохранитьСхемуВФайл" id="403">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.СохранитьСхемуВФайл</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сохранить...</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ГрСхемаСохранитьСхемуВФайлРасширеннаяПодсказка" id="404"/>
+								</Button>
+								<ButtonGroup name="Группа18" id="413">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа18</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="Группа18РасширеннаяПодсказка" id="414"/>
+									<ChildItems>
+										<Button name="ВставитьЭтапСхемы" id="411">
+											<Type>CommandBarButton</Type>
+											<Representation>PictureAndText</Representation>
+											<CommandName>Form.Command.ВставитьЭтапСхемы</CommandName>
+											<Picture>
+												<xr:Ref>CommonPicture.Подпроцесс</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<ExtendedTooltip name="ВставитьЭтапСхемыРасширеннаяПодсказка" id="412"/>
+										</Button>
+										<Button name="Кнопка1" id="409">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Item.ГрСхема.StandardCommand.InsertItemDecorativeLine</CommandName>
+											<ExtendedTooltip name="Кнопка1РасширеннаяПодсказка" id="410"/>
+										</Button>
+										<Button name="ГрСхемаКнопка1" id="405">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Item.ГрСхема.StandardCommand.InsertItemDecoration</CommandName>
+											<ExtendedTooltip name="ГрСхемаКнопка1РасширеннаяПодсказка" id="406"/>
+										</Button>
+									</ChildItems>
+								</ButtonGroup>
+								<ButtonGroup name="Группа16" id="399">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа16</v8:content>
+										</v8:item>
+									</Title>
+									<CommandSource>Item.ГрСхема</CommandSource>
+									<ExtendedTooltip name="Группа16РасширеннаяПодсказка" id="400"/>
+								</ButtonGroup>
+							</ChildItems>
+						</CommandBar>
+						<GraphicalSchemaField name="ГрСхема" id="396">
+							<DataPath>ГрСхема</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<CommandSet>
+								<ExcludedCommand>InsertItemActivity</ExcludedCommand>
+								<ExcludedCommand>InsertItemCompletion</ExcludedCommand>
+								<ExcludedCommand>InsertItemCondition</ExcludedCommand>
+								<ExcludedCommand>InsertItemJoin</ExcludedCommand>
+								<ExcludedCommand>InsertItemProcessing</ExcludedCommand>
+								<ExcludedCommand>InsertItemSplit</ExcludedCommand>
+								<ExcludedCommand>InsertItemStart</ExcludedCommand>
+								<ExcludedCommand>InsertItemSubBusinessProcess</ExcludedCommand>
+								<ExcludedCommand>InsertItemSwitch</ExcludedCommand>
+							</CommandSet>
+							<Output>Enable</Output>
+							<ContextMenu name="ГрСхемаКонтекстноеМеню" id="397"/>
+							<ExtendedTooltip name="ГрСхемаРасширеннаяПодсказка" id="398"/>
+						</GraphicalSchemaField>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаДополнительно" id="22">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дополнительно</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаДополнительноExtendedTooltip" id="375"/>
+					<ChildItems>
+						<UsualGroup name="РодительВес" id="550">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Родитель вес</v8:content>
+								</v8:item>
+							</Title>
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="РодительВесРасширеннаяПодсказка" id="551"/>
+							<ChildItems>
+								<InputField name="Родитель" id="544">
+									<DataPath>Объект.Parent</DataPath>
+									<ContextMenu name="РодительКонтекстноеМеню" id="545"/>
+									<ExtendedTooltip name="РодительРасширеннаяПодсказка" id="546"/>
+								</InputField>
+								<InputField name="Вес" id="547">
+									<DataPath>Объект.Вес</DataPath>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<SpinButton>true</SpinButton>
+									<ContextMenu name="ВесКонтекстноеМеню" id="548"/>
+									<ExtendedTooltip name="ВесРасширеннаяПодсказка" id="549"/>
+									<Events>
+										<Event name="Tuning">ВесРегулирование</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<InputField name="Комментарий" id="5">
+							<DataPath>Объект.Комментарий</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<HorizontalStretch>true</HorizontalStretch>
+							<ContextMenu name="КомментарийКонтекстноеМеню" id="6"/>
+							<ExtendedTooltip name="КомментарийExtendedTooltip" id="376"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.Процессы</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="Этапы" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Этапы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Этап" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Этап</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ЭтапыПроцессов</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Картинка" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Картинка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>v8ui:Picture</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ЭтапыДляПереходов" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Этапы для переходов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+			<Columns>
+				<Column name="НачальныйЭтап" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Начальный этап</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Процессы</v8:Type>
+						<v8:Type>cfg:CatalogRef.ЭтапыПроцессов</v8:Type>
+					</Type>
+				</Column>
+				<Column name="КонечныйЭтап" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Этап/подпроцесс перехода</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Процессы</v8:Type>
+						<v8:Type>cfg:CatalogRef.ЭтапыПроцессов</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Флаг" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Флаг</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="НавСсылка" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Нав ссылка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИсполнительПоУмолчанию" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Исполнитель по умолчанию</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ТребоватьПриПереводеНаСледующийЭтапИсполнителя" id="6">
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ПереноситьИсполнителяИзПредыдущегоЭтапа" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Переносить исполнителя из предыдущего этапа</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ШаблонОповещенияНаблюдателей" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Шаблон оповещения наблюдателей</v8:content>
+						</v8:item>
+					</Title>
+					<Type/>
+				</Column>
+				<Column name="ШаблонОповещенияИнициатора" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Шаблон оповещения инициатора</v8:content>
+						</v8:item>
+					</Title>
+					<Type/>
+				</Column>
+				<Column name="ШаблонОповещенияТекущегоИсполнителя" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Шаблон оповещения текущего исполнителя</v8:content>
+						</v8:item>
+					</Title>
+					<Type/>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ИсполнителиТЗ" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Исполнители ТЗ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+			<Columns>
+				<Column name="Исполнитель" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Исполнитель</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ГруппыПользователей</v8:Type>
+						<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Этап" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Этап</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Процессы</v8:Type>
+						<v8:Type>cfg:CatalogRef.ЭтапыПроцессов</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Флаг" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Флаг</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="НавСсылка" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Нав ссылка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="НачальныйИсполнитель" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Начальный исполнитель</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ГруппыПользователей</v8:Type>
+				<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="АвтоматическоеВыполнение" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Автоматическое выполнение</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Этап" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Этап</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ЭтапыПроцессов</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Флаг" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Флаг</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="НавСсылка" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Нав ссылка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ГрСхема" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Схема</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.2/data/graphscheme">d5p1:FlowchartContextType</v8:Type>
+			</Type>
+			<Settings xmlns:d4p1="http://v8.1c.ru/8.2/data/graphscheme" xsi:type="d4p1:FlowchartContextType">
+				<d4p1:backColor>style:FieldBackColor</d4p1:backColor>
+				<d4p1:enableGrid>true</d4p1:enableGrid>
+				<d4p1:drawGridMode>Lines</d4p1:drawGridMode>
+				<d4p1:gridHorizontalStep>20</d4p1:gridHorizontalStep>
+				<d4p1:gridVerticalStep>20</d4p1:gridVerticalStep>
+				<d4p1:bpUUID>00000000-0000-0000-0000-000000000000</d4p1:bpUUID>
+				<d4p1:useOutput>Auto</d4p1:useOutput>
+				<d4p1:printPropItem>
+					<d4p1:key>6</d4p1:key>
+					<d4p1:val>10</d4p1:val>
+				</d4p1:printPropItem>
+				<d4p1:printPropItem>
+					<d4p1:key>7</d4p1:key>
+					<d4p1:val>10</d4p1:val>
+				</d4p1:printPropItem>
+				<d4p1:printPropItem>
+					<d4p1:key>8</d4p1:key>
+					<d4p1:val>10</d4p1:val>
+				</d4p1:printPropItem>
+				<d4p1:printPropItem>
+					<d4p1:key>9</d4p1:key>
+					<d4p1:val>10</d4p1:val>
+				</d4p1:printPropItem>
+				<d4p1:printPropItem>
+					<d4p1:key>13</d4p1:key>
+					<d4p1:val>0</d4p1:val>
+				</d4p1:printPropItem>
+				<d4p1:printPropItem>
+					<d4p1:key>16</d4p1:key>
+					<d4p1:val>0</d4p1:val>
+				</d4p1:printPropItem>
+			</Settings>
+		</Attribute>
+		<Attribute name="ШагКорректировкиВеса" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шаг корректировки веса</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>4</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ЭтапыДляПереходовШаблонОповещенияНаблюдателей</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemGroup">
+						<dcsset:groupType>AndGroup</dcsset:groupType>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ЭтапыДляПереходов.Флаг</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ЭтапыДляПереходов.ШаблонОповещенияНаблюдателей</dcsset:left>
+							<dcsset:comparisonType>NotFilled</dcsset:comparisonType>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:Red</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ОтметкаНезаполненного</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ЭтапыДляПереходовШаблонОповещенияИнициатора</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemGroup">
+						<dcsset:groupType>AndGroup</dcsset:groupType>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ЭтапыДляПереходов.Флаг</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ЭтапыДляПереходов.ШаблонОповещенияИнициатора</dcsset:left>
+							<dcsset:comparisonType>NotFilled</dcsset:comparisonType>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:Red</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ОтметкаНезаполненного</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ЭтапыДляПереходовШаблонОповещенияТекущегоИсполнителя</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemGroup">
+						<dcsset:groupType>AndGroup</dcsset:groupType>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ЭтапыДляПереходов.Флаг</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ЭтапыДляПереходов.ШаблонОповещенияТекущегоИсполнителя</dcsset:left>
+							<dcsset:comparisonType>NotFilled</dcsset:comparisonType>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:Red</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ОтметкаНезаполненного</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="ДобавитьИсполнителяВоВсеЭтапы" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить исполнителя во все этапы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить исполнителя во все этапы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ВыбратьВсеЭтапы" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать все этапы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать все этапы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ВыбратьВсеЭтапы</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СнятьВсеЭтапы" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять все этапы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять все этапы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СнятьВсеЭтапы</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ВыбратьВсеЭтапыИсполнители" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать все этапы исполнители</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать все этапы исполнители</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ВыбратьВсеЭтапыИсполнители</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СнятьВсеЭтапыИсполнителя" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять все этапы исполнителя</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять все этапы исполнителя</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СнятьВсеЭтапыИсполнителя</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПрочитатьСхемуИзФайла" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прочитать схему из файла</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прочитать схему из файла</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.OpenFile</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПрочитатьСхемуИзФайла</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СохранитьСхемуВФайл" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить схему в файл</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить схему в файл</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.SaveFile</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СохранитьСхемуВФайл</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ВставитьЭтапСхемы" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вставить этап...</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вставить этап схемы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВставитьЭтапСхемы</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

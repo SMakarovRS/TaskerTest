@@ -1,0 +1,731 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Выбрать исполнителя:</v8:content>
+		</v8:item>
+	</Title>
+	<Width>65</Width>
+	<WindowOpeningMode>LockWholeInterface</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>None</CommandBarLocation>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаКоманды" id="75">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа команды</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTipRepresentation>None</ToolTipRepresentation>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКомандыРасширеннаяПодсказка" id="76"/>
+		</UsualGroup>
+		<LabelDecoration name="ДекорацияЗадание" id="66">
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Задание:</v8:content>
+				</v8:item>
+			</Title>
+			<BackColor>style:FieldAlternativeBackColor</BackColor>
+			<ContextMenu name="ДекорацияЗаданиеКонтекстноеМеню" id="67"/>
+			<ExtendedTooltip name="ДекорацияЗаданиеРасширеннаяПодсказка" id="68"/>
+		</LabelDecoration>
+		<UsualGroup name="ГруппаШапка" id="32">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Horizontal</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="33"/>
+			<ChildItems>
+				<PictureDecoration name="ДекорацияПустышка" id="36">
+					<Width>4</Width>
+					<Height>1</Height>
+					<FileDragMode>AsFile</FileDragMode>
+					<ContextMenu name="ДекорацияПустышкаКонтекстноеМеню" id="37"/>
+					<ExtendedTooltip name="ДекорацияПустышкаРасширеннаяПодсказка" id="38"/>
+				</PictureDecoration>
+				<UsualGroup name="ГруппаРеквизитов" id="34">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа реквизитов</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаРеквизитовРасширеннаяПодсказка" id="35"/>
+					<ChildItems>
+						<LabelField name="СсылкаНаОбъект" id="18">
+							<DataPath>Документ</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Документ</v8:content>
+								</v8:item>
+							</Title>
+							<TitleFont ref="sys:DefaultGUIFont" height="8" kind="WindowsFont"/>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Font ref="sys:DefaultGUIFont" height="8" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+							<ContextMenu name="СсылкаНаОбъектКонтекстноеМеню" id="19"/>
+							<ExtendedTooltip name="СсылкаНаОбъектРасширеннаяПодсказка" id="20"/>
+						</LabelField>
+						<LabelField name="СсылкаНаОбъектСервис" id="29">
+							<DataPath>Сервис</DataPath>
+							<TitleFont ref="sys:DefaultGUIFont" height="8" kind="WindowsFont"/>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Font ref="sys:DefaultGUIFont" height="8" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+							<ContextMenu name="СсылкаНаОбъектСервисКонтекстноеМеню" id="30"/>
+							<ExtendedTooltip name="СсылкаНаОбъектСервисРасширеннаяПодсказка" id="31"/>
+						</LabelField>
+						<LabelField name="Услуга" id="124">
+							<DataPath>Услуга</DataPath>
+							<TitleFont ref="sys:DefaultGUIFont" height="8" kind="WindowsFont"/>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Font ref="sys:DefaultGUIFont" height="8" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+							<ContextMenu name="УслугаКонтекстноеМеню" id="125"/>
+							<ExtendedTooltip name="УслугаРасширеннаяПодсказка" id="126"/>
+						</LabelField>
+						<LabelField name="СсылкаНаОбъектПроцесс" id="60">
+							<DataPath>Процесс</DataPath>
+							<TitleFont ref="sys:DefaultGUIFont" height="8" kind="WindowsFont"/>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Font ref="sys:DefaultGUIFont" height="8" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+							<ContextMenu name="СсылкаНаОбъектПроцессКонтекстноеМеню" id="61"/>
+							<ExtendedTooltip name="СсылкаНаОбъектПроцессРасширеннаяПодсказка" id="62"/>
+						</LabelField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаТекущийИсполнитель" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа текущий исполнитель</v8:content>
+				</v8:item>
+			</Title>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаТекущийИсполнительРасширеннаяПодсказка" id="4"/>
+			<ChildItems>
+				<LabelDecoration name="ДекорацияТекущийИсполнитель" id="55">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<HorizontalStretch>true</HorizontalStretch>
+					<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Текущий исполнитель:</v8:content>
+						</v8:item>
+					</Title>
+					<BackColor>style:FieldAlternativeBackColor</BackColor>
+					<ContextMenu name="ДекорацияТекущийИсполнительКонтекстноеМеню" id="56"/>
+					<ExtendedTooltip name="ДекорацияТекущийИсполнительРасширеннаяПодсказка" id="57"/>
+				</LabelDecoration>
+				<UsualGroup name="ГруппаТекстТекущийИсполнитель" id="53">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа текст текущий исполнитель</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаТекстТекущийИсполнительРасширеннаяПодсказка" id="54"/>
+					<ChildItems>
+						<PictureDecoration name="ДекорацияПустышка2" id="39">
+							<Width>15</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Height>1</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Декорация пустышка2</v8:content>
+								</v8:item>
+							</Title>
+							<FileDragMode>AsFile</FileDragMode>
+							<ContextMenu name="ДекорацияПустышка2КонтекстноеМеню" id="40"/>
+							<ExtendedTooltip name="ДекорацияПустышка2РасширеннаяПодсказка" id="41"/>
+						</PictureDecoration>
+						<UsualGroup name="ГруппаТекущийЭтапКартинкаТекст" id="58">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа текущий этап картинка текст</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTipRepresentation>None</ToolTipRepresentation>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаТекущийЭтапКартинкаТекстРасширеннаяПодсказка" id="59"/>
+							<ChildItems>
+								<PictureDecoration name="КартинкаТекущийИсполнитель" id="10">
+									<Width>2</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Height>2</Height>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Картинка текущий исполнитель</v8:content>
+										</v8:item>
+									</Title>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="КартинкаТекущийИсполнительКонтекстноеМеню" id="11"/>
+									<ExtendedTooltip name="КартинкаТекущийИсполнительРасширеннаяПодсказка" id="12"/>
+								</PictureDecoration>
+								<LabelDecoration name="НадписьТекущийИсполнитель" id="13">
+									<Width>35</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Height>2</Height>
+									<Font ref="sys:DefaultGUIFont" height="12" kind="WindowsFont"/>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<VerticalAlign>Center</VerticalAlign>
+									<ContextMenu name="НадписьТекущийИсполнительКонтекстноеМеню" id="14"/>
+									<ExtendedTooltip name="НадписьТекущийИсполнительРасширеннаяПодсказка" id="15"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<PictureDecoration name="ДекорацияПустышка3" id="69">
+							<Width>15</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Height>1</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Декорация пустышка2</v8:content>
+								</v8:item>
+							</Title>
+							<FileDragMode>AsFile</FileDragMode>
+							<ContextMenu name="ДекорацияПустышка3КонтекстноеМеню" id="70"/>
+							<ExtendedTooltip name="ДекорацияПустышка3РасширеннаяПодсказка" id="71"/>
+						</PictureDecoration>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаИсполнители" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать исполнителя</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаИсполнителиРасширеннаяПодсказка" id="9"/>
+			<ChildItems>
+				<LabelDecoration name="ДекорацияНазначитьИсполнителем" id="63">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<HorizontalStretch>true</HorizontalStretch>
+					<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выбрать исполнителя:</v8:content>
+						</v8:item>
+					</Title>
+					<BackColor>style:FieldAlternativeBackColor</BackColor>
+					<ContextMenu name="ДекорацияНазначитьИсполнителемКонтекстноеМеню" id="64"/>
+					<ExtendedTooltip name="ДекорацияНазначитьИсполнителемРасширеннаяПодсказка" id="65"/>
+				</LabelDecoration>
+				<CommandBar name="ГруппаКоманднаяПанель" id="100">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа командная панель</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаКоманднаяПанельРасширеннаяПодсказка" id="101"/>
+					<ChildItems>
+						<Button name="КомандаСвернутьДерево" id="110">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.КомандаСвернутьДерево</CommandName>
+							<ExtendedTooltip name="КомандаСвернутьДеревоРасширеннаяПодсказка" id="111"/>
+						</Button>
+						<Button name="КомандаРазвернутьДерево" id="112">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.КомандаРазвернутьДерево</CommandName>
+							<ExtendedTooltip name="КомандаРазвернутьДеревоРасширеннаяПодсказка" id="113"/>
+						</Button>
+						<Button name="Эскалация" id="116">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.Эскалация</CommandName>
+							<ExtendedTooltip name="ЭскалацияРасширеннаяПодсказка" id="117"/>
+						</Button>
+						<Button name="ВыбратьИсполнителя" id="102">
+							<Type>CommandBarButton</Type>
+							<DefaultButton>true</DefaultButton>
+							<CommandName>Form.Command.ВыбратьИсполнителя</CommandName>
+							<ExtendedTooltip name="ВыбратьИсполнителяРасширеннаяПодсказка" id="103"/>
+						</Button>
+						<Button name="ВыбратьИзСправочника" id="104">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.ВыбратьИзСправочника</CommandName>
+							<ExtendedTooltip name="ВыбратьИзСправочникаРасширеннаяПодсказка" id="105"/>
+						</Button>
+						<Button name="ВыбратьГруппу" id="114">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.ВыборГруппы</CommandName>
+							<ExtendedTooltip name="ВыбратьГруппуРасширеннаяПодсказка" id="115"/>
+						</Button>
+						<Button name="ИсполнительНеВыбран" id="106">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.ИсполнительНеВыбран</CommandName>
+							<ExtendedTooltip name="ИсполнительНеВыбранРасширеннаяПодсказка" id="107"/>
+						</Button>
+					</ChildItems>
+				</CommandBar>
+				<UsualGroup name="ГруппаТаблицаИсполнителей" id="77">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа таблица исполнителей</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаТаблицаИсполнителейРасширеннаяПодсказка" id="78"/>
+					<ChildItems>
+						<Table name="Дерево" id="79">
+							<Representation>Tree</Representation>
+							<CommandBarLocation>None</CommandBarLocation>
+							<Height>10</Height>
+							<SelectionMode>SingleRow</SelectionMode>
+							<RowSelectionMode>Row</RowSelectionMode>
+							<Header>false</Header>
+							<FooterHeight>6</FooterHeight>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<InitialListView>Beginning</InitialListView>
+							<InitialTreeView>ExpandAllLevels</InitialTreeView>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Дерево</DataPath>
+							<CommandSet>
+								<ExcludedCommand>Add</ExcludedCommand>
+								<ExcludedCommand>Change</ExcludedCommand>
+								<ExcludedCommand>Copy</ExcludedCommand>
+								<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+								<ExcludedCommand>Delete</ExcludedCommand>
+								<ExcludedCommand>EndEdit</ExcludedCommand>
+								<ExcludedCommand>MoveDown</ExcludedCommand>
+								<ExcludedCommand>MoveUp</ExcludedCommand>
+								<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+							</CommandSet>
+							<ContextMenu name="ДеревоКонтекстноеМеню" id="80"/>
+							<AutoCommandBar name="ДеревоКоманднаяПанель" id="81"/>
+							<ExtendedTooltip name="ДеревоРасширеннаяПодсказка" id="82"/>
+							<SearchStringAddition name="ДеревоСтрокаПоиска" id="83">
+								<AdditionSource>
+									<Item>Дерево</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДеревоСтрокаПоискаКонтекстноеМеню" id="84"/>
+								<ExtendedTooltip name="ДеревоСтрокаПоискаРасширеннаяПодсказка" id="85"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ДеревоСостояниеПросмотра" id="86">
+								<AdditionSource>
+									<Item>Дерево</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<HorizontalLocation>Left</HorizontalLocation>
+								<ContextMenu name="ДеревоСостояниеПросмотраКонтекстноеМеню" id="87"/>
+								<ExtendedTooltip name="ДеревоСостояниеПросмотраРасширеннаяПодсказка" id="88"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ДеревоУправлениеПоиском" id="89">
+								<AdditionSource>
+									<Item>Дерево</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ДеревоУправлениеПоискомКонтекстноеМеню" id="90"/>
+								<ExtendedTooltip name="ДеревоУправлениеПоискомРасширеннаяПодсказка" id="91"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">ДеревоВыбор</Event>
+								<Event name="BeforeAddRow">ДеревоПередНачаломДобавления</Event>
+								<Event name="BeforeDeleteRow">ДеревоПередУдалением</Event>
+							</Events>
+							<ChildItems>
+								<ColumnGroup name="ГруппаСтрока" id="95">
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Исполнитель</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>InCell</Group>
+									<ExtendedTooltip name="ГруппаСтрокаРасширеннаяПодсказка" id="96"/>
+									<ChildItems>
+										<PictureField name="ДеревоКартинкаСтроки" id="97">
+											<DataPath>Дерево.КартинкаСтроки</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="ДеревоКартинкаСтрокиКонтекстноеМеню" id="98"/>
+											<ExtendedTooltip name="ДеревоКартинкаСтрокиРасширеннаяПодсказка" id="99"/>
+										</PictureField>
+										<InputField name="ДеревоИсполнители" id="92">
+											<DataPath>Дерево.Исполнители</DataPath>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Исполнитель</v8:content>
+												</v8:item>
+											</ToolTip>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ДеревоИсполнителиКонтекстноеМеню" id="93"/>
+											<ExtendedTooltip name="ДеревоИсполнителиРасширеннаяПодсказка" id="94"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<InputField name="ДеревоКоличество" id="121">
+									<DataPath>Дерево.Количество</DataPath>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Количество выполняемых в данный момент заданий</v8:content>
+										</v8:item>
+									</ToolTip>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДеревоКоличествоКонтекстноеМеню" id="122"/>
+									<ExtendedTooltip name="ДеревоКоличествоРасширеннаяПодсказка" id="123"/>
+								</InputField>
+								<InputField name="ДеревоЛинияПоддержки" id="118">
+									<DataPath>Дерево.ЛинияПоддержки</DataPath>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Линия поддержки</v8:content>
+										</v8:item>
+									</ToolTip>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДеревоЛинияПоддержкиКонтекстноеМеню" id="119"/>
+									<ExtendedTooltip name="ДеревоЛинияПоддержкиРасширеннаяПодсказка" id="120"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="СсылкаНаОбъект" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ссылка на объект</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="Дерево" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дерево</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Исполнители" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Исполнители</v8:content>
+						</v8:item>
+					</Title>
+					<Type/>
+				</Column>
+				<Column name="КартинкаСтроки" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Картинка строки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>v8ui:Picture</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ЛинияПоддержки" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Линия поддержки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ЛинииПоддержки</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Количество" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Количество</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="СвернутьРазвернуть" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дерево свернуть/развернуть</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Сервис" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сервис</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Сервисы</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Процесс" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Процесс</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Процессы</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Документ" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DocumentRef.Задание</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Услуга" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Услуга</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Услуги</v8:Type>
+			</Type>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ДеревоПодразделение</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Дерево.Исполнители</dcsset:left>
+						<dcsset:comparisonType>Contains</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:string">Исполнители прошлых этапов</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:DarkGreen</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Шрифт</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="ВыбратьИсполнителя" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать исполнителя</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыбратьИсполнителя</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ВыбратьИзСправочника" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Из справочника...</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать из справочника</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ИсполнительВыборИзСправочника</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ВыбратьИзСправочника</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ИсполнительНеВыбран" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>&lt;Не выбран&gt;</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить "Исполнитель не выбран..."</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.InputFieldClear</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ИсполнительНеВыбран</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаСвернутьДерево" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Свернуть все группировки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Свернуть все группировки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CollapseAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаСвернутьДерево</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаРазвернутьДерево" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Развернуть все группировки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Развернуть все группировки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.ExpandAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаРазвернутьДерево</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ВыборГруппы" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбор группы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбор группы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ИсполнительГруппаПользователей</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ВыбратьГруппу</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Эскалация" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Эскалация</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Эскалация задания (выбор исполнителя с большей компетенции в рамках линии поддержки)</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.Эскалация</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>Эскалация</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

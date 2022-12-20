@@ -1,0 +1,293 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаЗаписатьИЗакрыть" id="52">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.StandardCommand.WriteAndClose</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Выдать право подписи</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаЗаписатьИЗакрытьРасширеннаяПодсказка" id="53"/>
+			</Button>
+			<Button name="ФормаЗаписать" id="54">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Write</CommandName>
+				<ExtendedTooltip name="ФормаЗаписатьРасширеннаяПодсказка" id="55"/>
+			</Button>
+			<Button name="ФормаОтозватьПравоПодписи" id="50">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ОтозватьПравоПодписи</CommandName>
+				<ExtendedTooltip name="ФормаОтозватьПравоПодписиРасширеннаяПодсказка" id="51"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="FillCheckProcessingAtServer">ОбработкаПроверкиЗаполненияНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<PictureDecoration name="ДекорацияПодписьУжеИспользуется" id="56">
+			<Visible>false</Visible>
+			<TextColor>#A80000</TextColor>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Декорация подпись уже используется</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTipRepresentation>ShowRight</ToolTipRepresentation>
+			<Picture>
+				<xr:Ref>CommonPicture.сстВнимание</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<FileDragMode>AsFile</FileDragMode>
+			<ContextMenu name="ДекорацияПодписьУжеИспользуетсяКонтекстноеМеню" id="57"/>
+			<ExtendedTooltip name="ДекорацияПодписьУжеИспользуетсяРасширеннаяПодсказка" id="58">
+				<Height>4</Height>
+				<Title formatted="false">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Подпись уже используется. Редактирование данных может привести к изменению в печатных формах документов при их повторном формировании. Редактировать...</v8:content>
+					</v8:item>
+				</Title>
+				<Events>
+					<Event name="URLProcessing">ДекорацияПодписьУжеИспользуетсяРасширеннаяПодсказкаОбработкаНавигационнойСсылки</Event>
+				</Events>
+			</ExtendedTooltip>
+		</PictureDecoration>
+		<PictureDecoration name="ДекорацияПравоОтозвано" id="59">
+			<Visible>false</Visible>
+			<TextColor>#A80000</TextColor>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Право подписи отозвано и более не действует.</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Право подписи отозвано и более не действует. Если право подписи аннулировано по ошибке, исправление внести может администратор из формы списка, подменю Еще.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ToolTipRepresentation>ShowRight</ToolTipRepresentation>
+			<Picture>
+				<xr:Ref>CommonPicture.сстВнимание</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<FileDragMode>AsFile</FileDragMode>
+			<ContextMenu name="ДекорацияПравоОтозваноКонтекстноеМеню" id="60"/>
+			<ExtendedTooltip name="ДекорацияПравоОтозваноРасширеннаяПодсказка" id="61"/>
+		</PictureDecoration>
+		<UsualGroup name="ГруппаПериод" id="40">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа период</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа период</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПериодРасширеннаяПодсказка" id="41"/>
+			<ChildItems>
+				<InputField name="Период" id="28">
+					<DataPath>Объект.ДатаНазначения</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПериодКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="ПериодРасширеннаяПодсказка" id="30"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаОграничениеИспользования" id="42">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа ограничение использования</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа ограничение использования</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОграничениеИспользованияРасширеннаяПодсказка" id="43"/>
+			<ChildItems>
+				<InputField name="Организация" id="7">
+					<DataPath>Объект.Организация</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ОрганизацияКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="9"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаПодписант" id="44">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа подписант</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа подписант</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПодписантРасширеннаяПодсказка" id="45"/>
+			<ChildItems>
+				<InputField name="ФизическоеЛицо" id="13">
+					<DataPath>Объект.ФизическоеЛицо</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ФизическоеЛицоКонтекстноеМеню" id="14"/>
+					<ExtendedTooltip name="ФизическоеЛицоРасширеннаяПодсказка" id="15"/>
+					<Events>
+						<Event name="OnChange">ФизическоеЛицоПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="ДействуетНаОсновании" id="37">
+					<DataPath>Объект.ДействуетНаОсновании</DataPath>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Используется при составлении договоров: "…, который действует на основании доверенности выданной нотариусом".</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ToolTipRepresentation>Button</ToolTipRepresentation>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДействуетНаОснованииКонтекстноеМеню" id="38"/>
+					<ExtendedTooltip name="ДействуетНаОснованииРасширеннаяПодсказка" id="39"/>
+				</InputField>
+				<UsualGroup name="ГруппаФИО" id="46">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа ФИО</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа ФИО</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ToolTipRepresentation>Button</ToolTipRepresentation>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаФИОРасширеннаяПодсказка" id="47">
+						<Title formatted="false">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Используется в расшифровках подписей печатных документов, например, Поступление, Инвентаризация и т.д.</v8:content>
+							</v8:item>
+						</Title>
+					</ExtendedTooltip>
+					<ChildItems>
+						<LabelField name="РасшифровкаПодписи" id="16">
+							<DataPath>Объект.РасшифровкаПодписи</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>37</MaxWidth>
+							<TextColor>style:ВидДняПроизводственногоКалендаряСубботаЦвет</TextColor>
+							<ContextMenu name="РасшифровкаПодписиКонтекстноеМеню" id="17"/>
+							<ExtendedTooltip name="РасшифровкаПодписиРасширеннаяПодсказка" id="18"/>
+							<Events>
+								<Event name="OnChange">РасшифровкаПодписиПриИзменении</Event>
+							</Events>
+						</LabelField>
+						<Button name="РедактироватьПредставление" id="48">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.РедактироватьПредставление</CommandName>
+							<ExtendedTooltip name="РедактироватьПредставлениеРасширеннаяПодсказка" id="49"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<InputField name="Должность" id="22">
+					<DataPath>Объект.Должность</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДолжностьКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="ДолжностьРасширеннаяПодсказка" id="24"/>
+					<Events>
+						<Event name="OnChange">ДолжностьПриИзменении</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.Подписи</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="КэшЗначений" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кэш значений</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="РедактироватьПредставление" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Редактировать представление</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Редактировать представление</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Change</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>РедактироватьПредставление</Action>
+			<Representation>Picture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОтозватьПравоПодписи" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отозвать право подписи</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отозвать право подписи</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтозватьПравоПодписи</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

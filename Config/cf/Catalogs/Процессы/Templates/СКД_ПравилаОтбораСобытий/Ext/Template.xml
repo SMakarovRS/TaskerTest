@@ -1,0 +1,400 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>АвтоматическоеВыполнениеЗаданияЧасов</dataPath>
+			<field>АвтоматическоеВыполнениеЗаданияЧасов</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Исполнители.Исполнитель</dataPath>
+			<field>Исполнители.Исполнитель</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КонтрольИсполнителей</dataPath>
+			<field>КонтрольИсполнителей</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>АвтоматическоеВыполнениеЗадания</dataPath>
+			<field>АвтоматическоеВыполнениеЗадания</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИмяПредопределенныхДанных</dataPath>
+			<field>ИмяПредопределенныхДанных</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Ссылка</dataPath>
+			<field>Ссылка</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Наименование</dataPath>
+			<field>Наименование</field>
+		</field>
+		<field xsi:type="DataSetFieldNestedDataSet">
+			<dataPath>Наблюдатели</dataPath>
+			<field>Наблюдатели</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВыводПрошлыхИсполнителейВСпискеВыбора</dataPath>
+			<field>ВыводПрошлыхИсполнителейВСпискеВыбора</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЭтоГруппа</dataPath>
+			<field>ЭтоГруппа</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЭтапыПроцесса.КонечныйЭтап</dataPath>
+			<field>ЭтапыПроцесса.КонечныйЭтап</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВерсияДанных</dataPath>
+			<field>ВерсияДанных</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Этапы.Ссылка</dataPath>
+			<field>Этапы.Ссылка</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПометкаУдаления</dataPath>
+			<field>ПометкаУдаления</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НеИзменять</dataPath>
+			<field>НеИзменять</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Код</dataPath>
+			<field>Код</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИсполнителиЭтапов.Исполнитель</dataPath>
+			<field>ИсполнителиЭтапов.Исполнитель</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НеИспользоватьКомментарии</dataPath>
+			<field>НеИспользоватьКомментарии</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ГрафическаяСхема</dataPath>
+			<field>ГрафическаяСхема</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Родитель</dataPath>
+			<field>Родитель</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>УдалитьУчетПоПроектам</dataPath>
+			<field>УдалитьУчетПоПроектам</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НеИспользовать</dataPath>
+			<field>НеИспользовать</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>АвтоматическоеВыполнениеЗаданияЭтап</dataPath>
+			<field>АвтоматическоеВыполнениеЗаданияЭтап</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидЭтапа</dataPath>
+			<field>ВидЭтапа</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДобавлятьНовогоИнициатораВНаблюдатели</dataPath>
+			<field>ДобавлятьНовогоИнициатораВНаблюдатели</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Картинка</dataPath>
+			<field>Картинка</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НавСсылка</dataPath>
+			<field>НавСсылка</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Комментарий</dataPath>
+			<field>Комментарий</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НеПереходитьНаЭтапыВыполненияБезУказанияРешений</dataPath>
+			<field>НеПереходитьНаЭтапыВыполненияБезУказанияРешений</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СостояниеЭтапа</dataPath>
+			<field>СостояниеЭтапа</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЭтапыПроцесса.Ссылка</dataPath>
+			<field>ЭтапыПроцесса.Ссылка</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТипПроцесса</dataPath>
+			<field>ТипПроцесса</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>УдалитьЗапретитьИзменятьДатуВыполнитьДо</dataPath>
+			<field>УдалитьЗапретитьИзменятьДатуВыполнитьДо</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЭтапыПроцесса.НомерСтроки</dataPath>
+			<field>ЭтапыПроцесса.НомерСтроки</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Этапы.ТребоватьПриПереводеНаСледующийЭтапИсполнителя</dataPath>
+			<field>Этапы.ТребоватьПриПереводеНаСледующийЭтапИсполнителя</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>УдалитьТипДокумента</dataPath>
+			<field>УдалитьТипДокумента</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Этапы.НомерСтроки</dataPath>
+			<field>Этапы.НомерСтроки</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Этапы.Этап</dataPath>
+			<field>Этапы.Этап</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Наблюдатели.Наблюдатель</dataPath>
+			<field>Наблюдатели.Наблюдатель</field>
+		</field>
+		<field xsi:type="DataSetFieldNestedDataSet">
+			<dataPath>Исполнители</dataPath>
+			<field>Исполнители</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Этапы.НавСсылка</dataPath>
+			<field>Этапы.НавСсылка</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Наблюдатели.НомерСтроки</dataPath>
+			<field>Наблюдатели.НомерСтроки</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Этапы.Подпроцесс</dataPath>
+			<field>Этапы.Подпроцесс</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Этапы.ИсполнительПоУмолчанию</dataPath>
+			<field>Этапы.ИсполнительПоУмолчанию</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Этапы.УдалитьПереноситьИсполнителяИзПредыдущегоЭтапа</dataPath>
+			<field>Этапы.УдалитьПереноситьИсполнителяИзПредыдущегоЭтапа</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Предопределенный</dataPath>
+			<field>Предопределенный</field>
+		</field>
+		<field xsi:type="DataSetFieldNestedDataSet">
+			<dataPath>Этапы</dataPath>
+			<field>Этапы</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>АвтоматическоеВыполнение.Ссылка</dataPath>
+			<field>АвтоматическоеВыполнение.Ссылка</field>
+		</field>
+		<field xsi:type="DataSetFieldNestedDataSet">
+			<dataPath>ЭтапыПроцесса</dataPath>
+			<field>ЭтапыПроцесса</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЭтапыПроцесса.НачальныйЭтап</dataPath>
+			<field>ЭтапыПроцесса.НачальныйЭтап</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>АвтоматическоеВыполнение.НомерСтроки</dataPath>
+			<field>АвтоматическоеВыполнение.НомерСтроки</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Исполнители.Ссылка</dataPath>
+			<field>Исполнители.Ссылка</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Наблюдатели.Ссылка</dataPath>
+			<field>Наблюдатели.Ссылка</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Исполнители.НомерСтроки</dataPath>
+			<field>Исполнители.НомерСтроки</field>
+		</field>
+		<field xsi:type="DataSetFieldNestedDataSet">
+			<dataPath>ИсполнителиЭтапов</dataPath>
+			<field>ИсполнителиЭтапов</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИсполнителиЭтапов.Ссылка</dataPath>
+			<field>ИсполнителиЭтапов.Ссылка</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>АвтоматическоеВыполнение.Этап</dataPath>
+			<field>АвтоматическоеВыполнение.Этап</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИсполнителиЭтапов.НомерСтроки</dataPath>
+			<field>ИсполнителиЭтапов.НомерСтроки</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИсполнителиЭтапов.Этап</dataPath>
+			<field>ИсполнителиЭтапов.Этап</field>
+		</field>
+		<field xsi:type="DataSetFieldNestedDataSet">
+			<dataPath>АвтоматическоеВыполнение</dataPath>
+			<field>АвтоматическоеВыполнение</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	Процессы.Ссылка КАК Ссылка,
+	Процессы.ВерсияДанных КАК ВерсияДанных,
+	Процессы.ПометкаУдаления КАК ПометкаУдаления,
+	Процессы.Родитель КАК Родитель,
+	Процессы.ЭтоГруппа КАК ЭтоГруппа,
+	Процессы.Код КАК Код,
+	Процессы.Наименование КАК Наименование,
+	Процессы.АвтоматическоеВыполнениеЗадания КАК АвтоматическоеВыполнениеЗадания,
+	Процессы.АвтоматическоеВыполнениеЗаданияЧасов КАК АвтоматическоеВыполнениеЗаданияЧасов,
+	Процессы.АвтоматическоеВыполнениеЗаданияЭтап КАК АвтоматическоеВыполнениеЗаданияЭтап,
+	Процессы.ВидЭтапа КАК ВидЭтапа,
+	Процессы.ВыводПрошлыхИсполнителейВСпискеВыбора КАК ВыводПрошлыхИсполнителейВСпискеВыбора,
+	Процессы.ГрафическаяСхема КАК ГрафическаяСхема,
+	Процессы.ДобавлятьНовогоИнициатораВНаблюдатели КАК ДобавлятьНовогоИнициатораВНаблюдатели,
+	Процессы.Картинка КАК Картинка,
+	Процессы.Комментарий КАК Комментарий,
+	Процессы.КонтрольИсполнителей КАК КонтрольИсполнителей,
+	Процессы.НавСсылка КАК НавСсылка,
+	Процессы.НеИзменять КАК НеИзменять,
+	Процессы.НеИспользовать КАК НеИспользовать,
+	Процессы.НеИспользоватьКомментарии КАК НеИспользоватьКомментарии,
+	Процессы.НеПереходитьНаЭтапыВыполненияБезУказанияРешений КАК НеПереходитьНаЭтапыВыполненияБезУказанияРешений,
+	Процессы.СостояниеЭтапа КАК СостояниеЭтапа,
+	Процессы.ТипПроцесса КАК ТипПроцесса,
+	Процессы.УдалитьЗапретитьИзменятьДатуВыполнитьДо КАК УдалитьЗапретитьИзменятьДатуВыполнитьДо,
+	Процессы.УдалитьТипДокумента КАК УдалитьТипДокумента,
+	Процессы.УдалитьУчетПоПроектам КАК УдалитьУчетПоПроектам,
+	Процессы.Этапы.(
+		Ссылка КАК Ссылка,
+		НомерСтроки КАК НомерСтроки,
+		Этап КАК Этап,
+		НавСсылка КАК НавСсылка,
+		Подпроцесс КАК Подпроцесс,
+		ИсполнительПоУмолчанию КАК ИсполнительПоУмолчанию,
+		ТребоватьПриПереводеНаСледующийЭтапИсполнителя КАК ТребоватьПриПереводеНаСледующийЭтапИсполнителя,
+		УдалитьПереноситьИсполнителяИзПредыдущегоЭтапа КАК УдалитьПереноситьИсполнителяИзПредыдущегоЭтапа
+	) КАК Этапы,
+	Процессы.ЭтапыПроцесса.(
+		Ссылка КАК Ссылка,
+		НомерСтроки КАК НомерСтроки,
+		НачальныйЭтап КАК НачальныйЭтап,
+		КонечныйЭтап КАК КонечныйЭтап
+	) КАК ЭтапыПроцесса,
+	Процессы.Исполнители.(
+		Ссылка КАК Ссылка,
+		НомерСтроки КАК НомерСтроки,
+		Исполнитель КАК Исполнитель
+	) КАК Исполнители,
+	Процессы.ИсполнителиЭтапов.(
+		Ссылка КАК Ссылка,
+		НомерСтроки КАК НомерСтроки,
+		Этап КАК Этап,
+		Исполнитель КАК Исполнитель
+	) КАК ИсполнителиЭтапов,
+	Процессы.Наблюдатели.(
+		Ссылка КАК Ссылка,
+		НомерСтроки КАК НомерСтроки,
+		Наблюдатель КАК Наблюдатель
+	) КАК Наблюдатели,
+	Процессы.АвтоматическоеВыполнение.(
+		Ссылка КАК Ссылка,
+		НомерСтроки КАК НомерСтроки,
+		Этап КАК Этап
+	) КАК АвтоматическоеВыполнение,
+	Процессы.Предопределенный КАК Предопределенный,
+	Процессы.ИмяПредопределенныхДанных КАК ИмяПредопределенныхДанных
+ИЗ
+	Справочник.Процессы КАК Процессы
+ГДЕ
+	Процессы.Ссылка = &amp;Основание	</query>
+	</dataSet>
+	<parameter>
+		<name>Основание</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Основание</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Процессы</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+		<use>Always</use>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Ссылка</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Наименование</dcsset:left>
+					<dcsset:comparisonType>Contains</dcsset:comparisonType>
+					<dcsset:right xsi:type="xs:string"/>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ТипПроцесса</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">АвтоматическоеВыполнение.Этап</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Исполнители.Исполнитель</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ИсполнителиЭтапов.Исполнитель</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Наблюдатели.Наблюдатель</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ЭтапыПроцесса.НачальныйЭтап</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ЭтапыПроцесса.КонечныйЭтап</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>
